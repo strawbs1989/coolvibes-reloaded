@@ -1,0 +1,151 @@
+ div.gallery {	 
+  margin: 5px;
+  float:center;
+  width: 180px;
+  height: auto;
+  align-items: flex-end;
+}
+
+
+
+div.gallery img {
+  float:center;
+  width: 100%;
+  height: auto;
+  background-color: #0000ff67;
+ 
+ 
+ -webkit-border-radius: 0px;
+ -moz-border-radius: 20px;
+  margin: 10px 0 20px 400px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+  
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+div.gallery img {
+  float: right;	
+  background-color: #ccc;	
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 100px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Left and right column */
+.column.side {
+width: 55%;
+background-color: #a1d0f0;
+float: left;
+margin: 44px 330px;
+border: 4px rounded;
+}
+column.row {
+	width: 1em;
+}
+
+
+
+
+div.gallery {
+  margin: 5px;
+ 
+  float: left;
+  width: 180px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+  
+  
+}
+
+div {
+	position: center
+}
+
+
+
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

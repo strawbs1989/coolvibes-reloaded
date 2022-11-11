@@ -1,388 +1,517 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en-GB"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Global, ​Music, Your club name, dance, Festival, ​Our Night Club, ​&nbsp;Latests Events, Vatos Locos and Friends Friday 5.26, II Points x Secret Project – May 1st, Jean Pierre’s Wynwood Remix, ​Next Level Entertainment, Themusicshow, ​The best DJ&amp;apos;s and Musicians, ​Tonight Special Party&nbsp; &nbsp; Booking Available">
-    <meta name="description" content="coolvibes-reloaded is a one in a million online internet radio
-station playing different tunes than you're normal radio station!
-feel the raww">
-    <title>Home</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
-    <link rel="icon" href="images/favicon.png">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface:400">
-    
-    
-    
-    
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "coolvibes-reloaded",
-		"sameAs": [
-				"https://facebook.com/coolvibesuk",
-				"https://twitter.com/name",
-				"https://instagram.com/name"
-		]
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home">
-    <meta name="twitter:description" content="coolvibes-reloaded">
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="coolvibes-reloaded is a one in a million online internet radio
-station playing different tunes than you're normal radio station!
-feel the raww">
-    <meta property="og:type" content="website">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+ 
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<title>Coolvibes|Reloaded</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://coolvibes-reloaded.com/w3.css">
+<link rel="stylesheet" href="http://coolvibes-reloaded.com/fonts.css">
+<link rel="stylesheet" href="http://coolvibes-reloaded.com/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+
+<!-- Start Audio Player -->
+<div id="lor-horizontal-player">
+  <div class="lor-horizontal-player-main-bg"><a href="https://www.listenonlineradio.com/uk/coolvibes-reloaded" target="_blank"><img src="https://www.listenonlineradio.com/wp-content/uploads/Coolvibes-Reloaded.jpg" alt="Coolvibes Reloaded" class="lor-horizontal-player-station-img"></a><a onclick="popupPlayer(this.href,'playerWindow','370','800','0','0','yes');return false" href="http://player.listenonlineradio.com/uk/coolvibes-reloaded" target="_blank" class="lor-horizontal-player-play-icon" title="Play"><img src="https://listenonlineradio.com/widgets/play.svg" class="lor-horizontal-player-play-icon-img" alt="play-icon"></a>
+    <div class="lor-horizontal-player-station-details"><span id="get-lor-horizontal-player-station-title" class="lor-horizontal-player-station-title text-marquee">Coolvibes Reloaded</span><span id="get-lor-horizontal-player-station-slogan" class="lor-horizontal-player-station-slogan text-marquee">We want to rock with you</span></div><span class="lor-horizontal-player-gradient"></span><a class="lor-horizontal-player-lor-logo" href="https://www.listenonlineradio.com/" target="_blank" title="Listen Online Radio"></a>
+  </div>
+  <script id="lor-horizontal-player-js" src="https://listenonlineradio.com/widgets/lor-horizontal-player-light.min.js"></script>
+</div>
+<!-- End Audio Player -->
+<center><img src="images\header.png" height="123" width="440" class-"LOGO" alt="coolvibes alightens you with tons of different tunes to entertain you"></center>
+<center>
+  <p>You're Tuned To</p>
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <head>
+    <div id="snow"></div>
+    <title>Station Activity</title>
+
+    <style type="text/css">
+      td {
+        font-size: 0.6em;
+      }
+
+      /* temporary for testing purposes */
+      #NowOn {
+        border: 0px solid black;
+        font-size: 11.5px;
+        color: black;
+        background: transparent;
+        height: 65px;
+        width: 350px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      /* NOT CURRENTLY USED
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+
+var GMT = new Date().getTimezoneOffset();
+var offsetGMT = +1 new Date().getTimezoneOffset()/01:00;
+*/
+      // Sun=0 1 2 3 4 5 Sat=6
+      var DayOfWeek = new Array('Weekend', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend');
+      var NoShow = 'No Show Scheduled<br />for COOLVIBES';
+      var DH = new Array(7);
+      for (d = 0; d < 7; d++) {
+        DH[d] = new Array(24);
+        for (h = 0; h < 24; h++) {
+          DH[d][h] = '';
+        }
+      }
+      DH[1][10] = 'Monday at 10 AM<br>AUTOMIX<br>with auto';
+      DH[1][08] = 'Monday at 8 AM<br>AUTOMIX<br>with auto';
+      DH[1][12] = 'Auto mix<br>with auto parrott<br>Monday at Noon<br>No Genre';
+      DH[1][14] = 'auto<br>with auto parrott<br>Monday at 2 PM<br>No Genre';
+      DH[1][16] = 'No Show Name<br>with Katy Cox<br>Monday at 4 PM<br>Rap';
+      DH[1][17] = 'The Greatest<br>with DJ Fresh<br>Monday at 5 PM<br>No Genre';
+      DH[1][18] = 'Revolution Corner<br>with Randy Underwood<br>Monday at 6 PM<br>No Genre';
+      DH[1][20] = 'Daily Affirmation<br>with DJ Hightower<br>Monday at 8 PM<br>No Genre';
+      DH[1][22] = 'No Show Name<br>with David Doggett<br>Monday 10 to Midnight<br>No Genre';
+      DH[1][23] = 'No Show Name<br>with David Doggett<br>Monday at 11 PM<br>No Genre';
+      DH[2][13] = 'No Show Name<br>with Michelle Caillouet<br>Tuesday at 1 PM<br>Rock';
+      DH[2][08] = 'Gingernation<br>with DJ Harvey<br>Tuesday at 8 AM<br>Mix n Match';
+      DH[2][16] = 'No Show Name<br>with Sweet Action Jackson<br>Tuesday at 4 PM<br>Rock';
+      DH[2][20] = 'The Rock Hour<br>with Dan the Man<br>Tuesday at 8 PM<br>No Genre';
+      DH[3][10] = 'Love Me! Hate Me!<br>with DJ Nia<br>Wednesday at 10 AM<br>No Genre';
+      DH[3][11] = 'Westcoast Wednesdays<br>with DJ Smoove<br>Wednesday at 11 AM<br>No Genre';
+      DH[3][15] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday 3 to 5 PM<br>Classic Rock';
+      DH[3][16] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday at 4 PM<br>Classic Rock';
+      DH[3][22] = 'EZ Does It<br>with DJ EZ<br>Wednesday at 10 PM<br>Rap';
+      DH[4][12] = 'automix<br>with autodj<br>Thursday Noon to 2 PM<br>mix';
+      DH[4][22] = 'Request Show<br>with Strawbs<br>Thursday 8 PM to 10pm<br>Mix n Match';
+      DH[4][13] = 'automix<br>with autodj<br>Thursday at 1 PM<br>mix';
+      DH[4][14] = 'The Hour<br>with DJ V-Jeezy<br>Thursday at 2 PM<br>No Genre';
+      DH[4][22] = 'Request Show<br>with DJ Strawbs<br>Thursday at 10 PM<br>No Genre';
+      DH[5][10] = 'Friday at 10 AM<br>Christian Music<br>with Jammin J';
+      DH[5][11] = 'Friday at 11 AM<br>Christian Music<br>with Jammin J';
+      DH[5][12] = 'Friday at Noon<br>automix<br>with autodj';
+      DH[5][13] = 'Friday at 1 PM<br>automix<br>with auto';
+      DH[5][09] = 'Friday at 9 AM<br>Mix n Match<br>with Will';
+      DH[5][14] = 'Friday at 2 PM<br>automix<br>with autodj';
+      DH[5][15] = 'Friday at 3 PM<br>automix<br>with autodj';
+      DH[5][16] = 'Friday at 4 PM<br>automix<br>with autodj';
+      DH[5][17] = 'Friday at 5 PM<br>automix<br>with autodj';
+      DH[5][19] = 'Friday at 7 PM<br>Mix n Match<br>with Will';
+      DH[5][22] = 'Friday at 10 PM<br>Dance/Trance<br>with Dean';
+      DH[5][23] = 'Friday at 11 PM<br>automix<br>with autodj';
+      DH[6][18] = 'Saturday at 6 PM<br>automix<br>with automix';
+      DH[6][19] = 'Saturday at 7 PM<br>Dance/Trance<br>with Dean';
+      DH[6][13] = 'Saturday at 1 PM<br>Old School/Reggae<br>with El Carlito';
+      DH[6][22] = 'Saturday at 10 PM<br>mix<br>with autodj';
+      DH[6][23] = 'Saturday at 11 PM<br>mix<br>with autodj';
+      DH[7][22] = 'Sunday at 8 PM<br>Request Show<br>with Strawbs';
+      DH[7][18] = 'Sunday at 6 PM<br>Old School/Reggae<br>with El Carlito';
+      // Add more when schedule is known. Note: there may be better ways to do this when information is known.
+      function OnNow() {
+        var thedate = new Date();
+        var dayofweek = thedate.getDay();
+        var hourofday = thedate.getHours();
+        // alert(dayofweek+':'+hourofday+'<br />'+DH[dayofweek][hourofday]);
+        var showOn = DH[dayofweek][hourofday];
+      }
+
+      function NowON() {
+        var thedate = new Date();
+        var dayofweek = thedate.getDay();
+        var hourofday = thedate.getHours();
+        var showOn = DH[dayofweek][hourofday];
+        if (showOn == '') {
+          showOn = thedate + '<p />No Show Scheduled';
+        }
+        document.getElementById('NowOn').innerHTML = showOn;
+      }
+    </script>
   </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class=" u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-header u-section-row-container" id="sec-ca7a" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=""><div class="u-section-rows">
-        <div class="u-black u-section-row u-section-row-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" id="sec-9880">
-          
-          
-          
-          
-          
-          <div class="u-clearfix u-sheet u-sheet-1">
-            <p class="u-align-center u-hidden-xl u-text u-text-default u-text-1">Feel Like Having You're BirthdayShow On Our Site? Send In You're BirthdayBelowfor example 12/09/89 plus you're name&nbsp;and we'll add it to our home page!</p>
-            <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/logo.png" alt="" data-image-width="250" data-image-height="250">
-            <div class="u-clearfix u-custom-html u-custom-html-1">
-              <div class="cc_player" data-username="coolvibes" data-size="sm" data-style="light">Loading ...</div><script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/player.js"></script>
-            </div>
-            <div class="u-social-icons u-spacing-10 u-social-icons-1">
-              <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/coolvibesuk"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d230"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d230"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
-c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
-              </a>
-              <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f2fa"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-f2fa"><path fill="currentColor" d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2
-	c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7
-	c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2
-	c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5
-	c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
-              </a>
-              <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name"><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ab1a"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-ab1a"><path fill="currentColor" d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z
-	 M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path fill="#FFFFFF" d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path fill="currentColor" d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7
-	V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7
-	c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
-              </a>
-            </div>
-            <img class="u-expanded-width-xs u-image u-image-default u-image-2" src="images/oie_DjJ6D2bF9vYO.png" alt="" data-image-width="871" data-image-height="178">
-            <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-              <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
-                <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-color u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#">
-                  <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-46f6"></use></svg>
-                  <svg class="u-svg-content" version="1.1" id="svg-46f6" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-                </a>
-              </div>
-              <div class="u-custom-menu u-nav-container">
-                <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-black u-black u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-black u-nav-link u-text-active-white u-text-hover-white" href="Home.html" style="padding: 10px 0px;">Home</a>
-</li><li class="u-nav-item"><a class="u-active-black u-black u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-black u-nav-link u-text-active-white u-text-hover-white" href="Birthday.html" style="padding: 10px 0px;">Birthday</a>
-</li><li class="u-nav-item"><a class="u-active-black u-black u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-button-style u-hover-black u-nav-link u-text-active-white u-text-hover-white" href="Tunein.html" style="padding: 10px 0px;">Tunein</a>
-</li></ul>
-              </div>
-              <div class="u-custom-menu u-nav-container-collapse">
-                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                  <div class="u-inner-container-layout u-sidenav-overflow">
-                    <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Birthday.html">Birthday</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Tunein.html">Tunein</a>
-</li></ul>
-                  </div>
-                </div>
-                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-              </div>
-            </nav>
-            
-            <h5 class="u-text u-text-default u-text-2">NOW PLAYING</h5>
-            <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-4" src="images/nav-removebg-preview.png" alt="" data-image-width="327" data-image-height="78">
-            <div class="u-align-right u-clearfix u-custom-html u-custom-html-2">
-              <span class="cc_streaminfo" data-type="song" data-username="coolvibes">Loading ...</span>
-              <script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/streaminfo.js"></script>
-            </div>
-            <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle u-gallery-item-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded" src="images/Laurs.jpg" data-image-width="250" data-image-height="128">
-              </div>
-              <div class="u-over-slide u-shading u-over-slide-1">
-                <h3 class="u-gallery-heading"></h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-            <div class="u-carousel u-expanded-width-xs u-gallery u-layout-carousel u-lightbox u-no-transition u-show-text-none u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-9387">
-              <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-                <li data-u-target="#carousel-9387" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                <li data-u-target="#carousel-9387" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                <li data-u-target="#carousel-9387" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-                <li data-u-target="#carousel-9387" data-u-slide-to="3" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-              </ol>
-              <div class="u-carousel-inner u-gallery-inner" role="listbox">
-                <div class="u-active u-carousel-item u-gallery-item u-carousel-item-1">
-                  <div class="u-back-slide" data-image-width="820" data-image-height="461">
-                    <img class="u-back-image u-expanded" src="images/slide1-820x461.png">
-                  </div>
-                  <div class="u-over-slide u-over-slide-2">
-                    <h3 class="u-gallery-heading"></h3>
-                    <p class="u-gallery-text"></p>
-                  </div>
-                </div>
-                <div class="u-carousel-item u-gallery-item u-carousel-item-2">
-                  <div class="u-back-slide" data-image-width="929" data-image-height="518">
-                    <img class="u-back-image u-expanded" src="images/slide1-2-929x518.png">
-                  </div>
-                  <div class="u-over-slide u-over-slide-3">
-                    <h3 class="u-gallery-heading"></h3>
-                    <p class="u-gallery-text"></p>
-                  </div>
-                </div>
-                <div class="u-carousel-item u-gallery-item u-carousel-item-3" data-image-width="820" data-image-height="461">
-                  <div class="u-back-slide" data-image-width="820" data-image-height="461">
-                    <img class="u-back-image u-expanded" src="images/oie_MDzpUGgfuaz8.jpg">
-                  </div>
-                  <div class="u-over-slide u-over-slide-4">
-                    <h3 class="u-gallery-heading"></h3>
-                    <p class="u-gallery-text"></p>
-                  </div>
-                  
-                  
-                  
-                  
-                  
-                </div>
-                <div class="u-carousel-item u-gallery-item u-carousel-item-4" data-image-width="820" data-image-height="461">
-                  <div class="u-back-slide">
-                    <img class="u-back-image u-expanded" src="images/oie_B0KM3oN3uThZ.jpg">
-                  </div>
-                  <div class="u-over-slide u-over-slide-5">
-                    <h3 class="u-gallery-heading"></h3>
-                    <p class="u-gallery-text"></p>
-                  </div>
-                  
-                  
-                  
-                  
-                  
-                </div>
-              </div>
-              <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-prev u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-9387" role="button" data-u-slide="prev">
-                <span aria-hidden="true">
-                  <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                </span>
-                <span class="sr-only">
-                  <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-                </span>
-              </a>
-              <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-next u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-9387" role="button" data-u-slide="next">
-                <span aria-hidden="true">
-                  <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                </span>
-                <span class="sr-only">
-                  <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-                </span>
-              </a>
+
+  <BODY onLoad="NowON()">
+    <!-- Unhide this if table display desired
+<script type="text/javascript">
+document.write(TableStationSchedule())
+</script>
+-->
+    <script type="text/javascript">
+      document.write(NowON());
+    </script>
+    <div id='NowOn' onClick="NowON()">Click For Now On COOLVIBES</div>
+  </body>
+
+</html>
+</center>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="/index.html" class="active">Home</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="/tunein.html">Tunein Again</a>
+    <a href="/mobile.html">Mobile</a>
+    <a href="/birthday.html">Birthday</a>
+	<a href="/featured.html">Featured</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div style="padding-left:16px">
+
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!-- Header -->
+
+  <!-- End Header -->
+  <!-- Start Presenters -->
+
+  <div align="right">
+  </div>
+  <html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#333" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,133.3C960,149,1056,171,1152,154.7C1248,139,1344,85,1392,58.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+
+    <div align="center">
+      <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+         <i class="fa-fw fas fa-snowflake"></i>Presenters!
+      </div>
+    </div>
+    </div>
+
+    <!-- Presenters Images -->
+    <div align="center">
+      <!-- MAIN (Center website) -->
+      <div class="main">
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column">
+            <div class="content">
+              <img src="images/strawb1.jpg" height="123" width="240"">
+              <style type="text/css">
+                .WimpyPlayerPopup204,
+                .WimpyPlayerPopup204:hover,
+                .WimpyPlayerPopup204:visited,
+                .WimpyPlayerPopup204:link {
+                  font-size: 20px;
+                  background-color: #CFC700;
+                  position: relative;
+                  display: inline-block;
+                  overflow: hidden;
+                  padding-left: 1em;
+                  padding-right: 1em;
+                  margin: 0px;
+                  -webkit-text-size-adjust: 100%;
+                  -ms-text-size-adjust: 100%;
+                  cursor: pointer;
+                  height: 2em;
+                  border-radius: 1em;
+                  -webkit-border-radius: 1em;
+                  -moz-border-radius: 1em;
+                  -ms-border-radius: 1em;
+                  -o-border-radius: 1em;
+                  border-style: solid;
+                  border-width: 1px;
+                  border-color: rgba(123, 126, 128, 1);
+                  box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), 0.85px 2.769px 3px rgba(0, 0, 0, 0.22817204301075278);
+                  -webkit-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), 0.852px 2.769px 3px rgba(0, 0, 0, 0.22817204301075278);
+                  -moz-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), 0.852px 2.769px 3px rgba(0, 0, 0, 0.22817204301075278);
+                  -ms-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), 0.852px 2.769px 3px rgba(0, 0, 0, 0.22817204301075278);
+                  -o-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), 0.852px 2.769px 3px rgba(0, 0, 0, 0.22817204301075278);
+                  white-space: nowrap;
+                  line-height: 1.9em;
+                  color: #fdfdfd;
+                  font-family: Arial, Helvetica, sans-serif;
+                  text-align: center;
+                  font-weight: normal;
+                  font-style: normal;
+                  text-shadow: -0.16px -1.16px 0.23597px rgba(0, 0, 0, 0.7), 0px 1.25px 6.7px #2e4a63;
+                  -webkit-text-shadow: -0.16px -1.16px 0.23597px rgba(0, 0, 0, 0.7), 0px 1.2px 6.7px #2e4a63;
+                  -moz-text-shadow: -0.16px -1.16px 0.23597px rgba(0, 0, 0, 0.7), 0px 1.25px 6.7px #2e4a63;
+                  -ms-text-shadow: -0.16px -1.16px 0.23597px rgba(0, 0, 0, 0.7), 0px 1.25px 6.7px #2e4a63;
+                  -o-text-shadow: -0.16px -1.16px 0.23597px rgba(0, 0, 0, 0.7), 0px 1.25px 6.7px #2e4a63;
+                  font-smooth: always;
+                  -webkit-font-smoothing: antialiased;
+                  text-decoration: none;
+                }
+
+                .WimpyPlayerPopup204:active {
+                  color: #cecece;
+                  background-color: #767676;
+                  border-color: rgba(26, 26, 26, 0.38);
+                  box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+                  -webkit-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+                  -moz-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+                  -ms-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+                  -o-box-shadow: inset 0.16px 0.28px 0.3px rgba(255, 255, 255, 0), inset -0.16px -0.28px 0.4px rgba(246, 246, 246, 0.3), inset 0px 0px 14px rgba(0, 0, 0, 0.4);
+                  text-shadow: none;
+                  -webkit-text-shadow: none;
+                  -moz-text-shadow: none;
+                  -ms-text-shadow: none;
+                  -o-text-shadow: none;
+                  text-decoration: none;
+                }
+              </style>
+              <a class="WimpyPlayerPopup204" href="javascript:;" onClick="window.open(')">Requests</a>
+
+              <p>
+              <p>If You Would Like a Tune Played, Strawbs Will Hunt It Down And Wack It On!</p>
+              </p>
             </div>
           </div>
-        </div>
-        <div class="u-black u-section-row u-section-row-2" id="sec-b4eb">
-          <div class="u-clearfix u-sheet u-sheet-2"></div>
-          
-          
-          
-          
-          
-        </div>
-      </div></header>
-    <section class="u-align-center u-black u-clearfix u-section-1" id="carousel_abfe">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-tab-links-align-center u-tabs u-tabs-1">
-          <ul class="u-spacing-0 u-tab-list u-unstyled" role="tablist">
-            <li class="u-tab-item" role="presentation">
-              <a class="active u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">Monday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">Tuesday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-3" id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917" aria-selected="false">Wednesday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-4" id="link-tab-b2e1" href="#tab-b2e1" role="tab" aria-controls="tab-b2e1" aria-selected="false">Thursday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-5" id="link-tab-f158" href="#tab-f158" role="tab" aria-controls="tab-f158" aria-selected="false">Friday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-6" id="link-tab-2a12" href="#tab-2a12" role="tab" aria-controls="tab-2a12" aria-selected="false">Saturday</a>
-            </li>
-            <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-4-base u-button-style u-custom-font u-font-montserrat u-tab-link u-text-active-black u-text-body-color u-text-hover-grey-75 u-white u-tab-link-7" id="link-tab-ee96" href="#tab-ee96" role="tab" aria-controls="tab-ee96" aria-selected="false">Sunday</a>
-            </li>
-          </ul>
-          <div class="u-tab-content">
-            <div class="u-align-left u-black u-container-style u-tab-active u-tab-pane u-tab-pane-1" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
-              <div class="u-container-layout u-container-layout-1">
-                <p class="u-text u-text-1">DJ LEVI 12PM - 3PM</p>
-                <p class="u-text u-text-2">DJ BUBBLES 6PM - 8PM</p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-2" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
-              <div class="u-container-layout u-container-layout-2">
-                <p class="u-text u-text-3">CLASSIC KAT 8AM - 10AM</p>
-                <p class="u-text u-text-4">RISHAB 10AM - 1PM</p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-3" id="tab-2917" role="tabpanel" aria-labelledby="link-tab-2917">
-              <div class="u-container-layout u-container-layout-3">
-                <p class="u-text u-text-default u-text-5">LEVI&nbsp; 7PM - 9PM</p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-4" id="tab-b2e1" role="tabpanel" aria-labelledby="link-tab-b2e1">
-              <div class="u-container-layout u-container-layout-4">
-                <p class="u-text u-text-default u-text-6">RISHAB 10AM - 1PM</p>
-                <p class="u-text u-text-default u-text-7">STRAWBS 6PM - 7PM</p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-5" id="tab-f158" role="tabpanel" aria-labelledby="link-tab-f158">
-              <div class="u-container-layout u-container-layout-5">
-                <p class="u-text u-text-default u-text-8">MOHIT 2PM - 4PM</p>
-                <p class="u-text u-text-default u-text-9">JOSH 11PM - 6PM</p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-6" id="tab-2a12" role="tabpanel" aria-labelledby="link-tab-2a12">
-              <div class="u-container-layout u-container-layout-6">
-                <p class="u-text u-text-default u-text-10">MOHIT 9PM - 10PM<span style="font-size: 1.25rem;"></span>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-left u-black u-container-style u-tab-pane u-tab-pane-7" id="tab-ee96" role="tabpanel" aria-labelledby="link-tab-ee96">
-              <div class="u-container-layout u-container-layout-7">
-                <p class="u-text u-text-default u-text-11">STRAWBS 6PM - 7PM<span style="font-size: 1.5rem;"></span>
-                </p>
-              </div>
+          <div class="column">
+            <div class="content">
+              <img src="images/jason.jpg" height="123" width="240">
+              <h3>DJ Reuben</h3>
+
             </div>
           </div>
-        </div>
-        <img class="u-image u-image-contain u-image-default u-image-1" src="images/nav-removebg-preview.png" alt="" data-image-width="327" data-image-height="78">
-        <h5 class="u-text u-text-default u-text-12">Schedule</h5>
-      </div>
-    </section>
-    <section class="u-align-center u-black u-clearfix u-section-2" id="carousel_ee90">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-custom-font u-text u-text-default u-text-1"> The best <span style="font-style: italic;" class="u-text-palette-5-base">DJ's</span>&nbsp;
-        </h2>
-        <div class="u-align-left u-clearfix u-gutter-38 u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="250" data-image-height="128">
-                    <div class="u-container-layout">
-                      <p class="u-align-center u-text u-text-body-alt-color u-text-default u-text-2">Strawbs</p>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="240" data-image-height="128">
-                    <div class="u-container-layout">
-                      <p class="u-align-center u-text u-text-body-alt-color u-text-default u-text-3">DJ Reuben</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-3" data-image-width="240" data-image-height="128">
-                    <div class="u-container-layout">
-                      <p class="u-align-center u-text u-text-body-alt-color u-text-default u-text-4">DJ SIMON</p>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-4" data-image-width="250" data-image-height="128">
-                    <div class="u-container-layout u-valign-bottom u-container-layout-4">
-                      <p class="u-align-center u-text u-text-body-alt-color u-text-default u-text-5">Rishab</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="column">
+            <div class="content">
+              <img src="images/deano.jpg" height="123" width="240">
+              <h3>Deano</h3>
+
             </div>
           </div>
+          <div class="column">
+            <div class="content">
+              <img src="images/kayley1.jpg" height="123" width="240">
+              <h3>Kayley</h3>
+
+            </div>
+          </div>
+          <!-- END GRID -->
         </div>
-        <h2 class="u-custom-font u-text u-text-default u-text-6">Managers</h2>
-        <img class="u-image u-image-default u-image-5" src="images/kayley.jpg" alt="" data-image-width="250" data-image-height="128" data-href="Strawbs.html" title="Strawbs" data-target="_blank">
-        <img class="u-image u-image-default u-image-6" src="images/Laurs.jpg" alt="" data-image-width="250" data-image-height="128" data-href="Strawbs.html" title="Strawbs" data-target="_blank">
-        <p class="u-align-center u-text u-text-default u-text-7">Laura</p>
-        <p class="u-align-center u-text u-text-default u-text-8">Classic Kat</p>
+
+        <!-- END MAIN -->
       </div>
-    </section>
-    <section class="u-black u-clearfix u-section-3" id="carousel_1c92">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-custom-font u-text u-text-default u-text-1">Other Ways Of&nbsp; <span class="u-text-palette-1-base">T</span>
-          <span class="u-text-palette-1-base">uning In</span>
-        </h2>
-        <p class="u-align-center u-text u-text-default u-text-2">Download The Get Me Radio Roku Tv App<br>From There Search Coolvibes-Reloaded
-        </p>
-        <p class="u-align-center u-text u-text-default u-text-3">Download The Get Me Radio Android App<br>From There Search Coolvibes-Reloaded
-        </p>
+    </div>
+    </div>
+
+    <!-- End Presenters Images -->
+    </div>
+
+    <!-- END MAIN -->
+
+    <!-- Finish Presenters -->
+
+    <!-- Start Programs -->
+    <p style="page-break-before: always">
+    <div align="center">
+      <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+         <i class="fa-fw fas fa-snowflake"></i>Programs!
       </div>
-    </section>
-    <section class="u-black u-clearfix u-section-4" id="sec-710d">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h5 class="u-text u-text-default u-text-1">OUR PROGRAMS</h5>
-        <img class="u-image u-image-default u-image-1" src="images/oie_NpnvSawoC1A1.jpg" alt="" data-image-width="276" data-image-height="194" data-href="Strawbs.html" title="Strawbs" data-target="_blank">
-        <img class="u-image u-image-default u-image-2" src="images/classickat.jpg" alt="" data-image-width="268" data-image-height="188">
-        <img class="u-image u-image-contain u-image-default u-image-3" src="images/nav-removebg-preview.png" alt="" data-image-width="327" data-image-height="78">
+    </div>
+    <div class="sidebar s1">
+
+      <a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+
+      <div class="sidebar-content">
+
+        <div class="sidebar-top group">
+
+          <br>
+
+          <html>
+
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          </head>
+
+  <body>
+
+<table>
+  <tr>
+    <th>Kayley's Show</th>
+    <th>Strawb's Show</th>
+    <th>Ray's Show</th>
+    <th>G-Force Reggae</th>
+    <th>New Presenter</th>
+  </tr>
+  <tr>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+    <td><a href="http://shoutcastservices.uk/DJ-Ray/"target="_blank"><b>Click here for DJ Ray</b></a></td>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+  </tr>
+  <tr>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+    <td>New Presenter</td>
+  </tr>
+</table>
+
+  </body>
+
+  </html>
+  <p style="page-break-before: always">
+
+  <div align="right">
+    <html>
+
+    <head>
+      <!-- text area -->
+
+      <!-- Start Currently Playing -->
+      <div align="right">
+        <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+           <i class="fa-fw fas fa-snowflake"></i>Currently Playing!
+        </div>
       </div>
-    </section>
-    <section class="u-black u-clearfix u-section-5" id="sec-e8bd">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-text u-text-default u-text-1">Updated Music</p>
-        <img class="u-image u-image-default u-image-1" src="images/lilbaby.jpg" alt="" data-image-width="1280" data-image-height="720">
-        <img class="u-image u-image-contain u-image-default u-image-2" src="images/nav-removebg-preview.png" alt="" data-image-width="327" data-image-height="78">
-        <img class="u-image u-image-default u-image-3" src="images/maxresdefault.jpg" alt="" data-image-width="1280" data-image-height="720">
-        <p class="u-text u-text-default u-text-2">
-          <a href="https://okhype.com/hiphop-music/lil-baby-california-breeze/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Lil Baby-California Breeze</a>
-        </p>
-        <a href="https://open.spotify.com/track/1xzi1Jcr7mEi9K2RfzLOqS" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Beyonce</a>
-      </div>
-    </section>
-    <section class="u-black u-clearfix u-section-6" id="sec-220d">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <img class="u-image u-image-contain u-image-default u-image-1" src="images/nav-removebg-preview.png" alt="" data-image-width="327" data-image-height="78">
-        <h6 class="u-align-center u-text u-text-default u-text-1">Music Submissions</h6>
-        <p class="u-align-center u-text u-text-default u-text-2">Are You An Artist But Would Love To Air Your Music?<br>Sure All Ya Ave Do Is Submit Your Music To Us. Must Be MP3 ONLY
-        </p>
-        <a href="mailto:coolvibes1989@gmail.com?subject=Submission" class="u-btn u-button-style u-gradient u-none u-text-body-alt-color u-btn-1">Submit You're Music</a>
-      </div>
-    </section>
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-157c"><div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">coolvibes-reloaded</p>
-        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/powered-by-light150.png" alt="" data-image-width="151" data-image-height="62">
-        <p class="u-small-text u-text u-text-variant u-text-2">Site Made And Copywrited By&nbsp; JnL Creations</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
+      <!-- end currently playing -->
+
+    </head>
+
+    <body>
+      <!-- End text area -->
+
+      <p class="round3"><span class="cc_streaminfo" data-type="song" data-username="coolvibes">Loading ...</span>
+        <script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/streaminfo.js"></script>
+        <br /><img class="cc_streaminfo" data-type="trackimageurl" data-username="coolvibes" /><br /><a href="#" class="cc_streaminfo" data-type="trackbuyurl" data-username="coolvibes"></a><br />
       </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+      <hr />
+
+      <!-- Start Coolvibes Babe Of The Month! -->
+      <div align="right">
+        <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+          <h3>Smart Babe Of The Month!</h3>
+        </div>
+      </div>
+      <div align="right"><img src="images/jen.jpg" height="100px" width="100px">
+      </div>
+  </div>
+  <!-- Finish Coolvibes Babe Of The Month! -->
+</body>
+
+</html>
+</div>
+<!-- End Programs -->
+
+<!-- Social -->
+<div align="right">
+  <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+    <h3>
+      <div class="tree" id="mkm">Social!
+    </h3>
+  </div>
+</div>
+</div>
+
+<div align="right"><a href="https://facebook.com/coolvibesuk"><img src="https://img.icons8.com/nolan/64/facebook-f.png" style="width:100px;height:100px;"></a>
+  <a href="https://www.instagram.com/coolvibesradio/?hl=en-gb"><img src="https://img.icons8.com/nolan/64/instagram-new.png" style="width:100px;height:100px;"></a></center>
+  <a href="https://twitter.com/coolvibesradio"><img src="https://img.icons8.com/nolan/64/twitter-squared.png" style="width:100px;height:100px;"></a></center>
+</div>
+</div>
+</div>
+</div>
+
+<div align="center">
+  <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+     <i class="fa-fw fas fa-snowflake"></i>Entertainment!
+  </div>
+</div>
+
+<html>
+
+<head>
+</head>
+
+<body>
+  <iframe src="https://www.mysitemapgenerator.com/embed/rss/0/890cca91d762302a7c1fa8a34be73ac6" width="100%" height="580" frameborder=0></iframe>
   
-</body></html>
+  <div align="center">
+      <div style="height: 40px;width: 300px; background-color: #A00000;color:white;">
+         <i class="fa-fw fas fa-snowflake"></i>Special!
+      </div>
+    </div>
+    </div>
+    <div align="center"><img src="images/funny.jpg" height="100px" width="100px">
+      </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+
+        <div align="center">
+          <h3>
+            <p>other ways of tuneing in</p>
+          </h3>
+          <div id="cc_tunein">
+            <a href="http://boogie.vside-radio.com:2199/tunein/coolvibes.pls"><img align="absmiddle" src="http://boogie.vside-radio.com:2199/system/images/tunein-pls.png" border="0" alt="Winamp, iTunes" title="Winamp, iTunes" /></a>
+            <a href="http://boogie.vside-radio.com:2199/tunein/coolvibes.asx"><img align="absmiddle" src="http://boogie.vside-radio.com:2199/system/images/tunein-asx.png" border="0" alt="Windows Media Player" title="Windows Media Player" /></a>
+            <a href="http://boogie.vside-radio.com:2199/tunein/coolvibes.ram"><img align="absmiddle" src="http://boogie.vside-radio.com:2199/system/images/tunein-ram.png" border="0" alt="Real Player" title="Real Player" /></a>
+            <a href="http://boogie.vside-radio.com:2199/tunein/coolvibes.qtl"><img align="absmiddle" src="http://boogie.vside-radio.com:2199/system/images/tunein-qtl.png" border="0" alt="QuickTime" title="QuickTime" /></a>
+            <center>
+              <p>ways of tunein in</p>
+            </center>
+            <center>
+              <p>Download the Get Me Radio! Roku TV App from <a href="https://channelstore.roku.com/en-gb/details/b97490a8fb5758527be0396e43422e42/get-me-radio">here</a> and then search for Coolvibes Radio.
+            </center>
+            </p>
+            <center>
+              <p>Download the Get Me Radio! Android App <a href="https://play.google.com/store/apps/details?id=com.getmeradio.gmr">from here</a> and search for Coolvibes Radio on our Mobile App.
+            </center>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <div>
+    <center>© Copyright 2021 | 2024 <strong>Coolvibes Reloaded</strong> | All Rights Reserved | Site by <a href="http://www.coolvibes-reloaded.com/" target="_blank">coolvibes</a>
+  </div>
+  </center>
+
+  <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script src='https://codepen.io/_fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>
+</body>
+</html>
