@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0);
   color: #00bcd4;
   line-height: 2;
   text-align: justify;
@@ -189,7 +189,7 @@ body {
   }
 
   body {
-    background-color: #050505;
+    background-color: #000000;
     padding: 20px;
     font-family: Arial;
   }
@@ -230,7 +230,7 @@ body {
 
   /* Content */
   .content {
-    background-color: #030303;
+    background-color: #03030300;
     padding: 10px;
   }
 
@@ -318,14 +318,14 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #126a56;
   text-align: left;
   padding: 8px;
   box-shadow: #ffcc00;
 }
 
 tr:nth-child(even) {
-  background-color: #442626;
+  background-color: #053631;
   box-shadow: #ffcc00;
 }
 
