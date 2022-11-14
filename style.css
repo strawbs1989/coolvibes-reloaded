@@ -7,7 +7,7 @@ body {
   color: #00bcd4;
   line-height: 2;
   text-align: justify;
-  font-family: verdana, arial, helvetica;
+  font-family: Future Now;
 }
 
 @media only screen and (min-width: 600px) {
@@ -124,7 +124,7 @@ body {
   }
 
   table {
-    font-family: arial, sans-serif;
+    font-family: Future Now;
     border-collapse: collapse;
     width: 100%;
   }
@@ -145,7 +145,7 @@ body {
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Future Now;
   }
 
   /* Float four columns side by side */
@@ -191,7 +191,7 @@ body {
   body {
     background-color: #000000;
     padding: 20px;
-    font-family: Arial;
+    font-family: Future Now;
   }
 
   /* Center website */
@@ -251,7 +251,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Future Now;
 }
 
 .topnav {
@@ -310,7 +310,7 @@ body {
 }
 
 table {
-  font-family: arial, sans-serif;
+  font-family: Future Now;
   border-collapse: collapse;
   width: 100%;
   background-color: #060606;
