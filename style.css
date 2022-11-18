@@ -1,4 +1,8 @@
 
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -357,3 +361,13 @@ ul {
 li i {
   margin-right: 20px;
 }
+
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
