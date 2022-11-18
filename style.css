@@ -16,29 +16,7 @@ audio::-webkit-media-controls-panel {
   background-image: linear-gradient(+130deg, DarkTurquoise, DarkBlue);
 }
 
-function current_song_name() {
-    $ch = curl_init();
- 
-// URL for Scraping
-curl_setopt($ch, CURLOPT_URL,'http://coolvibes.boogie.vside-radio.com:8406/status.xsl');
- 
-// Return Transfer True
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$output = curl_exec($ch);
-$dom = new DOMDocument();
-@$dom->loadHTML($output);
-$xpath = new DomXPath($dom);
-$inputs = $dom->getElementsByTagName('td');
-$data = array();
-foreach($inputs as $input):
-    $data[] = $input->textContent;
-endforeach;
-echo 'Currently playing: '.end($data);
 
-// Closing cURL
-curl_close($ch);
-
-}
 body {
   background-color: rgb(255 255 255);
   color: #000;
