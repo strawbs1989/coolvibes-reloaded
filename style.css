@@ -6,9 +6,42 @@
 @import url(//fonts.googleapis.com/css?
 family=Open+Sans);
 
+.img {
+  float: right;
+  top: 20px;
+  bottom: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-image: linear-gradient(+130deg, DarkTurquoise, DarkBlue);
+}
+
+function current_song_name() {
+    $ch = curl_init();
+ 
+// URL for Scraping
+curl_setopt($ch, CURLOPT_URL,'http://coolvibes.boogie.vside-radio.com:8406/status.xsl');
+ 
+// Return Transfer True
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$output = curl_exec($ch);
+$dom = new DOMDocument();
+@$dom->loadHTML($output);
+$xpath = new DomXPath($dom);
+$inputs = $dom->getElementsByTagName('td');
+$data = array();
+foreach($inputs as $input):
+    $data[] = $input->textContent;
+endforeach;
+echo 'Currently playing: '.end($data);
+
+// Closing cURL
+curl_close($ch);
+
+}
 body {
-  background-color: rgb(0 0 0);
-  color: #00bcd4;
+  background-color: rgb(255 255 255);
+  color: #000;
   line-height: 2;
   text-align: justify;
   font-family: 'Future Now', sans-serif;
@@ -60,7 +93,7 @@ body {
   }
 
   nav ul li a {
-    background-color: lightblue;
+    background-image: linear-gradient(+130deg, DarkTurquoise, DarkBlue);
     height: 45px;
     padding: 5px 35px;
     border-radius: 10px;
@@ -145,7 +178,7 @@ body {
   }
 
   tr:nth-child(even) {
-    background-color: #dd8383;
+    background-color: #fcffff;
   }
 
   * {
@@ -197,7 +230,7 @@ body {
   }
 
   body {
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 20px;
     font-family: Future Now;
   }
@@ -264,7 +297,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #00bcd487;
+  background-image: linear-gradient(+130deg, DarkTurquoise, DarkBlue);
 }
 
 .topnav a {
@@ -318,11 +351,11 @@ body {
 }
 
 table {
-  font-family: Future Now;
+  font-family: sans-serif;
   border-collapse: collapse;
   width: 100%;
-  background-color: #060606;
-  box-shadow: 0 4px 8px 0 #e91e63;
+  background-color: #1d69b1;
+  box-shadow: 0 4px 8px 0 #3333ff;
 }
 
 td, th {
@@ -333,7 +366,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #053631;
+  background-color: #fff;
   box-shadow: #ffcc00;
 }
 

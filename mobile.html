@@ -1,29 +1,218 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-<head>
-    <title>Coolvibes-Reloaded</title>
-	<meta charset="utf-8">
-	<meta name="keywords" content="UK, Eritrea, Europe, 
-	East Africa">
-	<meta name="description" content="coolvibes reloaded we provide different
-	music that many online radio stations don't ">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./style.css">
+	<link href="//db.onlinewebfonts.com/c/312b980d3cfe638ce7c139f0dd99e1e2?family=Future+Now" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <html>
+      <title>Coolvibes|Reloaded</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/w3.css">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/fonts.css">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+
+
+<div style="position:relative; height:60px;">
+  <img src="https://coolvibes-reloaded.com/images/logo.png" style="position:relative; top:-0px; right:-200px; width:200px; height:120px; border:none;" />
+</div>
+
+<div align="right"><div style="position:relative; height:60px;">
+  <audio src="http://scotspaul.vside-radio.com:7355/stream"
+  _=1" controls="true" class="audio-1">
+  </audio>
+  <style="position:relative; top:-0px; right:-200px; width:200px; height:120px; border:none;" />
+</div></div>
+
+
+
+
+
+
+
+     
+     
+      <center>
+        <p>You're Tuned To</p>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+        <head>
+          <div id="snow"></div>
+          <title>Station Activity</title>
+
+          <style type="text/css">
+            td {
+              font-size: 0.6em;
+            }
+
+            /* temporary for testing purposes */
+            #NowOn {
+              border: 0px solid black;
+              font-size: 11.5px;
+			  font-family: future_now;
+              color: #00bcd4;
+              background: transparent;
+              height: 65px;
+              width: 350px;
+            }
+
+          </style>
+
+          <script type="text/javascript">
+            /* NOT CURRENTLY USED
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+
+var GMT = new Date().getTimezoneOffset();
+var offsetGMT = +1 new Date().getTimezoneOffset()/01:00;
+*/
+            // Sun=0 1 2 3 4 5 Sat=6
+            var DayOfWeek = new Array('Weekend', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend');
+            var NoShow = 'No Show Scheduled<br />for COOLVIBES';
+            var DH = new Array(7);
+            for (d = 0; d < 7; d++) {
+              DH[d] = new Array(24);
+              for (h = 0; h < 24; h++) {
+                DH[d][h] = '';
+              }
+            }
+            DH[1][10] = 'Monday at 10 AM<br>AUTOMIX<br>with auto';
+            DH[1][08] = 'Monday at 8 AM<br>AUTOMIX<br>with auto';
+            DH[1][12] = 'Auto mix<br>with auto parrott<br>Monday at Noon<br>No Genre';
+            DH[1][14] = 'auto<br>with auto parrott<br>Monday at 2 PM<br>No Genre';
+            DH[1][16] = 'No Show Name<br>with Katy Cox<br>Monday at 4 PM<br>Rap';
+            DH[1][17] = 'The Greatest<br>with DJ Fresh<br>Monday at 5 PM<br>No Genre';
+            DH[1][18] = 'Revolution Corner<br>with Randy Underwood<br>Monday at 6 PM<br>No Genre';
+            DH[1][20] = 'Daily Affirmation<br>with DJ Hightower<br>Monday at 8 PM<br>No Genre';
+            DH[1][22] = 'No Show Name<br>with David Doggett<br>Monday 10 to Midnight<br>No Genre';
+            DH[1][23] = 'No Show Name<br>with David Doggett<br>Monday at 11 PM<br>No Genre';
+            DH[2][13] = 'No Show Name<br>with Michelle Caillouet<br>Tuesday at 1 PM<br>Rock';
+            DH[2][08] = 'No Show Name<br>with Sweet Action Jackson<br>Tuesday at 4 PM<br>Rock';
+            DH[2][16] = 'No Show Name<br>with Sweet Action Jackson<br>Tuesday at 4 PM<br>Rock';
+            DH[2][20] = 'The Rock Hour<br>with Dan the Man<br>Tuesday at 8 PM<br>No Genre';
+            DH[3][10] = 'Love Me! Hate Me!<br>with DJ Nia<br>Wednesday at 10 AM<br>No Genre';
+            DH[3][11] = 'Westcoast Wednesdays<br>with DJ Smoove<br>Wednesday at 11 AM<br>No Genre';
+            DH[3][15] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday 3 to 5 PM<br>Classic Rock';
+            DH[3][16] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday at 4 PM<br>Classic Rock';
+            DH[3][22] = 'EZ Does It<br>with DJ EZ<br>Wednesday at 10 PM<br>Rap';
+            DH[4][12] = 'automix<br>with autodj<br>Thursday Noon to 2 PM<br>mix';
+            DH[4][22] = 'Request Show<br>with Strawbs<br>Thursday 8 PM to 10pm<br>Mix n Match';
+            DH[4][13] = 'automix<br>with autodj<br>Thursday at 1 PM<br>mix';
+            DH[4][14] = 'The Hour<br>with DJ V-Jeezy<br>Thursday at 2 PM<br>No Genre';
+            DH[4][22] = 'Request Show<br>with DJ Strawbs<br>Thursday at 10 PM<br>No Genre';
+            DH[5][10] = 'Friday at 10 AM<br>Christian Music<br>with Jammin J';
+            DH[5][11] = 'Friday at 11 AM<br>Christian Music<br>with Jammin J';
+            DH[5][12] = 'Friday at Noon<br>automix<br>with autodj';
+            DH[5][13] = 'Friday at 1 PM<br>automix<br>with auto';
+            DH[5][09] = 'Friday at 9 AM<br>Mix n Match<br>with Will';
+            DH[5][14] = 'Friday at 2 PM<br>automix<br>with autodj';
+            DH[5][15] = 'Friday at 3 PM<br>automix<br>with autodj';
+            DH[5][16] = 'Friday at 4 PM<br>automix<br>with autodj';
+            DH[5][17] = 'Friday at 5 PM<br>automix<br>with autodj';
+            DH[5][19] = 'Friday at 7 PM<br>Mix n Match<br>with Will';
+            DH[5][22] = 'Friday at 10 PM<br>Dance/Trance<br>with Dean';
+            DH[5][23] = 'Friday at 11 PM<br>automix<br>with autodj';
+            DH[6][18] = 'Saturday at 6 PM<br>automix<br>with automix';
+            DH[6][19] = 'Saturday at 7 PM<br>Dance/Trance<br>with Dean';
+            DH[6][13] = 'Saturday at 1 PM<br>Old School/Reggae<br>with El Carlito';
+            DH[6][22] = 'Saturday at 10 PM<br>mix<br>with autodj';
+            DH[6][23] = 'Saturday at 11 PM<br>mix<br>with autodj';
+            DH[7][18] = 'Sunday   at 18 pm<br>Request Show<br>with Strawbs';
+            DH[7][21] = 'Sunday   at 9 PM<br>Old School/Reggae<br>with El Carlito';
+            // Add more when schedule is known. Note: there may be better ways to do this when information is known.
+            function OnNow() {
+              var thedate = new Date();
+              var dayofweek = thedate.getDay();
+              var hourofday = thedate.getHours();
+              // alert(dayofweek+':'+hourofday+'<br />'+DH[dayofweek][hourofday]);
+              var showOn = DH[dayofweek][hourofday];
+            }
+
+            function NowON() {
+              var thedate = new Date();
+              var dayofweek = thedate.getDay();
+              var hourofday = thedate.getHours();
+              var showOn = DH[dayofweek][hourofday];
+              if (showOn == '') {
+                showOn = thedate + '<p />No Show Scheduled';
+              }
+              document.getElementById('NowOn').innerHTML = showOn;
+            }
+
+          </script>
+        </head>
+
+        <BODY onLoad="NowON()"></BODY>
+        <!-- Unhide this if table display desired
+<script type="text/javascript">
+document.write(TableStationSchedule())
+</script>
+-->
+        <script type="text/javascript">
+          document.write(NowON));
+
+        </script>
+        <div id='NowOn' onClick="NowON()">Click For Now On COOLVIBES</div>
+      </center>
+
+    </html>
+
+  </body>
+
+</html>
+
+
 <body>
-       
-<header>
+</body>
 
+  <div class="topnav" id="myTopnav">
+    <a href="https://coolvibes-reloaded.com/index.html" class="active">Home</a>
+    <a href="https://coolvibes-reloaded.com/Schedule.html">Schedule</a>
+    <a href="https://coolvibes-reloaded.com/tunein.html">Tunein Again</a>
+    <a href="https://coolvibes-reloaded.com/mobile.html">Mobile</a>
+    <a href="https://coolvibes-reloaded.com/Birthday.html">Birthday</a>
+	<a href="https://coolvibes-reloaded.com/featured.html">Featured</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
+  <div style="padding-left:16px">
 
-<!-- header section starts -->
+  </div>
 
-<div class="header">
-    <center><div class="cc_player" data-username="coolvibes">Loading ...</div>
-	<script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/player.js"></script>
-    <img src="https://coolvibes.w3spaces.com/vibeslogo.png" height="160" width="160" class-"LOGO" alt="coolvibes alightens you with tons of different tunes to entertain you"></center>
-	<p class="round3"><span class="cc_streaminfo" data-type="song" data-username="coolvibes">Loading ...</span>
-	<script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/streaminfo.js"></script>
-	<br /><img class="cc_streaminfo" data-type="trackimageurl" data-username="coolvibes" /><br /><a href="#" class="cc_streaminfo" data-type="trackbuyurl" data-username="coolvibes"></a><br /></p>
-	
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!-- Header -->
+
+  <!-- End Header -->
+  <!-- Start Presenters -->
+
+  <div align="right">
+  </div>
+  <html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#6666ff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,133.3C960,149,1056,171,1152,154.7C1248,139,1344,85,1392,58.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>

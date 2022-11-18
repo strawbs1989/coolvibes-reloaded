@@ -1,201 +1,226 @@
-<html>
-<title>Coolvibes|Reloaded</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="main_news.css">
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./style.css">
+	<link href="//db.onlinewebfonts.com/c/312b980d3cfe638ce7c139f0dd99e1e2?family=Future+Now" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <html>
+      <title>Coolvibes|Reloaded</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/w3.css">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/fonts.css">
+      <link rel="stylesheet" href="http://coolvibes-reloaded.com/font-awesome.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 
 
-<!-- Start Audio Player -->
-<div id="lor-horizontal-player"><div class="lor-horizontal-player-main-bg"><a href="https://www.listenonlineradio.com/uk/coolvibes-reloaded" target="_blank"><img src="https://www.listenonlineradio.com/wp-content/uploads/Coolvibes-Reloaded.jpg" alt="Coolvibes Reloaded" class="lor-horizontal-player-station-img"></a><a onclick="popupPlayer(this.href,'playerWindow','370','800','0','0','yes');return false" href="http://player.listenonlineradio.com/uk/coolvibes-reloaded" target="_blank" class="lor-horizontal-player-play-icon" title="Play"><img src="https://listenonlineradio.com/widgets/play.svg" class="lor-horizontal-player-play-icon-img" alt="play-icon"></a><div class="lor-horizontal-player-station-details"><span id="get-lor-horizontal-player-station-title" class="lor-horizontal-player-station-title text-marquee">Coolvibes Reloaded</span><span id="get-lor-horizontal-player-station-slogan" class="lor-horizontal-player-station-slogan text-marquee">We want to rock with you</span></div><span class="lor-horizontal-player-gradient"></span><a class="lor-horizontal-player-lor-logo" href="https://www.listenonlineradio.com/" target="_blank" title="Listen Online Radio"></a></div><script id="lor-horizontal-player-js" src="https://listenonlineradio.com/widgets/lor-horizontal-player-light.min.js"></script></div>
-<!-- End Audio Player --> 
-<center><img src="images\header.jpg" height="123" width="970" class-"LOGO" alt="coolvibes alightens you with tons of different tunes to entertain you"></center>
-	
-<!-- Header/menu -->
-<style>
-body {margin:0;font-family:Arial}
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-.with-sidebar {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.sidebar {
-  flex-basis: 20rem;
-  flex-grow: 1;
-}
-
-.not-sidebar {
-  flex-basis: 0;
-  flex-grow: 999;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.active {
-  background-color: #000;
-  color: black;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-</style>
-</head>
-<body>
-
-<body>
-
-<div class="topnav" id="myTopnav">
-  <a href="/index.html" class="active">Home</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="/tunein.html">Tunein Again</a>
-  <a href="/mobile.html">Mobile</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+<div style="position:relative; height:60px;">
+  <img src="https://coolvibes-reloaded.com/images/logo.png" style="position:relative; top:-0px; right:-200px; width:200px; height:120px; border:none;" />
 </div>
 
-<div style="padding-left:16px">
+<div align="right"><div style="position:relative; height:60px;">
+  <audio src="http://scotspaul.vside-radio.com:7355/stream"
+  _=1" controls="true" class="audio-1">
+  </audio>
+  <style="position:relative; top:-0px; right:-200px; width:200px; height:120px; border:none;" />
+</div></div>
 
-</div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script> 
-  
-  
 
-  <!-- Header -->
-  
-    
+
+
+
+
      
-    </div>
-    </div>
-  </header>
+     
+      <center>
+        <p>You're Tuned To</p>
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+        <head>
+          <div id="snow"></div>
+          <title>Station Activity</title>
+
+          <style type="text/css">
+            td {
+              font-size: 0.6em;
+            }
+
+            /* temporary for testing purposes */
+            #NowOn {
+              border: 0px solid black;
+              font-size: 11.5px;
+			  font-family: future_now;
+              color: #00bcd4;
+              background: transparent;
+              height: 65px;
+              width: 350px;
+            }
+
+          </style>
+
+          <script type="text/javascript">
+            /* NOT CURRENTLY USED
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+
+var GMT = new Date().getTimezoneOffset();
+var offsetGMT = +1 new Date().getTimezoneOffset()/01:00;
+*/
+            // Sun=0 1 2 3 4 5 Sat=6
+            var DayOfWeek = new Array('Weekend', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend');
+            var NoShow = 'No Show Scheduled<br />for COOLVIBES';
+            var DH = new Array(7);
+            for (d = 0; d < 7; d++) {
+              DH[d] = new Array(24);
+              for (h = 0; h < 24; h++) {
+                DH[d][h] = '';
+              }
+            }
+            DH[1][10] = 'Monday at 10 AM<br>AUTOMIX<br>with auto';
+            DH[1][08] = 'Monday at 8 AM<br>AUTOMIX<br>with auto';
+            DH[1][12] = 'Auto mix<br>with auto parrott<br>Monday at Noon<br>No Genre';
+            DH[1][14] = 'auto<br>with auto parrott<br>Monday at 2 PM<br>No Genre';
+            DH[1][16] = 'No Show Name<br>with Katy Cox<br>Monday at 4 PM<br>Rap';
+            DH[1][17] = 'The Greatest<br>with DJ Fresh<br>Monday at 5 PM<br>No Genre';
+            DH[1][18] = 'Revolution Corner<br>with Randy Underwood<br>Monday at 6 PM<br>No Genre';
+            DH[1][20] = 'Daily Affirmation<br>with DJ Hightower<br>Monday at 8 PM<br>No Genre';
+            DH[1][22] = 'No Show Name<br>with David Doggett<br>Monday 10 to Midnight<br>No Genre';
+            DH[1][23] = 'No Show Name<br>with David Doggett<br>Monday at 11 PM<br>No Genre';
+            DH[2][13] = 'No Show Name<br>with Michelle Caillouet<br>Tuesday at 1 PM<br>Rock';
+            DH[2][08] = 'No Show Name<br>with Sweet Action Jackson<br>Tuesday at 4 PM<br>Rock';
+            DH[2][16] = 'No Show Name<br>with Sweet Action Jackson<br>Tuesday at 4 PM<br>Rock';
+            DH[2][20] = 'The Rock Hour<br>with Dan the Man<br>Tuesday at 8 PM<br>No Genre';
+            DH[3][10] = 'Love Me! Hate Me!<br>with DJ Nia<br>Wednesday at 10 AM<br>No Genre';
+            DH[3][11] = 'Westcoast Wednesdays<br>with DJ Smoove<br>Wednesday at 11 AM<br>No Genre';
+            DH[3][15] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday 3 to 5 PM<br>Classic Rock';
+            DH[3][16] = 'The Storm Hour<br>with the Weatherman and Reba<br>Wednesday at 4 PM<br>Classic Rock';
+            DH[3][22] = 'EZ Does It<br>with DJ EZ<br>Wednesday at 10 PM<br>Rap';
+            DH[4][12] = 'automix<br>with autodj<br>Thursday Noon to 2 PM<br>mix';
+            DH[4][22] = 'Request Show<br>with Strawbs<br>Thursday 8 PM to 10pm<br>Mix n Match';
+            DH[4][13] = 'automix<br>with autodj<br>Thursday at 1 PM<br>mix';
+            DH[4][14] = 'The Hour<br>with DJ V-Jeezy<br>Thursday at 2 PM<br>No Genre';
+            DH[4][22] = 'Request Show<br>with DJ Strawbs<br>Thursday at 10 PM<br>No Genre';
+            DH[5][10] = 'Friday at 10 AM<br>Christian Music<br>with Jammin J';
+            DH[5][11] = 'Friday at 11 AM<br>Christian Music<br>with Jammin J';
+            DH[5][12] = 'Friday at Noon<br>automix<br>with autodj';
+            DH[5][13] = 'Friday at 1 PM<br>automix<br>with auto';
+            DH[5][09] = 'Friday at 9 AM<br>Mix n Match<br>with Will';
+            DH[5][14] = 'Friday at 2 PM<br>automix<br>with autodj';
+            DH[5][15] = 'Friday at 3 PM<br>automix<br>with autodj';
+            DH[5][16] = 'Friday at 4 PM<br>automix<br>with autodj';
+            DH[5][17] = 'Friday at 5 PM<br>automix<br>with autodj';
+            DH[5][19] = 'Friday at 7 PM<br>Mix n Match<br>with Will';
+            DH[5][22] = 'Friday at 10 PM<br>Dance/Trance<br>with Dean';
+            DH[5][23] = 'Friday at 11 PM<br>automix<br>with autodj';
+            DH[6][18] = 'Saturday at 6 PM<br>automix<br>with automix';
+            DH[6][19] = 'Saturday at 7 PM<br>Dance/Trance<br>with Dean';
+            DH[6][13] = 'Saturday at 1 PM<br>Old School/Reggae<br>with El Carlito';
+            DH[6][22] = 'Saturday at 10 PM<br>mix<br>with autodj';
+            DH[6][23] = 'Saturday at 11 PM<br>mix<br>with autodj';
+            DH[7][18] = 'Sunday   at 18 pm<br>Request Show<br>with Strawbs';
+            DH[7][21] = 'Sunday   at 9 PM<br>Old School/Reggae<br>with El Carlito';
+            // Add more when schedule is known. Note: there may be better ways to do this when information is known.
+            function OnNow() {
+              var thedate = new Date();
+              var dayofweek = thedate.getDay();
+              var hourofday = thedate.getHours();
+              // alert(dayofweek+':'+hourofday+'<br />'+DH[dayofweek][hourofday]);
+              var showOn = DH[dayofweek][hourofday];
+            }
+
+            function NowON() {
+              var thedate = new Date();
+              var dayofweek = thedate.getDay();
+              var hourofday = thedate.getHours();
+              var showOn = DH[dayofweek][hourofday];
+              if (showOn == '') {
+                showOn = thedate + '<p />No Show Scheduled';
+              }
+              document.getElementById('NowOn').innerHTML = showOn;
+            }
+
+          </script>
+        </head>
+
+        <BODY onLoad="NowON()"></BODY>
+        <!-- Unhide this if table display desired
+<script type="text/javascript">
+document.write(TableStationSchedule())
+</script>
+-->
+        <script type="text/javascript">
+          document.write(NowON));
+
+        </script>
+        <div id='NowOn' onClick="NowON()">Click For Now On COOLVIBES</div>
+      </center>
+
+    </html>
+
+  </body>
+
+</html>
+
+
+<body>
+</body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="https://coolvibes-reloaded.com/index.html" class="active">Home</a>
+    <a href="https://coolvibes-reloaded.com/Schedule.html">Schedule</a>
+    <a href="https://coolvibes-reloaded.com/tunein.html">Tunein Again</a>
+    <a href="https://coolvibes-reloaded.com/mobile.html">Mobile</a>
+    <a href="https://coolvibes-reloaded.com/Birthday.html">Birthday</a>
+	<a href="https://coolvibes-reloaded.com/featured.html">Featured</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div style="padding-left:16px">
+
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!-- Header -->
+
   <!-- End Header -->
-  
+  <!-- Start Presenters -->
 
+  <div align="right">
+  </div>
+  <html>
 
-<!-- MAIN (Center website) -->
-<div class="main">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#6666ff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,133.3C960,149,1056,171,1152,154.7C1248,139,1344,85,1392,58.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
 
-
-
-
-<!-- END MAIN -->
-
-
-
-<!-- Finish Presenters -->
-  
-
-
-
-<br>
-<br>
-
-<h3><p class="solid">Pre-Recorded Shows!</p></h3>  
+    <div align="center">
+      <div style="height: 40px;width: 300px;background-image: linear-gradient(+130deg, DarkTurquoise, #d1d1df);color: #fff;">
+         <i class="fa-fw fas fa-snowflake"></i>Pre-Recorded Shows!
+      </div>  
 <div class="gallery">
         
     	<iframe src="https://widget.spreaker.com/player?episode_id=46580191&theme=light&playlist=false&cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2Feda8258f613c4c8e883b57e1b75e6ecf.jpg" width="180" height="200" frameborder="0"></iframe>
