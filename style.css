@@ -516,3 +516,8 @@ div.desc {
   display: table;
   clear: both;
 }
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
