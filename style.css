@@ -396,7 +396,8 @@ function myFunction() {
   }
 }
 
-< --- form css -->body {
+/* Form Css */
+body {
 
   background-color: #eee;
 }
@@ -429,8 +430,8 @@ function myFunction() {
   height: 50px;
   font-size: 11px;
 }
-
-< --- image gallery --->div.gallery {
+/* IMAGE GALLERY */
+div.gallery {
   border: 1px solid #f70c0c;
   box-shadow: inset 29px 12px 19px #0c49a5;
 }
