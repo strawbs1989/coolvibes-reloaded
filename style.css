@@ -342,8 +342,8 @@ div.gallery{
 	/* box-shadow: inset 29px 12px 19px #0c49a5; */
 }
 
-div.gallery img{
-	display: block;
+div.gallery img {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
