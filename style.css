@@ -344,7 +344,7 @@ div.gallery{
 
 div.gallery img {
   display: block;
-  margin-left: auto;
+  margin-left: 180%;
   margin-right: auto;
   width: 50%;
 }
