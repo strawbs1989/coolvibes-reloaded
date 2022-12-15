@@ -314,8 +314,9 @@ function myFunction(){
 		x.className="topnav";
 	}
 }
+
 body{
-	background-color: #eee;
+	background-color: #fff;
 }
 .height-100{
 	height: 100vh;
