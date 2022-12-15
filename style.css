@@ -16,10 +16,10 @@ body{
 	color: #000;
 	line-height: 2;
 	text-align: justify;
-	font-family: 'Apple Color Emoji', sans-serif;
+	font-family: 'Volvo Novum Light',;
 }
 @font-face{
-	font-family: 'Apple Color Emoji';
+	font-family: 'Volvo Novum Light',;
 	src: url(Apple Color Emoji.ttf) format(tff),;
 }
 @media only screen and (min-width: 600px){
@@ -125,7 +125,7 @@ body{
 		box-shadow: inset 29px 12px 19px #0c49a5;
 	}
 	table{
-		font-family: Apple Color Emoji;
+		font-family: 'Volvo Novum Light',;
 		border-collapse: collapse;
 		width: 100%;
 		box-shadow: inset 29px 12px 19px #0c49a5;
@@ -142,7 +142,7 @@ body{
 		box-sizing: border-box;
 	}
 	body{
-		font-family: Apple Color Emoji;
+		font-family: 'Volvo Novum Light',;
 	}
 	/* Float four columns side by side */
 	.column{
@@ -181,7 +181,7 @@ body{
 	body{
 		background-color: #ffffff;
 		padding: 20px;
-		font-family: Future Now;
+		font-family: 'Volvo Novum Light',;
 	}
 	/* Center website */
 	.main{
@@ -230,7 +230,7 @@ body{
 }
 body{
 	margin: 0;
-	font-family: Future Now;
+	font-family: 'Volvo Novum Light',;
 }
 .topnav{
 	overflow: hidden;
