@@ -337,18 +337,19 @@ body{
 	height: 50px;
 	font-size: 11px;
 }
-div.gallery{
-	/* border: 1px solid #f70c0c; */
-	/* box-shadow: inset 29px 12px 19px #0c49a5; */
+.container {
+	width: 80%;
+	margin: auto;
+	
+	
 }
-
-div.gallery img {
-  display: block;
-  margin-left: 160%;	
-  margin-right: 20%;
-  width: 90%;
-  position: sticky;
-  
+.container img {
+	width: 40%;
+	height: 200px;
+	object-fit: fill;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 div.desc{
 	padding: 15px;
