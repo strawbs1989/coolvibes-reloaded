@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
 }
-
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 .img{
 	float: right;
 	top: 20px;
@@ -16,11 +16,11 @@ body{
 	color: #000;
 	line-height: 2;
 	text-align: justify;
-	font-family: 'Future Now', sans-serif;
+	font-family: 'Apple Color Emoji', sans-serif;
 }
 @font-face{
-	font-family: 'Future Now';
-	src: url(Future Now.ttf) format(tff),;
+	font-family: 'Apple Color Emoji';
+	src: url(Apple Color Emoji.ttf) format(tff),;
 }
 @media only screen and (min-width: 600px){
 	header{
