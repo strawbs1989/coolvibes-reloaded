@@ -338,6 +338,20 @@ body{
 	height: 50px;
 	font-size: 11px;
 }
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
 .container {
 	width: 80%;
 	margin: auto;
