@@ -340,19 +340,11 @@ body{
 }
 
 
-.container {
-	width: 80%;
-	margin: auto;
-	
-	
-}
-.container img {
-	width: 40%;
-	height: 200px;
-	object-fit: fill;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+.igal{
+	position:relative; 
+	width:140px; 
+	left:50%; 
+	transition:translateX(-50%);
 }
 div.desc{
 	padding: 15px;
