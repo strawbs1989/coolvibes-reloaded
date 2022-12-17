@@ -7,6 +7,15 @@
 	top: 20px;
 	bottom: 20px;
 }
+
+.img-fluid {
+width: 100%;
+height: auto;
+
+}
+
+@media screen and (max-width: 500px)
+
 audio::-webkit-media-controls-panel{
 	background-image: linear-gradient(+130deg, DarkTurquoise, DarkBlue);
 	box-shadow: inset 29px 12px 19px #0c49a5;
