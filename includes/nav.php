@@ -1,0 +1,1 @@
+<hr><h1>Aubs test page</h1><hr><a href='?'>Home</a> | <a href='?p=aubs'>Aubs</a> | <a href='?p=info'>Info</a> | <a href='?p=text'>Text</a> <hr>
