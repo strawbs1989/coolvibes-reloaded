@@ -1,0 +1,8 @@
+body {
+  background-image: url("/img/cover_blur.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-color: teal
+}
