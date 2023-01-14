@@ -61,7 +61,9 @@ body {
 #tab-one:checked ~ .tabs #tab-one-label,
 #tab-two:checked ~ .tabs #tab-two-label,
 #tab-three:checked ~ .tabs #tab-three-label,
-#tab-four:checked ~ .tabs #tab-four-label {
+#tab-four:checked ~ .tabs #tab-four-label
+#tab-five:checked ~ .tabs #tab-four-label
+#tab-six:checked ~ .tabs #tab-four-label {
   background-color: #fff;
   cursor: default;
   border-left-color: #69be28;
@@ -70,7 +72,9 @@ body {
 #tab-one:checked ~ .tabs #tab-one-panel,
 #tab-two:checked ~ .tabs #tab-two-panel,
 #tab-three:checked ~ .tabs #tab-three-panel,
-#tab-four:checked ~ .tabs #tab-four-panel {
+#tab-four:checked ~ .tabs #tab-four-panel
+#tab-five:checked ~ .tabs #tab-four-label
+#tab-six:checked ~ .tabs #tab-four-label {
   display: block;
 }
 
@@ -113,14 +117,18 @@ body {
   #tab-one:checked ~ .tabs #tab-one-label,
 #tab-two:checked ~ .tabs #tab-two-label,
 #tab-three:checked ~ .tabs #tab-three-label,
-#tab-four:checked ~ .tabs #tab-four-label {
+#tab-four:checked ~ .tabs #tab-four-label
+#tab-five:checked ~ .tabs #tab-four-label
+#tab-six:checked ~ .tabs #tab-four-label {
     border-bottom: none;
   }
 
   #tab-one:checked ~ .tabs #tab-one-panel,
 #tab-two:checked ~ .tabs #tab-two-panel,
 #tab-three:checked ~ .tabs #tab-three-panel,
-#tab-four:checked ~ .tabs #tab-four-panel {
+#tab-four:checked ~ .tabs #tab-four-panel
+#tab-five:checked ~ .tabs #tab-four-label
+#tab-six:checked ~ .tabs #tab-four-label {
     border-bottom: 1px solid #ccc;
   }
 }
