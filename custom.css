@@ -231,26 +231,6 @@
 }
 
 
-/* Spikes */
-
-.spikes {
-  position: relative;
-  background: #0bd;
-}
-
-.spikes::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  left: -0%;
-  top: 100%;
-  z-index: 10;
-  display: block;
-  height: 80px;
-  background-size: 80px 100%;
-  background-image: linear-gradient(135deg, #0bd 25%, transparent 25%), linear-gradient(225deg, #0bd 25%, transparent 25%);
-  background-position: 0 0;
-}
 
 .content {
   padding: 2rem;
