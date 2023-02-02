@@ -1,1 +1,0 @@
-<hr><center><b>&copy; DJ Strawbs <?php $cur = date('Y'); $until = $cur + 4; echo "$cur - $until"; ?></b></center><hr></body></html>
