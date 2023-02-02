@@ -1,0 +1,14 @@
+body
+{
+background:black;
+color:orange;
+}
+a
+{
+color:red;
+}
+a:hover
+{
+color:red;
+text-transform: uppercase;
+}

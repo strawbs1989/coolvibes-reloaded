@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+background: #f4303e; /* Old browsers */
+background: -moz-linear-gradient(top,  #f4303e 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f4303e 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f4303e 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4303e', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+color:orange;
+}
+a
+{
+color:red;
+}
+a:hover
+{
+color:red;
+text-transform: uppercase;
+}
+.container
+{
+color:black;
+width: 70%;
+margin:auto;
+background:#87CEFA;
+border:2px solid lime;
+text-align:center;
+min-height: 40%;
+border-radius: 43px 43px 43px 43px;
+-moz-border-radius: 43px 43px 43px 43px;
+-webkit-border-radius: 43px 43px 43px 43px;
+border: 0px solid #000000;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+.right
+{
+position:relative;
+float:right;
+width:10%;
+
+margin:auto;
+background:#87CEFA;
+border:2px solid lime;
+text-align:center;
+min-height: 40%;
+border-radius: 43px 43px 43px 43px;
+-moz-border-radius: 43px 43px 43px 43px;
+-webkit-border-radius: 43px 43px 43px 43px;
+border: 0px solid #000000;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+.radio_text
+{
+position:relative;
+margin-top: 20px;
+}
+footer {
+    bottom:0;
+    position:fixed;
+    z-index:150;
+    width:100%;
+    background-color:black;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+    height:35px;
+}
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+span
+{
+color:white;
+float:right;
+}
+li
+{
+display: inline-block;
+ list-style: none;
+list-style-type: none;
+}
+ul
+{
+ list-style: none;
+list-style-type: none;
+}
+        
