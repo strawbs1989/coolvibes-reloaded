@@ -1,0 +1,113 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 866px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin: 60px auto 0 0;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 756px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 13px 0;
+}
+
+.u-section-1 .u-custom-html-1 {
+  min-height: 685px;
+  margin: 35px 398px 0 23px;
+}
+
+.u-section-1 .u-layout-wrap-2 {
+  width: 445px;
+  margin: -746px 0 60px auto;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 364px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 18px 0;
+}
+
+.u-section-1 .u-image-1 {
+  width: 256px;
+  height: 256px;
+  background-image: url("images/strawbs.png");
+  background-position: 50% 50%;
+  margin: 23px auto 0 0;
+}
+
+.u-section-1 .u-text-1 {
+  margin: -256px 0 0 225px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 733px;
+  }
+
+  .u-section-1 .u-layout-wrap-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 623px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    height: auto;
+    margin-right: 165px;
+    margin-left: 156px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 223px;
+    height: 223px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -223px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 110px;
+    margin-left: 101px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 663px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 10px;
+    margin-left: 1px;
+  }
+
+  .u-section-1 .u-layout-wrap-2 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 120px;
+  }
+}
