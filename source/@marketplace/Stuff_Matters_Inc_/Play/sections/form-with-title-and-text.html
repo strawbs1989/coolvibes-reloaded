@@ -1,0 +1,43 @@
+<!--
+  templateType: section
+  label: Form with title and text
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/form-with-title-and-text.png
+  description: "A form with title and text above it."
+-->
+
+{% dnd_section
+    max_width=600,
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+
+    {% dnd_column %}
+
+        {# Text #}
+
+        {% dnd_row
+            margin={ 'bottom': 30 }
+        %}
+            {% dnd_module path='@hubspot/rich_text' %}         
+                {% module_attribute 'html' %}
+                    <h2 class="play_centered">{{ context.form_title || 'Get notified when everything is settled.' }}</h2>
+                    <p class="play_centered">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, <a href="#">there live the</a> blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean and beyond everything.</p>
+                {% end_module_attribute %}   
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {# Form #}
+
+        {% dnd_row %}
+            {% dnd_module path='@hubspot/form' %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+
+    {% end_dnd_column %}
+{% end_dnd_section %}

@@ -1,0 +1,2 @@
+var langToggle=document.querySelectorAll(".mwh_el_lang .mwh_lang_toggle");if(langToggle){var langContent=document.querySelector(".mwh_el_lang .globe_class"),langWindow=document.querySelector(".play_window .mwh_languages");Array.prototype.forEach.call(langToggle,(function(el){el.addEventListener("click",(function(){langWindow.innerHTML=langContent.innerHTML}))}))}
+//# sourceURL=https://cdn1.hubspotusercontent-eu1.net/hub/26937672/hub_generated/template_assets/61692185801/1676287496898/marketplace/Stuff_Matters_Inc_/Play/js/language.js

@@ -1,0 +1,102 @@
+<!--
+  templateType: section
+  label: Hero slider
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/hero-slider.png
+  description: "Fullwidth hero slider with 3 slides."
+-->
+
+{% dnd_section
+    full_width=true,
+    padding={ 'left': 0, 'right': 0 }
+%}
+    {% dnd_module path='../modules/hero-slider'
+        slides=[
+            {
+                "image": {
+                    "src" : get_asset_url('../images/img-611.jpg'),
+                    "alt" : "img-103"
+                },
+                "title": "Entertainment is what we love.",
+                "title_heading_type": "h1",
+                "text": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. She packed her seven versalia.",
+                "title_color": {
+                    "color": "#FFFFFF"
+                },
+                "text_color": {
+                    "color": "#FFFFFF"
+                },
+                "bg_color": {
+                    "color": "#000000"
+                },
+                "button_toggle": true,
+                "button_options": {
+                    "button_text": "Learn How",
+                    "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                    }
+                },
+                "button_toggle2": true,
+                "button_options2": {
+                    "button_text": "View Gallery",
+                    "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                    }
+                }
+            },
+            {
+                "image": {
+                    "src" : get_asset_url('../images/img-608.jpg'),
+                    "alt" : "img-106"
+                },
+                "title": "We organize your events & games.",
+                "title_heading_type": "h1",
+                "text": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia. She packed her seven versalia.",
+                "title_color": {
+                    "color": "#000000"
+                },
+                "text_color": {
+                    "color": "#000000"
+                },
+                "bg_color": {
+                    "color": "#CCCCCC"
+                },
+                "button_toggle": true,
+                "button_options": {
+                    "button_text": "Our Curators",
+                    "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                    }
+                },
+                "button_toggle2": false,
+                "button_options2": {
+                    "button_text": "Discover",
+                    "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                    }
+                }
+            }
+        ]
+    %}
+    {% end_dnd_module %}
+{% end_dnd_section %}

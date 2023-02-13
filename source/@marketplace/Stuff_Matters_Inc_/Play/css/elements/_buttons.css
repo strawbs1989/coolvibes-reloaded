@@ -1,0 +1,38 @@
+button,
+.button,
+.hs-button,
+.cta_button {
+  cursor: pointer;
+  transition: all 0.15s linear;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* No button */
+
+.no-button,
+.no-button:hover,
+.no-button:focus,
+.no-button:active {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: initial;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  transition: none;
+  box-shadow: none;
+}
+
+button.uiButton {
+  box-shadow: none;
+}

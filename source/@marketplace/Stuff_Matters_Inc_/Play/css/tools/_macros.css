@@ -1,0 +1,104 @@
+{###########################################################################}
+{########################   HubSpot Helper Macros   ########################}
+{###########################################################################}
+
+{## Table of contents:
+
+  1. Color Field CSS Mapper
+  2. Update Colors From Theme Settings
+  3. Apply Font Properties
+  4. Render H1-H6 Styles
+
+##}
+
+{% set macros = true %}
+
+{###########################################################################}
+{########################   Color Field CSS Mapper   #######################}
+{###########################################################################}
+
+{% macro color(value) %}
+  {% set colorhex = value.color|convert_rgb %}
+  {% if value.opacity != null %}
+    {% set coloropacity = value.opacity / 100 %}
+  {% else %}
+    {% set coloropacity = '1' %}
+  {% endif %}
+  rgba({{ colorhex }}, {{ coloropacity }})
+{% endmacro %}
+
+{% macro color_itself(value, opacity) %}
+  {% set colorhex = value|convert_rgb %}
+  {% set coloropacity = opacity / 100 %}  
+  rgba({{ colorhex }}, {{ coloropacity }})
+{% endmacro %}
+
+{###########################################################################}
+{########################   Apply Font Properties   ########################}
+{###########################################################################}
+
+{% macro apply_font_properties(f, lf) %}
+  {{ dynamic_settings.typography[f]['font' ~ lf].style }};
+  line-height: {{ dynamic_settings.typography[f].line_height }}em;
+  letter-spacing: {{ dynamic_settings.typography[f].letter_spacing }}em;  
+{% endmacro %}
+
+{###########################################################################}
+{#########################   Render H1-H6 Styles   #########################}
+{###########################################################################}
+
+{% macro heading_styles(lf) %}
+  {% set h_items = [
+    dynamic_settings.typography.headings.h1,
+    dynamic_settings.typography.headings.h2,
+    dynamic_settings.typography.headings.h3,
+    dynamic_settings.typography.headings.h4,
+    dynamic_settings.typography.headings.h5,
+    dynamic_settings.typography.headings.h6
+  ] %}
+  {% for h in h_items %}
+    {% set size = size + 1 %}
+    h{{ size }} {
+      {% if lf %}
+        /* Not default look & feel */
+        {{ apply_font_properties(heading_font, lf) }}
+        color: {{ body_heading_color }};
+        font-size: {{ font_sizes[loop.index0] }};
+      {% else %}
+        /* Default look & feel */
+        {{ apply_font_properties(h.font, lf) }}  
+        color: {{ h.font_style.color }};
+        {{ h.font_style.style }};
+        font-size: {{ h.font_style.size ~ h.font_style.size_unit }};
+        text-transform: none;
+        margin: 0 0 1em 0;
+      {% endif %}
+    }
+
+    .play_grid--list h{{ size }}.mportfolio-title,
+    h{{ size }}.play_module_pricing_card_heading,
+    h{{ size }}.play_module_pricing_card_features_hdr,
+    h{{ size }}.play_grid-title .play_grid-title-link {
+      {% if lf %}
+        /* Not default look & feel */
+        color: {{ body_heading_color }};
+      {% else %}
+        /* Default look & feel */
+        color: {{ h.font_style.color }};
+      {% endif %}
+    }
+
+    .blog-post__related-posts h{{ size }}:after,
+    .blog-comments-container h{{ size }}:after,
+    .play_blog_post-title:after,
+    .play_blog_tag-author_title:after {
+      {% if lf %}
+        /* Not default look & feel */
+        background-color: {{ body_heading_color }};
+      {% else %}
+        /* Default look & feel */
+        background-color: {{ h.font_style.color }};
+      {% endif %}
+    }
+  {% endfor %}
+{% endmacro %}

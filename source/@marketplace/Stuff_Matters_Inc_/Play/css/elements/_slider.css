@@ -1,0 +1,83 @@
+.splide__arrows button.splide__arrow {
+  border-radius: 0;
+  min-width: auto;
+  background-color: transparent;
+  opacity: 1;
+  box-shadow: none;
+  border: none;
+  width: auto;
+}
+
+.splide__arrows button.splide__arrow svg {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+}
+
+.splide__arrows button.splide__arrow:hover,
+.splide__arrows button.splide__arrow:focus,
+.splide__arrows button.splide__arrow:active {
+  background-color: transparent;
+  padding: 0;
+}
+
+ul.splide__pagination {
+  bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  ul.splide__pagination {
+    bottom: -60px;
+  }
+}
+
+.play_widget-image_slider ul.splide__pagination {
+  display: none;
+}
+
+.play_module_testimonial ul.splide__pagination {
+  margin-top: 30px;
+  bottom: auto;
+}
+
+button.splide__pagination__page {
+  width: 15px;
+  height: 15px;
+  margin: 12px;
+  min-width: auto;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  transition: all 0.15s linear;
+}
+
+button.splide__pagination__page:before,
+button.splide__pagination__page:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 10px;
+}
+
+button.splide__pagination__page:before {
+  top: -10px;
+}
+
+button.splide__pagination__page:hover,
+button.splide__pagination__page:focus {
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+button.splide__pagination__page.is-active {
+  transform: scale(1);
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+}

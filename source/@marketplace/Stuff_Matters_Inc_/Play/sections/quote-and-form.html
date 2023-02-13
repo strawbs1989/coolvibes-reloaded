@@ -1,0 +1,55 @@
+<!--
+  templateType: section
+  label: Quote and form
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/quote-and-form.png
+  description: "A quote module and a form next to it."
+-->
+
+{% dnd_section
+    vertical_alignment='MIDDLE',
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+
+    {# Quote #}
+
+    {% dnd_column offset=0, width=5, margin={ 'bottom': 0 } %}      
+        {% dnd_row %}
+            {% dnd_module path='../modules/text-with-image'
+                image={
+                    "alt": 'Paragraph Image',
+                    "src": get_asset_url('../images/event-605.jpg')
+                },
+                title='Welcome to Play!',
+                text='<p>Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in grove right at the coast of the Semantics, a large ocean.</p>',
+                image_position='top_image'
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {# Spacing #}
+
+    {% dnd_column offset=5, width=1 %}      
+        {% dnd_row %}
+            {% dnd_module path='@hubspot/horizontal_spacer' %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {# Form #}
+
+    {% dnd_column offset=6, width=6 %}      
+        {% dnd_row %}
+            {% dnd_module path='@hubspot/form' %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}
+
+{% end_dnd_section %}

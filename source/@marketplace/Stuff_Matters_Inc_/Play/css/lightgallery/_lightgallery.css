@@ -1,0 +1,49 @@
+/* Lightgallery */
+
+button.lg-close.lg-icon:after,
+.lg-prev.lg-icon:after,
+.lg-next.lg-icon:before {
+  content: "";
+}
+
+.lg-close.lg-icon svg {
+  fill: white;
+}
+
+.mportfolio-item img {
+  width: 100%;
+}
+
+.work-clicker {
+  cursor: pointer;
+}
+
+.play-prev,
+.play-next,
+.play-close {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  background-size: 32px 32px;
+}
+
+.play-prev {
+  background-image: url({{get_asset_url("../../images/lightgallery/chevron-left.svg")}});
+}
+
+.play-next {
+  background-image: url({{get_asset_url("../../images/lightgallery/chevron-right.svg")}});
+}
+
+.play-close {
+  background-image: url({{get_asset_url("../../images/lightgallery/cross.svg")}});
+}
+
+.lg button.lg-next,
+.lg button.lg-prev {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  border-bottom: 0;
+}

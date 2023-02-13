@@ -1,0 +1,37 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Gallery
+  screenshotPath: ../images/template-previews/gallery.png
+-->
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_100' class='body-container body-container--gallery', label='Main section' %}
+
+  {# Page title #}
+
+  {% include_dnd_partial path='../sections/page-title.html'
+    context={
+      'text': 'Gallery',
+      'background_color': '#F5F5F5',
+      'color': '#000000',
+      'section_margin_bottom': '0px'
+    }
+  %}
+
+  {# Gallery #}
+
+  {% include_dnd_partial path='../sections/gallery.html' %}
+
+  {# Form with title and text #}
+
+  {% include_dnd_partial path='../sections/form-with-title-and-text.html'
+    context={
+      'form_title': 'Get notified when a new gallery added.'
+    }
+  %}
+
+{% end_dnd_area %}
+{% endblock body %}

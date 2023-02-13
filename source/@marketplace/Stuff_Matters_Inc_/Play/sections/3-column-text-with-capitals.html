@@ -1,0 +1,123 @@
+<!--
+  templateType: section
+  label: 3 column text
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/3-column-text-with-capitals.png
+  description: "3 columns of texts with big capital letters/numbers above them."
+-->
+
+{% dnd_section
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+    {% dnd_column %}
+
+        {# Columns #}
+
+        {% dnd_row %}
+            
+            {# Column 1 #}
+
+            {% dnd_column
+                offset=0,
+                width=4,
+                padding={ 'left': 0, 'right': 0 },
+                margin={
+                    'mobile': { 'bottom': 100 }
+                }
+            %}
+                {% dnd_row margin={ 'bottom': 60 } %}
+                    {% dnd_module path='../modules/single-letter-number'
+                        letter='A'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <p>Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts and more.</p>
+                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean and beyond then.</p>
+                        {% end_module_attribute %}   
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/button'
+                        horizontal_alignment='LEFT',
+                        button_text='Find more'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+    
+            {# Column 2 #}
+            
+            {% dnd_column
+                offset=4,
+                width=4,
+                padding={ 'left': 0, 'right': 0 },
+                margin={
+                    'mobile': { 'bottom': 100 }
+                }
+            %}
+                {% dnd_row margin={ 'bottom': 60 } %}
+                    {% dnd_module path='../modules/single-letter-number'
+                        letter='B'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.</p>
+                            <p>Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts and more.</p>
+                        {% end_module_attribute %}   
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/button'
+                        horizontal_alignment='LEFT',
+                        button_text='Visit'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+    
+            {# Column 3 #}
+            
+            {% dnd_column
+                offset=8,
+                width=4,
+                padding={ 'left': 0, 'right': 0 }
+            %}
+                {% dnd_row margin={ 'bottom': 60 } %}
+                    {% dnd_module path='../modules/single-letter-number'
+                        letter='C'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean and beyond then.</p>
+                            <p>On the skyline of her <a href="#">hometown</a> Bookmarks grove, the headline of Alphabet Village and the subline of her own road she had.</p>
+                        {% end_module_attribute %}   
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/button'
+                        horizontal_alignment='LEFT',
+                        button_text='Try now'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+        
+        {% end_dnd_row %}
+        
+    {% end_dnd_column %}
+{% end_dnd_section %}

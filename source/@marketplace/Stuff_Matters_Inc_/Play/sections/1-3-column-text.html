@@ -1,0 +1,107 @@
+<!--
+  templateType: section
+  label: 1-3 column text
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/1-3-column-text.png
+  description: "One fullwidth column with content and 3 more columns below it."
+-->
+
+{% dnd_section
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+    {% dnd_column %}
+
+        {# Large column #}
+
+        {% dnd_row
+            margin={ 'bottom': 100 }
+        %}
+            {% dnd_module path='../modules/text-with-image'
+                image={
+                    "alt": 'Paragraph Image',
+                    "src": get_asset_url('../images/twi-001.jpg')
+                },
+                title='Entertainment is what you like most.',
+                text='<p>Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in grove right at the coast of the Semantics, a large ocean.</p>',
+                image_position='left_image'
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {# Columns #}
+
+        {% dnd_row %}
+            
+            {# Column 1 #}
+
+            {% dnd_column
+                offset=0,
+                width=4,
+                padding={ 'left': 0, 'right': 0 },
+                margin={
+                    'mobile': { 'bottom': 100 }
+                }
+            %}
+                {% dnd_row %}
+                    {% dnd_module path='../modules/text-with-image'
+                        title_heading_type='h3',
+                        title='Concerts',
+                        text='<p>Far far away, she packed her behind the word mountains, <a href="#">far from</a> the lit countries Vokalia and Conso.</p>',
+                        image_position='top_image',
+                        image=''
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+    
+            {# Column 2 #}
+            
+            {% dnd_column
+                offset=4,
+                width=4,
+                padding={ 'left': 0, 'right': 0 },
+                margin={
+                    'mobile': { 'bottom': 100 }
+                }
+            %}
+                {% dnd_row %}
+                    {% dnd_module path='../modules/text-with-image'
+                        title_heading_type='h3',
+                        title='Exhibitions',
+                        text='<p>Far far away, she packed her behind the word mountains, <a href="#">far from</a> the lit countries Vokalia and Conso.</p>',
+                        image_position='top_image',
+                        image=''
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+    
+            {# Column 3 #}
+            
+            {% dnd_column
+                offset=8,
+                width=4,
+                padding={ 'left': 0, 'right': 0 }
+            %}
+                {% dnd_row %}
+                    {% dnd_module path='../modules/text-with-image'
+                        title_heading_type='h3',
+                        title='Festivals',
+                        text='<p>Far far away, she packed her behind the word mountains, <a href="#">far from</a> the lit countries Vokalia and Conso.</p>',
+                        image_position='top_image',
+                        image=''
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+        
+        {% end_dnd_row %}
+        
+    {% end_dnd_column %}
+{% end_dnd_section %}

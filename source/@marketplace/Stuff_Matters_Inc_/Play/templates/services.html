@@ -1,0 +1,59 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Services
+  screenshotPath: ../images/template-previews/services.png
+-->
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_100' class='body-container body-container--services', label='Main section' %}
+
+  {# Page title #}
+
+  {% include_dnd_partial path='../sections/page-title.html'
+    context={
+      'text': 'Our Services',
+      'color': '#000000',
+      'add_lens': true,
+      'background_image': get_asset_url('../images/img-640.jpg')
+    }
+  %}
+
+  {# Pricing cards #}
+
+  {% dnd_section %}
+    {% dnd_module path='../modules/pricing-cards' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# Quote #}
+
+  {% include_dnd_partial path='../sections/quote.html'
+    context={
+      'section_padding_top': 100,
+      'section_margin_bottom': 100,
+      'background_color': '#FFEED5'
+    }
+  %}
+
+  {# Cards #}
+
+  {% dnd_section %}
+    {% dnd_module path='../modules/cards' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# Number counters #}
+
+  {% dnd_section
+    padding={ 'top': 100 },
+    background_color = '#FF9902'
+  %}
+    {% dnd_module path='../modules/number-counters' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}  
+
+{% end_dnd_area %}
+{% endblock body %}

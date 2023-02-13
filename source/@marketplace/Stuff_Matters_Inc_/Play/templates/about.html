@@ -1,0 +1,166 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/template-previews/about.png
+-->
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_100' class='body-container body-container--about', label='Main section' %}
+
+  {# Page title #}
+  
+  {% include_dnd_partial path='../sections/page-title.html'
+    context={
+      'text': 'About Us',
+      'color': '#000000',
+      'add_lens': true,
+      'background_image': get_asset_url('../images/img-630.jpg')
+    }
+  %}
+
+  {# 2 columns of text #}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+          
+        {# Column 1 #}
+
+        {% dnd_column
+          offset=0,
+          width=6,
+          padding={ 'left': 0, 'right': 0 },
+          margin={
+            'mobile': { 'bottom': 100 }
+          }
+        %}
+          {% dnd_row %}
+            {% dnd_module path='@hubspot/rich_text' %}         
+              {% module_attribute 'html' %}
+                <h2>Who we are?</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, <a href="#">there live the</a> blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>A small river named <strong>Duden flows</strong> by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              {% end_module_attribute %}   
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+
+        {# Column 2 #}
+        
+        {% dnd_column
+          offset=6,
+          width=6,
+          padding={ 'left': 0, 'right': 0 }
+        %}
+          {% dnd_row %}
+            {% dnd_module path='@hubspot/rich_text' %}         
+              {% module_attribute 'html' %}
+                <h2>What can you expect?</h2>
+                <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her <a href="#">hometown</a> Bookmarksgrove, the headline of Alphabet Village and the subline of her own road.</p>
+              {% end_module_attribute %}   
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      
+      {% end_dnd_row %}        
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {# Clients #}
+
+  {% dnd_section
+    padding={
+        'default': { 'top': 100 }
+    },
+    margin={
+        'default': { 'bottom': 100 }
+    },
+    background_color='#FFEED5'
+  %}
+    {% dnd_module path='../modules/clients' %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_module path='../modules/text-with-image'
+        image={
+            "alt": 'Paragraph Image',
+            "src": get_asset_url('../images/about-600.jpg')
+        },
+        title='Creating a lovely ambience for everybody.',
+        text='<p>Far far away, behind the word mountains, far from the countries <a href="#">Vokalia and Consonantia</a>, there live the blind texts. Separated they live in grove right at the coast of the Semantics, a large ocean.</p>',
+        image_position='right_image'
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {# Our team #}
+
+  {% include_dnd_partial path='../sections/team.html'
+    context={
+      'section_padding_top': 100,
+      'section_margin_bottom': 0,
+      'background_color': '#F5F5F5',
+      'color': '#000000',
+      'text': 'Our Team'
+    }
+  %}
+
+  {# Accordions #}
+
+  {% dnd_section
+    background_color='#333333',
+    padding={ 'top': 100 }
+  %}
+    {% dnd_column padding={ 'left': 0, 'right': 0 } %}
+      
+      {# Title #}
+
+      {% dnd_row
+        margin={ 'bottom': 100 }
+      %}
+        {% dnd_module path='../modules/fancy-header'
+          text={{ context.text || 'Frequently Asked Questions' }},
+          huge={{ context.huge || false }},
+          styles={
+            'color': {
+              'color': '#FFFFFF'
+            }
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+      {% dnd_row %}
+        {% dnd_column
+            offset=0,
+            width=6,
+            padding={ 'left': 0, 'right': 0 },
+            margin={
+                'mobile': { 'bottom': 30 }
+            }
+        %}
+            {% dnd_row %}
+                {% dnd_module path='../modules/accordion' %}
+                {% end_dnd_module %}
+            {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column
+            offset=6,
+            width=6,
+            padding={ 'left': 0, 'right': 0 }
+        %}
+            {% dnd_row %}
+                {% dnd_module path='../modules/accordion' %}
+                {% end_dnd_module %}
+            {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

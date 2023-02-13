@@ -1,0 +1,49 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% macro render_button(d) %}
+    
+    {# Set attributes used for the link field #}
+
+    {% set href = d.rb_href %}
+    {% set target = '' %}
+    {% set rel = [] %}
+    {% set rel_str = '' %}
+    
+    {% if d.rb_type is equalto 'EMAIL_ADDRESS' %}
+      {% set href = 'mailto:' + href %}
+    {% endif %}
+    {% if d.rb_follow %}
+      {% do rel.append('nofollow') %}
+    {% endif %}
+    {% if d.rb_tab %}
+      {% do rel.append('noopener') %}
+      {% set target = ' target="_blank"' %}
+    {% endif %}
+    {% if rel %}
+      {% set rel_join = rel|join(' ') %}
+      {% set rel_str = ' rel="{{ rel_join }}"' %}
+    {% endif %}
+
+    {# Button html #}
+
+    <a class="{{ d.rb_class }}" href="{{ href }}"{{ target ~ rel_str }}>
+    {% if d.rb_feature == 'portfolio' %}
+        {# Do NOT close <a> tag #}
+    {% elif d.rb_feature == 'social_icon' %}
+            {% icon                
+              name='{{ d.rb_social_icon }}'
+              style='SOLID'
+              purpose='semantic'
+              extra_classes='msi_icon'
+              title='{{ d.rb_acc_title }}'
+              unique_in_loop=True
+            %}
+        </a>
+    {% else %}
+            {{ d.rb_text }}
+        </a>
+    {% endif %}
+
+{% endmacro %}

@@ -1,0 +1,50 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing page
+  screenshotPath: ../images/template-previews/landing-page.png
+-->
+
+{% extends './layouts/base.html' %}
+
+{% block header %}
+  {% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
+
+{% block body %}
+{% dnd_area 'dnd_area_100' class='body-container body-container--landing-page', label='Main section' %}
+
+  {# Page title #}
+
+  {% include_dnd_partial path='../sections/page-title.html'
+    context={
+      'text': 'Welcome',
+      'color': '#FFFFFF',
+      'huge': true,
+      'add_lens': false,
+      'background_color': '#000000',
+      'align_content': 'center'
+    }
+  %}
+
+  {# Quote and form #}
+
+  {% include_dnd_partial path='../sections/quote-and-form.html'
+    context={
+      'text_size': 't_medium'
+    }
+  %}
+
+  {# Quick answers #}
+
+  {% include_dnd_partial path='../sections/questions-answers.html'
+    context={
+      'section_padding_top': 100,
+      'section_margin_bottom': '0px',
+      'background_color': '#333333',
+      'color': '#FFFFFF'
+    }
+  %}
+
+{% end_dnd_area %}
+{% endblock body %}

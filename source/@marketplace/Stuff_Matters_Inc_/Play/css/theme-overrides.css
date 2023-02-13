@@ -1,0 +1,1790 @@
+{% import './tools/_macros.css' %}
+
+
+{#   TABLE OF CONTENTS - START   ###################################################
+
+
+
+1. "Look & Feel"s                          @look_feel
+
+   Play has an advanced design system which allows you to change the look & feel
+   of your website with literally one click. This section includes necessary
+   variables and external CSS calls for this system.
+
+------------------------------------------------------------------------------------
+
+2. Containers / Grid / DND areas            @containers
+
+   Basics of container width and spacing values.
+
+------------------------------------------------------------------------------------
+
+3. General                                  @general
+
+   Some fundamental tags like body and html.
+
+------------------------------------------------------------------------------------
+
+4. Typography                               @typography
+
+   Settings related to texts and headings.
+
+------------------------------------------------------------------------------------
+
+5. Buttons                                  @buttons
+
+   You can stylize 2 different buttons in Play: "Primary" and "Secondary" buttons.
+   Also, a third button style is being generated with the secondary button values.
+
+------------------------------------------------------------------------------------
+
+6. Forms                                    @forms
+
+   General view of forms and inner elements like inputs.
+
+------------------------------------------------------------------------------------
+
+7. Tables                                   @tables
+
+   Tables are mostly formed by colors of forms and body texts. 
+
+------------------------------------------------------------------------------------
+
+8. Website header                           @website_header
+
+   Play has a complex header system which lets you easily pick a predefined layout
+   in the header module. This section mostly includes the color management of this
+   system and widgets in it. 
+
+------------------------------------------------------------------------------------
+
+9. Website footer                           @website_footer
+
+   Footer section and elements inside it like menu items, social icons etc.
+
+------------------------------------------------------------------------------------
+
+10. Blog                                    @blog
+
+   Blog pages use the grid system of Play. So this section only includes a few
+   basic color overrides.
+
+------------------------------------------------------------------------------------
+
+11. System pages                            @system_pages
+
+   A couple of arrangements for system pages.
+
+------------------------------------------------------------------------------------
+
+12. Modules                                 @modules
+
+   Color management of some custom and native widgets can be found here.
+
+------------------------------------------------------------------------------------
+
+13. Sliders                                 @sliders
+
+   Play uses "Splide" for sliders. In this section, you can see a few color
+   arrangements for navigation items in sliders.
+
+------------------------------------------------------------------------------------
+
+14. Paddings                                @paddings
+
+   Thanks to Play's "Padding Multiplier" system, you can easily shrink or enlarge
+   the paddings of some specific elements through your website. This section handles
+   necessary calculations for that.
+
+------------------------------------------------------------------------------------
+
+15. Spacings                                @spacings
+
+   This section handles necessary calculations for spacings between sections etc.
+
+
+
+#   TABLE OF CONTENTS - END   ################################################### #}
+
+
+
+
+{#
+  
+@look_feel
+
+#}
+
+{# ##################################################### #}
+{# #################   "Look & Feel"   ################# #}
+{# ##################################################### #}
+
+/* Default look & feel variables */
+
+{% set dynamic_settings = {
+  'colors': {
+    'primary': theme.colors.primary.color,
+    'primary_accent': theme.colors.primary_accent.color,
+    'secondary': theme.colors.secondary.color,
+    'secondary_accent': theme.colors.secondary_accent.color
+  },
+  'header_colors': {
+    'menu_item': theme.header_colors.primary_menu.menu_item.color,
+    'menu_item_hover': theme.header_colors.primary_menu.menu_item_hover.color,
+    'menu_item_active': theme.header_colors.primary_menu.menu_item_active.color,
+    'submenu_bg': theme.header_colors.primary_menu.submenu_bg.color,
+    'submenu_item': theme.header_colors.primary_menu.submenu_item.color,
+    'submenu_item_hover': theme.header_colors.primary_menu.submenu_item_hover.color,
+    'submenu_item_active': theme.header_colors.primary_menu.submenu_item_active.color,
+    'submenu_item_hover_bg': theme.header_colors.primary_menu.submenu_item_hover_bg.color,
+    'search_icon': theme.header_colors.icons.icon.color,
+    'search_icon_hover': theme.header_colors.icons.icon_hover.color,
+    'window_bg': theme.header_colors.window.bg.color,
+    'window_text': theme.header_colors.window.text.color,
+    'window_link': theme.header_colors.window.link.color,
+    'window_link_hover': theme.header_colors.window.link_hover.color,
+    'container_bg': theme.header_colors.container.bg.color,
+    'mobile_bg': theme.header_colors.mobile.bg.color,
+    'mobile_item': theme.header_colors.mobile.item.color,
+    'mobile_item_hover': theme.header_colors.mobile.item_hover.color
+  },
+  'body_colors': {
+    'bg': theme.body_colors.bg.color,
+    'text': theme.body_colors.text.color,
+    'heading': theme.body_colors.heading.color,
+    'link': theme.body_colors.link.color,
+    'link_hover': theme.body_colors.link_hover.color
+  },
+  'footer_colors': {
+    'menu_title': theme.footer_colors.menus.menu_title.color,
+    'menu_item': theme.footer_colors.menus.menu_item.color,
+    'menu_item_hover': theme.footer_colors.menus.menu_item_hover.color,
+    'social_accounts_icon': theme.footer_colors.social_accounts.icon.color,
+    'social_accounts_icon_hover': theme.footer_colors.social_accounts.icon_hover.color,
+    'text_color': theme.footer_colors.text.text_color.color,
+    'container_bg': theme.footer_colors.container.bg.color
+  },
+  'typography': {
+    'primary': {
+      'font': theme.typography.primary.font,
+      'line_height': theme.typography.primary.line_height,
+      'letter_spacing': theme.typography.primary.letter_spacing
+    },
+    'secondary': {
+      'font': theme.typography.secondary.font,
+      'line_height': theme.typography.secondary.line_height,
+      'letter_spacing': theme.typography.secondary.letter_spacing
+    },
+    'headings': {
+      'h1': {
+        'font': theme.typography.headings.h1.font,
+        'font_style': theme.typography.headings.h1.font_style
+      },
+      'h2': {
+        'font': theme.typography.headings.h2.font,
+        'font_style': theme.typography.headings.h2.font_style
+      },
+      'h3': {
+        'font': theme.typography.headings.h3.font,
+        'font_style': theme.typography.headings.h3.font_style
+      },
+      'h4': {
+        'font': theme.typography.headings.h4.font,
+        'font_style': theme.typography.headings.h4.font_style
+      },
+      'h5': {
+        'font': theme.typography.headings.h5.font,
+        'font_style': theme.typography.headings.h5.font_style
+      },
+      'h6': {
+        'font': theme.typography.headings.h6.font,
+        'font_style': theme.typography.headings.h6.font_style
+      }
+    }
+  }
+} %}
+
+{% set lf = '' %}
+{% set lf_word = '' %}
+
+{% set primary_color = dynamic_settings['colors' ~ lf].primary %}
+{% set primary_accent_color = dynamic_settings['colors' ~ lf].primary_accent %}
+{% set secondary_color = dynamic_settings['colors' ~ lf].secondary %}
+{% set secondary_accent_color = dynamic_settings['colors' ~ lf].secondary_accent %}
+
+/* Body */
+
+{% set body_text_color = theme.typography.body_text.font_style.color %}
+{% set body_font = theme.typography.body_text.font %}
+{% set body_font_size = theme.typography.body_text.font_style.size ~ theme.typography.body_text.font_style.size_unit %}
+{% set p_bottom_margin = theme.typography.body_text.p_bottom_margin ~ 'em' %}
+
+{% set body_link_font_style = 'text-decoration:none; font-weight: bold' %}
+{% set body_link_color = theme.typography.links.link_color.color %}
+{% set body_link_hover_font_style = 'text-decoration:none' %}
+{% set body_link_hover_color = theme.typography.links.link_hover_color.color %}
+
+{% set h3_font_size = theme.typography.headings.h3.font_style.size ~ theme.typography.headings.h3.font_style.size_unit %}
+
+/* Main borders */
+
+{% set main_borders_css = theme.general_view.borders.border.css %}
+
+/* Main corners */
+
+{% set main_corners = theme.general_view.corners.radius ~ 'px' %}
+
+/* Automatic menu item corners */
+
+{% set mcs = main_corners|split('px') %}
+{% set menu_corner = mcs[0] %}
+
+/* Main shadows */
+
+{% set main_shadows_horizontal = '0px' %}
+{% set main_shadows_vertical = '0px' %}
+{% set main_shadows_blur = '0px' %}
+{% set main_shadows_spread = '0px' %}
+{% set main_shadows_color = 'rgba(0, 0, 0, 0.1)' %}
+
+/* Automatic helper design element shadows */
+
+{% set msh = main_shadows_horizontal|split('px') %}
+{% set msv = main_shadows_vertical|split('px') %}
+{% set msb = main_shadows_blur|split('px') %}
+{% set mss = main_shadows_spread|split('px') %}
+{% set global_shadow_h = msh[0] %}
+{% set global_shadow_v = msv[0] %}
+{% set global_shadow_b = msb[0] %}
+{% set global_shadow_s = mss[0] %}
+
+/* Buttons */
+
+/* Primary */
+
+{% set primary_button_font = theme.buttons.primary.text.font %}
+{% set primary_button_font_size = theme.buttons.primary.text.font_style.size ~ theme.buttons.primary.text.font_style.size_unit %}
+{% set primary_button_font_style = theme.buttons.primary.text.font_style.style %}
+{% set primary_button_text_transform = 'none' %}
+{% set primary_button_text_color = theme.buttons.primary.text.font_style.color %}
+{% set primary_button_alignment = 'center' %}
+
+{% set primary_button_bg_color = color(theme.buttons.primary.background.color) %}
+
+{% set primary_button_border_css = theme.buttons.primary.border.border.css %}
+
+{% set primary_button_corner = theme.buttons.primary.corner.radius ~ 'px' %}
+
+{% set primary_button_shadow_horizontal = '0px' %}
+{% set primary_button_shadow_vertical = '0px' %}
+{% set primary_button_shadow_blur = '0px' %}
+{% set primary_button_shadow_spread = '0px' %}
+{% set primary_button_shadow_color = color(theme.buttons.primary.hovers.background.color) %}
+
+{% set primary_button_spacing_css = 'padding-top:10px;padding-right:30px;padding-bottom:10px;padding-left:30px;' %}
+{% set primary_button_width_type = 'auto' %}
+{% set primary_button_height_type = 'auto' %}
+{% set primary_button_width = '120px' %}
+{% set primary_button_height = '60px' %}
+
+{% set primary_button_disabled_bg_color = color(theme.buttons.primary.disabled.bg_color) %}
+{% set primary_button_disabled_text_color = color(theme.buttons.primary.disabled.color) %}
+
+{% set primary_button_hover_font_style = primary_button_font_style %}
+{% set primary_button_hover_text_color = theme.buttons.primary.hovers.text.color.color %}
+
+{% set primary_button_hover_bg_color = color(theme.buttons.primary.hovers.background.color) %}
+
+{% set primary_button_hover_border_css = theme.buttons.primary.hovers.border.border.css %}
+
+{% set primary_button_hover_corner = primary_button_corner %}
+
+{% set primary_button_hover_shadow_horizontal = '0px' %}
+{% set primary_button_hover_shadow_vertical = '0px' %}
+{% set primary_button_hover_shadow_blur = '0px' %}
+{% set primary_button_hover_shadow_spread = '0px' %}
+{% set primary_button_hover_shadow_color = color(theme.buttons.primary.hovers.background.color) %}
+
+{% set primary_button_hover_spacing_css = primary_button_spacing_css %}
+
+/* Forms */
+
+{% set form_title_text_color = theme.forms.title.text.color.color %}
+{% set form_title_bg_color = color(theme.forms.title.background.color) %}
+
+{% set form_text_color = theme.forms.form_body.text.color.color %}
+{% set form_bg_color = color(theme.forms.form_body.background.color) %}
+
+{% set form_border_css = theme.forms.form_body.border.border.css %}
+
+{% set form_field_text_color = theme.forms.fields.text.color.color %}
+{% set form_field_placeholder_color = color(theme.forms.fields.text.placeholder) %}
+{% set form_field_bg_color = color(theme.forms.fields.background.color) %}
+
+{% set form_field_border_css = theme.forms.fields.border.border.css %}
+
+{% set form_field_corner = primary_button_corner %}
+
+{% set form_field_shadow_horizontal = '0px' %}
+{% set form_field_shadow_vertical = '0px' %}
+{% set form_field_shadow_blur = '0px' %}
+{% set form_field_shadow_spread = '0px' %}
+{% set form_field_shadow_color = 'rgba(0, 0, 0, 0.1)' %}
+
+{% set form_field_spacing_css = 'padding:20px;' %}
+{% set form_field_height_type = 'auto' %}
+{% set form_field_height = '60px' %}
+
+{% set form_label_font = 'secondary' %}
+{% set form_label_font_size = theme.forms.labels.text.font_style.size ~ theme.forms.labels.text.font_style.size_unit %}
+{% set form_label_font_style = theme.forms.labels.text.font_style.style %}
+{% set form_label_text_color = theme.forms.labels.text.font_style.color %}
+{% set form_label_text_transform = 'none' %}
+
+/* Form buttons */
+
+{% set form_button_font_size = theme.forms.buttons.text.font_style.size ~ theme.forms.buttons.text.font_style.size_unit %}
+{% set form_button_font_style = theme.forms.buttons.text.font_style.style %}
+{% set form_button_text_color = theme.forms.buttons.text.font_style.color %}
+
+{% set form_button_bg_color = color(theme.forms.buttons.background.color) %}
+
+{% set form_button_border_css = theme.forms.buttons.border.border.css %}
+
+{% set form_button_hover_font_style = form_button_font_style %}
+{% set form_button_hover_text_color = theme.forms.buttons.hovers.text.color.color %}
+
+{% set form_button_hover_bg_color = color(theme.forms.buttons.hovers.background.color) %}
+
+{% set form_button_hover_border_css = theme.forms.buttons.hovers.border.border.css %}
+
+
+/* Tables */
+
+{% set table_header_text_color = theme.tables.header.text.color.color %}
+{% set table_header_bg_color = color(theme.tables.header.background.color) %}
+
+{% set table_text_color = theme.tables.table_body.text.color.color %}
+{% set table_bg_color = color(theme.tables.table_body.background.color) %}
+
+/* Paddings and margins */
+
+{% set padding_multiplier = 1 %}
+{% set margin_multiplier = 1 %}
+{% set force_padding = false %}
+
+{% set padding_form_title = false %}
+{% set padding_form = false %}
+{% set padding_blog_comments = false %}
+{% set padding_pricing_cards = true %}
+{% set padding_accordion = false %}
+{% set padding_cards = false %}
+{% set padding_list = false %}
+{% set padding_team_members = true %}
+{% set padding_testimonials = true %}
+{% set padding_number_counters = true %}
+{% set padding_events = false %}
+
+
+
+{#
+  
+@containers
+
+#}
+
+{# ###################################################### #}
+{# #########   Containers / Grid / DND areas   ########## #}
+{# ###################################################### #}
+
+{% set container_width = theme.spacing.content.maximum_content_width ~ 'px' %}
+{% set dnd_section_padding = '0px ' ~ '20px ' ~ theme.spacing.section.desktop.vertical_spacing ~ 'px ' ~ '20px' %}
+
+.content-wrapper {
+  max-width: {{ container_width }};
+}
+
+.dnd-section,
+.content-wrapper--vertical-spacing {
+  padding: {{ dnd_section_padding }};
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ container_width }};
+}
+
+header .dnd-section > .row-fluid,
+footer .dnd-section > .row-fluid {
+  max-width: 100%;
+}
+
+
+
+{#
+  
+@general
+
+#}
+
+{# ###################################################### #}
+{# ####################   General   ##################### #}
+{# ###################################################### #}
+
+html {
+  font-size: {{ body_font_size }};
+}
+
+body, main {
+  background: {{ dynamic_settings.body_colors.bg }};
+}
+
+body {
+  {{ apply_font_properties(body_font, lf_word) }}
+  color: {{ body_text_color }};
+  font-size: {{ body_font_size }};
+}
+
+/* Borders, corners and shadows */
+
+.mat_pri_bor {
+  {{ main_borders_css }}
+}
+
+.mat_pri_cor {
+  border-radius: {{ main_corners }};
+}
+
+.mat_pri_sha {
+  box-shadow: {{ main_shadows_horizontal }} {{ main_shadows_vertical }} {{ main_shadows_blur }} {{ main_shadows_spread }} {{ main_shadows_color }};
+}
+
+
+
+{#
+  
+@typography
+
+#}
+
+{# ###################################################### #}
+{# ##################   Typography   #################### #}
+{# ###################################################### #}
+
+/* Paragraphs */
+
+p, ul, ol, pre {  
+    margin: 0 0 {{ p_bottom_margin }} 0;
+}
+
+/* Anchors */
+
+a {
+    {{ body_link_font_style }};
+    color: {{ body_link_color }};
+}
+
+a:hover,
+a:focus,
+a:active {
+    {{ body_link_hover_font_style }};
+    color: {{ body_link_hover_color }};
+}
+
+/* Headings */
+
+{{ heading_styles(lf_word) }}
+
+@media(max-width: 767px) {
+
+    h1, h2 {
+        font-size: {{ h3_font_size }};
+    }
+
+}
+
+
+
+{#
+  
+@buttons
+
+#}
+
+{# ###################################################### #}
+{# ####################   Buttons   ##################### #}
+{# ###################################################### #}
+
+/* Primary */
+
+button,
+button:active,
+.button,
+.button:active,
+.hs-button,
+.hs-button:active,
+.comment-reply-to.hs-button.secondary,
+.comment-reply-to.hs-button.secondary:active {
+    {{ apply_font_properties( primary_button_font, lf_word) }}
+    {{ primary_button_font_style }};
+    font-size: {{ primary_button_font_size }};
+    text-transform: {{ primary_button_text_transform }};
+    background: {{ primary_button_bg_color }};
+    color: {{ primary_button_text_color }};
+    {{ primary_button_spacing_css }}
+    {% if primary_button_width_type == 'custom' %}
+        width: {{ primary_button_width }};
+    {% endif %}
+    {% if primary_button_height_type == 'custom' %}
+        height: {{ primary_button_height }};
+    {% endif %}
+    {{ primary_button_border_css }}
+    border-radius: {{ primary_button_corner }};
+    box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+    justify-content: {{ primary_button_alignment }};
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.hs-button:hover,
+.hs-button:focus,
+.comment-reply-to.hs-button.secondary:hover,
+.comment-reply-to.hs-button.secondary:focus {
+    {{ primary_button_hover_font_style }};
+    background: {{ primary_button_hover_bg_color }};
+    color: {{ primary_button_hover_text_color }};
+    {{ primary_button_hover_spacing_css }}
+    {{ primary_button_hover_border_css }}
+    border-radius: {{ primary_button_hover_corner }};
+    box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+button:disabled,
+.button:disabled,
+.hs-button:disabled {
+    background: {{ primary_button_disabled_bg_color }};
+    color: {{ primary_button_disabled_text_color }};
+}
+
+/* Secondary */
+
+button.play_secondary_button,
+button.play_secondary_button:active,
+.button.play_secondary_button,
+.button.play_secondary_button:active,
+.hs-button.play_secondary_button,
+.hs-button.play_secondary_button:active,
+.cta_button,
+.cta_button:active {
+    {{ apply_font_properties( primary_button_font, lf_word) }}
+    {{ primary_button_font_style }};
+    font-size: {{ primary_button_font_size }};
+    text-transform: {{ primary_button_text_transform }};
+    background: {{ primary_button_text_color }};
+    color: {{ primary_button_bg_color }};
+    {{ primary_button_spacing_css }}
+    {% if primary_button_width_type == 'custom' %}
+        width: {{ primary_button_width }};
+    {% endif %}
+    {% if primary_button_height_type == 'custom' %}
+        height: {{ primary_button_height }};
+    {% endif %}
+    {{ primary_button_border_css }}
+    border-radius: {{ primary_button_corner }};
+    box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+    justify-content: {{ primary_button_alignment }};
+}
+
+button.play_secondary_button:hover,
+button.play_secondary_button:focus,
+.button.play_secondary_button:hover,
+.button.play_secondary_button:focus,
+.hs-button.play_secondary_button:hover,
+.hs-button.play_secondary_button:focus,
+.cta_button:hover,
+.cta_button:focus {
+    {{ primary_button_hover_font_style }};
+    background: {{ primary_button_hover_bg_color }};
+    color: {{ primary_button_text_color }};
+    {{ primary_button_hover_spacing_css }}
+    {{ primary_button_hover_border_css }}
+    border-radius: {{ primary_button_hover_corner }};
+    box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+button.play_secondary_button:disabled,
+.button.play_secondary_button:disabled,
+.hs-button.play_secondary_button:disabled {
+    background: {{ primary_button_disabled_bg_color }};
+    color: {{ primary_button_disabled_text_color }};
+}
+
+
+
+{#
+  
+@forms
+
+#}
+
+{# ###################################################### #}
+{# #####################   Forms   ###################### #}
+{# ###################################################### #}
+
+form {
+  color: {{ form_text_color }};
+  background: {{ form_bg_color }};
+  {{ form_border_css }}
+  border-radius: {{ main_corners }};
+  box-shadow: {{ main_shadows_horizontal }} {{ main_shadows_vertical }} {{ main_shadows_blur }} {{ main_shadows_spread }} {{ main_shadows_color }};
+}
+
+/* Form title */
+
+.form-title {
+  color: {{ form_title_text_color }};
+  background: {{ form_title_bg_color }};
+  border-radius: {{ main_corners }};
+}
+
+/* Labels */
+
+form label {
+  {{ apply_font_properties( form_label_font, lf_word) }}
+  {{ form_label_font_style }};
+  font-size: {{ form_label_font_size }};
+  color: {{ form_label_text_color }};
+  text-transform: {{ form_label_text_transform }};
+}
+
+/* Help text */
+
+form legend {
+  color: {{ form_text_color }};
+}
+
+/* Inputs */
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form input[type=number],
+form input[type=file],
+form select,
+form textarea {
+  color: {{ form_field_text_color }};
+  background: {{ form_field_bg_color }};
+  {{ form_field_border_css }}
+  border-radius: {{ form_field_corner }};
+  box-shadow: {{ form_field_shadow_horizontal }} {{ form_field_shadow_vertical }} {{ form_field_shadow_blur }} {{ form_field_shadow_spread }} {{ form_field_shadow_color }};
+  {{ form_field_spacing_css }}
+  {% if form_field_height_type == 'custom' %}
+      height: {{ form_field_height }};
+  {% endif %}
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form input[type=tel]:focus,
+form input[type=number]:focus,
+form input[type=file]:focus,
+form select:focus,
+form textarea:focus {
+  {{ form_field_border_css }}
+  outline: none;
+}
+
+/* Form placeholder text */
+
+::-webkit-input-placeholder {
+  color: {{ form_field_placeholder_color }};
+}
+
+::-moz-placeholder {
+  color: {{ form_field_placeholder_color }};
+}
+
+:-ms-input-placeholder {
+  color: {{ form_field_placeholder_color }};
+}
+
+::placeholder {
+  color: {{ form_field_placeholder_color }};
+}
+
+/* Inputs - date picker */
+
+.pika-lendar {
+  {{ apply_font_properties(body_font, lf_word) }}
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ body_text_color }};
+}
+
+.fn-date-picker .pika-table thead th {
+  color: {{ body_text_color }};
+}
+
+.fn-date-picker td.is-selected .pika-button {
+  color: {{ body_text_color }};
+  background: {{ primary_color }};
+}
+
+/* Validation */
+
+.hs-input.invalid.error {
+  border-color: {{ form_label_text_color }};
+}
+
+/* Button */
+
+form input[type=submit],
+form input[type=submit]:active,
+form .hs-button,
+form .hs-button:active {
+    {{ apply_font_properties( primary_button_font, lf_word) }}
+    {{ form_button_font_style }};
+    font-size: {{ form_button_font_size }};
+    text-transform: {{ primary_button_text_transform }};
+    background: {{ form_button_bg_color }};
+    color: {{ form_button_text_color }};
+    {{ primary_button_spacing_css }}
+    {% if primary_button_width_type == 'custom' %}
+        width: {{ primary_button_width }};
+    {% endif %}
+    {% if primary_button_height_type == 'custom' %}
+        height: {{ primary_button_height }};
+    {% endif %}
+    {{ form_button_border_css }}
+    border-radius: {{ primary_button_corner }};
+    box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+    justify-content: {{ primary_button_alignment }};
+}
+
+form input[type=submit]:hover,
+form input[type=submit]:focus,
+form .hs-button:hover,
+form .hs-button:focus {
+    {{ form_button_hover_font_style }};
+    background: {{ form_button_hover_bg_color }};
+    color: {{ form_button_hover_text_color }};
+    {{ primary_button_hover_spacing_css }}
+    {{ form_button_hover_border_css }}
+    border-radius: {{ primary_button_hover_corner }};
+    box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+
+
+{#
+  
+@tables
+
+#}
+
+{# ###################################################### #}
+{# ####################   Tables   ###################### #}
+{# ###################################################### #}
+
+/* Table */
+
+table {
+  {{ main_borders_css }}
+  background-color: {{ table_bg_color }};
+}
+
+/* Table cells */
+
+td,
+th {
+  {{ main_borders_css }}
+  color: {{ table_text_color }};
+}
+
+/* Table header */
+
+thead th,
+thead td {
+  background-color: {{ table_header_bg_color }};
+  color: {{ table_header_text_color }};
+}
+
+/* Table footer */
+
+tfoot td {
+  background-color: {{ table_header_bg_color }};
+  color: {{ table_header_text_color }};
+}
+
+
+
+{#
+  
+@website_header
+
+#}
+
+{# ###################################################### #}
+{# ################   Website header   ################## #}
+{# ###################################################### #}
+
+/* Container */
+
+.play_module_website_h {
+  background: {{ dynamic_settings.header_colors.container_bg }};
+}
+
+.header.header--no-navigation {
+  background: {{ dynamic_settings.header_colors.container_bg }};
+}
+
+/* Primary menu */
+
+{# Top level #}
+
+.play_header_menu .menu__link {
+  color: {{ dynamic_settings.header_colors.menu_item }};
+}
+
+.play_header_menu .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.menu_item }};
+}
+
+.play_header_menu .menu__link--active-link,
+.play_header_menu .menu__link--active-branch {
+  color: {{ dynamic_settings.header_colors.menu_item_active }};
+}
+
+.play_header_menu .menu__link--active-link + .menu__child-toggle .menu__child-toggle-icon,
+.play_header_menu .menu__link--active-branch + .menu__child-toggle .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.menu_item_active }};
+}
+
+.play_header_menu .menu-item-container:hover a,
+.play_header_menu .menu-item-container:hover span {
+  color: {{ dynamic_settings.header_colors.menu_item_hover }};
+}
+
+.play_header_menu .menu-item-container:hover .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.menu_item_hover }};
+}
+
+{# Submenus #}
+
+.play_header_menu .menu__submenu {
+  background: {{ dynamic_settings.header_colors.submenu_bg }};
+}
+
+.play_header_menu .menu__submenu.menu__submenu--level-3 {
+  background: {{ color_variant(dynamic_settings.header_colors.submenu_bg, 10) }};
+}
+
+.play_header_menu .menu__submenu .menu__link {
+  color: {{ dynamic_settings.header_colors.submenu_item }};
+}
+
+.play_sticky_bar .play_header_menu .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_header_menu .menu__submenu .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.submenu_item }};
+}
+
+.play_header_menu .menu__submenu .menu__link--active-link,
+.play_header_menu .menu__submenu .menu__link--active-branch {
+  color: {{ dynamic_settings.header_colors.submenu_item_active }};
+}
+
+.play_header_menu .menu__submenu .menu__link--active-link + .menu__child-toggle .menu__child-toggle-icon,
+.play_header_menu .menu__submenu .menu__link--active-branch + .menu__child-toggle .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.submenu_item_active }};
+}
+
+.play_header_menu .menu__submenu .menu-item-container:hover {
+  background: {{ dynamic_settings.header_colors.submenu_item_hover_bg }};
+}
+
+.play_header_menu .menu__submenu .menu-item-container:hover a,
+.play_header_menu .menu__submenu .menu-item-container:hover span {
+  background: {{ dynamic_settings.header_colors.submenu_item_hover_bg }};
+  color: {{ dynamic_settings.header_colors.submenu_item_hover }};
+}
+
+.play_header_menu .menu__submenu .menu-item-container:hover .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.submenu_item_hover }};
+}
+
+/* Secondary menu */
+
+.play_header_menu.mwh_el_secondary_menu .menu__link {
+  color: {{ dynamic_settings.header_colors.menu_item }};
+}
+
+.play_header_menu.mwh_el_secondary_menu .menu__link--active-link,
+.play_header_menu.mwh_el_secondary_menu .menu__link--active-branch,
+.play_header_menu.mwh_el_secondary_menu .menu-item-container:hover a,
+.play_header_menu.mwh_el_secondary_menu .menu-item-container:hover span {
+  color: {{ dynamic_settings.header_colors.menu_item_hover }};
+}
+
+/* Social accounts */
+
+.mwh_el_social .msi_icon svg {
+  fill: {{ dynamic_settings.header_colors.search_icon }};
+}
+
+.mwh_el_social .play_social_icons a:hover svg,
+.mwh_el_social .play_social_icons a:focus svg,
+.mwh_el_social .play_social_icons a:active svg {
+  fill: {{ dynamic_settings.header_colors.search_icon_hover }};
+}
+
+/* Language switcher */
+
+.mwh_lang_toggle {
+  color: {{ dynamic_settings.header_colors.search_icon }};
+}
+
+.mwh_lang_toggle:hover,
+.mwh_lang_toggle:focus {
+  color: {{ dynamic_settings.header_colors.search_icon_hover }};
+}
+
+/* Search */
+
+.mwh_search_toggle svg,
+.mwh_el_search button svg {
+  fill: {{ dynamic_settings.header_colors.search_icon }};
+}
+
+.mwh_search_toggle:hover svg,
+.mwh_search_toggle:active svg,
+.mwh_search_toggle:focus svg,
+.mwh_el_search button:hover svg,
+.mwh_el_search button:active svg,
+.mwh_el_search button:focus svg {
+  fill: {{ dynamic_settings.header_colors.search_icon_hover }};
+}
+
+.mwh_el_search .hs-search-field__input {
+  color: {{ dynamic_settings.header_colors.menu_item }};
+  border-color: {{ dynamic_settings.header_colors.menu_item }};
+}
+
+.mwh_el_search .hs-search-field__input:focus {
+  border-color: {{ dynamic_settings.header_colors.search_icon_hover }};
+}
+
+.mwh_el_search .hs-search-field__input::-webkit-input-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.menu_item, 30) }};
+}
+
+.mwh_el_search .hs-search-field__input::-moz-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.menu_item, 30) }};
+}
+
+.mwh_el_search .hs-search-field__input:-ms-input-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.menu_item, 30) }};
+}
+
+.mwh_el_search .hs-search-field__input:-moz-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.menu_item, 30) }};
+}
+
+.mwh_el_search .hs-search-field__input::placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.menu_item, 30) }};
+}
+
+/* Overlay window */
+
+.play_window {
+	background: {{ dynamic_settings.header_colors.window_bg }};
+  color: {{ dynamic_settings.header_colors.window_text }};
+}
+
+.play_window a,
+.mwh_languages .lang_list_class li a {
+  color: {{ dynamic_settings.header_colors.window_link }};
+}
+
+.play_window a:hover,
+.play_window a:focus,
+.play_window a:active,
+.mwh_languages .lang_list_class li a:hover,
+.mwh_languages .lang_list_class li a:focus,
+.mwh_languages .lang_list_class li a:active {
+  color: {{ dynamic_settings.header_colors.window_link_hover }};
+}
+
+/* Overlay search */
+
+.m_w_search .mwh_el_search button {
+  background: {{ primary_button_bg_color }};
+  {{ primary_button_border_css }}
+  border-radius: {{ primary_button_corner }};
+  box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+}
+
+.m_w_search .mwh_el_search button svg {
+  fill: {{ primary_button_text_color }};
+}
+
+.m_w_search .mwh_el_search button:hover {
+  background: {{ primary_button_hover_bg_color }};
+  {{ primary_button_hover_border_css }}
+  border-radius: {{ primary_button_hover_corner }};
+  box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+.m_w_search .mwh_el_search button:hover svg,
+.m_w_search .mwh_el_search button:active svg,
+.m_w_search .mwh_el_search button:focus svg {
+  fill: {{ primary_button_hover_text_color }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input {
+  color: {{ dynamic_settings.header_colors.window_text }};
+  border-color: {{ dynamic_settings.header_colors.window_text }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input:focus {
+  border-color: {{ dynamic_settings.header_colors.window_link_hover }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input::-webkit-input-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.window_text, 30) }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input::-moz-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.window_text, 30) }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input:-ms-input-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.window_text, 30) }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input:-moz-placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.window_text, 30) }};
+}
+
+.m_w_search .mwh_el_search .hs-search-field__input::placeholder {
+  color: {{ color_itself(dynamic_settings.header_colors.window_text, 30) }};
+}
+
+/* Overlay close button */
+
+.header__close--toggle {
+  background: {{ primary_button_bg_color }};
+  border-radius: {{ primary_button_corner }};
+  {{ primary_button_border_css }}
+  box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+}
+
+.header__close--toggle:before,
+.header__close--toggle:after {
+  background-color: {{ primary_button_text_color }};
+}
+
+.header__close--toggle:hover {
+  background: {{ primary_button_hover_bg_color }};
+  border-radius: {{ primary_button_hover_corner }};
+  {{ primary_button_hover_border_css }}
+  box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+.header__close--toggle:hover::before,
+.header__close--toggle:hover::after {
+  background-color: {{ primary_button_hover_text_color }};
+}
+
+/* Back to top button */
+
+#goTop {
+  background: {{ primary_button_bg_color }};
+  {{ primary_button_border_css }}
+  border-radius: {{ primary_button_corner }};
+  box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+}
+
+#goTop svg {
+  fill: {{ primary_button_text_color }};
+}
+
+#goTop:hover {
+  background: {{ primary_button_hover_bg_color }};
+  {{ primary_button_hover_border_css }}
+  border-radius: {{ primary_button_hover_corner }};
+  box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+#goTop:hover svg {
+  fill: {{ primary_button_hover_text_color }};
+}
+
+/* Mobile */
+
+.play_mobile_bar,
+.play_mobile_nav_container {
+	background: {{ dynamic_settings.header_colors.mobile_bg }};
+	color: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_sticky_bar {
+	background: {{ dynamic_settings.header_colors.mobile_bg }};
+	color: {{ dynamic_settings.header_colors.mobile_item }};
+  border-color: {{ primary_color }};
+}
+
+.play_mobile_nav_container .menu__submenu,
+.play_mobile_nav_container .menu__submenu.menu__submenu--level-3 {
+  background: {{ dynamic_settings.header_colors.mobile_bg }};
+}
+
+.play_mobile_bar svg,
+.play_mobile_nav_container svg,
+.play_mobile_nav_container .mwh_el_social .msi_icon svg,
+.play_sticky_bar svg {
+	fill: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_mobile_bar .mwh_search_toggle:hover svg,
+.play_mobile_nav_container .mwh_el_social .msi_icon:hover svg,
+.play_sticky_bar .mwh_search_toggle:hover svg {
+	fill: {{ dynamic_settings.header_colors.mobile_item_hover }};
+}
+
+.play_mobile_bar .mwh_lang_toggle,
+.play_mobile_nav_container a.menu__link,
+.play_mobile_nav_container span.menu__link,
+.play_mobile_nav_container .menu__submenu a.menu__link,
+.play_mobile_nav_container .play_header_menu.mwh_el_secondary_menu .menu__link,
+.play_sticky_bar .mwh_lang_toggle,
+.play_sticky_bar a.menu__link,
+.play_sticky_bar span.menu__link {
+  color: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_mobile_bar .mwh_lang_toggle:hover,
+.play_mobile_nav_container a.menu__link:hover,
+.play_mobile_nav_container .menu-item-container:hover a.menu__link,
+.play_mobile_nav_container .play_header_menu.mwh_el_secondary_menu .menu-item-container:hover a,
+.play_mobile_nav_container .play_header_menu.mwh_el_secondary_menu .menu-item-container:hover span,
+.play_sticky_bar .mwh_lang_toggle:hover {
+  color: {{ dynamic_settings.header_colors.mobile_item_hover }};
+}
+
+.play_mobile_nav_container .play_header_menu .menu__submenu .menu-item-container:hover,
+.play_mobile_nav_container .play_header_menu .menu__submenu .menu-item-container:hover a,
+.play_mobile_nav_container .play_header_menu .menu__submenu .menu-item-container:hover span {
+  background: {{ dynamic_settings.header_colors.mobile_bg }};
+}
+
+.play_mobile_nav_container .play_header_menu .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_mobile_nav_container .play_header_menu .menu-item-container:hover .menu__child-toggle-icon {
+  border-color: {{ dynamic_settings.header_colors.mobile_item_hover }};
+}
+
+.play_mob_nav_icon label span {
+  background: {{ dynamic_settings.header_colors.mobile_item }};
+}
+
+.play_mob_nav_icon:hover label span {
+  background: {{ dynamic_settings.header_colors.mobile_item_hover }};
+}
+
+
+
+{#
+  
+@website_footer
+
+#}
+
+{# ###################################################### #}
+{# ################   Website footer   ################## #}
+{# ###################################################### #}
+
+/* Container */
+
+.play_module_website_f {
+  background: {{ dynamic_settings.footer_colors.container_bg }};
+}
+
+/* Menu */
+
+.mwf_el_menu-title {
+  color: {{ dynamic_settings.footer_colors.menu_title }};
+}
+
+.mwf_el_menu .menu__link {
+  color: {{ dynamic_settings.footer_colors.menu_item }};
+}
+
+.mwf_el_menu .menu__link--active-link,
+.mwf_el_menu .menu__link--active-branch,
+.mwf_el_menu .menu-item-container:hover a,
+.mwf_el_menu .menu-item-container:hover span {
+  color: {{ dynamic_settings.footer_colors.menu_item_hover }};
+}
+
+/* Social accounts */
+
+.mwf_el_social .msi_icon svg {
+  fill: {{ dynamic_settings.footer_colors.social_accounts_icon }};
+}
+
+.mwf_el_social .play_social_icons a:hover svg,
+.mwf_el_social .play_social_icons a:focus svg,
+.mwf_el_social .play_social_icons a:active svg {
+  fill: {{ dynamic_settings.footer_colors.social_accounts_icon_hover }};
+}
+
+/* Text */
+
+.mwf_el_text,
+.mwf_image_text {
+  color: {{ dynamic_settings.footer_colors.text_color }};
+}
+
+
+
+{#
+  
+@blog
+
+#}
+
+{# ###################################################### #}
+{# #####################   Blog   ####################### #}
+{# ###################################################### #}
+
+.blog-header__inner {
+  max-width: {{ container_width }};
+}
+
+.play_blog_post-header_inner.content-wrapper {
+  max-width: {{ theme.spacing.content.maximum_content_width + 40 ~ 'px' }};
+}
+
+.play_blog_post-header_container,
+.blog-header_author_container,
+.blog-header_tag_container {
+  background: {{ secondary_accent_color }};
+  color: {{ secondary_color }};
+}
+
+.play_blog_tag-author_title,
+.play_blog_post-title {
+  color: {{ secondary_color }};
+}
+
+.play_blog_tag-author_title:after,
+.play_blog_post-title:after {
+  background: {{ secondary_color }};
+}
+
+.play_grid-author-image,
+.blog-header__author-avatar {
+  background: {{ secondary_color }};
+}
+
+.blog-header_author_container .play_social_icons svg {
+  fill: {{ secondary_color }};
+}
+
+.mblog-next-post,
+.mblog-previous-post {
+  color: {{ body_text_color }};
+}
+
+blockquote {
+  border-left-color: {{ primary_color }};
+}
+
+
+
+{#
+  
+@system_pages
+
+#}
+
+{# ###################################################### #}
+{# #################   System pages   ################### #}
+{# ###################################################### #}
+
+/* Success message */
+
+.systems-page .success {
+  color: {{ secondary_color }};
+  background-color: {{ secondary_accent_color }};
+  {{ main_borders_css }}
+  border-radius: {{ main_corners }};
+}
+
+
+
+{#
+  
+@modules
+
+#}
+
+{# ###################################################### #}
+{# ####################   Modules   ##################### #}
+{# ###################################################### #}
+
+/* Menu */
+
+{% if menu_corner > 0 %}
+  .menu__submenu .menu-item-container,
+  .menu__submenu .menu-item-container a {
+    border-radius: {{ menu_corner / 2|round ~ 'px' }};
+  }
+{% endif %}
+
+/* Blog listings */
+
+.pagination__link-icon svg {
+  fill: {{ body_text_color }};
+}
+
+.pagination__link-icon:hover svg {
+  fill: {{ body_link_hover_color }};
+}
+
+.pagination__link--disabled .pagination__link-icon svg,
+.pagination__link--disabled .pagination__link-icon svg {
+  fill: {{ body_text_color }};
+  opacity: 0.3;
+}
+
+.pagination__link--active {
+  color: {{ body_text_color }};
+}
+
+/* Number counters */
+
+.play_module_number_counters .counter_icon svg {
+    fill: {{ primary_color }};
+}
+
+/* Quote */
+
+.play_module_quote_text {
+  {{ apply_font_properties('primary', lf_word) }}
+}
+
+.play_module_quote_icon {
+    background-color: {{ secondary_accent_color }};
+}
+
+.play_module_quote_icon svg {
+    fill: {{ secondary_color }};
+}
+
+/* Countdown timer */
+
+.play_module_countdown_timer-container {
+  background-color: {{ secondary_color }};
+}
+
+.play_module_countdown_timer-container {
+  {{ apply_font_properties('primary', lf_word) }}
+}
+
+.play_module_countdown_timer-container span {
+  {{ apply_font_properties('secondary', lf_word) }}
+}
+
+/* List */
+
+.play_module_list_arrow svg {
+  fill: {{ primary_color }};
+}
+
+.play_module_list_arrow.circle {
+  border-color: {{ primary_color }};
+}
+
+.play_module_list_arrow.line {
+  background: {{ primary_color }};
+}
+
+/* Accordion */
+
+.play_module_accordion_item {
+  background: {{ secondary_color }};
+}
+
+.play_module_accordion_q svg {
+  fill: {{ secondary_accent_color }};
+}
+
+/* Pricing Card */
+
+.play_module_pricing_card.hmpc_badged {
+  background-color: {{ secondary_accent_color }};
+  color: {{ secondary_color }};
+}
+
+.play_module_pricing_card.hmpc_badged .play_module_pricing_card_heading,
+.play_module_pricing_card.hmpc_badged .play_module_pricing_card_price,
+.play_module_pricing_card.hmpc_badged .play_module_pricing_card_features_hdr {
+  color: {{ secondary_color }};
+}
+
+.play_module_pricing_card_badge {
+  background-color: {{ secondary_accent_color }};
+  color: {{ secondary_color }};
+  border-radius: {{ primary_button_corner }};
+}
+
+/* Social Accounts */
+
+.msi_icon svg {
+  fill: {{ body_text_color }};
+}
+
+.play_social_icons a:hover svg,
+.play_social_icons a:focus svg,
+.play_social_icons a:active svg {
+  fill: {{ body_link_color }};
+}
+
+/* Single Letter/Number */
+
+.play_module_single_letter_number {
+  color: {{ secondary_color }};
+  background-color: {{ primary_color }};
+}
+
+.play_module_single_letter_number:after {
+  background-color: {{ secondary_accent_color }};
+}
+
+/* Testimonials */
+
+.play_module_testimonial_score {
+  color: {{ secondary_color }};
+  background-color: {{ secondary_accent_color }};
+}
+
+/* Video */
+
+button.oembed_custom-thumbnail .oembed_custom-thumbnail_icon {
+  background: {{ primary_button_bg_color }};
+  {{ primary_button_border_css }}
+  border-radius: {{ primary_button_corner }};
+  box-shadow: {{ primary_button_shadow_horizontal }} {{ primary_button_shadow_vertical }} {{ primary_button_shadow_blur }} {{ primary_button_shadow_spread }} {{ primary_button_shadow_color }};
+}    
+
+button.oembed_custom-thumbnail .oembed_custom-thumbnail_icon svg {
+  fill: {{ primary_button_text_color }} !important;
+}
+
+button.oembed_custom-thumbnail:hover .oembed_custom-thumbnail_icon {
+  background: {{ primary_button_hover_bg_color }};
+  {{ primary_button_hover_border_css }}
+  border-radius: {{ primary_button_hover_corner }};
+  box-shadow: {{ primary_button_hover_shadow_horizontal }} {{ primary_button_hover_shadow_vertical }} {{ primary_button_hover_shadow_blur }} {{ primary_button_hover_shadow_spread }} {{ primary_button_hover_shadow_color }};
+}
+
+button.oembed_custom-thumbnail:hover .oembed_custom-thumbnail_icon svg {
+  fill: {{ primary_button_hover_text_color }} !important;
+}
+
+/* Tabs */
+
+.play_module_tabs_link {
+  border-radius: {{ primary_button_corner }};
+}
+
+.play_module_tabs_link.active {
+  background: {{ secondary_accent_color }};
+  color: {{ secondary_color }};
+}
+
+
+
+{#
+  
+@sliders
+
+#}
+
+{# ###################################################### #}
+{# ####################   Sliders   ##################### #}
+{# ###################################################### #}
+
+button.splide__pagination__page {
+  background-color: {{ body_text_color }};
+}
+
+.splide__arrows button.splide__arrow svg {
+  fill: {{ body_text_color }};
+}
+
+.play_module_hero button.splide__pagination__page {
+  background-color: {{ secondary_color }};
+}
+
+@media (max-width: 767px) {
+  .play_module_hero button.splide__pagination__page {
+    background-color: {{ body_text_color }};
+  }
+}
+
+.play_module_hero .splide__arrows button.splide__arrow svg {
+  fill: {{ secondary_color }};
+}
+
+.splide__arrows button.splide__arrow:hover svg,
+.splide__arrows button.splide__arrow:focus svg,
+.splide__arrows button.splide__arrow:active svg {
+  fill: {{ primary_color }};
+}
+
+button.splide__pagination__page.is-active,
+button.splide__pagination__page:hover,
+button.splide__pagination__page:focus {
+  background-color: {{ primary_color }};
+}
+
+
+
+{#
+  
+@paddings
+
+#}
+
+{# ###################################################### #}
+{# ###################   Paddings   ##################### #}
+{# ###################################################### #}
+
+{% set pm = padding_multiplier > 0 %}
+{% set module_bg_color = secondary_color %}
+  
+/* Forms */
+
+{% if padding_form_title or force_padding %}
+  .form-title {
+    padding: calc(30px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+{% if padding_form or force_padding %}
+  form {
+    padding: calc(20px * {{ padding_multiplier }} + 40px);
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Blog comments */
+
+{% if padding_blog_comments or force_padding %}
+  .blog-comments {
+    padding: calc(60px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Pricing cards */
+
+{% if padding_pricing_cards or force_padding %}
+  .play_module_pricing_card {
+    padding: calc(20px * {{ padding_multiplier }} + 30px);
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% else %}
+  .play_module_pricing_card {
+    padding: 30px;
+  }
+{% endif %}
+
+/* Accordion */
+
+{% if padding_accordion or force_padding %}
+  .play_module_accordion {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Cards */
+
+{% if padding_cards or force_padding %}
+  .play_module_icon_card_text-outer {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* List */
+
+{% if padding_list or force_padding %}
+  .play_module_list {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Team members */
+
+{% if padding_team_members or force_padding %}
+  .play_module_team_members_text {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Number counters */
+
+{% if padding_number_counters or force_padding %}
+  .play_module_number_counters-top {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Testimonials */
+
+{% if padding_testimonials or force_padding %}
+  .play_module_testimonial_container {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+/* Events */
+
+{% if padding_events or force_padding %}
+  .play_module_calendar_item {
+    padding: calc(50px * {{ padding_multiplier }});
+    {% if pm %}
+      background: {{ module_bg_color }};
+    {% endif %}
+  }
+{% endif %}
+
+
+
+{#
+  
+@spacings
+
+#}
+
+{# ###################################################### #}
+{# ###################   Spacings   ##################### #}
+{# ###################################################### #}
+
+/* Pricing cards */
+
+.play_module_pricing_card_header,
+.play_module_pricing_card_desc,
+.play_module_pricing_card_features_hdr,
+.play_module_pricing_card_price,
+.play_module_pricing_card_badge {
+  margin-bottom: calc(30px * {{ margin_multiplier }});
+}
+
+.play_module_pricing_card_features ul {
+  margin-bottom: calc(60px * {{ margin_multiplier }});
+}
+
+.play_module_pricing_card_features li {
+  margin: 0 0 calc(10px * {{ margin_multiplier }}) 0;
+}
+
+/* Accordion */
+
+.play_module_accordion_item,
+.play_module_accordion_title {
+  margin-bottom: calc(30px * {{ margin_multiplier }});
+}
+
+/* Cards */
+
+.play_module_icon_card {
+  margin-bottom: calc(20px * {{ margin_multiplier }});
+}
+
+.play_module_icon_card_title,
+.play_module_icon_card p {
+  margin-bottom: calc(30px * {{ margin_multiplier }});
+}
+
+/* List */
+
+.play_module_list {
+  gap: calc(30px * {{ margin_multiplier }});
+}
+
+/* Team members */
+
+.play_module_team_members_bio {
+  margin-bottom: calc(30px * {{ margin_multiplier }});
+}
+
+.play_module_team_members_title,
+.play_module_team_members_job {
+  margin-bottom: calc(10px * {{ margin_multiplier }});
+}
+
+/* Events */
+
+.play_module_calendar_title {
+  margin-top: calc(6px * {{ margin_multiplier }});
+  margin-bottom: calc(10px * {{ margin_multiplier }});
+}
+
+.play_module_calendar_item {
+  gap: calc(30px * {{ margin_multiplier }}) 30px;
+}
+
+/* Quote */
+
+.play_module_quote {
+  gap: calc(30px * {{ margin_multiplier }});
+}
+
+/* Text with image */
+
+.play_module_image_text {
+  gap: calc(50px * {{ margin_multiplier }}) 70px;
+}

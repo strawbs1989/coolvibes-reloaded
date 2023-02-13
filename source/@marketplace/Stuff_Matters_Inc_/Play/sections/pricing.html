@@ -1,0 +1,181 @@
+<!--
+  templateType: section
+  label: Pricing
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/pricing.png
+  description: "Pricing cards for your plans."
+-->
+
+{% dnd_section
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+    {% dnd_column %}
+
+        {# Title #}
+
+        {% dnd_row
+            margin={ 'bottom': 100 }
+        %}
+            {% dnd_module path='../modules/fancy-header'
+                text={{ context.text || 'Pricing' }},
+                huge={{ context.huge || false }},
+                styles={
+                    'color': {
+                        'color': context.color || theme.typography.headings.h1.font_style.color
+                    }
+                }
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+
+        {# Pricing cards #}
+
+        {% dnd_row %}
+            {% dnd_module path='../modules/pricing-cards'
+                cards=[
+                    {
+                    "tier": "Party",
+                    "tier_heading_type": "h2",
+                    "price": "19",
+                    "currency": "$",
+                    "description": "For every human being who wants to enjoy our services.",
+                    "features": [
+                        {
+                        "feature": "First feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Second feature is a bit longer than other features.",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Third feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Fourth feature",
+                        "additional": "Additional fees may apply.",
+                        },
+                        {
+                        "feature": "Fifth feature",
+                        "additional": "",
+                        }
+                    ],
+                    "badge_toggle": false,
+                    "button_toggle": true,
+                    "button_options": {
+                        "button_text": "Buy service",
+                        "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                        }
+                    }
+                    },
+                    {
+                    "tier": "Festival",
+                    "tier_heading_type": "h2",
+                    "price": "49",
+                    "currency": "$",
+                    "description": "For every human being who wants to enjoy our services.",
+                    "features": [
+                        {
+                        "feature": "First feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Second feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Third feature is a bit longer than other features.",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Fourth feature",
+                        "additional": "Additional fees may apply.",
+                        },
+                        {
+                        "feature": "Fifth feature",
+                        "additional": "",
+                        }
+                    ],
+                    "badge_toggle": true,
+                    "badge_options": {
+                        "badge_text": "Recommended",
+                        "image": {
+                            "src" : get_asset_url('../images/pricing-601.jpg'),
+                            "alt" : "pricing-001"
+                        },
+                    },
+                    "button_toggle": true,
+                    "button_options": {
+                        "button_text": "Buy service",
+                        "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                        }
+                    }
+                    },
+                    {
+                    "tier": "Concert",
+                    "tier_heading_type": "h2",
+                    "price": "199",
+                    "currency": "$",
+                    "description": "For every human being who wants to enjoy our services.",
+                    "features": [
+                        {
+                        "feature": "First feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Second feature",
+                        "additional": "For the USA only.",
+                        },
+                        {
+                        "feature": "Third feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Fourth feature",
+                        "additional": "",
+                        },
+                        {
+                        "feature": "Fifth feature is a bit longer than other features.",
+                        "additional": "",
+                        }
+                    ],
+                    "badge_toggle": false,
+                    "button_toggle": true,
+                    "button_options": {
+                        "button_text": "Buy service",
+                        "button_link": {
+                        "url": {
+                            "href": "",
+                            "type": "EXTERNAL"
+                        },
+                        "no_follow": false,
+                        "open_in_new_tab": false
+                        }
+                    }
+                    }
+                ]
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        
+    {% end_dnd_column %}
+{% end_dnd_section %}

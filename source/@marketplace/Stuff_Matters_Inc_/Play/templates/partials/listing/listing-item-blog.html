@@ -1,0 +1,87 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% macro render_list_item() %}
+
+    {# Article content #}
+
+    <div class="play_grid-content play_grid-content--{{ bl }} play_grid-blog_item">
+
+        {# Featured image #}
+
+        {% if content.featured_image and module.show_hide.featured_image %}
+            <a class="mgiw-list play_grid-image-wrapper play_grid-image-wrapper--{{ bl }}" href="{{ content.absolute_url }}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Read full post: {{ content.name }}">
+                <img class="play_grid-image play_grid-image--{{ bl }}" src="{{ content.featured_image }}" loading="lazy" alt="{{ content.featured_image_alt_text }}" width="{{ bl == 'small' ? '100%' : '100%' }}">
+            </a>
+        {% endif %}
+
+        <div class="play_grid-blog_item_inner">
+
+            {# Featured image #}
+
+            {% if content.featured_image and module.show_hide.featured_image %}
+                <a class="mgiw-box play_grid-image-wrapper play_grid-image-wrapper--{{ bl }}" href="{{ content.absolute_url }}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Read full post: {{ content.name }}">
+                    <img class="play_grid-image play_grid-image--{{ bl }}" src="{{ content.featured_image }}" loading="lazy" alt="{{ content.featured_image_alt_text }}" width="{{ bl == 'small' ? '100%' : '100%' }}">
+                </a>
+            {% endif %}
+
+            {# Title #}
+
+            {% if module.show_hide.title %}
+                <h2 class="play_grid-title"><a class="play_grid-title-link" href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+            {% endif %}
+
+            {% if module.show_hide.publish_date or (module.show_hide.author and content.blog_author) %}
+                <div class="play_grid-date_bar">
+
+                    {# Publish date #}
+
+                    {% if module.show_hide.publish_date %}
+                        <time class="play_grid-timestamp" datetime="{{ content.publish_date }}">
+                            {{ content.publish_date|datetimeformat('%e %b %Y') }}
+                        </time>
+                    {% endif %}
+
+                    {# Author #}
+
+                    {% if module.show_hide.author and content.blog_author %}
+                        <div class="play_grid-author">
+                            <a class="play_grid-author-name" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">{{ content.blog_author.display_name }}</a>
+                        </div>
+                    {% endif %}
+
+                </div>
+            {% endif %}
+
+            {# Summary #}
+
+            {% if module.show_hide.description and content.post_list_content %}
+                <div class="play_grid-summary">
+                    {{ content.post_list_content|truncatehtml(100) }}
+                </div>
+            {% endif %}
+
+            {# Read more button #}
+
+            {% if module.show_hide.button %}
+                <div class="play_grid-button-wrapper play_module_container">
+                    <a class="play_grid-button button" href="{{ content.absolute_url }}">{{ module.show_hide.button_text }}</a>
+                </div>
+            {% endif %}
+
+            {# Tags #}
+
+            {% if module.show_hide.tags and content.tag_list %}
+                <div class="play_grid-tags">
+                    {% for tag in content.tag_list %}
+                        <a class="play_grid-tag" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if !loop.last %}<span>, </span>{% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+{% endmacro %}

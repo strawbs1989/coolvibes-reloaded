@@ -1,0 +1,34 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% import '../social-icons.html' %}
+
+{% macro print_blog_author_page_header(blog_post) %}
+
+    {% set b_a = content.blog_author if blog_post else blog_author %}
+    {% set h = 'h2' if blog_post else 'h1' %}
+
+    <div class="blog-header_author_container {{ 'mat_pri_bor mat_pri_cor mat_pri_sha' if blog_post }}">
+        <div class="content-wrapper">
+            <div class="play_module_page_title_container">
+                <{{ h }} class="play_blog_tag-author_title {{ 'mmptt_big' if !blog_post }}">{{ b_a.display_name }}</{{ h }}>
+            </div>
+            {% if b_a.bio %}
+                <p class="blog-header__subtitle">{{ b_a.bio }}</p>
+            {% endif %}
+            <div class="blog-header__author_ae">
+                {% if b_a.avatar and !blog_post %}
+                    <img class="blog-header__author-avatar" src="{{ b_a.avatar }}" alt="{{ b_a.display_name }}" width="50" loading="eager">
+                {% endif %}
+                {% if b_a.email %}
+                    <p class="blog-header__email"><a href="mailto:{{ b_a.email }}">{{ b_a.email }}</a></p>
+                {% endif %}
+            </div>
+            {% if b_a.has_social_profiles %}
+                {{ render_author_social_icons(b_a) }}
+            {% endif %}
+        </div>
+    </div>
+
+{% endmacro %}

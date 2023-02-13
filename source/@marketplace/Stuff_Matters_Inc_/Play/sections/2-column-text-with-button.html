@@ -1,0 +1,100 @@
+<!--
+  templateType: section
+  label: 2 column text
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/2-column-text-with-button.png
+  description: "2 columns of text, image and button."
+-->
+
+{% dnd_section
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+    {% dnd_column %}
+        {% dnd_row %}
+            
+            {# Column 1 #}
+
+            {% dnd_column
+                offset=0,
+                width=6,
+                padding={ 'left': 0, 'right': 0 },
+                margin={
+                    'mobile': { 'bottom': 100 }
+                }
+            %}
+                {% dnd_row %}
+                    {% dnd_module margin={ 'bottom': 40 } path='@hubspot/linked_image'
+                        img={
+                            "alt": 'Image 001',
+                            "src": get_asset_url('../images/about-600.jpg'),
+                            "width": 800
+                        },
+                        extra_classes='play_linked_image',
+                        horizontal_alignment='CENTER'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h2>It's what we do.</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, <a href="#">there live the</a> blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language.</p>
+                            <p>A small river named <strong>Duden flows</strong> by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        {% end_module_attribute %}   
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/button'
+                        horizontal_alignment='LEFT',
+                        button_text='Find out more'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+    
+            {# Column 2 #}
+            
+            {% dnd_column
+                offset=6,
+                width=6,
+                padding={ 'left': 0, 'right': 0 }
+            %}
+                {% dnd_row %}
+                    {% dnd_module margin={ 'bottom': 40 } path='@hubspot/linked_image'
+                        img={
+                            "alt": 'Image 002',
+                            "src": get_asset_url('../images/about-601.jpg'),
+                            "width": 800
+                        },
+                        extra_classes='play_linked_image',
+                        horizontal_alignment='CENTER'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/rich_text' %}         
+                        {% module_attribute 'html' %}
+                            <h2>And this is how.</h2>
+                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+                            <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her <a href="#">hometown</a> Bookmarksgrove, the headline of Alphabet Village and the subline of her own road.</p>
+                        {% end_module_attribute %}   
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+                {% dnd_row %}
+                    {% dnd_module path='@hubspot/button'
+                        horizontal_alignment='LEFT',
+                        button_text='Contact us'
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
+            {% end_dnd_column %}
+        
+        {% end_dnd_row %}        
+    {% end_dnd_column %}
+{% end_dnd_section %}

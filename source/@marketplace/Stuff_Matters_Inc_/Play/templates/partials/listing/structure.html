@@ -1,0 +1,195 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{# macros #}
+
+{# add column styles with cycle #}
+
+{% macro cycle_class(cc) -%}
+    {%- cycle cc %}
+{%- endmacro %}
+
+{# print listing item article #}
+
+{% macro listing_item(col_class, l_class, a_label, listing_type) %}
+    <article class="play_grid-col play_grid--{{ l_class }} {{ col_class }}{{ ms_vis_class }}" aria-label="Summary: {{ a_label }}">
+        {% set html = './listing-item-' ~ listing_type ~ '.html' %}
+        {% import html %}
+        {{ render_list_item() }}
+    </article>
+{% endmacro %}
+
+{# Set layout style & structure #}
+
+{% set cycle_list_1 = ['mgi-col1'] %}
+{% set cycle_list_2 = ['mgi-col1','mgi-col2'] %}
+{% set cycle_list_3 = ['mgi-col1','mgi-col2','mgi-col3'] %}
+
+{% set layouts = {
+    '1col': {
+        'remaining_post_class': '1col',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '2col': {
+        'remaining_post_class': '2col',
+        'cycle_class': cycle_list_2,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '3col': {
+        'remaining_post_class': '3col',
+        'cycle_class': cycle_list_3,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '1_2col': {
+        'remaining_post_class': '2col',
+        'cycle_class': cycle_list_2,
+        'initial_post_count': 1,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '1_3col': {
+        'remaining_post_class': '3col',
+        'cycle_class': cycle_list_3,
+        'initial_post_count': 1,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '2_1col': {
+        'remaining_post_class': '1col',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 2,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '2_3col': {
+        'remaining_post_class': '3col',
+        'cycle_class': cycle_list_3,
+        'initial_post_count': 2,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '3_1col': {
+        'remaining_post_class': '1col',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 3,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '3_2col': {
+        'remaining_post_class': '2col',
+        'cycle_class': cycle_list_2,
+        'initial_post_count': 3,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    'masonry2': {
+        'remaining_post_class': 'masonry2',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    'masonry3': {
+        'remaining_post_class': 'masonry3',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    'list': {
+        'remaining_post_class': 'list',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 0
+    },
+    '1col_list': {
+        'remaining_post_class': '1col',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 1
+    },
+    '2col_list': {
+        'remaining_post_class': '2col',
+        'cycle_class': cycle_list_2,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 2
+    },
+    '3col_list': {
+        'remaining_post_class': '3col',
+        'cycle_class': cycle_list_3,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 3
+    },
+    '2x1col_list': {
+        'remaining_post_class': '1col',
+        'cycle_class': cycle_list_1,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 2
+    },
+    '2x2col_list': {
+        'remaining_post_class': '2col',
+        'cycle_class': cycle_list_2,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 4
+    },
+    '2x3col_list': {
+        'remaining_post_class': '3col',
+        'cycle_class': cycle_list_3,
+        'initial_post_count': 0,
+        'allow_vis_sidebar': false,
+        'appended_list_count': 6
+    }
+} %}
+
+{# get blog layout style #}
+
+{% if blog_author %}
+    {% set bl = module.author_layout_style %}
+{% elif tag %}
+    {% set bl = module.tag_layout_style %}
+{% else %}
+    {% set bl = module.layout_style %}
+{% endif %}
+
+{# check sidebar style and set variables accordingly #}
+
+{% set ss_visible = false %}
+{% set ms_hid_class = '' %}
+
+{# check if current layout allows visible sidebar #}
+
+{% set ms_vis_class = '' %}
+
+{# set layout configuration #}
+
+{% set initial_posts = [] %}
+{% set remaining_posts = [] %}
+
+{% set initial_cols = 0 %}
+{% if layouts[bl]['initial_post_count'] %}
+    {% set initial_cols = layouts[bl]['initial_post_count'] %}      
+{% endif %}
+
+{% set list_style_count = 0 %}
+{% if layouts[bl]['appended_list_count'] %}
+    {% set list_style_count = layouts[bl]['appended_list_count'] %}      
+{% endif %}
+
+{% set masonry_layout = '' %}
+{% if bl == 'masonry2' or bl == 'masonry3' %}
+    {% set masonry_layout = ' play_grid-' ~ bl %}
+{% endif %}

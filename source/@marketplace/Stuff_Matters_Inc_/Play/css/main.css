@@ -1,0 +1,76 @@
+/* z-index is important for parallax footer */
+
+main {
+    position: relative;
+    z-index: 10;
+}
+
+/* Includes */
+
+{% include './generic/_reset.css' %}
+{% include './generic/_normalize.css' %}
+
+/* Objects
+Non-cosmetic design patterns including grid and layout classes)
+*/
+
+{% include './objects/_layout.css' %}
+{% include './objects/_containers-dnd.css' %}
+{% include './templates/play-grid.css' %}
+
+/* Elements
+Base HMTL elements are styled in this section (<body<, <h1>, <a>, <p>, <button> etc.)
+*/
+
+{% include './elements/_typography.css' %}
+{% include './elements/_buttons.css' %}
+{% include './elements/_forms.css' %}
+{% include './elements/_tables.css' %}
+{% include './elements/_slider.css' %}
+{% include './elements/_image.css' %}
+
+/* Components
+Specific pieces of UI that are stylized. Typically used for global partial styling
+*/
+
+{% include './components/_header.css' %}
+{% include './components/_default-modules.css' %}
+{% include './components/_footer.css' %}
+
+/* Utilities
+Helper classes with ability to override anything that comes before it
+*/
+
+{% include './utilities/_helper.css' %}
+{% include './utilities/_misc.css' %}
+
+/* Lightgallery
+A plugin for lighbox interaction in portfolio module.
+*/
+
+{% include './lightgallery/_lightgallery.css' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

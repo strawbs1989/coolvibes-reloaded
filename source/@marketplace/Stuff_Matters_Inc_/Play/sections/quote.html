@@ -1,0 +1,20 @@
+<!--
+  templateType: section
+  label: Quote
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/quote.png
+  description: "A quote section with the Quote module in it."
+-->
+
+{% dnd_section
+    padding={ 
+      'default': { 'top': context.section_padding_top || 100 }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom || 100 }
+    },
+    background_color={{ context.background_color || '#FFEED5' }}
+%}
+    {% dnd_module path='../modules/quote' %}
+    {% end_dnd_module %}
+{% end_dnd_section %}
