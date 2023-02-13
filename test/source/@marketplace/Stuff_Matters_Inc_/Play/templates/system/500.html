@@ -1,0 +1,28 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Play - 500 Error
+  screenshotPath: ../../images/template-previews/500.png
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends '../layouts/base.html' %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Error 500 | Server error" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="error-page" data-error="500">
+    {% icon
+      name='unlink'
+      style='SOLID'
+      unicode='f127'
+      purpose='decorative'
+    %}
+    <div class="error-page-number">500</div>
+    {% module 'content'
+      path='@hubspot/rich_text',
+      html='<h4>Something went wrong.</h4>'
+    %}
+  </div>
+</section>
+{% endblock body %}

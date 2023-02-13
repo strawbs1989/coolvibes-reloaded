@@ -1,0 +1,28 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Play - 404 Error
+  screenshotPath: ../../images/template-previews/404.png
+-->
+{% set template_css = '../../css/templates/system.css' %}
+{% extends '../layouts/base.html' %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Error 404 | Page not found" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="error-page" data-error="404">
+    {% icon
+      name='unlink'
+      style='SOLID'
+      unicode='f127'
+      purpose='decorative'
+    %}
+    <div class="error-page-number">404</div>
+    {% module 'content'
+      path='@hubspot/rich_text',
+      html='<h4>Page not found.</h4>'
+    %}
+  </div>
+</section>
+{% endblock body %}

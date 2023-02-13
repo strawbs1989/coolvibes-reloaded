@@ -1,0 +1,135 @@
+/* Fields */
+
+.hs-form-field {
+  margin-bottom: 30px;
+}
+
+/* Labels */
+
+form label {
+  display: inline-table;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+  width: 100%;
+}
+
+form textarea {
+  min-height: 150px;
+}
+
+form fieldset {
+  max-width: 100% !important;
+}
+
+/* Inputs - checkbox/radio */
+
+form .inputs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form .inputs-list > li {
+  display: block;
+  margin: 0.7rem 0;
+}
+
+form .inputs-list input,
+form .inputs-list span {
+  vertical-align: middle;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  cursor: pointer;
+  margin-right: 0.35rem;
+}
+
+/* Inputs - date picker */
+
+.hs-dateinput {
+  position: relative;
+}
+
+.hs-dateinput:before {
+  content: "\01F4C5";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fn-date-picker .pika-table td,
+.fn-date-picker .pika-table th {
+  border: none;
+}
+
+.fn-date-picker button,
+.fn-date-picker button:hover,
+.fn-date-picker button:focus,
+.fn-date-picker td button.pika-button,
+.fn-date-picker td button.pika-button:hover,
+.fn-date-picker td button.pika-button:focus {
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+
+.hs-datepicker .fn-date-picker.pika-single {
+  border: none !important;
+}
+
+.hs-datepicker .fn-date-picker .pika-lendar {
+  margin: 20px 20px -8px 20px;
+}
+
+/* Inputs - file picker */
+
+form input[type="file"] {
+  background-color: transparent;
+  border: initial;
+  padding: initial;
+}
+
+/* Headings and text */
+
+form .hs-richtext,
+form .hs-richtext p {
+  font-size: 0.875rem;
+  margin: 0 0 1.4rem;
+}
+
+form .hs-richtext img {
+  max-width: 100% !important;
+}
+
+/* GDPR */
+
+.legal-consent-container .hs-form-booleancheckbox-display > span,
+.legal-consent-container .hs-form-booleancheckbox-display > span p {
+  font-size: 0.875rem;
+  line-height: 0.875em;
+  margin-bottom: 1.4rem;
+}
+
+/* Validation */
+
+.hs-error-msg {
+  margin-top: 0.35rem;
+}
+
+/* Captcha */
+
+.grecaptcha-badge {
+  margin: 0 auto;
+}

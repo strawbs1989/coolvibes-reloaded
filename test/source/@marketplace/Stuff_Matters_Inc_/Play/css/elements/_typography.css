@@ -1,0 +1,63 @@
+body {
+  word-break: break-word;
+}
+
+html[lang^="ja"] body,
+html[lang^="zh"] body,
+html[lang^="ko"] body {
+  line-break: strict;
+  word-break: break-all;
+}
+
+/* Anchors */
+
+a {
+  cursor: pointer;
+}
+
+/* Lists */
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+ul.no-list {
+  list-style: none;
+}
+
+/* Code blocks */
+
+pre {
+  overflow: auto;
+  white-space: normal;
+}
+
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
+
+blockquote {
+  border-left: 2px solid;
+  padding-left: 30px;
+}
+
+/* Horizontal rules */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  color: #ccc;
+}
+
+/* Image alt text */
+
+img {
+  font-size: 14px;
+  word-break: normal;
+}

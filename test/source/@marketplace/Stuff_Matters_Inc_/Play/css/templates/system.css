@@ -1,0 +1,174 @@
+/* Error pages */
+
+.error-page {
+  padding: 120px 80px;
+  position: relative;
+  text-align: center;
+}
+
+.error-page h4 {
+  margin-bottom: 0;
+}
+
+.error-page svg {
+  height: 50px;
+}
+
+.error-page-number {
+  font-size: 160px;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .error-page-number {
+    font-size: 80px;
+  }
+  .error-page svg {
+    height: 30px;
+  }
+}
+
+/* System pages */
+
+.systems-page {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 80px 20px;
+}
+
+.systems-page--search-results {
+  max-width: 100%;
+}
+
+.systems-page p.header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+
+.systems-page p.header {
+  margin-top: 60px;
+}
+
+.systems-page .subscribe-options p.header {
+  margin-top: 0;
+}
+
+.systems-page .success {
+  display: inline-block;
+  margin: 1.4rem 0;
+  padding: 20px 30px;
+  font-size: 16px;
+  border-radius: 0;
+}
+
+.systems-page form input {
+  max-width: 100%;
+}
+
+.systems-page form input[type="submit"] {
+  margin: 0.625rem 0;
+  display: block;
+}
+
+.systems-page .form-container + div span p {
+  margin-top: 60px;
+}
+
+.systems-page .email-prefs .fakelabel {
+  font-size: 16px;
+}
+
+.systems-page .email-prefs .item-inner p {
+  font-size: 14px;
+}
+
+.systems-page .having-trouble {
+  font-size: 14px;
+}
+
+/* Search pages */
+
+ul.hs-search-results__listing li {
+  margin-bottom: 60px;
+}
+
+ul.hs-search-results__listing li p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.hs-search-results__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hs-search-results__pagination a {
+  font-size: 16px;
+}
+
+/* Password prompt */
+
+.password-prompt input[type="password"] {
+  height: auto !important;
+  margin-bottom: 1.4rem;
+}
+
+.systems-page #hs-login-widget-remember,
+.systems-page #hs-login-widget-remember ~ label {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.systems-page #hs_login_reset {
+  display: inline-table;
+  margin-bottom: 0.625rem;
+  font-size: 14px;
+}
+
+/* Backup unsubscribe */
+
+.backup-unsubscribe #email-prefs-form div {
+  padding-bottom: 0 !important;
+}
+
+.backup-unsubscribe input[type="email"] {
+  font-size: 0.875rem !important;
+  margin-bottom: 1.4rem;
+  padding: 1rem !important;
+}
+
+/* Subscription preferences */
+
+#email-prefs-form .item.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#email-prefs-form .item.disabled input:disabled {
+  cursor: not-allowed;
+}
+
+/* Membership pages */
+
+#hs-membership-form a[class*="show-password"] {
+  font-size: 0.75rem;
+}
+
+/* Input error messages */
+
+.form-input-validation-message ul.hs-error-msgs {
+  padding-left: 0;
+  margin: -20px 0 10px 0;
+}
+
+.form-input-validation-message ul.hs-error-msgs li {
+  margin: 0;
+  line-height: 1em;
+}
+
+.hs-error-msgs label {
+  font-style: normal;
+}

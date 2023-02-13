@@ -1,0 +1,68 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% import '../button.html' %}
+
+{% macro render_list_item() %}     
+
+    <div class="play_grid-content play_grid-content--{{ bl }} mportfolio-item{{ ' work-clicker' if content.lightbox }}">
+
+            {% if not content.lightbox %}
+                {{ render_button({
+                    'rb_href': content.link.url.href,
+                    'rb_type': '',
+                    'rb_follow': content.link.no_follow,
+                    'rb_tab': content.link.open_in_new_tab,
+                    'rb_class': '',
+                    'rb_text': '',
+                    'rb_feature': 'portfolio',
+                    'rb_social_icon': '',
+                    'rb_acc_title': ''
+                }) }}
+            {% endif %}
+
+            <div class="mportfolio-box-outer">
+                {% if content.thumbnail %}
+                    {% image
+                        src='{{ content.thumbnail.src }}'
+                        alt='{{ content.thumbnail.alt }}'
+                        loading='lazy'
+                    %}
+                {% endif %}
+                {% if content.title or content.desc or content.tag %}
+                    <div class="mportfolio-box{{' no-image' if !content.thumbnail }}">
+                        {% if content.tag %}
+                            <div class="mportfolio-tag">{{ content.tag }}</div>
+                        {% endif %}
+                        {% if content.title %}
+                            <h3 class="mportfolio-title">{{ content.title }}</h3>
+                        {% endif %}
+                        {% if content.desc %}
+                            <p>{{ content.desc }}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+
+        {% if not content.lightbox %}
+            </a>
+        {% endif %}
+
+        {% if content.lightbox %}
+            {{ require_css(get_asset_url('../../../css/lightgallery/lightgallery-bundle.min.css')) }}
+            {{ require_js(get_asset_url('../../../js/packages/lightgallery.min.js')) }}
+            {{ require_js(get_asset_url('../../../js/portfolio.js')) }}
+            {{ '<input type="hidden" class="play-work-imgs" imgs="' }}
+            {%- for item in content.images -%}
+                {{ item.image.src }}
+                {%- if not loop.last -%}
+                    {{ ',' }}
+                {%- endif -%}
+            {%- endfor -%}
+            {{ '">' }}
+        {% endif %}
+
+    </div>
+
+{% endmacro %}

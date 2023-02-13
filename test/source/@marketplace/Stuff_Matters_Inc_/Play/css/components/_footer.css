@@ -1,0 +1,10 @@
+.footer {
+  z-index: 5;
+  width: 100%;
+}
+
+/* Footer DND sections */
+
+.footer .dnd-section {
+  padding: 0;
+}

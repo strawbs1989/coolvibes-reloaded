@@ -1,0 +1,31 @@
+.play_module_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.play_centered {
+  text-align: center;
+}
+
+.play_widget-image img,
+.play_widget-image_slider img {
+  width: 100%;
+}
+
+.play_social_icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  line-height: 0;
+  flex-wrap: wrap;
+}
+
+.msi_icon svg {
+  height: 20px;
+}
+
+.mwh_el_social .msi_icon svg,
+.mwf_el_social .msi_icon svg {
+  height: 18px;
+}

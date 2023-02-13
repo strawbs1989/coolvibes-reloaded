@@ -1,0 +1,29 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact
+  screenshotPath: ../images/template-previews/contact.png
+-->
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{% dnd_area 'dnd_area_100' class='body-container body-container--contact', label='Main section' %}
+
+  {# Page title #}
+
+  {% include_dnd_partial path='../sections/page-title.html'
+    context={
+      'text': 'Contact',
+      'color': '#000000',
+      'add_lens': true,
+      'background_image': get_asset_url('../images/img-631.jpg')
+    }
+  %}
+
+  {# Contact info #}
+
+  {% include_dnd_partial path='../sections/contact-info.html' %}
+
+{% end_dnd_area %}
+{% endblock body %}

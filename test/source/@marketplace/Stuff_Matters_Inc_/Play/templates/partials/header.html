@@ -1,0 +1,19 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+
+<header class="header">
+
+  {% dnd_area 'header-top-dnd_area_100'
+    label='Top header'
+  %}
+    {% dnd_section %}
+      {% dnd_module
+        path='../../modules/website-header'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+</header>

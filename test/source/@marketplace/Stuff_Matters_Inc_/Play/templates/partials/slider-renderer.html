@@ -1,0 +1,37 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{{ require_js(get_asset_url('../../js/packages/splide.js'), "footer") }}
+{{ require_css(get_asset_url('../../css/splide/splide.min.css')) }}
+{{ require_js(get_asset_url('../../js/slider.js')) }}
+
+{% macro render_slider(ds_args) %}
+    <div class="splide play_splide" {{ "data-splide='{{ ds_args }}'" if ds_args }}>
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+                {% icon
+                    name='chevron-right'
+                    style='SOLID'
+                    unicode='f054'
+                    purpose='semantic'
+                    title='Previous slide'
+                %}
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+                {% icon
+                    name='chevron-right'
+                    style='SOLID'
+                    unicode='f054'
+                    purpose='semantic'
+                    title='Next slide'
+                %}
+            </button>
+        </div>
+        <div class="splide__track">
+            <div class="splide__list">
+                {{ caller() }}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

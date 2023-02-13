@@ -1,0 +1,44 @@
+<!--
+  templateType: section
+  label: Contact info
+  isAvailableForNewContent: true
+  screenshotPath: ../images/section-previews/contact-info.png
+  description: "Address information with a contact form."
+-->
+
+{% dnd_section
+    vertical_alignment='MIDDLE',
+    padding={ 
+      'default': { 'top': context.section_padding_top }
+    },
+    margin={ 
+      'default': { 'bottom': context.section_margin_bottom }
+    },
+    background_color={{ context.background_color }}
+%}
+    {% dnd_column offset=0, width=6 %}
+
+      {# Text #}
+      
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/rich_text' %}         
+          {% module_attribute 'html' %}
+            <h2>Don't be a stranger.</h2>
+            <p>Tells us what you're offering, and the form header closes the deal. Over here you can explain <a href="#">why your offer</a> is so great it's worth filling out a form for.</p>
+            <p><b>3443 Diane Folk Street, Goleta CA,<br>United States</b></p>
+            <p>+001 805-452-9037<br>+001 322-121-8654</p>
+          {% end_module_attribute %}   
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+    {# Form #}
+
+    {% dnd_column offset=6, width=6 %}
+      {% dnd_row %}
+        {% dnd_module path='@hubspot/form' %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+
+{% end_dnd_section %}

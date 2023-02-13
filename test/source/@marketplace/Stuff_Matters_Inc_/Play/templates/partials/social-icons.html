@@ -1,0 +1,121 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% import './button.html' %}
+
+{% macro render_social_icons(items) %}
+    <div class="play_social_icons">
+        {% for item in items %}
+            
+            {# Sets a custom icon if the custom option is selected #}
+
+            {% if item.social_account != 'custom_icon' %}
+                {% set social_icon = item.social_account %}
+            {% else %}
+                {% set social_icon = item.custom_icon.name %}
+            {% endif %}
+
+            {{ render_button({
+                'rb_href': item.social_link.url.href,
+                'rb_type': item.social_link.url.type,
+                'rb_follow': item.social_link.no_follow,
+                'rb_tab': item.social_link.open_in_new_tab,
+                'rb_class': '',
+                'rb_text': '',
+                'rb_feature': 'social_icon',
+                'rb_social_icon': social_icon,
+                'rb_acc_title': item.accessibility.title
+            }) }}
+            
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro render_author_social_icons(blog_author) %}
+    <div class="play_social_icons">
+        {% if blog_author.website %}
+        <a href="{{ blog_author.website }}" target="_blank" rel="noopener">
+            {% icon                
+                name='link'
+                style='SOLID'
+                unicode='f0c1'
+                purpose='semantic'
+                extra_classes='msi_icon'
+                title='Follow me on my website'
+            %}
+        </a>
+        {% endif %}
+        {% if blog_author.facebook %}
+        <a href="{{ blog_author.facebook }}" target="_blank" rel="noopener">
+            {% icon                
+                name='facebook-f'
+                style='SOLID'
+                unicode='f39e'
+                purpose='semantic'
+                extra_classes='msi_icon'
+                title='Follow me on Facebook'
+            %}
+        </a>
+        {% endif %}
+        {% if blog_author.linkedin %}
+        <a href="{{ blog_author.linkedin }}" target="_blank" rel="noopener">
+            {% icon                
+                name='linkedin-in'
+                style='SOLID'
+                unicode='f0e1'
+                purpose='semantic'
+                extra_classes='msi_icon'
+                title='Follow me on LinkedIn'
+            %}
+        </a>
+        {% endif %}
+        {% if blog_author.twitter %}
+        <a href="{{ blog_author.twitter }}" target="_blank" rel="noopener">
+            {% icon                
+                name='twitter'
+                style='SOLID'
+                unicode='f099'
+                purpose='semantic'
+                extra_classes='msi_icon'
+                title='Follow me on Twitter'
+            %}
+        </a>
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro render_share_social_icons() %}
+    <div class="play_social_icons">
+      <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}&utm_medium=social&utm_source=facebook" target="_blank" rel="noopener">
+        {% icon          
+          name='facebook-f'
+          style='SOLID'
+          unicode='f39e'
+          purpose='semantic'
+          extra_classes='msi_icon'
+          title='Share on Facebook'
+        %}
+      </a>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}&utm_medium=social&utm_source=linkedin" target="_blank" rel="noopener">
+        {% icon          
+          name='linkedin-in'
+          style='SOLID'
+          unicode='f0e1'
+          purpose='semantic'
+          extra_classes='msi_icon'
+          title='Share on LinkedIn'
+        %}
+      </a>
+      <a href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}&utm_medium=social&utm_source=twitter&url={{ content.absolute_url }}&utm_medium=social&utm_source=twitter&source=tweetbutton&text={{ content.name|striptags }}" target="_blank" rel="noopener">
+        {% icon          
+          name='twitter'
+          style='SOLID'
+          unicode='f099'
+          purpose='semantic'
+          extra_classes='msi_icon'
+          title='Share on Twitter'
+        %}
+      </a>
+    </div>
+{% endmacro %}

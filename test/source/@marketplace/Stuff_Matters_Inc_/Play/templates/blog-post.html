@@ -1,0 +1,156 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Play - Blog post
+  screenshotPath: ../images/template-previews/blog-post.png
+-->
+
+{% set template_css = '../../css/templates/blog.css' %}
+{% extends './layouts/base.html' %}
+{% import './partials/blog/author-page-header.html' %}
+
+{# Get blog post sidebar style and set variables accordingly #}
+
+{% set ms_hid_class = '' %}
+{% set ms_vis_class = '' %}
+
+{% block body %}
+<div class="body-container body-container--blog-post">
+
+  {# Blog post #}
+
+  <div class="play_blog_post-container">
+
+    <div class="play_blog_post-header_container">
+      <div class="play_blog_post-header_lens"></div>
+      <div class="play_blog_post-header_inner{{ ' yes-f-img' if content.featured_image }} content-wrapper">
+        {# Title #}
+        <div class="play_module_page_title_container">
+          <h1 class="play_blog_post-title">{{ content.name }}</h1>
+        </div>
+        <div class="play_grid-date_bar">
+
+            {# Publish date #}
+
+            <time class="play_grid-timestamp" datetime="{{ content.publish_date }}">
+                {{ content.publish_date|datetimeformat('%e %b %Y') }}
+            </time>
+
+            {# Author #}
+
+            {% if content.blog_author %}
+                <div class="play_grid-author">
+                    <a class="play_grid-author-name" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}" rel="author">{{ content.blog_author.display_name }}</a>
+                </div>
+            {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+    {% if content.featured_image %}
+
+      {# Featured image #}
+      <img class="play_blog_post-featured_image" src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}">
+
+    {% endif %}
+
+    <div class="content-wrapper">
+
+      <div class="blog-post-container{{ ms_vis_class }}">
+
+        <article class="blog-post{{ ms_vis_class }}">
+          {# Body #}
+          <div class="blog-post__body">
+            {{ content.post_body }}
+          </div>
+          {# Social share #}      
+          <div class="blog-post__share">
+            {% header "share" header_tag='h3', overrideable=True, value='Share:', no_wrapper=True %}
+            {{ render_share_social_icons() }}
+          </div>
+          {# Tags #}
+          {% if content.tag_list %}
+            <div class="blog-post__tags">
+              {% for tag in content.tag_list %}
+                <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>   
+
+      </div>
+
+      {# Author info #}
+
+      {% if content.blog_author %}
+        {{ print_blog_author_page_header(true) }}
+      {% endif %}
+
+      {# Comments #}
+
+      <div class="blog-comments-container">
+        {% header "comments" header_tag='h2', overrideable=True, value='Comments', no_wrapper=True %}
+
+        {% if group.allow_comments %}
+          <div class="blog-comments">
+            {% module 'blog_comments'
+              path='@hubspot/blog_comments',
+              label="Blog comments"
+            %}
+            <input type="hidden" class="bc_url" data-abs_url="{{ content.absolute_url }}" >
+          </div>
+        {% endif %}
+      </div>
+
+      {# Related posts listing #}
+      
+      <div class="blog-post__related-posts">
+        {% header "related_posts" header_tag='h2', overrideable=True, value='You may also like', no_wrapper=True %}
+        <input type="hidden" class="rp_cols" data-cols="{{ theme.other.blog_post.related_posts_cols }}" data-vc="View Comments" >
+        {{ require_js(get_asset_url('../js/blog/blog-post-related.js')) }}
+        {% related_blog_posts limit=theme.other.blog_post.related_posts_limit, callback="blog_post_formatter" %}
+      </div>
+
+      {# Pagination #}
+
+      {% if content.next_post_name and theme.other.blog_post.infinite_blog_post %}
+        {{ require_js(get_asset_url('../js/packages/infinite-scroll.pkgd.min.js')) }}
+        {{ require_js(get_asset_url('../js/blog/infinite-blog-post.js')) }}
+      {% endif %}
+
+      <div class="blog-post__pagination">
+        <div class="blog-post__previous">
+          {% if content.previous_post_name %}
+            {% icon
+              name='arrow-left'
+              style='SOLID'
+              unicode='f060'
+              purpose='semantic'
+              title='Search'
+              no_wrapper=True
+            %}
+            <a href="/{{ content.previous_post_slug }}" class="mblog-previous-post">{{ content.previous_post_name }}</a>
+          {% endif %}
+        </div>
+        <div class="blog-post__next">
+          {% if content.next_post_name %}
+            <a href="/{{ content.next_post_slug }}" class="mblog-next-post">{{ content.next_post_name }}</a>
+            {% icon
+              name='arrow-right'
+              style='SOLID'
+              unicode='f061'
+              purpose='semantic'
+              title='Search'
+              no_wrapper=True
+            %}
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock body %}

@@ -1,0 +1,11 @@
+<!--
+  isAvailableForNewContent: false
+-->
+
+{% macro print_blog_tag_page_header() %}
+  <div class="blog-header_tag_container">
+    <div class="play_module_page_title_container content-wrapper">
+      <h1 class="play_blog_tag-author_title mmptt_big">{{ page_meta.html_title|split(' | ')|last }}</h1>
+    </div>
+  </div>
+{% endmacro %}
