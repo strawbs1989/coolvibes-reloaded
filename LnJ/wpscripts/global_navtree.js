@@ -3,21 +3,21 @@ var global_navtree = WpNavBar.readTree({
 {   'sTitle':'Home',
 'bIsWebPath':true,
 'sUrl':'index.html',
-'sTarget':'_self'
-},
+'sTarget':'_self',"childArray" : [
 {   'sTitle':'HomeMobile',
 'bIsWebPath':true,
 'sUrl':'m.index.html',
 'sTarget':'_self'
+}]
 },
 {   'sTitle':'About Us',
 'bIsWebPath':true,
 'sUrl':'aboutus.html',
-'sTarget':'_self'
-},
+'sTarget':'_self',"childArray" : [
 {   'sTitle':'AboutUsMobile',
 'bIsWebPath':true,
 'sUrl':'m.aboutus.html',
 'sTarget':'_self'
+}]
 }]
 });
