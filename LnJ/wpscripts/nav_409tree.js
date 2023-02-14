@@ -1,23 +1,22 @@
-var global_navtree = WpNavBar.readTree({
+var nav_409tree = WpNavBar.readTree({
 "childArray" : [
-{   'sTitle':'Home',
+{   'bIsCurrentPage':true,
+'sTitle':'Home',
+'bIsExternal':true,
 'bIsWebPath':true,
 'sUrl':'index.html',
 'sTarget':'_self',"childArray" : [
 {   'sTitle':'Home(mobile)',
+'bIsExternal':true,
 'bIsWebPath':true,
 'sUrl':'m.index.html',
 'sTarget':'_self'
 }]
 },
-{   'sTitle':'About Us',
+{   'sTitle':'Home(mobile)',
+'bIsExternal':true,
 'bIsWebPath':true,
-'sUrl':'aboutus.html',
-'sTarget':'_self',"childArray" : [
-{   'sTitle':'AboutUsMobile',
-'bIsWebPath':true,
-'sUrl':'m.aboutus.html',
+'sUrl':'m.index.html',
 'sTarget':'_self'
-}]
 }]
 });
