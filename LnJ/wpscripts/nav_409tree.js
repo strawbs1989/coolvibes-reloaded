@@ -1,7 +1,6 @@
 var nav_409tree = WpNavBar.readTree({
 "childArray" : [
-{   'bIsCurrentPage':true,
-'sTitle':'Home',
+{   'sTitle':'Home',
 'bIsExternal':true,
 'bIsWebPath':true,
 'sUrl':'index.html',
@@ -13,7 +12,8 @@ var nav_409tree = WpNavBar.readTree({
 'sTarget':'_self'
 }]
 },
-{   'sTitle':'Home(mobile)',
+{   'bIsCurrentPage':true,
+'sTitle':'Home(mobile)',
 'bIsExternal':true,
 'bIsWebPath':true,
 'sUrl':'m.index.html',
