@@ -10,14 +10,14 @@ var global_navtree = WpNavBar.readTree({
 'sUrl':'m.index.html',
 'sTarget':'_self'
 },
-{   'sTitle':'AboutUsMobile',
-'bIsWebPath':true,
-'sUrl':'m.aboutus.html',
-'sTarget':'_self'
-},
 {   'sTitle':'About Us',
 'bIsWebPath':true,
 'sUrl':'aboutus.html',
+'sTarget':'_self'
+},
+{   'sTitle':'AboutUsMobile',
+'bIsWebPath':true,
+'sUrl':'m.aboutus.html',
 'sTarget':'_self'
 }]
 });
