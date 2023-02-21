@@ -4,7 +4,7 @@ input {border:1px solid black;border-radius:2px;padding:0;}
 input[type=image] { border: none; }
 textarea {border:1px solid black;padding:0;}
 * {box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-ms-box-sizing:content-box;}
-a:link {color: #09d6eb;text-decoration:underline;}
+a:link {color:#ffffff;text-decoration:underline;}
 a:active {color:#ffffff;text-decoration:underline;}
 a:hover {color:#ffffff;text-decoration:underline;}
 a:visited {color:#ffffff;text-decoration:underline;}
