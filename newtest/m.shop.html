@@ -31,11 +31,13 @@
       .OBJ-3 { line-height:31px; }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wputils.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.event.move.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.event.swipe.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.wpslider.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.wplightbox.js"></script>
     <script type="text/javascript">
+      wpRedirectMobile('shop.html',0);
       $(document).ready(function() {
       $('#slider_7').data('wpslider', new $.fn.wpslider( { g_nDivId:'#slider_7', g_nTransitStyle:9, g_nLoopTime:2000, g_nAnimationTime:500, g_bPlayAtStart:true, g_nOverlaySlidePos:3, g_nOverlaySlideMargin:20, g_strEasing: "swing" } ) );
       var btnState = [];
