@@ -1,0 +1,24 @@
+﻿body {margin:0;padding:0;word-wrap:break-word;}
+img {border:none;}
+input {border:1px solid black;border-radius:2px;padding:0;}
+input[type=image] { border: none; }
+textarea {border:1px solid black;padding:0;}
+* {box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-ms-box-sizing:content-box;}
+a:link {color:#ffffff;text-decoration:underline;}
+a:active {color:#ffffff;text-decoration:underline;}
+a:hover {color:#ffffff;text-decoration:underline;}
+a:visited {color:#ffffff;text-decoration:underline;}
+.DefaultParagraph { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Artistic-Body { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Body-1 { text-align:left;margin:0px 0px 12px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Bullet-List { text-align:left;margin:0px 0px 8px 25px;text-indent:-15.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#999999;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Footer { text-align:center;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#999999;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Header-and-Footer { text-align:center;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:12.0px;vertical-align:0; }
+.Heading-1 { text-align:left;margin:32px 0px 8px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:24.0px;vertical-align:0; }
+.Heading-1:first-child { margin-top:0; }
+.Headings { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Hyperlink-1 { text-align:left;margin:0px 0px 12px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Hyperlinks { text-align:left;margin:0px 0px 12px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Large-Heading { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:700;color:#000000;background-color:transparent;font-variant:normal;font-size:64.0px;vertical-align:0; }
+.Lists { text-align:left;margin:0px 0px 12px 24px;text-indent:0.0px;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+.Normal { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
