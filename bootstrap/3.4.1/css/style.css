@@ -40,3 +40,7 @@
     height: 10rem;
     background-color: #C70E35;
 }
+a:link {
+	color: #f10808;
+	text-decoration:underline;
+	}
