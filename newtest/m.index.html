@@ -77,182 +77,22 @@
       </div>
       <img alt="Strawbs Hip/Hop" src="wpimages/wpa08584e4_06.png" style="position:absolute;left:103px;top:1352px;width:115px;height:29px;">
       <div style="position:absolute;left:34px;top:1401px;width:240px;height:122px;">
-        
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="robots" content="noindex"/>
-
-    <script type="ab49349ede4e33d42fff2107-text/javascript">
-        // @formatter:off
-        !function () { var e = function () { var e, t = "__tcfapiLocator", a = [], n = window; for (; n;) { try { if (n.frames[t]) { e = n; break } } catch (e) { } if (n === window.top) break; n = n.parent } e || (!function e() { var a = n.document, r = !!n.frames[t]; if (!r) if (a.body) { var i = a.createElement("iframe"); i.style.cssText = "display:none", i.name = t, a.body.appendChild(i) } else setTimeout(e, 5); return !r }(), n.__tcfapi = function () { for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)n[r] = arguments[r]; if (!n.length) return a; if ("setGdprApplies" === n[0]) n.length > 3 && 2 === parseInt(n[1], 10) && "boolean" == typeof n[3] && (e = n[3], "function" == typeof n[2] && n[2]("set", !0)); else if ("ping" === n[0]) { var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" }; "function" == typeof n[2] && n[2](i) } else a.push(n) }, n.addEventListener("message", (function (e) { var t = "string" == typeof e.data, a = {}; try { a = t ? JSON.parse(e.data) : e.data } catch (e) { } var n = a.__tcfapiCall; n && window.__tcfapi(n.command, n.version, (function (a, r) { var i = { __tcfapiReturn: { returnValue: a, success: r, callId: n.callId } }; t && (i = JSON.stringify(i)), e.source.postMessage(i, "*") }), n.parameter) }), !1)) }; "undefined" != typeof module ? module.exports = e : e() }();
-        // @formatter:on
-    </script>
-    <script type="ab49349ede4e33d42fff2107-text/javascript">
-        window.prerollOnFirstPlay = false;
-    </script>
-    <script type="ab49349ede4e33d42fff2107-text/javascript">
-        window.startTime = Date.now();
-    </script>
-
-    <script type="ab49349ede4e33d42fff2107-text/javascript">
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
-        var tenant = urlParams.get('tenant') ? urlParams.get('tenant') : 'www.radio.net'
-
-        if (urlParams.get('preroll') === '1') {
-            window.prerollOnFirstPlay = true;
-        }
-
-        function initCMP () {
-            RND.CMP.initialize({
-                debug: false,
-                privacyLink: "https://" + tenant + "/privacy-policy",
-                privacyManagerId: 238149,
-                languageDetection: true,
-                allowedLanguages: ['de', 'en', 'fr', 'es', 'pt', 'it', 'pl', 'da', 'sv'],
-                fallbackLanguage: 'en',
-                sp: {
-                    config: {
-                        baseEndpoint: 'https://cdn.privacy-mgmt.com',
-                        propertyHref: 'https://' + tenant
-                    },
-                },
-            });
-        }
-    </script>
-    <script id="rnd_cmp" src="/assets/js/cmp/rnd.js" onLoad="initCMP()" async type="ab49349ede4e33d42fff2107-text/javascript"></script>
-
-    <script
-        type="cmp-managed"
-        data-vendor-id="5ea2d4894e5aa15059fde8a0"
-        data-vendor-name="Google Tag Manager"
-    >
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WKS96CV");
-    </script>
-
-    <link rel="stylesheet" href="css/popout-player.css" />
-</head>
-
-<body id="app">
-<div id="notification" class=""></div>
-
-<section id="player" style="display: none">
-    <header>
-        <a id="stationlink" target="_blank" href="https://www.radio.de/">
-            <img width="30" height="30" src="images/logo.svg" alt=""/>
-        </a>
-    </header>
-
-    <h1 id="radioname"></h1>
-
-    <div id="prerollAd" style="display: none">
-
-        <div id="player-ad-mobile-metadata" style="display: none">
-            <div class="row">
-                <img
-                    src="images/station_avatar.svg"
-                    id="player-ad-mobile-station-logo"
-                    alt="Station Logo"
-                />
-                <div id="player-ad-mobile-station-metadata">
-                    <div id="player-ad-mobile-stream-message"></div>
-                    <div id="player-ad-mobile-stream-countdown"></div>
+        <div class="radio-content-container">
+                <div class="content-column-left">
+                    <div id="player_table_container">
+                        <div id="player_box_container">
+                            <div id="player_image_container">
+                                <img id="player_image" onclick="openRadioTable('coolvibes-radio');" src="https://static.mytuner.mobi/media/tvos_radios/gcfuvfbtan7y.png" alt="Coolvibes Radio">
+                            </div>
+                            <div id="play_pause_container">
+                                <button id="play_pause_button" class="mdc-fab md-36" onclick="openRadioTable('coolvibes-radio');" aria-label="Play">
+                                    <svg id="player_icon_table" class="material-icons md-36 btn-play-pause" data-url="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="prerollContainer"></div>
-        <div id="mobile-ad-resume-button" style="display: none">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 512.055 512.055" xml:space="preserve">
-<g opacity="1" transform="matrix(1,0,0,1,197.71499633789062,177.28500366210938)"><path fill="rgb(80,205,49)" fill-opacity="1" d=" M-158.3090057373047,-147.5850067138672 C-158.3090057373047,-147.5850067138672 -158.3090057373047,147.5800018310547 -158.3090057373047,147.5800018310547 C-158.3090057373047,152.83799743652344 -156.91299438476562,158.0019989013672 -154.26300048828125,162.5449981689453 C-148.75,171.9949951171875 -138.8260040283203,177.27099609375 -128.6219940185547,177.28500366210938 C-128.6219940185547,177.28500366210938 -128.54100036621094,177.28500366210938 -128.54100036621094,177.28500366210938 C-123.4729995727539,177.2779998779297 -118.33799743652344,175.9720001220703 -113.6449966430664,173.23399353027344 C-113.6449966430664,173.23399353027344 139.3560028076172,25.649999618530273 139.3560028076172,25.649999618530273 C143.77999877929688,23.069000244140625 147.46299743652344,19.386999130249023 150.04400634765625,14.961999893188477 C158.3090057373047,0.7929999828338623 153.5229949951172,-17.391000747680664 139.3560028076172,-25.6560001373291 C139.3560028076172,-25.6560001373291 -113.6449966430664,-173.23899841308594 -113.6449966430664,-173.23899841308594 C-118.18599700927734,-175.88800048828125 -123.35099792480469,-177.28500366210938 -128.60899353027344,-177.28500366210938 C-145.01199340820312,-177.28500366210938 -158.3090057373047,-163.98800659179688 -158.3090057373047,-147.5850067138672z"></path></g>
-</svg>
-        </div>
-    </div>
-
-    <video-js
-        id="radiostream"
-        class="video-js-js vjs-default-skin"
-        width="640"
-        height="360"
-        preload="none"
-        controls
-        playsinline
-    >
-    </video-js>
-
-    <img
-        id="radiologo"
-        src="images/station_avatar.svg"
-        width="300"
-        height="300"
-        alt=""
-    />
-    <div id="volumeControl">
-        <div id="volume_icon"></div>
-        <input
-            type="range"
-            name="volume"
-            class="__volume"
-            min="0"
-            max="1"
-            value="1"
-            id="volumeSlider"
-            step="0.01"
-        />
-    </div>
-
-    <div id="play_btn"></div>
-</section>
-
-<footer id="footer"></footer>
-
-<script
-    type="cmp-managed"
-    data-vendor-id="755"
-    data-vendor-name="Google Advertising Products"
-    src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"
-></script>
-<script src="js/popout-player.js" type="ab49349ede4e33d42fff2107-text/javascript"></script>
-<script src="js/RAD_Player.js" type="ab49349ede4e33d42fff2107-text/javascript"></script>
-
-
-<script type="ab49349ede4e33d42fff2107-text/javascript">
-    // desktop and mew display ad config
-    var displayAdContainer = document.createElement('div');
-    displayAdContainer.style.cssText ='width:300px; height:250px; margin:20px auto 0 auto;';
-    displayAdContainer.id = (window.innerWidth < 768) ? "RAD_M_player_incontent-1" : "RAD_D_player_incontent-1";
-    document.body.insertBefore(displayAdContainer, document.getElementById('footer'));
-
-    window.adHandler = window.adHandler || {};
-    window.adHandler.cmd = window.adHandler.cmd || [];
-
-    adHandler.cmd.push(function () {
-        if (navigator.userAgent.indexOf('Firefox/') !== -1){
-            adHandler.service.getAdUnitsForCurrentMapping().forEach(function(adUnit){
-                adUnit.amazonEnabled = false;
-            });
-        }
-        adHandler.service.setTargeting('advertising', 'true');
-        adHandler.mapping_player()
-    });
-
-</script>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="ab49349ede4e33d42fff2107-|49" defer=""></script></body>
-</html>
-
       </div>
       <div style="position:absolute;left:132px;top:172px;width:229px;height:183px;">
         <div class="cc_player" data-username="coolvibes" data-size="sm" data-style="light">Loading ...</div><script language="javascript" type="text/javascript" src="http://boogie.vside-radio.com:2199/system/player.js"></script>
