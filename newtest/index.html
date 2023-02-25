@@ -46,6 +46,76 @@
       $('#btn_35').click(function(){$('#slider_16').data('wpslider').previous();});
       });
     </script>
+    <!--Header code for HTML Fragment frag_7 -->
+<style>
+.control {
+    border: 11.2px solid #333;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 28px;
+    width: 112px;
+    height: 112px;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+}
+
+.control,
+.control .left,
+.control .right,
+.control:before {
+    display: inline-block;
+    vertical-align: middle;
+    transition: border 0.4s, width 0.4s, height 0.4s, margin 0.4s;
+    transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.control:before {
+    content: "";
+    height: 112px;
+}
+
+.control.pause .left,
+.control.pause .right {
+    margin: 0;
+    border-left: 36.96px solid #333;
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    height: 96.992px;
+}
+
+.control.pause .left {
+    border-right: 22.4px solid transparent;
+}
+
+.control.play .left {
+    margin-left: 18.66666667px;
+    border-left: 48.496px solid #333;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-right: 0px solid transparent;
+    height: 56px;
+}
+
+.control.play .right {
+    margin: 0;
+    border-left: 48.496px solid #333;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    height: 0px;
+}
+
+.control:hover {
+    border-color: #000;
+}
+
+.control:hover .left,
+.control:hover .right {
+    border-left-color: #000;
+}
+
+</style>
   </head>
   <body style="height:6398px;background:url('wpimages/wp5776a421_06.png') repeat-x scroll center top, url('wpimages/wp366171af_06.png') repeat-x scroll center bottom #ffffff;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:1507px;height:6398px;">
@@ -182,82 +252,13 @@
       <img alt="Staff Schedule" src="wpimages/wpa787a873_06.png" style="position:absolute;left:625px;top:1420px;width:190px;height:34px;">
       <img alt="" src="wpimages/wp19980370_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:147px;width:1507px;height:548px;">
       <div style="position:absolute;left:558px;top:67px;width:392px;height:338px;">
-        
+        <!--Body-->
 <div class="control play trigger-audio">
   <span class="left"></span>
   <audio src="http://scotspaul.vside-radio.com:7355/stream" volume="1.0"></audio>
   <span class="right"></span>
 </div>
 
-<style>
-.control {
-    border: 11.2px solid #333;
-    border-radius: 50%;
-    margin: 20px;
-    padding: 28px;
-    width: 112px;
-    height: 112px;
-    font-size: 0;
-    white-space: nowrap;
-    text-align: center;
-    cursor: pointer;
-}
-
-.control,
-.control .left,
-.control .right,
-.control:before {
-    display: inline-block;
-    vertical-align: middle;
-    transition: border 0.4s, width 0.4s, height 0.4s, margin 0.4s;
-    transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
-}
-
-.control:before {
-    content: "";
-    height: 112px;
-}
-
-.control.pause .left,
-.control.pause .right {
-    margin: 0;
-    border-left: 36.96px solid #333;
-    border-top: 0 solid transparent;
-    border-bottom: 0 solid transparent;
-    height: 96.992px;
-}
-
-.control.pause .left {
-    border-right: 22.4px solid transparent;
-}
-
-.control.play .left {
-    margin-left: 18.66666667px;
-    border-left: 48.496px solid #333;
-    border-top: 28px solid transparent;
-    border-bottom: 28px solid transparent;
-    border-right: 0px solid transparent;
-    height: 56px;
-}
-
-.control.play .right {
-    margin: 0;
-    border-left: 48.496px solid #333;
-    border-top: 28px solid transparent;
-    border-bottom: 28px solid transparent;
-    height: 0px;
-}
-
-.control:hover {
-    border-color: #000;
-}
-
-.control:hover .left,
-.control:hover .right {
-    border-left-color: #000;
-}
-
-</style>
 
 <script>
 const audioButtons = document.querySelectorAll('.trigger-audio')
