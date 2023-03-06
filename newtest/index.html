@@ -46,76 +46,29 @@
       $('#btn_35').click(function(){$('#slider_16').data('wpslider').previous();});
       });
     </script>
-    <!--Header code for HTML Fragment frag_7 -->
-<style>
-.control {
-    border: 11.2px solid #333;
-    border-radius: 50%;
-    margin: 20px;
-    padding: 28px;
-    width: 112px;
-    height: 112px;
-    font-size: 0;
-    white-space: nowrap;
-    text-align: center;
-    cursor: pointer;
-}
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu Tab</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-.control,
-.control .left,
-.control .right,
-.control:before {
-    display: inline-block;
-    vertical-align: middle;
-    transition: border 0.4s, width 0.4s, height 0.4s, margin 0.4s;
-    transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
-}
+    <!--Header code for HTML Fragment frag_6 -->
+<script>
+$(document).ready(function(){
+  $("#play28").click(function(){
+    $("#play28").hide();
+    $("#pause28").show();
+  });
+  $("#pause28").click(function(){
+    $("#pause28").hide();
+    $("#play28").show();
+  });
+});
+</script>
 
-.control:before {
-    content: "";
-    height: 112px;
-}
 
-.control.pause .left,
-.control.pause .right {
-    margin: 0;
-    border-left: 36.96px solid #333;
-    border-top: 0 solid transparent;
-    border-bottom: 0 solid transparent;
-    height: 96.992px;
-}
 
-.control.pause .left {
-    border-right: 22.4px solid transparent;
-}
-
-.control.play .left {
-    margin-left: 18.66666667px;
-    border-left: 48.496px solid #333;
-    border-top: 28px solid transparent;
-    border-bottom: 28px solid transparent;
-    border-right: 0px solid transparent;
-    height: 56px;
-}
-
-.control.play .right {
-    margin: 0;
-    border-left: 48.496px solid #333;
-    border-top: 28px solid transparent;
-    border-bottom: 28px solid transparent;
-    height: 0px;
-}
-
-.control:hover {
-    border-color: #000;
-}
-
-.control:hover .left,
-.control:hover .right {
-    border-left-color: #000;
-}
-
-</style>
   </head>
   <body style="height:6398px;background:url('wpimages/wp5776a421_06.png') repeat-x scroll center top, url('wpimages/wp366171af_06.png') repeat-x scroll center bottom #ffffff;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:1507px;height:6398px;">
@@ -140,20 +93,11 @@
       <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:311px;top:5px;width:23px;height:24px;">
       <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:408px;top:5px;width:23px;height:24px;">
       <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:541px;top:5px;width:23px;height:24px;">
+      <map id="map4" name="map4"><area shape="rect" coords="0,0,22,21" href="djpage.html" alt=""></map>
+      <img alt="DJ" usemap="#map4" src="wpimages/wp0b8bc99d_06.png" style="position:absolute;left:619px;top:6px;width:21px;height:20px;">
       <div style="position:absolute;left:408px;top:1494px;width:624px;height:251px;">
-        <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menu Tab</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<body>
+        
+    
     <div class="container">
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Mon</a></li>
@@ -241,95 +185,17 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
 
 
       </div>
       <img alt="" src="wpimages/wp3a788a47_06.png" style="position:absolute;left:213px;top:716px;width:323px;height:305px;">
       <img alt="" src="wpimages/wp7d77141a_06.png" style="position:absolute;left:682px;top:716px;width:530px;height:495px;">
       <img alt="Staff Schedule" src="wpimages/wpa787a873_06.png" style="position:absolute;left:625px;top:1420px;width:190px;height:34px;">
-      <img alt="" src="wpimages/wp19980370_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:147px;width:1507px;height:548px;">
-      <div style="position:absolute;left:558px;top:67px;width:392px;height:338px;">
-        <!--Body-->
-<div class="control play trigger-audio">
-  <span class="left"></span>
-  <audio src="http://scotspaul.vside-radio.com:7355/stream" volume="1.0"></audio>
-  <span class="right"></span>
-</div>
-
-
-<script>
-const audioButtons = document.querySelectorAll('.trigger-audio')
-const buttonToStopAllAudios = document.querySelector('.fa-stop')
-
-const getAudioElementFromButton = buttonElement =>
-    buttonElement.querySelector('audio')
-
-const stopAudioFromButton = buttonElement => {
-    // Pause the audio
-    getAudioElementFromButton(buttonElement).pause()
-
-    // Update element classes
-    buttonElement.classList.add('fa-play')
-    buttonElement.classList.remove('fa-pause')
-}
-
-const playAudioFromButton = buttonElement => {
-    // Pause the audio
-    getAudioElementFromButton(buttonElement).play()
-
-    // Update element classes
-    buttonElement.classList.remove('fa-play')
-    buttonElement.classList.add('fa-pause')
-}
-
-audioButtons.forEach(audioButton => {
-    audioButton.addEventListener('click', () => {
-        // I get this first because I have to pause all the audios before doing anything, so I have to know it this audio was paused or not
-        const audioElement = getAudioElementFromButton(audioButton)
-        const audioIsPaused = audioElement.paused
-
-        // Stop all audios before starting this one
-        audioButtons.forEach(stopAudioFromButton)
-
-        audioIsPaused
-            ?
-            playAudioFromButton(audioButton) // Play if it's paused
-            :
-            stopAudioFromButton(audioButton) // Pause if it's playing
-    })
-})
-
-buttonToStopAllAudios.addEventListener('click', () => {
-    audioButtons.forEach(stopAudioFromButton)
-})
-
-$('.control').on('mousedown', function() {
-    $(this).toggleClass('pause play');
-});
-
-$(document).on('keyup', function(e) {
-    if (e.which == 32) {
-        $('.control').toggleClass('pause play');
-    }
-});
-
-$('.control').on('mousedown', function() {
-    $(this).toggleClass('pause play');
-});
-
-$(document).on('keyup', function(e) {
-    if (e.which == 32) {
-        $('.control').toggleClass('pause play');
-    }
-});
-</script>
-      </div>
-      <img alt="CoolVibes-Reloaded" src="wpimages/wpbef17c39_06.png" style="position:absolute;left:510px;top:337px;width:268px;height:34px;">
-      <map id="map4" name="map4"><area shape="rect" coords="0,0,124,35" href="https://tawk.to/chat/5f7bb2244704467e89f4ebd6/1ejtj1o9k" target="_blank" alt=""></map>
-      <img alt="Requests" usemap="#map4" src="wpimages/wpe3295ef0_06.png" style="position:absolute;left:613px;top:393px;width:123px;height:34px;">
+      <img alt="" src="wpimages/wp19980370_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:113px;width:1507px;height:548px;">
+      <img alt="CoolVibes-Reloaded" src="wpimages/wpbef17c39_06.png" style="position:absolute;left:540px;top:337px;width:268px;height:34px;">
+      <map id="map5" name="map5"><area shape="rect" coords="0,0,124,35" href="https://tawk.to/chat/5f7bb2244704467e89f4ebd6/1ejtj1o9k" target="_blank" alt=""></map>
+      <img alt="Requests" usemap="#map5" src="wpimages/wpe3295ef0_06.png" style="position:absolute;left:613px;top:393px;width:123px;height:34px;">
       <div id="slider_16" style="position:absolute;left:377px;top:1993px;width:724px;height:344px;overflow:hidden;">
         <div id="slider_16_P1" style="position:absolute;left:0px;right:0px;width:724px;height:344px;">
           <img alt="" src="wpimages/wp3bf73b46_05_06.jpg" style="position:absolute;left:0px;top:0px;width:724px;height:344px;">
@@ -361,13 +227,25 @@ $(document).on('keyup', function(e) {
       <img alt="Dolphins" src="wpimages/wp0cf26732_06.png" style="position:absolute;left:672px;top:3709px;width:191px;height:55px;">
       <img alt="" src="wpimages/wpae21109f_05_06.jpg" style="position:absolute;left:623px;top:3842px;width:303px;height:455px;">
       <img alt="Autism &amp; Epilepsy" src="wpimages/wp1b74abd3_06.png" style="position:absolute;left:570px;top:4556px;width:395px;height:55px;">
-      <img alt="" src="wpimages/wp8eeaa993_06.gif" style="position:absolute;left:600px;top:4776px;width:336px;height:287px;">
+      <img alt="" src="wpimages/wpb8160a98_06.gif" style="position:absolute;left:600px;top:4776px;width:336px;height:287px;">
       <img alt="Couples" src="wpimages/wp27cd6b7d_06.png" style="position:absolute;left:679px;top:5245px;width:177px;height:55px;">
-      <map id="map5" name="map5"><area shape="rect" coords="433,66,571,101" href="mailto:jnlravers89@gmail.com" alt=""></map>
-      <img alt="Would You Like The Chance To Have You And Yours  Image Here? Feel Free To Contact  TheStudio" usemap="#map5" src="wpimages/wpc061794b_06.png" class="OBJ-6" style="position:absolute;left:412px;top:5358px;width:710px;height:100px;">
-      <img alt="" src="wpimages/wpf479f6dd_06.png" style="position:absolute;left:215px;top:5592px;width:396px;height:338px;">
-      <img alt="" src="wpimages/wpf479f6dd_06.png" style="position:absolute;left:768px;top:5592px;width:396px;height:338px;">
+      <map id="map6" name="map6"><area shape="rect" coords="433,66,571,101" href="mailto:jnlravers89@gmail.com" alt=""></map>
+      <img alt="Would You Like The Chance To Have You And Yours  Image Here? Feel Free To Contact  TheStudio" usemap="#map6" src="wpimages/wpc061794b_06.png" class="OBJ-6" style="position:absolute;left:412px;top:5358px;width:710px;height:100px;">
+      <img alt="" src="wpimages/wp786263bd_06.png" style="position:absolute;left:215px;top:5592px;width:396px;height:338px;">
+      <img alt="" src="wpimages/wp786263bd_06.png" style="position:absolute;left:768px;top:5592px;width:396px;height:338px;">
       <img alt="Listen with the ears &amp; understand with the heart" src="wpimages/wp244ad1b0_06.png" style="position:absolute;left:361px;top:463px;width:736px;height:38px;">
+      <div style="position:absolute;left:1098px;top:53px;width:218px;height:48px;">
+        
+<audio id="myAudio">
+ <source src="https://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4"
+         type="audio/mp4">
+ <source src="https://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga"
+         type="audio/ogg";>
+ Your browser does not support the HTML5 Audio element.
+</audio>
+      </div>
+      <img alt="" src="wpimages/wp1c43ec43_05_06.jpg" id="pause28" onclick="document.getElementById('myAudio').pause()" __AddCode="here" style="position:absolute;left:644px;top:89px;width:60px;height:60px;">
+      <img alt="" src="wpimages/wp04803c76_05_06.jpg" id="play28" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:644px;top:89px;width:60px;height:60px;">
     </div>
   </body>
 </html>
