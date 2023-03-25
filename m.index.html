@@ -76,7 +76,7 @@
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.wputils.js"></script>
     <script type="text/javascript">
-      wpRedirectMobile('index.html',0);
+      wpRedirectNonMobile('index.html',0);
       $(document).ready(function() {
       $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       });
