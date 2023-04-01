@@ -18,3 +18,5 @@ a:visited {color:#ffffff;text-decoration:underline;}
 .Heading-2:first-child { margin-top:0; }
 .Headings { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
 .Normal { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Slider-Heading { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Trebuchet MS", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Slider-Title { text-align:left;margin:0px;text-indent:0.0px;line-height:1px;font-family:"Trebuchet MS", sans-serif;font-style:normal;font-weight:normal;color:#c93068;background-color:transparent;font-variant:normal;font-size:64.0px;vertical-align:0; }
