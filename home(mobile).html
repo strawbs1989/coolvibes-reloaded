@@ -85,35 +85,25 @@
       .P-2 { text-align:center;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
       .C-3 { line-height:16.00px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:13.3px;vertical-align:0; }
       .OBJ-15 { background:transparent url('wpimages/wp7d4bce49.png') no-repeat left top; }
+      .OBJ-16:hover {  transform: scale(1.1); }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.event.move.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.event.swipe.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.wpslider.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpvisibility.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
       $('#slider_1').data('wpslider', new $.fn.wpslider( { g_nDivId:'#slider_1', g_nTransitStyle:2, g_nLoopTime:4000, g_nAnimationTime:500, g_bPlayAtStart:true, g_nStartPanel:5, g_strEasing: "swing" } ) );
       var btnState = [];
       $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       $('#slider_1').data('wpslider').restrictSlides();
+      clickHide('pause28', 'pause28', 150);
+      clickShow('pause28', 'play28', 150);
+      clickHide('play28', 'play28', 150);
+      clickShow('play28', 'pause28', 150);
       });
     </script>
-    <!--Header code for HTML Fragment frag_6 -->
-<script>
-$(document).ready(function(){
-  $("#play28").click(function(){
-    $("#play28").hide();
-    $("#pause28").show();
-  });
-  $("#pause28").click(function(){
-    $("#pause28").hide();
-    $("#play28").show();
-  });
-});
-</script>
-
-
-
     <!--Header code for HTML Fragment frag_6 -->
 <script>
 $(document).ready(function(){
@@ -156,19 +146,9 @@ $(document).ready(function(){
       <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:84px;top:37px;width:22px;height:24px;">
       <map id="map3" name="map3"><area shape="rect" coords="0,0,22,21" href="djpage.html" alt=""></map>
       <img alt="DJ" usemap="#map3" src="wpimages/wp0b8bc99d_06.png" style="position:absolute;left:319px;top:39px;width:21px;height:20px;">
-      <img alt="" src="wpimages/wp1e11ee4f_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:782px;height:235px;">
-      <div style="position:absolute;left:494px;top:155px;width:218px;height:48px;">
-        
-<audio id="myAudio">
- <source src=""
-         type="audio/mp3">
- <source src="http://144.76.182.36:8406/stream";>
- Your browser does not support the HTML5 Audio element.
-</audio>
-      </div>
+      <img alt="" src="wpimages/wp739fc74a_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:777px;height:235px;">
       <map id="map4" name="map4"><area shape="rect" coords="0,0,58,32" href="https://tawk.to/chat/5f7bb2244704467e89f4ebd6/1ejtj1o9k" target="_blank" alt=""></map>
       <img alt="Requests" usemap="#map4" src="wpimages/wpdb12fac6_06.png" style="position:absolute;left:329px;top:326px;width:57px;height:31px;">
-      <img alt="Listen with the ears &amp; understand with the heart" src="wpimages/wp3869089b_06.png" style="position:absolute;left:171px;top:425px;width:441px;height:37px;">
       <img alt="" src="wpimages/wpaff03bdd_06.png" style="position:absolute;left:101px;top:491px;width:141px;height:173px;">
       <img alt="Autism &amp; Epilepsy" src="wpimages/wpf02266cb_06.png" style="position:absolute;left:299px;top:3006px;width:139px;height:37px;">
       <img alt="" src="wpimages/wp865a81de_06.gif" style="position:absolute;left:308px;top:3136px;width:115px;height:189px;">
@@ -220,8 +200,6 @@ $(document).ready(function(){
         </button>
       </div>
       <img alt="" src="wpimages/wp0ee41102_06.png" id="img_347" class="OBJ-8" style="position:absolute;left:43px;top:3589px;width:738px;height:294px;">
-      <img alt="" src="wpimages/wp1c43ec43_05_06.jpg" id="pause28" onclick="document.getElementById('myAudio').pause()" __AddCode="here" style="position:absolute;left:328px;top:179px;width:60px;height:60px;">
-      <img alt="" src="wpimages/wp04803c76_05_06.jpg" id="play28" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:328px;top:179px;width:60px;height:60px;">
       <div style="position:absolute;left:552px;top:47px;width:218px;height:48px;">
         
 <audio id="myAudio"
@@ -287,12 +265,12 @@ $(document).ready(function(){
         <p class="Footer"><span class="C-2">Coolvibes-<wbr>Reloaded</span></p>
       </div>
       <map id="map6" name="map6"><area shape="poly" coords="8,11,11,11,11,8,8,8,8,4,11,4,11,0,5,0,3,2,3,8,0,8,0,11,3,11,3,23,8,23" href="http://www.facebook.com/coolvibesuk" target="_blank" alt=""></map>
-      <img alt="" usemap="#map6" src="wpimages/wp68fad3eb_06.png" style="position:absolute;left:276px;top:5213px;width:11px;height:23px;">
+      <img alt="" usemap="#map6" src="wpimages/wp74740d16_06.png" style="position:absolute;left:350px;top:4953px;width:11px;height:23px;">
       <map id="map7" name="map7">
         <area shape="poly" coords="4,9,3,9,3,8" href="https://twitter.com/CoolVibesRadio" target="_blank" alt="">
         <area shape="poly" coords="11,22,17,20,22,16,24,10,26,4,27,3,26,2,27,1,23,2,17,0,14,5,11,7,6,4,1,2,2,8,1,10,5,14,3,14,7,19,1,21,7,23" href="https://twitter.com/CoolVibesRadio" target="_blank" alt="">
       </map>
-      <img alt="" usemap="#map7" src="wpimages/wpacc203cd_06.png" style="position:absolute;left:482px;top:5215px;width:28px;height:23px;">
+      <img alt="" usemap="#map7" src="wpimages/wp3ddaac9f_06.png" style="position:absolute;left:492px;top:4953px;width:28px;height:23px;">
       <div style="position:absolute;left:0px;top:5742px;width:275px;height:28px;overflow:hidden;">
         <p class="Footer"><span class="C-2">Our App</span></p>
       </div>
@@ -307,6 +285,8 @@ $(document).ready(function(){
       <img alt="" src="wpimages/wp3e67015a_06.png" style="position:absolute;left:41px;top:5603px;width:118px;height:118px;">
       <img alt="" src="wpimages/wpa9595e77_05_06.jpg" style="position:absolute;left:153px;top:938px;width:150px;height:150px;">
       <div class="OBJ-15" style="position:absolute;left:117px;top:856px;width:538px;height:336px;"></div>
+      <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:330px;top:184px;width:67px;height:57px;">
+      <img alt="" src="play28.png" id="play28" class="OBJ-16" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:330px;top:184px;width:67px;height:57px;">
     </div>
   </body>
 </html>
