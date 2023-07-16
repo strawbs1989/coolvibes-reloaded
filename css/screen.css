@@ -1,0 +1,41 @@
+body {
+  background-color: #fff;
+  font: normal 1em / 1.5em sans-serif;
+}
+noscript {
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+#dj {
+  display: block;
+  width: 100%;
+  max-width: 30em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid #000;
+}
+#dj[src="images/off-air.png"] {
+  animation: none;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    border-radius: 0;
+    max-width: 30em;
+  }
+  50% {
+    opacity: 0.2;
+    border-radius: 50%;
+    max-width: 20em;
+  }
+  100% {
+    opacity: 1;
+    border-radius: 0;
+    max-width: 30em;
+  }
+}
