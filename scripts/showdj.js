@@ -5,9 +5,23 @@ function onair(){
    var dj = d.querySelector('#dj'),
        nd = new Date(),
        dy = nd.getDay(),
-       hr = nd.getHours(),
+       hr = nd.getHours(),                                  
        mn = nd.getMinutes();
-
+else {
+if(( dy === 1 && hr === 21 && mn <=00 )||
+   ( dy === 1 && hr === 8 && mn <=15 )) {
+     dj.src='images/billy.png';
+ }
+ else {
+if(( dy === 2 && hr === 8 && mn <=00 )||
+   ( dy === 2 && hr === 8 && mn <=15 )) {
+     dj.src='images/kayley.png';
+ }
+ else {
+if(( dy === 3 && hr === 8 && mn <=00 )||
+   ( dy === 3 && hr === 8 && mn <=15 )) {
+     dj.src='images/off-air.png';
+ }
 if ( dy === 4 && hr === 20 && mn <=12 ) {
      dj.src='images/strawbs.png';
  }
@@ -21,11 +35,7 @@ if(( dy === 6 && hr === 8 && mn <=14 )||
    ( dy === 6 && hr === 9 && mn <=15 )) {
      'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny'; 
  }
- else {
-if(( dy === 1 && hr === 8 && mn <=14 )||
-   ( dy === 1 && hr === 8 && mn <=15 )) {
-     dj.src='images/kayley.png';
- }
+ 
 else {
      dj.src='images/off-air.png';
   
