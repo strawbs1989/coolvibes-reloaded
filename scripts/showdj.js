@@ -12,7 +12,7 @@ if ( dy === 4 && hr === 20 && mn <=12 ) {
    ( dy === 4 && hr === 7 && mn <=19 )||
    ( dy === 4 && hr === 6 && mn >=20 )||
    ( dy === 4 && hr === 3 && mn <=19 ) 
-     dj.src='images/strawbs.gif';
+     dj.src='images/strawbs.png';
  }
 else {
 if(( dy === 5 && hr === 13 && mn <=59 )||
@@ -27,7 +27,7 @@ if(( dy === 6 && hr === 8 && mn <=14 )||
  else {
 if(( dy === 1 && hr === 8 && mn <=14 )||
    ( dy === 1 && hr === 8 && mn <=15 )) {
-     dj.src='images/kayley.jpg';
+     dj.src='images/kayley.png';
  }
 else {
      dj.src='images/off-air.png';
