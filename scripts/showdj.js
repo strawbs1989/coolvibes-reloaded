@@ -9,9 +9,6 @@ function onair(){
        mn = nd.getMinutes();
 
 if ( dy === 4 && hr === 20 && mn <=12 ) {
-   ( dy === 4 && hr === 7 && mn <=19 )||
-   ( dy === 4 && hr === 6 && mn >=20 )||
-   ( dy === 4 && hr === 3 && mn <=19 ) 
      dj.src='images/strawbs.png';
  }
 else {
