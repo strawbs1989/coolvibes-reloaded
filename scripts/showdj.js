@@ -11,19 +11,19 @@
       switch (dy) {
         case 1: // Monday
           if ((hr === 21 && mn <=59) || (hr === 8 && mn <=15))
-            dj.src = 'images/billy.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/billy.png';
           break;
         case 2: // Tuesday
           if ((hr === 8 && mn >=0) || (hr === 8 && mn <=15))
-            dj.src = 'images/kayley.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/kayley.png';
           break;
         case 3: // Wednesday
           if ((hr === 8 && mn >=0) || (hr === 8 && mn <=15))
-            dj.src = 'images/off-air.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
           break;
         case 4: // Thursday
           if (hr === 21 && mn <=00) {
-            dj.src = 'images/strawbs.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
           }
           break;
@@ -37,7 +37,7 @@
           break;
         case 0: // Sunday
           if (hr === 21 && mn <=00) {
-            dj.src = 'images/strawbs.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
           }
           break;
