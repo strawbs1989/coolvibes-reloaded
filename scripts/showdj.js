@@ -1,12 +1,14 @@
-<script>
-  (function(d) {
+(function(d) {
     function onair() {
       const dj = d.querySelector('#dj'),
-            tx = d.querySelector('#txt'),
+            tx = document.createElement('div'),
             nd = new Date(),
             dy = nd.getDay(),
             hr = nd.getHours(),                               
             mn = nd.getMinutes();
+        
+      tx.style.color = 'white';
+      dj.insertAdjacentElement('afterend', tx);
 
       switch (dy) {
         case 1: // Monday
@@ -22,7 +24,7 @@
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
           break;
         case 4: // Thursday
-          if (hr === 21 && mn <=00) {
+          if (hr === 21 && mn >=0) {
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
           }
@@ -36,7 +38,7 @@
             tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 0: // Sunday
-          if (hr === 21 && mn <=00) {
+          if (hr === 21 && mn >=0) {
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
           }
@@ -46,7 +48,6 @@
           break;
       }
     }
-  
+ 
     setInterval(function() { onair(); }, 1000);
   })(document);
-</script>
