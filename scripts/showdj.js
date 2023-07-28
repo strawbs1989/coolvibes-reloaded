@@ -35,7 +35,7 @@
           break;
         case 6: // Saturday
           if ((hr === 0 && mn <=14) || (hr === 9 && mn <=15))
-            tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
+            tx.innerHTML = 'Saturday at 12 PM<br>Christian Music<br>with Dj Bunny';
           break;
         case 0: // Sunday
           if (hr === 21 && mn >=0) {
