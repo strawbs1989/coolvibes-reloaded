@@ -21,7 +21,7 @@
           break;
         case 3: // Wednesday
           if ((hr === 8 && mn >=0) || (hr === 8 && mn <=15))
-            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
+            dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg';
           break;
         case 4: // Thursday
           if (hr === 21 && mn >=0) {
@@ -44,7 +44,7 @@
           }
           break;
         default:
-          dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png';
+          dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg';
           break;
       }
     }
