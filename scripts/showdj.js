@@ -12,11 +12,11 @@
 
       switch (dy) {
         case 1: // Monday
-          if ((hr === 21 && mn <=00) {
+          if ((hr === 21 && mn <=0) {
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/billy.png';
           break;
         case 2: // Tuesday
-          if ((hr === 8 && mn >=00) || (hr === 10 && mn <=00))
+          if ((hr === 8 && mn >=0) || (hr === 10 && mn <=0))
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/kayley.png';
           break;
         case 3: // Wednesday
@@ -24,21 +24,21 @@
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
           break;
         case 4: // Thursday
-          if (hr === 21 && mn >=00) || (hr === 22 && mn <=00))
+          if (hr === 21 && mn >=0) || (hr === 22 && mn <=0))
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
           }
           break;
         case 5: // Friday
-          if ((hr === 10 && mn <=00) || (hr === 23 && mn <=59))
+          if ((hr === 10 && mn <=0) || (hr === 23 && mn <=0))
             tx.innerHTML = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 6: // Saturday
-          if ((hr === 8 && mn <=00) || (hr === 14 && mn <=00))
+          if ((hr === 8 && mn <=0) || (hr === 14 && mn <=0))
             tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 0: // Sunday
-          if (hr === 21 && mn >=00) || (hr === 22 && mn <=00))
+          if (hr === 21 && mn >=0) || (hr === 22 && mn <=0))
             dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
             tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
           }
