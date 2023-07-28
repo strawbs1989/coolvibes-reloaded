@@ -44,7 +44,7 @@
           }
           break;
         default:
-          dj.src='images/off-air.png';
+          dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png';
           break;
       }
     }
