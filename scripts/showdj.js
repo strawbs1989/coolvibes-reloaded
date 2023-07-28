@@ -30,12 +30,12 @@
           }
           break;
         case 5: // Friday
-          if ((hr === 13 && mn <=59) || (hr === 14 && mn <=59))
-            tx.innerHTML = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
-          break;
+        if (hr >= 10 && hr <= 23)
+        tx.innerHTML = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
+         break;
         case 6: // Saturday
-          if ((hr === 0 && mn <=14) || (hr === 9 && mn <=15))
-            tx.innerHTML = 'Saturday at 12 PM<br>Christian Music<br>with Dj Bunny';
+          if ((hr === 8 && mn <=14) || (hr === 9 && mn <=15))
+            tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 0: // Sunday
           if (hr === 21 && mn >=0) {
