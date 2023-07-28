@@ -211,39 +211,119 @@ $(document).ready(function(){
       <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:679px;top:148px;width:67px;height:57px;">
       <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:679px;top:148px;width:67px;height:57px;">
       <div style="position:absolute;left:273px;top:1088px;width:1081px;height:325px;">
-        <center><!DOCTYPE HTML>
-<html lang="en">
-<html>
+        <center><title>ON-AIR</title></center>	
 
+<center><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <head>
+<title>Station Activity</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+<style type="text/css">
+td { font-size:0.6em; } /* temporary for testing purposes */
+#NowOn {
+border: 0px solid black;
+font-size: 11.5px;
+color: black;
+background: transparent;
+height: 55px;
+width: 350px;
+}
+</style>
 
-  <title>Who is on air</title>
+<script type="text/javascript">
 
-  <link rel="stylesheet" href="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/css/screen.css" media="screen">
+/* NOT CURRENTLY USED
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
 
+var GMT = new Date().getTimezoneOffset();
+var offsetGMT = -5 * new Date().getTimezoneOffset()/60;
+*/
+
+// Sun=0 1 2 3 4 5 Sat=6
+var DayOfWeek = new Array('Weekend','Monday','Tuesday','Wednesday','Thursday','Friday','Weekend');
+
+var NoShow = 'No Show Scheduled<br />for KSWH';
+var DH = new Array (7);
+for (d=0; d<7; d++) {
+DH[d] = new Array (24);
+for (h=0; h<24; h++) { DH[d][h] = ''; }
+}
+
+DH[1][21] = 'Monday at 9 PM<br>Camino Concept<br>with Billy';
+DH[1][08] = 'Kats Theme<br>With Classic Kat<br>Monday at 8 AM<br>No Genre';
+DH[1][14] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 2 PM<br>No Genre';
+DH[1][16] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 4 PM<br>Rap';
+DH[1][17] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 5 PM<br>No Genre';
+DH[1][18] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 6 PM<br>No Genre';
+DH[1][20] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 8 PM<br>No Genre';
+DH[1][22] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday 10 to Midnight<br>No Genre';
+DH[1][23] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Monday at 11 PM<br>No Genre';
+DH[2][08] = 'Kats Theme<br>with Classic Kat<br>Tuesday at 8 AM<br>Kats Theme';
+DH[2][16] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Tuesday at 4 PM<br>Rock';
+DH[2][20] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Tuesday at 8 PM<br>No Genre';
+DH[3][10] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Wednesday at 10 AM<br>No Genre';
+DH[3][11] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Wednesday at 11 AM<br>No Genre';
+DH[3][15] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Wednesday 3 to 5 PM<br>Classic Rock';
+DH[3][16] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Wednesday at 4 PM<br>Classic Rock';
+DH[3][22] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Wednesday at 10 PM<br>Rap';
+DH[4][21] = 'Strawbs's Shout-Out & Request<br>with Strawbs<br>Thursday 9 PM to 10 PM<br>Rap/Urban';
+DH[4][13] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Thursday at 1 PM<br>Rap/Urban';
+DH[4][14] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Thursday at 2 PM<br>No Genre';
+DH[4][15] = 'No Show<br>DJ BUNNY<br>NO SHOW<br>Thursday at 3 PM<br>No Genre';
+DH[5][12] = 'Friday at 12 AM<br>No Show<br>';
+DH[5][11] = 'Friday at 11 AM<br>No Show<br>';
+DH[5][12] = 'Friday at Noon<br>No Show<br>';
+DH[5][13] = 'Friday at 1 PM<br>No Show<br>';
+DH[5][14] = 'Friday at 2 PM<br>No Show<br>';
+DH[5][15] = 'Friday at 3 PM<br>No Show<br>';
+DH[5][16] = 'Friday at 4 PM<br>No Show<br>';
+DH[5][17] = 'Friday at 5 PM<br>No Show<br>';
+DH[5][22] = 'Friday at 10 PM<br>No Show<br>';
+DH[5][23] = 'Friday at 11 PM<br>No Show<br>';
+DH[6][01] = 'Saturday at 1 AM<br>No Show<br>';
+DH[6][12] = 'Saturday at Noon<br>No Show<br>';
+DH[6][13] = 'Saturday at 1 AM<br>Test Show<br>';
+DH[6][14] = 'Saturday at 2 PM<br>No Show<br>';
+DH[6][15] = 'Saturday at 3 PM<br>No Show<br>';
+DH[6][16] = 'Saturday at 4 PM<br>No Show<br>';
+DH[6][17] = 'Saturday at 5 PM<br>No Show<br>';
+DH[6][22] = 'Saturday at 10 PM<br>No Show<br>';
+DH[6][23] = 'Saturday at 11 PM<br>No Show<br>';
+// Add more when schedule is known. Note: there may be better ways to do this when information is known.
+
+
+function OnNow() {
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+// alert(dayofweek+':'+hourofday+'<br />'+DH[dayofweek][hourofday]);
+var showOn = DH[dayofweek][hourofday];
+if (showOn == '') { showOn = thedate+'\n\nNo Show Scheduled'; }
+alert(showOn);
+}
+
+function NowON() {
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+var showOn = DH[dayofweek][hourofday];
+if (showOn == '') { showOn = thedate+'<p />No Show Scheduled'; }
+document.getElementById('NowOn').innerHTML = showOn;
+}
+</script>
 </head>
-
-<body>
-
-  <noscript>
-    <p>JavaScipt need to be enabled for this page to function correctly</p>
-  </noscript>
-
-  <h1>Who is on air</h1>
-
-  <img id="dj" src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg" alt="Off-line">
-
-  <script src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/scripts/showdj.js"></script>
-
-</body>
-
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+<BODY onLoad="NowON()">
+<!-- Unhide this if table display desired
+<script type="text/javascript">
+document.write(TableStationSchedule())
+</script>
+-->
+<script type="text/javascript">
+document.write(NowON());
+</script>
+<div id='NowOn' onClick="NowON()">Click For Now On CoolVibes</div>
 </body>
 </html></center>
       </div>
