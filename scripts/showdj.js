@@ -30,7 +30,7 @@
           }
           break;
         case 5: // Friday
-          if ((hr === 10 && mn <=0) || (hr === 23 && mn <=0))
+          if (hr >= 10 && hr <= 23)
             tx.innerHTML = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 6: // Saturday
