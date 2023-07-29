@@ -9,7 +9,7 @@ body {
  }
  h1{
     text-align: center;
-    color: white;
+    color: #fff;
  }
 #dj {
    display: block;
@@ -17,7 +17,7 @@ body {
    max-width: 30em;
    height: auto;
    margin: auto;
-   border:  1px solid #000;
+   border:  1px solid #fff;
    box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.3);
  }
  #dj[src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png"] {
