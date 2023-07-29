@@ -34,7 +34,8 @@
             tx.innerHTML = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 6: // Saturday
-          if ((hr === 8 && mn <=14) || (hr === 9 && mn <=15))
+          if ((hr === 2 && mn <=03) {
+			https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png'
             tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
           break;
         case 0: // Sunday
