@@ -12,20 +12,20 @@
 
     switch (dy) {
       case 1: // Monday
-        if ((hr === 21 && mn <=59) || (hr === 8 && mn <=15))
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/billy.png';
+        if ((hr === 8 && mn <=0) {
+          dj.src = 'https://drive.google.com/file/d/1K6Ki9fxFxVo3UBlA0fjPzLv6D_EpKwIX/view?usp=drive_link';
         break;
       case 2: // Tuesday
         if ((hr === 8 && mn >=0) || (hr === 8 && mn <=15))
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/kayley.png';
+          dj.src = 'https://drive.google.com/file/d/17QW0zuz_PDgUZgXvCz7ybvK9acYraK4K/view?usp=drive_link';
         break;
       case 3: // Wednesday
         if ((hr === 8 && mn >=0) || (hr === 8 && mn <=15))
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
+          dj.src = 'https://drive.google.com/file/d/1D77ONt7JnNX1rTpNZd6lLYzfTCrXEAcJ/view?usp=drive_link';
         break;
       case 4: // Thursday
         if (hr === 21 && mn >=0) {
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
+          dj.src = 'https://drive.google.com/file/d/1SaYUrmEwalwxXwygXP0ZthYLKW7aji_H/view?usp=drive_link';
           tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
         }
         break;
@@ -35,18 +35,18 @@
         break;
       case 6: // Saturday
         if ((hr === 2 && mn <=03)) {
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/off-air.png';
+          dj.src = 'https://drive.google.com/file/d/1D77ONt7JnNX1rTpNZd6lLYzfTCrXEAcJ/view?usp=drive_link';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         }
         break;
       case 0: // Sunday
         if (hr === 21 && mn >=0) {
-          dj.src = 'https://github.com/strawbs1989/coolvibes-reloaded/tree/main/images/strawbs.png';
+          dj.src = 'https://drive.google.com/file/d/1SaYUrmEwalwxXwygXP0ZthYLKW7aji_H/view?usp=drive_link';
           tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
         }
         break;
       default:
-        dj.src='https://example.com/off-air.png';
+        dj.src='https://drive.google.com/file/d/1D77ONt7JnNX1rTpNZd6lLYzfTCrXEAcJ/view?usp=drive_link';
         break;
     }
   }

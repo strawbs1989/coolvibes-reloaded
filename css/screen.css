@@ -20,7 +20,7 @@ body {
    border:  1px solid #fff;
    box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.3);
  }
- #dj[src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png"] {
+ #dj[src="https://drive.google.com/file/d/1D77ONt7JnNX1rTpNZd6lLYzfTCrXEAcJ/view?usp=drive_link"] {
    animation: fade  4s ease-in-out infinite;
  }
  @keyframes fade {
