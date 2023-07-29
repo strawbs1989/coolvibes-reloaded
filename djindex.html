@@ -1,108 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<head>
-<title>Station Activity</title>
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
 
-<style type="text/css">
-td { font-size:0.8em; } /* temporary for testing purposes */
-#NowOn {
-border: 0px solid black;
-font-size: 40.5px;
-color: white;
-background: transparent;
-height: 55px;
-width: 350px;
-}
-</style>
+    <title>Who is on air</title>
+    <link rel="stylesheet" href="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/css/screen.css" media="screen">
+  </head>
+  <body>
+    <noscript>
+      <p>JavaScipt need to be enabled for this page to function correctly</p>
+    </noscript>
 
-<script type="text/javascript">
-
-/* NOT CURRENTLY USED
-var thedate = new Date();
-var dayofweek = thedate.getDay();
-var hourofday = thedate.getHours();
-
-var GMT = new Date().getTimezoneOffset();
-var offsetGMT = -5 * new Date().getTimezoneOffset()/60;
-*/
-
-// Sun=0 1 2 3 4 5 Sat=6
-var DayOfWeek = new Array('Weekend','Monday','Tuesday','Wednesday','Thursday','Friday','Weekend');
-
-var NoShow = 'No Show Scheduled<br />for COOLVIBES';
-var DH = new Array (7);
-for (d=0; d<7; d++) {
-DH[d] = new Array (24);
-for (h=0; h<24; h++) { DH[d][h] = ''; }
-}
-
-DH[1][21] = 'Monday at 9 PM<br>The Camino Concept<br>with Billy';
-DH[1][12] = 'No Show Name<br>with DJ Bunny<br>Monday at Noon<br>No Genre';
-DH[1][14] = 'No Show Name<br>with DJ Bunny<br>Monday at 2 PM<br>No Genre';
-DH[1][16] = 'No Show Name<br>with Katy Cox<br>Monday at 4 PM<br>Rap';
-DH[1][17] = 'No Show Name<br>with DJ Bunny<br>Monday at 5 PM<br>No Genre';
-DH[1][18] = 'No Show Name<br>with DJ Bunny<br>Monday at 6 PM<br>No Genre';
-DH[1][20] = 'No Show Name<br>with DJ Bunny<br>Monday at 8 PM<br>No Genre';
-DH[1][22] = 'No Show Name<br>with DJ Bunny<br>Monday 10 to Midnight<br>No Genre';
-DH[1][23] = 'No Show Name<br>with DJ Bunny<br>Monday at 11 PM<br>No Genre';
-DH[2][08] = 'No Show Name<br>with DJ Bunny<br>Tuesday at 8 AM<br>Dance';
-DH[2][16] = 'No Show Name<br>with DJ Bunny<br>Tuesday at 4 PM<br>Rock';
-DH[2][20] = 'No Show Name<br>with DJ Bunny<br>Tuesday at 8 PM<br>No Genre';
-DH[3][01] = 'All Round Dance,Rock.Pop!<br>with DJ Bunny<br>Wednesday at 1 AM<br>No Genre';
-DH[3][04] = 'All Round Dance,Rock.Pop!<br>with DJ Bunny<br>Wednesday at 4 AM<br>No Genre';
-DH[3][15] = 'All Round Dance<br>with the DJ Bunny<br>Wednesday 3 to 5 PM<br>Classic Rock';
-DH[3][16] = 'No Show Name<br>with DJ Bunny<br>Wednesday at 4 PM<br>Classic Rock';
-DH[3][22] = 'No Show Name<br>with DJ Bunny<br>Wednesday at 10 PM<br>Rap';
-DH[4][15] = 'No Show Name<br>with DJ Bunny<br>Thursday 3 to 6 PM<br>Rap/Urban';
-DH[4][20] = 'Request & Shout-Out Show<br>with Strawbs<br>Thursday at 8 PM<br>80s/Dance/Pop/';
-DH[4][14] = 'No Show Name<br>with DJ Bunny<br>Thursday at 2 PM<br>No Genre';
-DH[4][15] = 'No Show Name<br>with DJ Bunny<br>Thursday at 3 PM<br>No Genre';
-DH[5][10] = 'Friday at 10 AM<br>Christian Music<br>with Dj Bunny';
-DH[5][11] = 'Friday at 11 AM<br>Christian Music<br>with Dj Bunny';
-DH[5][12] = 'Friday at Noon<br>Modern Rock<br>with Dj Bunny';
-DH[5][13] = 'Friday at 1 PM<br>Modern Rock<br>with Dj Bunny';
-DH[5][14] = 'Friday at 2 PM<br>Urban Music<br>with Dj Bunny';
-DH[5][15] = 'Friday at 3 PM<br>Unknown Genre<br>with DJ Bunny';
-DH[5][16] = 'Friday at 4 PM<br>Urban Music<br>with Dj Bunny';
-DH[5][17] = 'Friday at 5 PM<br>Urban Music<br>with Dj Bunny';
-DH[5][22] = 'Friday at 10 PM<br>Modern Rock<br>with DJ Bunny';
-DH[5][20] = 'Friday at 11 PM<br>Modern Rock<br>with DJ Bunny';
-DH[6][22] = 'Saturday at 10 PM<br>Modern Rock<br>with DJ Bunny';
-DH[6][03] = 'Saturday at 3 AM<br>Modern Rock<br>with DJ Bunny';
-DH[7][20] = 'Sunday at 8 PM<br>Request & Shout-Out<br>with DJ Strawbs';
-DH[7][23] = 'Sunday at 11 PM<br>Modern Rock<br>with DJ Bunny';
-// Add more when schedule is known. Note: there may be better ways to do this when information is known.
-
-
-function OnNow() {
-var thedate = new Date();
-var dayofweek = thedate.getDay();
-var hourofday = thedate.getHours();
-// alert(dayofweek+':'+hourofday+'<br />'+DH[dayofweek][hourofday]);
-var showOn = DH[dayofweek][hourofday];
-if (showOn == '') { showOn = thedate+'\n\nNo Show Scheduled'; }
-alert(showOn);
-}
-
-function NowON() {
-var thedate = new Date();
-var dayofweek = thedate.getDay();
-var hourofday = thedate.getHours();
-var showOn = DH[dayofweek][hourofday];
-if (showOn == '') { showOn = thedate+'<p />No Show Scheduled'; }
-document.getElementById('NowOn').innerHTML = showOn;
-}
-</script>
-</head>
-<BODY onLoad="NowON()">
-<!-- Unhide this if table display desired
-<script type="text/javascript">
-document.write(TableStationSchedule())
-</script>
--->
-<script type="text/javascript">
-document.write(NowON());
-</script>
-<div id='NowOn' onClick="NowON()">Click For Now On COOLVIBES</div>
-</body>
+    <h1>Who is on air</h1>
+    <img id="dj" src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg" alt="Off-line">
+    <script src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/scripts/showdj.js"></script>
+    <!-- partial -->
+    <script  src="./script.js"></script>
+  </body>
 </html>
