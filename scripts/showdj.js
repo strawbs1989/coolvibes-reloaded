@@ -22,7 +22,7 @@ if(( dy === 2 && hr === 8 && mn <=00 )||
 else {
 if(( dy === 3 && hr === 8 && mn <=59 )||
    ( dy === 3 && hr === 9 && mn <=59 )) {
-     dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg'';
+     dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png'';
  }
  else {
 if(( dy === 4 && hr === 21 && mn <=00 )||
@@ -46,7 +46,7 @@ if(( dy === 7 && hr === 21 && mn <=00 )||
             tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
  }
 else {
-     dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.jpg';
+     dj.src='https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png';
     }
    }
   }
