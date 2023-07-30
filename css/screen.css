@@ -9,7 +9,7 @@ body {
  }
  h1{
     text-align: center;
-    color: #fff;
+    color: white;
  }
 #dj {
    display: block;
@@ -20,7 +20,7 @@ body {
    border:  1px solid #fff;
    box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.3);
  }
- #dj[src$="off-air.png"] {
+ #dj[src$="off-air.jpg"] {
    animation: fade  4s ease-in-out infinite;
  }
  @keyframes fade {
