@@ -18,6 +18,9 @@
 		if ((hr === 21) { // 21:00 - 21:59 - 59 minutes - 0 hour
           dj.src = 'djimages/billy.jpg';
         break;
+		if ((hr === 13) { // 13:00 - 13:59 - 59 minutes - 0 hour
+          tx.innerHTML = 'Monday at 1 PM<br>Auto<br>With Bunny';
+        break;
       case 2: // Tuesday
         if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
           dj.src = 'djimages/kayley.jpg';
