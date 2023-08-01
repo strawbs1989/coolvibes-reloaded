@@ -16,6 +16,7 @@
           dj.src = 'djimages/kayley.jpg';
        
         if ((hr === 13) { // 13:00 - 13:59 - 60 minutes - 1 hour
+	  dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Monday at 1 PM<br>Auto<br>With Bunny';
 
         if ((hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
@@ -27,10 +28,12 @@
           dj.src = 'djimages/kayley.jpg';
 		  
 		  if ((hr === 13) { // 13:00 - 13:59 - 60 minutes - 1 hour
-          tx.innerHTML = 'Tuesday at 1 PM<br>Auto<br>With Bunny';
+		    dj.src = 'djimages/djbunny.jpg';
+                    tx.innerHTML = 'Tuesday at 1 PM<br>Auto<br>With Bunny';
 		  
 		  if ((hr === 17) { // 17:00 - 17:59 - 60 minutes - 1 hour
-          tx.innerHTML = 'Tuesday at 5 PM<br>Auto<br>With Bunny';
+		    dj.src = 'djimages/djbunny.jpg';
+                    tx.innerHTML = 'Tuesday at 5 PM<br>Auto<br>With Bunny';
 		  
         break;
       case 3: // Wednesday
