@@ -57,12 +57,12 @@
         }
         break;
       case 5: // Friday
-                if (hr === 13 || hr === 14) // 13:00 - 14:59 - 2 hours
+                if (hr === 13 || hr === 14) // 13:00 - 14:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         break;
       case 6: // Saturday
-        if (hr === 2 && mn >=03) { // 2:03 - 2:59 - 57 minutes
+        if (hr === 2 && mn >=03) { // 2:03 - 2:59 - 56 minutes
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         }
