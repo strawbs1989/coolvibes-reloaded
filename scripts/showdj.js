@@ -34,9 +34,6 @@
 		  
 		  if ((hr === 17) { // 17:00 - 17:59 - 60 minutes - 1 hour
 		  dj.src = 'djimages/djbunny.jpg';
-
-	      
-
 		  
         break;
       case 3: // Wednesday
@@ -46,8 +43,6 @@
 
 	    if ((hr === 15) { // 15:00 - 15:59 - 60 minutes - 1 hour
 		  dj.src = 'djimages/djbunny.jpg';
-
-	    
 		  
         break;
       case 4: // Thursday
