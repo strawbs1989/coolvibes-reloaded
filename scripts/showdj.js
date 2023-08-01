@@ -37,7 +37,7 @@
 		  
         break;
       case 3: // Wednesday
-        if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
+        if ((hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
           dj.src = 'djimages/off-air.jpg';
 		  
 
@@ -46,7 +46,7 @@
 		  
         break;
       case 4: // Thursday
-        if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
+        if ((hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
           dj.src = 'djimages/strawbs.jpg';
           tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
 		  
@@ -62,13 +62,13 @@
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         break;
       case 6: // Saturday
-        if (hr === 2 && mn >=03) { // 2:03 - 2:59 - 56 minutes
+        if ((hr === 2 && mn >=03) { // 2:03 - 2:59 - 56 minutes
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         }
         break;
       case 0: // Sunday
-        if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
+        if ((hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
           dj.src = 'djimages/strawbs.jpg';
           tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
         }
