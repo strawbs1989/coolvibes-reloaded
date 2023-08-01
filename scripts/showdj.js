@@ -32,7 +32,7 @@
 		  dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Tuesday at 1 PM<br>Auto<br>With Bunny';
 		  
-		  if ((hr === 17) { // 17:00 - 17:59 - 59 minutes - 1 hour
+		  if ((hr === 17) { // 17:00 - 17:59 - 60 minutes - 1 hour
 		  dj.src = 'djimages/djbunny.jpg';
 		  
         break;
