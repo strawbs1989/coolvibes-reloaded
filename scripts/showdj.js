@@ -24,7 +24,7 @@
 
         break;
       case 2: // Tuesday
-        if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
+        if ((hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
           dj.src = 'djimages/kayley.jpg';
 		  
 
