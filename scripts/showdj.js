@@ -45,7 +45,7 @@
       case 4: // Thursday
         if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
           dj.src = 'djimages/strawbs.jpg';
-          tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
+          
         }
            
         if (hr === 16) { // 16:00 - 16:59 - 60 minutes - 1 hour
@@ -68,7 +68,7 @@
       case 0: // Sunday
         if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
           dj.src = 'djimages/strawbs.jpg';
-          tx.innerHTML = 'Sunday at 9 PM<br>Request<br>with Strawbs';
+          
         }          
         break;
       default:
