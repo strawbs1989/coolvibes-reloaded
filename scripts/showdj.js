@@ -6,9 +6,9 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
+	  let txt = null;
  
-    tx.style.color = 'white';
-    dj.insertAdjacentElement('afterend', tx);
+    
 
     switch (dy) {
       case 1: // Monday
