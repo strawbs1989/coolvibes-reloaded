@@ -73,7 +73,7 @@
         break;
       default:
         dj.src = 'djimages/strawbs.jpg';
-        tx.innerHTML = 'Thursday at 9 PM<br>Request<br>With Strawbs';
+        
         break;
     }
   }
