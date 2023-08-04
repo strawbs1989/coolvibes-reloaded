@@ -6,7 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-	      tx = document.getElementById("demo1").innerHTML = "Hello Dolly!";
+	  tx = document.getElementById("demo1").innerHTML = "Hello Dolly!";
  
     
 
