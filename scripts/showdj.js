@@ -60,7 +60,7 @@
       case 5: // Friday
         if (hr === 13 || hr === 14) { // 13:00 - 14:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
-          tx.innerHTML = 'Friday at 1 PM<br>Christian Music<br>with Dj Bunny';
+          let text = "The character \\ is called backslash.";
         }
 
         if (hr === 16 || hr === 17) { // 16:00 - 17:59 - 1 hours - 59 minutes
