@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          let text = "on-air"; 
+          let text = "The character \\ is called backslash."; 
 		  
   
 
