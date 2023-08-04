@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          let text = "on-air"; 
+          tx = document.getElementById("demo").innerHTML = "On-Air."; 
 		  
   
 
@@ -71,6 +71,12 @@
         if (hr === 15 || hr === 16) { // 15:00 - 16:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
+        }  		
+        break;
+		
+		if (hr === 21 || hr === 22) { // 21:00 - 22:59 - 1 hours - 59 minutes
+          dj.src = 'djimages/djbunny.jpg';
+          tx.innerHTML = 'Friday at 7 PM<br>Hard Rock';
         }  		
         break;
       case 6: // Saturday
