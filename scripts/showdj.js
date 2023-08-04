@@ -6,8 +6,9 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
+		  tx.style.color = 'white';
           let text = "on-air"; 
-
+  
 
  
     
