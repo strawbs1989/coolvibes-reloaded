@@ -63,7 +63,7 @@
 
         if (hr === 16 || hr === 17) { // 16:00 - 17:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
-          tx.innerHTML = document.getElementById("demo").innerHTML = Friday at 4 PM<br>Dance<br>with Bunny;
+          let text = "Friday at 4 PM<br>Dance<br>with Bunny";
         } 		
 
         if (hr === 15 || hr === 16) { // 15:00 - 16:59 - 1 hours - 59 minutes
