@@ -79,6 +79,7 @@
           tx.innerHTML = 'Friday at 7 PM<br>Hard Rock';
         }  		
         break;
+		
       case 6: // Saturday
         if (hr === 2 || hr === 3) { // 2:00 - 3:59 - 2 hours
           dj.src = 'djimages/djbunny.jpg';
