@@ -62,7 +62,7 @@
 
         if (hr === 14) { // 14:00 - 14:59 - 60 minutes - 1 hour
           dj.src = 'djimages/djbunny.jpg';
-          tx = document.getElementById("demo1").innerHTML = "bunny from 2pm!";
+          tx.innerHTML = document.getElementById("demo1").innerHTML = "bunny from 2pm!";
         } 
 		
         break;
