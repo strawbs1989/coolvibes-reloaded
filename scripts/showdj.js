@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          tx = document.getElementById("on-air"),
+          tx = document.getElementById('on-air'),
 		  
   
        
@@ -76,7 +76,7 @@
 		
 		if (hr === 22 || hr === 23) { // 22:00 - 23:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
-          tx.innerHTML = 'Friday at 7 PM<br>Hard Rock';
+          tx.innerHTML = 'Friday at 10 PM<br>Hard Rock';
         }  		
         break;
 		
