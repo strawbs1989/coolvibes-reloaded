@@ -60,7 +60,7 @@
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
         } 
 
-        if (hr === 14) || hr === 17) { // 14:00 - 17:59 - 3 hours - 0 minutes
+        if (hr === 14) { // 14:00 - 14:59 - 60 minutes - 1 hour
           dj.src = 'djimages/djbunny.jpg';
           tx = document.getElementById("demo1").innerHTML = "bunny from 2pm!";
         } 
