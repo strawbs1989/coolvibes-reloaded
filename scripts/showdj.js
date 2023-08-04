@@ -7,8 +7,8 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          tx = let text = "on-air"; 
-		  tx = document.getElementById("demo").innerHTML = text;
+          let text = "on-air"; 
+		  
   
 
  
