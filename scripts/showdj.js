@@ -6,7 +6,8 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-	  let txt = null;
+          let txt = null;
+
  
     
 
@@ -83,5 +84,5 @@
     }
   }
 
-  setInterval(function() { onair(); }, 1000);
+setInterval(function() { onair(); }, 1000);
 })(document);
