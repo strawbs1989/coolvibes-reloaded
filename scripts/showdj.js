@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          tx = document.getElementById('on-air'),
+          const dj on-air = document.getElementById("on-air");
 		  
   
        
