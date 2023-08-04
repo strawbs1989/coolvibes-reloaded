@@ -6,11 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  let txt = null;
-     
-		  
-  
-      
+	      let txt = null;
  
     
 
@@ -60,26 +56,9 @@
       case 5: // Friday
         if (hr === 13 || hr === 14) { // 13:00 - 14:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
-          tx.innerHTML = 'Friday at 1 PM<br>Christian Music<br>with Dj Bunny';
-        }
-
-        if (hr === 16 || hr === 17) { // 16:00 - 17:59 - 1 hours - 59 minutes
-          dj.src = 'djimages/djbunny.jpg';
-          let text = "Friday at 4 PM Dance with Bunny";
-        } 		
-
-        if (hr === 15 || hr === 16) { // 15:00 - 16:59 - 1 hours - 59 minutes
-          dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
-        }  		
+        }          
         break;
-		
-		if (hr === 22 || hr === 23) { // 22:00 - 23:59 - 1 hours - 59 minutes
-          dj.src = 'djimages/djbunny.jpg';
-          tx.innerHTML = 'Friday at 10 PM<br>Hard Rock';
-        }  		
-        break;
-		
       case 6: // Saturday
         if (hr === 2 || hr === 3) { // 2:00 - 3:59 - 2 hours
           dj.src = 'djimages/djbunny.jpg';
@@ -99,5 +78,5 @@
     }
   }
 
-setInterval(function() { onair(); }, 1000);
+  setInterval(function() { onair(); }, 1000);
 })(document);
