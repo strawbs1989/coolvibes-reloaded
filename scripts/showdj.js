@@ -7,10 +7,10 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          tx = document.getElementById("demo").innerHTML = "On-Air."; 
+          tx = document.getElementById("on-air").innerHTML = "On-Air."; 
 		  
   
-
+       
  
     
 
