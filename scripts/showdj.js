@@ -58,7 +58,12 @@
         if (hr === 13 || hr === 14) { // 13:00 - 14:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
-        } 
+        }
+
+        if (hr === 16 || hr === 17) { // 16:00 - 17:59 - 1 hours - 59 minutes
+          dj.src = 'djimages/djbunny.jpg';
+          
+        } 		
 
         if (hr === 15 || hr === 16) { // 15:00 - 16:59 - 1 hours - 59 minutes
           dj.src = 'djimages/djbunny.jpg';
