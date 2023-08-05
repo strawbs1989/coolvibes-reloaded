@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  tx.style.color = 'white';
-          dj.insertAdjacentElement('beforeend', tx);
+          dj.insertAdjacentText('beforeend', tx);
  
     
 
