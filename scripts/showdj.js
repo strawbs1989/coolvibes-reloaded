@@ -6,7 +6,8 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-	      let txt = null;
+		  tx.style.color = 'white';
+	      dj.insertAdjacentElement("beforebegin", tx);
  
     
 
@@ -63,7 +64,13 @@
         if (hr === 2 || hr === 3) { // 2:00 - 3:59 - 2 hours
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 8 AM<br>Christian Music<br>with Dj Bunny';
-        }          
+        } 
+
+        if (hr === 12 || hr === 13) { // 12:00 - 13:59 - 2 hours
+          dj.src = 'djimages/djbunny.jpg';
+          tx.innerHTML = 'Saturday at 12 AM<br>Dance<br>with Dj Bunny';
+        } 
+		
         break;
       case 0: // Sunday
         if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
