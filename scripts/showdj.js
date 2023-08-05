@@ -6,7 +6,8 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  let txt = null
+		  tx.style.color = 'white';
+          dj.insertAdjacentElement('beforeend', tx);
  
     
 
@@ -68,6 +69,11 @@
         if (hr === 12 || hr === 13) { // 12:00 - 13:59 - 2 hours
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'Saturday at 12 AM<br>Dance<br>with Dj Bunny';
+        } 
+		
+		if (hr === 22 || hr === 23) { // 22:00 - 23:59 - 2 hours
+          dj.src = 'djimages/djbunny.jpg';
+          tx.innerHTML = 'Saturday at 10 PM<br>Dance<br>with Dj Bunny';
         } 
 		
         break;
