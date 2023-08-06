@@ -6,8 +6,8 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  let selectedColors = ['red',];
-		  let txt = 'No Show Scheduled for COOLVIBES';
+		  selectedColors = 'red',;
+		  txt = 'No Show Scheduled for COOLVIBES';
  
     
 
@@ -38,7 +38,7 @@
         break;
       case 3: // Wednesday
         if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
-          dj.src = 'djimages/off-air.jpg';        
+          dj.src = 'djimages/djbunny.jpg';        
 
         if (hr === 15) // 15:00 - 15:59 - 60 minutes - 1 hour
           dj.src = 'djimages/djbunny.jpg';        
