@@ -6,7 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  let NoShow = "No Show Scheduled<br />for COOLVIBES";
+		  let name = 'No Show Scheduled for COOLVIBES';
  
     
 
@@ -92,7 +92,13 @@
         
         break;
     }
+	default;
+    tx.innerHTML = 'No Show Scheduled<br />for COOLVIBES';
+	
+	break;
   }
+}
+  
 
   setInterval(function() { onair(); }, 1000);
 })(document);
