@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  let selectedColors = ['red',];
-		  let name = 'No Show Scheduled for COOLVIBES';
+		  let text = 'No Show Scheduled for COOLVIBES';
  
     
 
