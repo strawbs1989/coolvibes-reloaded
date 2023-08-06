@@ -86,14 +86,13 @@
           dj.src = 'djimages/djbunny.jpg';
           tx.innerHTML = 'No Show Scheduled<br />for COOLVIBES';
         } 		
-        break;
+         break;
       default:
         dj.src = 'djimages/strawbs.jpg';
         
         break;
+    }
   }
-}
-  
 
   setInterval(function() { onair(); }, 1000);
 })(document);
