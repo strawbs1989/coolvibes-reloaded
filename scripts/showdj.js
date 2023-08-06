@@ -6,6 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
+		  var = NoShow.'No Show Scheduled<br />for COOLVIBES()';
 		  let txt = null;
  
     
