@@ -6,7 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  let txt = 'No Show Scheduled<br />for COOLVIBES';
+		  let NoShow = "No Show Scheduled<br />for COOLVIBES";
  
     
 
