@@ -7,7 +7,7 @@
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
 		  let selectedColors = ['red',];
-		  let text = 'No Show Scheduled for COOLVIBES';
+		  let txt = 'No Show Scheduled for COOLVIBES';
  
     
 
@@ -93,10 +93,7 @@
         
         break;
     }
-	default;
-    tx.innerHTML = 'No Show Scheduled<br />for COOLVIBES';
 	
-	break;
   }
 }
   
