@@ -6,8 +6,7 @@
           dy = nd.getDay(),
           hr = nd.getHours(),                          
           mn = nd.getMinutes();
-		  selectedColors = 'red',;
-		  txt = 'No Show Scheduled for COOLVIBES';
+		  let txt = null;
  
     
 
@@ -18,7 +17,7 @@
      
         if (hr === 13) { // 13:00 - 13:59 - 60 minutes - 1 hour
           dj.src = 'djimages/djbunny.jpg';
-          
+          text.link("https://www.w3schools.com");
         }
 
         if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
