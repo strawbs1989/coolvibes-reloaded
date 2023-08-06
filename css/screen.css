@@ -20,8 +20,7 @@ body {
    border:  1px solid #000;
    box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.3);
  }
- body {
-	 color: white;
+ #dj[src$="djimages/off-air.jpg"] {
    animation: none;
  }
  @keyframes fade {

@@ -92,8 +92,6 @@
         dj.src = 'djimages/strawbs.jpg';
         
         break;
-    }
-	
   }
 }
   
