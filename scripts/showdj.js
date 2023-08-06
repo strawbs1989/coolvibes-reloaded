@@ -80,7 +80,12 @@
         if (hr === 21) { // 21:00 - 21:59 - 60 minutes - 1 hour
           dj.src = 'djimages/strawbs.jpg';
           
-        }          
+        }
+
+        if (hr === 11) { // 11:00 - 11:59 - 1 hour
+          dj.src = 'djimages/djbunny.jpg';
+          tx.innerHTML = 'No Show Scheduled<br />for COOLVIBES';
+        } 		
         break;
       default:
         dj.src = 'djimages/strawbs.jpg';
