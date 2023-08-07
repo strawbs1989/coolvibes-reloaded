@@ -12,7 +12,7 @@
             if (hr === 8) // 8:00 - 8:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/kayley.jpg';
 
-            if (hr === 22) { // 22:00 - 12:59 - 59 minutes - 14 hour
+            if (hr === 22) { // 22:00 - 12:59 - 59 minutes - 2 hour
                 dj.src = 'djimages/camino.jpg';
                 
             }
