@@ -12,9 +12,9 @@
             if (hr === 8) // 8:00 - 8:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/kayley.jpg';
 
-            if (hr === 13) { // 13:00 - 13:59 - 60 minutes - 1 hour
-                dj.src = 'djimages/djbunny.jpg';
-                txt = '<a href="https://coolvibes-reloaded.com/requests" target="_blank">Monday at 1 PM<br>Requests With<br>With Bunny</a>';
+            if (hr === 22) { // 22:00 - 12:59 - 59 minutes - 14 hour
+                dj.src = 'djimages/camino.jpg';
+                
             }
 
             if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
