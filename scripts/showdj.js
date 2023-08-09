@@ -40,7 +40,7 @@
 
             if (hr === 15) // 15:00 - 15:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/djbunny.jpg';
-				txt = '<a href="https://coolvibes-reloaded.com/requests" target="_blank">Wednesday at 3 PM<br>Requests With<br>With Bunny</a>';
+				txt = '<a href="https://coolvibes-reloaded.com/requests" target="_blank">Wednesday at 3 PM<br>Requests<br>With Bunny</a>';
             break;
         case 4: // Thursday
             if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
