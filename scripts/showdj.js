@@ -45,6 +45,7 @@
         case 4: // Thursday
             if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/strawbs.jpg';
+				txt = '<a href="https://forms.gle/jphWAhp2RGgELphSA" target="_blank">Thursday at 9 PM<br>Requests<br></a>';
 
             if (hr === 16) { // 16:00 - 16:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/djbunny.jpg';
