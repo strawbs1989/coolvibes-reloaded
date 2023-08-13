@@ -66,6 +66,7 @@
         case 0: // Sunday
             if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/strawbs.jpg';
+				txt = '<a href="https://forms.gle/jphWAhp2RGgELphSA" target="_blank">Sunday at 9 PM<br>Requests<br></a>';
             break;
         default:
             dj.src = 'djimages/strawbs.jpg';
