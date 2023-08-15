@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Requests and Dedications</title>
+</head>
+<body>
+    <h1>Song Requests and Dedications</h1>
+    <p>Select a song from the list below to make a request or dedication:</p>
+    
+    <ul id="song-list">
+        <li><a href="#" onclick="requestSong('Song Title 1', 'Artist 1')">All The Lovers - Kylie Minogue</a></li>
+        <li><a href="#" onclick="requestSong('Song Title 2', 'Artist 2')">Breathe - Kylie Minogue</a></li>
+        <li><a href="#" onclick="requestSong('Song Title 3', 'Artist 3')">in you're eyes - Kylie Minogue</a></li>
+		
+        <li><a href="#" onclick="requestSong('Song Title 3', 'Artist 4')">Years & Years - Kylie Minogue</a></li>
+		<li><a href="#" onclick="requestSong('Song Title 3', 'Artist 5')">Heaven - Belinda Carlisle</a></li>
+		<li><a href="#" onclick="requestSong('Song Title 3', 'Artist 6')">sweet sixteen - billy idol</a></li>
+		<li><a href="#" onclick="requestSong('Song Title 3', 'Artist 4')">when the going gets tough - billy ocean</a></li>
+    </ul>
+    
+    <h2>Make a Request or Dedication</h2>
+    <form id="song-request-form">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" required><br><br>
+        
+        <label for="message">Dedication Message:</label><br>
+        <textarea id="message" rows="4" cols="50"></textarea><br><br>
+        
+        <button type="button" onclick="submitRequest()">Submit Request</button>
+    </form>
+    
+    <p id="confirmation-message"></p>
+    
+    <script>
+        function requestSong(songTitle, artistName) {
+            document.getElementById("song-request-form").style.display = "block";
+            document.getElementById("song-title").textContent = songTitle;
+            document.getElementById("artist-name").textContent = artistName;
+        }
+        
+        function submitRequest() {
+            var name = document.getElementById("name").value;
+            var songTitle = document.getElementById("song-title").textContent;
+            var artistName = document.getElementById("artist-name").textContent;
+            var message = document.getElementById("message").value;
+            
+            if (name !== "") {
+                var confirmation = "Request received! Thank you, " + name + ", for requesting \"" + songTitle + "\" by " + artistName + ".";
+                if (message !== "") {
+                    confirmation += " Your dedication message: \"" + message + "\"";
+                }
+                document.getElementById("confirmation-message").textContent = confirmation;
+                clearForm();
+            } else {
+                alert("Please enter your name before submitting.");
+            }
+        }
+        
+        function clearForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>
