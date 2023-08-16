@@ -8,7 +8,7 @@
     <p>Select a song from the list below to make a request or dedication:</p>
     
     <ul id="song-list">
-        <li><a href="#" onclick="requestSong('All The Lovers', 'Kylie Minogue')">All The Lovers - Kylie Minogue</a></li>
+        <li><a href="https://coolvibes-reloaded.com/req/KylieMinogue-AllTheLovers.mp3" onclick="requestSong('All The Lovers', 'Kylie Minogue', event)">All The Lovers - Kylie Minogue</a></li>
         <li><a href="#" onclick="requestSong('Breathe', 'Kylie Minogue')">Breathe - Kylie Minogue</a></li>
         <li><a href="#" onclick="requestSong('In Your Eyes', 'Kylie Minogue')">In Your Eyes - Kylie Minogue</a></li>
         <li><a href="#" onclick="requestSong('Years & Years', 'Kylie Minogue')">Years & Years - Kylie Minogue</a></li>
@@ -22,9 +22,6 @@
             <label for="name">Your Name:</label><br>
             <input type="text" id="name" required><br><br>
             
-            <input type="hidden" id="song-title">
-            <input type="hidden" id="artist-name">
-            
             <label for="message">Dedication Message:</label><br>
             <textarea id="message" rows="4" cols="50"></textarea><br><br>
             
@@ -35,20 +32,17 @@
     <p id="confirmation-message"></p>
     
     <script>
-        function requestSong(songTitle, artistName) {
+        function requestSong(songTitle, artistName, event) {
+            event.preventDefault(); // Prevent navigation
             document.getElementById("song-request-form").style.display = "block";
             document.getElementById("selected-song").textContent = "Selected Song: " + songTitle + " - " + artistName;
             document.getElementById("name").focus();
-            
-            // Set the hidden inputs' values
-            document.getElementById("song-title").value = songTitle;
-            document.getElementById("artist-name").value = artistName;
         }
         
         function submitRequest() {
             var name = document.getElementById("name").value;
-            var songTitle = document.getElementById("song-title").value;
-            var artistName = document.getElementById("artist-name").value;
+            var songTitle = document.getElementById("selected-song").textContent.split(' - ')[1];
+            var artistName = document.getElementById("selected-song").textContent.split(' - ')[2];
             var message = document.getElementById("message").value;
             
             if (name !== "") {
