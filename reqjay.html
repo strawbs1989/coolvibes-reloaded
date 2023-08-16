@@ -8,39 +8,49 @@
     <p>Select a song from the list below to make a request or dedication:</p>
     
     <ul id="song-list">
-        <li><a href="https://coolvibes-reloaded.com/req/KylieMinogue-AllTheLovers.mp3" onclick="requestSong('Song Title 1', 'Artist 1')">All The Lovers - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('Song Title 2', 'Artist 2')">Breathe - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('Song Title 3', 'Artist 3')">in you're eyes - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('Song Title 4', 'Artist 4')">Years & Years - Kylie Minogue</a></li>
-		<li><a href="#" onclick="requestSong('Song Title 5', 'Artist 5')">Heaven - Belinda Carlisle</a></li>
-		<li><a href="#" onclick="requestSong('Song Title 6', 'Artist 6')">sweet sixteen - billy idol</a></li>
-		<li><a href="#" onclick="requestSong('Song Title 7', 'Artist 4')">when the going gets tough - billy ocean</a></li>
+        <li><a href="https://coolvibes-reloaded.com/req/KylieMinogue-AllTheLovers.mp3" onclick="requestSong('All The Lovers', 'Kylie Minogue')">All The Lovers - Kylie Minogue</a></li>
+        <li><a href="#" onclick="requestSong('Breathe', 'Kylie Minogue')">Breathe - Kylie Minogue</a></li>
+        <li><a href="#" onclick="requestSong('In Your Eyes', 'Kylie Minogue')">In Your Eyes - Kylie Minogue</a></li>
+        <li><a href="#" onclick="requestSong('Years & Years', 'Kylie Minogue')">Years & Years - Kylie Minogue</a></li>
+		<li><a href="#" onclick="requestSong('Heaven', 'Belinda Carlisle')">Heaven - Belinda Carlisle</a></li>
+		<li><a href="#" onclick="requestSong('Sweet Sixteen', 'Billy Idol')">Sweet Sixteen - Billy Idol</a></li>
+		<li><a href="#" onclick="requestSong('When the Going Gets Tough', 'Billy Ocean')">When the Going Gets Tough - Billy Ocean</a></li>
     </ul>
     
-    <h2>Make a Request or Dedication</h2>
-    <form id="song-request-form">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" required><br><br>
-        
-        <label for="message">Dedication Message:</label><br>
-        <textarea id="message" rows="4" cols="50"></textarea><br><br>
-        
-        <button type="button" onclick="submitRequest()">Submit Request</button>
-    </form>
+    <div id="song-request-form" style="display: none;">
+        <h2>Make a Request or Dedication</h2>
+        <p id="selected-song"></p>
+        <form>
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" required><br><br>
+            
+            <input type="hidden" id="song-title">
+            <input type="hidden" id="artist-name">
+            
+            <label for="message">Dedication Message:</label><br>
+            <textarea id="message" rows="4" cols="50"></textarea><br><br>
+            
+            <button type="button" onclick="submitRequest()">Submit Request</button>
+        </form>
+    </div>
     
     <p id="confirmation-message"></p>
     
     <script>
         function requestSong(songTitle, artistName) {
             document.getElementById("song-request-form").style.display = "block";
-            document.getElementById("song-title").textContent = songTitle;
-            document.getElementById("artist-name").textContent = artistName;
+            document.getElementById("selected-song").textContent = "Selected Song: " + songTitle + " - " + artistName;
+            document.getElementById("name").focus();
+            
+            // Set the hidden inputs' values
+            document.getElementById("song-title").value = songTitle;
+            document.getElementById("artist-name").value = artistName;
         }
         
         function submitRequest() {
             var name = document.getElementById("name").value;
-            var songTitle = document.getElementById("song-title").textContent;
-            var artistName = document.getElementById("artist-name").textContent;
+            var songTitle = document.getElementById("song-title").value;
+            var artistName = document.getElementById("artist-name").value;
             var message = document.getElementById("message").value;
             
             if (name !== "") {
@@ -58,6 +68,8 @@
         function clearForm() {
             document.getElementById("name").value = "";
             document.getElementById("message").value = "";
+            document.getElementById("selected-song").textContent = "";
+            document.getElementById("song-request-form").style.display = "none";
         }
     </script>
 </body>
