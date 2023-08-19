@@ -1,68 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Requests and Dedications</title>
-</head>
-<body>
+
+    <style>
+      input[type="radio"] {
+        display: none;
+      }
+      label,
+      button {
+        display: block;
+        margin: .75rem 0 .2rem;
+      }
+      input[type="radio"] + label {
+        user-select: none;
+        cursor: pointer;
+      }
+      input[type="radio"]:checked + label {
+        font-weight: bold;
+      }
+      li:has(input[type="radio"]:checked) {
+        list-style-type: "+  ";
+      }
+      pre {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Song Requests and Dedications</h1>
     <p>Select a song from the list below to make a request or dedication:</p>
-    
-    <ul id="song-list">
-        <li><a href="https://coolvibes-reloaded.com/req/KylieMinogue-AllTheLovers.mp3" onclick="requestSong('All The Lovers', 'Kylie Minogue', event)">All The Lovers - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('Breathe', 'Kylie Minogue')">Breathe - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('In Your Eyes', 'Kylie Minogue')">In Your Eyes - Kylie Minogue</a></li>
-        <li><a href="#" onclick="requestSong('Years & Years', 'Kylie Minogue')">Years & Years - Kylie Minogue</a></li>
-        <!-- Add more songs here -->
-    </ul>
-    
-    <div id="song-request-form" style="display: none;">
-        <h2>Make a Request or Dedication</h2>
-        <p id="selected-song"></p>
-        <form>
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" required><br><br>
-            
-            <label for="message">Dedication Message:</label><br>
-            <textarea id="message" rows="4" cols="50"></textarea><br><br>
-            
-            <button type="button" onclick="submitRequest()">Submit Request</button>
-        </form>
-    </div>
-    
-    <p id="confirmation-message"></p>
-    
+
+    <form action="song_request_dedication.php" method="post" id="song-request-dedication-form" onsubmit="submitRequest(event)">
+      <ul id="song-list">
+        <li>
+          <input type="radio" id="song-1" name="song" value="put link to the song-1">
+          <label for="song-1">All The Lovers - Kylie Minogue</label>           
+        </li>
+        <li>
+          <input type="radio" id="song-2" name="song" value="put link to the song-2">
+          <label for="song-2">Breathe - Kylie Minogue</label>           
+        </li>       
+        <li>
+          <input type="radio" id="song-3" name="song" value="put link to the song-3">
+          <label for="song-3">In you're eyes - Kylie Minogue</label>           
+        </li> 
+        <li>
+          <input type="radio" id="song-4" name="song" value="put link to the song-4">
+          <label for="song-4">Years & Years - Kylie Minogue</label>           
+        </li>
+        <li>
+          <input type="radio" id="song-5" name="song" value="put link to the song-5">
+          <label for="song-5">Heaven - Belinda Carlisle</label>           
+        </li>
+        <li>
+          <input type="radio" id="song-6" name="song" value="put link to the song-6">
+          <label for="song-6">Sweet sixteen - Billy Idol</label>           
+        </li>
+        <li>
+          <input type="radio" id="song-7" name="song" value="put link to the song-7">
+          <label for="song-7">When the going gets tough - Billy Ocean</label>           
+        </li>       
+      </ul>
+
+      <h2>Make a Request or Dedication</h2>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="message">Dedication Message:</label>
+      <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+      <pre id="confirmation-message"></pre>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
     <script>
-        function requestSong(songTitle, artistName, event) {
-            event.preventDefault(); // Prevent navigation
-            document.getElementById("song-request-form").style.display = "block";
-            document.getElementById("selected-song").textContent = "Selected Song: " + songTitle + " - " + artistName;
-            document.getElementById("name").focus();
-        }
-        
-        function submitRequest() {
-            var name = document.getElementById("name").value;
-            var songTitle = document.getElementById("selected-song").textContent.split(' - ')[1];
-            var artistName = document.getElementById("selected-song").textContent.split(' - ')[2];
-            var message = document.getElementById("message").value;
-            
-            if (name !== "") {
-                var confirmation = "Request received! Thank you, " + name + ", for requesting \"" + songTitle + "\" by " + artistName + ".";
-                if (message !== "") {
-                    confirmation += " Your dedication message: \"" + message + "\"";
-                }
-                document.getElementById("confirmation-message").textContent = confirmation;
-                clearForm();
-            } else {
-                alert("Please enter your name before submitting.");
-            }
-        }
-        
-        function clearForm() {
-            document.getElementById("name").value = "";
-            document.getElementById("message").value = "";
-            document.getElementById("selected-song").textContent = "";
-            document.getElementById("song-request-form").style.display = "none";
-        }
+      function submitRequest(e) {
+        const song = document.querySelector('input[type="radio"]:checked');
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+        const confirmation = document.getElementById('confirmation-message');
+
+        e.preventDefault();
+        confirmation.textContent = '';
+
+        if (!song)
+          confirmation.textContent += 'Select a song before submitting.\n';
+        if (!name)
+          confirmation.textContent += 'Please enter your name before submitting.\n';
+        if (!message)
+          confirmation.textContent += 'Please enter message before submitting.\n';
+        if (song && name && message)
+          document.getElementById('song-request-dedication-form').submit();
+      }
     </script>
-</body>
+  </body>
 </html>
