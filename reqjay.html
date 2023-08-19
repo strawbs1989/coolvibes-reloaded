@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Requests and Dedications</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Requests and Dedications</title>
 
-    <style>
+  <style>
       input[type="radio"] {
         display: none;
       }
@@ -28,13 +28,13 @@
         color: red;
       }
     </style>
-  </head>
-  <body>
-    <h1>Song Requests and Dedications</h1>
+</head>
+<body>
+  <h1>Song Requests and Dedications</h1>
     <p>Select a song from the list below to make a request or dedication:</p>
-      
-	  <form action="https://coolvibes-reloaded.com/song_request_dedication.php" method="post" id="song-request-dedication-form" onsubmit="submitRequest(event)"
-      <ul id="song-list">
+
+  <form action="https://coolvibes-reloaded.com/song_request_dedication.php" method="post" id="song-request-dedication-form" onsubmit="submitRequest(event)">
+    <ul id="song-list">
         <li>
           <input type="radio" id="song-1" name="song" value="put link to the song-1">
           <label for="song-1">All The Lovers - Kylie Minogue</label>           
@@ -78,8 +78,25 @@
       <button type="submit">Submit Request</button>
     </form>
 
-    <script>
-      function submitRequest(e) {
+ 
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve the form data
+        $selectedSong = $_POST["song"];
+        $name = $_POST["name"];
+        $message = $_POST["message"];
+
+        // Perform any necessary processing (e.g., storing in a database, sending emails)
+
+        // Return a response (e.g., success or error message)
+        echo "Request submitted successfully!";
+    }
+    ?>
+  </form>
+
+  <script>
+    function submitRequest(e) {
         const song = document.querySelector('input[type="radio"]:checked');
         const name = document.getElementById('name').value;
         const message = document.getElementById('message').value;
@@ -97,6 +114,6 @@
         if (song && name && message)
           document.getElementById('song-request-dedication-form').submit();
       }
-    </script>
-  </body>
+  </script>
+</body>
 </html>
