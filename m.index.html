@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Home(mobile)</title>
     <meta name="generator" content="Serif WebPlus X8">
-    <meta name="viewport" content="width=782">
+    <meta name="viewport" content="width=914">
     <meta name="keywords" content="rockin, music, events, travelmusic, travel, holidaymusic, holiday, remixes, bouncemusic, djmusic, volountary, indoorwork, indoor, swimming, baking, vside-radio, secondlife, vside, onlinecommunitys, flights, socialmedia,Permissions-Policy,">
     <meta name="description" content="Welcome To Our New Website Hope Ya'll Enjoy">
     <meta name="author" content="Permissions-Policy">
@@ -74,44 +74,6 @@ $(document).ready(function(){
 
 <!-- HTML Fragment frag_28 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Header code for HTML Fragment frag_6 -->
-<script>
-$(document).ready(function(){
-  var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-  var sourceNode = null;
-
-  $("#toggleButton").click(function(){
-    if (!sourceNode) {
-      // Create a new audio buffer source node
-      sourceNode = audioContext.createBufferSource();
-      
-      // Load the audio from URL
-      var request = new XMLHttpRequest();
-      request.open('GET', 'http://boogie.vside-radio.com:8406/stream', true);
-      request.responseType = 'arraybuffer';
-      
-      request.onload = function() {
-        var audioData = request.response;
-        audioContext.decodeAudioData(audioData, function(buffer) {
-          sourceNode.buffer = buffer;
-          sourceNode.connect(audioContext.destination);
-          sourceNode.start(0);
-        });
-      };
-      
-      request.send();
-      
-      $("#toggleButton").text("Pause");
-    } else {
-      sourceNode.stop();
-      sourceNode = null;
-      $("#toggleButton").text("Play");
-    }
-  });
-});
-</script>
-
-<!-- HTML Fragment frag_28 -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
     <!-- Google tag (gtag.js) -->
@@ -125,8 +87,8 @@ $(document).ready(function(){
 </script>
   </head>
   <body style="height:7942px;background:#000000;">
-    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:782px;height:7942px;">
-      <img alt="" src="wpimages/wp8baf3cec_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:782px;height:235px;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:914px;height:7942px;">
+      <img alt="" src="wpimages/wp7efdf9b0_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:900px;height:235px;">
       <map id="map1" name="map1"><area shape="rect" coords="0,0,53,17" href="m.podcasts.html" alt=""></map>
       <img alt="Podcasts" usemap="#map1" src="wpimages/wpf5a116da_06.png" style="position:absolute;left:378px;top:43px;width:52px;height:16px;">
       <img alt="" src="wpimages/wpd6754e48_06.png" style="position:absolute;left:357px;top:39px;width:22px;height:24px;">
@@ -152,10 +114,9 @@ $(document).ready(function(){
       <img alt="Home" usemap="#map3" src="wpimages/wp58d7bb36_06.png" style="position:absolute;left:23px;top:43px;width:34px;height:16px;">
       <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:192px;top:39px;width:22px;height:24px;">
       <map id="map4" name="map4"><area shape="rect" coords="0,0,87,17" href="m.djs.html" alt=""></map>
-      <img alt="WhoAreTheDj’s" usemap="#map4" src="wpimages/wp35a8be02_06.png" style="position:absolute;left:214px;top:43px;width:86px;height:16px;">
+      <img alt="WhoAreTheDj’s" usemap="#map4" src="wpimages/wp35a8be02_06.png" style="position:absolute;left:219px;top:43px;width:86px;height:16px;">
       <map id="map5" name="map5"><area shape="rect" coords="0,0,62,17" href="m.unsigned.html" alt=""></map>
       <img alt="Unsigned" usemap="#map5" src="wpimages/wpd348e2e0_06.png" style="position:absolute;left:107px;top:43px;width:61px;height:16px;">
-      <img alt="" src="wpimages/wp739fc74a_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:777px;height:235px;">
       <img alt="" src="wpimages/wpaff03bdd_06.png" style="position:absolute;left:101px;top:491px;width:141px;height:173px;">
       <img alt="Autism &amp; Epilepsy" src="wpimages/wpf02266cb_06.png" style="position:absolute;left:305px;top:3922px;width:139px;height:37px;">
       <img alt="" src="wpimages/wp865a81de_06.gif" style="position:absolute;left:314px;top:4052px;width:115px;height:189px;">
@@ -231,8 +192,8 @@ $(document).ready(function(){
           <iframe src="https://minnit.chat/CoolvibesReloaded?embed&&nickname=" style="border:none;width:89%;height:500px;" allowTransparency="true"></iframe><br>
         </div>
       </div>
-      <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:330px;top:184px;width:67px;height:57px;">
-      <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:330px;top:184px;width:67px;height:57px;">
+      <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:400px;top:191px;width:67px;height:57px;">
+      <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:400px;top:191px;width:67px;height:57px;">
       <div style="position:absolute;left:230px;top:4815px;width:323px;height:541px;">
         <div style="position:absolute;left:22px;top:95px;width:284px;height:439px;">
           <!DOCTYPE html>
@@ -454,7 +415,7 @@ Sunday
 
         </div>
       </div>
-      <img alt="" src="wpimages/wp6ac59559_06.png" style="position:absolute;left:0px;top:7325px;width:782px;height:287px;">
+      <img alt="" src="wpimages/wpff805654_06.png" style="position:absolute;left:0px;top:7325px;width:793px;height:287px;">
       <div style="position:absolute;left:316px;top:7471px;width:265px;height:28px;overflow:hidden;">
         <p class="Footer"><span class="C-2">Coolvibes-<wbr>Reloaded</span></p>
       </div>
@@ -743,23 +704,6 @@ Sunday
 
 
       </div>
-      <div style="position:absolute;left:533px;top:28px;width:218px;height:48px;">
-        <!DOCTYPE html>
-	<html>
-<audio id="myAudio"
- <source src="http://boogie.vside-radio.com:8406/stream"
-         type="audio/mp4">
- Your browser does not support the HTML5 Audio element.
-</audio>
-</html>
-</div>
-      </div>
-      <!--Postamble for HTML Fragment frag_28-->
-<!-- Add a button to toggle play/pause -->
-<button id="toggleButton">Play</button>
-      <img alt="" src="wpimages/wpd6754e48_06.png" style="position:absolute;left:359px;top:39px;width:22px;height:24px;">
-      <map id="map13" name="map13"><area shape="rect" coords="0,0,53,17" href="m.podcasts.html" alt=""></map>
-      <img alt="Podcasts" usemap="#map13" src="wpimages/wpb5ae340e_06.png" style="position:absolute;left:380px;top:43px;width:52px;height:16px;">
     </div>
   </body>
 </html>
