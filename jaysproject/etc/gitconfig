@@ -1,0 +1,14 @@
+[diff "astextplain"]
+	textconv = astextplain
+[http]
+	sslBackend = openssl
+	sslCAInfo = C:/Users/jayau/OneDrive/Documents/jays_project/mingw64/etc/ssl/certs/ca-bundle.crt
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = false
+	editor = \"C:\\\\Program Files\\\\Notepad++\\\\notepad++.exe\" -multiInst -notabbar -nosession -noPlugin
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
