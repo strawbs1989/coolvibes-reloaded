@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         // Create connection
-        $conn = new mysqli($servername, $connection_username, $connection_password, $dbname);
+        $mysqli->real_connect($_ENV["DB_HOST"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
         // Check connection
         if ($conn->connect_error) {
