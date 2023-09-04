@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $connection_password = "Laurajay1998"; // Replace with your actual database password
         $dbname = "coolvibes-reloaded"; // Replace with your actual database name
 
+
         // Create connection
         $conn = new mysqli($servername, $connection_username, $connection_password, $dbname);
 
