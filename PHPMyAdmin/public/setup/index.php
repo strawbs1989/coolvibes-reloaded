@@ -6,7 +6,7 @@ use PhpMyAdmin\Application;
 
 // phpcs:disable PSR1.Files.SideEffects
 if (! defined('ROOT_PATH')) {
-    define('ROOT_PATH', dirname(__DIR__, 2) . DIRECTORY_SEPARATOR);
+    define('https://github.com/strawbs1989/coolvibes-reloaded/blob/main/PHPMyAdmin', dirname(__DIR__, 2) . DIRECTORY_SEPARATOR);
 }
 
 define('PHPMYADMIN', true);
