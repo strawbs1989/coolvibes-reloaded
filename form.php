@@ -17,10 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Database connection settings
-        $servername = "aws.connect.psdb.cloud"; // Replace with your actual server name
-        $connection_username = "pv12v5sekt6fudyk0762"; // Replace with your actual database username
-        $connection_password = "Laurajay1998"; // Replace with your actual database password
-        $dbname = "coolvibes-reloaded"; // Replace with your actual database name
+        $servername = "sql311.byethost8.com"; // Replace with your actual server name
+        $username = "b8_34833020"; // Replace with your actual database username
+        $password = "Laurajay1998"; // Replace with your actual database password
+        $dbname = "b8_34833020_coolvibes"; // Replace with your actual database name
 
 
         // Create connection
