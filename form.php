@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize inputs
     $yourname = filter_input(INPUT_POST, "yourname", FILTER_SANITIZE_STRING);
@@ -18,13 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Database connection settings
         $servername = "sql311.byethost8.com"; // Replace with your actual server name
-        $username = "b8_34833020"; // Replace with your actual database username
-        $password = "Laurajay1998"; // Replace with your actual database password
+        $db_username = "b8_34833020"; // Replace with your actual database username
+        $db_password = "Laurajay1998"; // Replace with your actual database password
         $dbname = "b8_34833020_coolvibes"; // Replace with your actual database name
 
-
         // Create connection
-        $conn = new mysqli($servername, $connection_username, $connection_password, $dbname);
+        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
         // Check connection
         if ($conn->connect_error) {
@@ -45,8 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Set the timezone to GMT+1 (Central European Time)
         date_default_timezone_set("Europe/London");
 
+        // Generate a unique user ID
+        $userid = generateUniqueUserId();
+
         // Prepare and bind the SQL statement to prevent SQL injection
-        $stmt = $conn->prepare("INSERT INTO registration (yourname, lastname, username, email, password, signup_date) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP())");
+        $stmt = $conn->prepare("INSERT INTO registration (userid, signup_date, yourname, lastname, username, email, password) VALUES (?, CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?)");
 
         // Check if the prepare statement was successful
         if ($stmt === false) {
@@ -54,45 +54,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Bind the parameters
-        $bind_result = $stmt->bind_param("sssss", $yourname, $lastname, $username, $email, $hashedPassword);
+        $stmt->bind_param("ssssss", $userid, $yourname, $lastname, $username, $email, $hashedPassword);
 
-        // Check if the binding was successful
-        if ($bind_result === false) {
-            die("Binding parameters failed: " . $stmt->error);
-        }
+        // Execute the prepared statement
+        if ($stmt->execute()) {
+            // Send email notification using PHPMailer
+            require 'PHPMailer/src/PHPMailer.php';
+            require 'PHPMailer/src/SMTP.php';
 
-        // Send email notification using PHPMailer
-        require 'PHPMailer/PHPMailer.php';
-        require 'PHPMailer/SMTP.php';
+            $to = $email;
+            $subject = "Registration Successful";
+            $message = "Thank you for registering! We're happy to have you on board!";
+            $headers = "From: coolvibes1989@gmail.com"; // Replace with your email address or sender address
 
-        $to = $email;
-        $subject = "Registration Successful";
-        $message = "Thank you for registering!";
-        $headers = "From: coolvibes1989@gmail.com"; // Replace with your email address or sender address
+            $mail = new PHPMailer\PHPMailer\PHPMailer();
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'jayaubs89@gmail.com'; // Replace with your Gmail email
+            $mail->Password = 'eawdimrjlashvwrp'; // Use an App Password if 2FA is enabled
+            $mail->SMTPSecure = 'tls'; // Use 'ssl' if you prefer SSL
+            $mail->Port = 587;
+            $mail->setFrom('coolvibes1989@gmail.com', 'CoolVibes-Reloaded'); // Replace with your name and email
+            $mail->addAddress($to);
+            $mail->Subject = $subject;
 
-        $mail = new PHPMailer\PHPMailer\PHPMailer();
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'jayaubs89@gmail.com'; // Replace with your Gmail email
-        $mail->Password = 'eawdimrjlashvwrp'; // Use an App Password if 2FA is enabled
-        $mail->SMTPSecure = 'tls'; // Use 'ssl' if you prefer SSL
-        $mail->Port = 587;
-        $mail->setFrom('coolvibes1989@gmail.com', 'CoolVibes-Reloaded'); // Replace with your name and email
-        $mail->addAddress($to);
-        $mail->Subject = $subject;
-        $mail->Body = $message;
+            // Create an HTML message with "Registration Successful" and an image
+            $message = "<html><body>";
+            $message .= "<p><img src='https://coolvibes-reloaded.com/img/favicon.png' alt='' width='708' height='142'></p>";
+            $message .= "<h1>Registration Successful</h1>";
+            $message .= "<p>Welcome to our website. We're excited to have you as a member.</p>";
+            $message .= "</body></html>";
+            $mail->msgHTML($message);
 
-        if ($mail->send()) {
-            echo 'Registration successful!';
+            if ($mail->send()) {
+                echo 'Registration successful!';
+            } else {
+                echo 'Email sending failed. Check your email configuration.';
+                echo 'Error: ' . $mail->ErrorInfo;
+            }
+
+            // Close the connection
+            $stmt->close();
+            $conn->close();
         } else {
-            echo 'Email sending failed. Check your email configuration.';
-            echo 'Error: ' . $mail->ErrorInfo;
+            echo 'Registration failed. Please try again later.';
         }
-
-        // Close the connection
-        $stmt->close();
-        $conn->close();
     }
 }
 ?>
