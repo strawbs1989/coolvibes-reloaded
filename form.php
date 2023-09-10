@@ -15,16 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Database connection settings
-        $DB_HOST = "aws.connect.psdb.cloud:"; // Replace with your actual server name
+        $DB_HOST = "aws.connect.psdb.cloud"; // Replace with your actual server name
         $DB_USERNAME = "pv12v5sekt6fudyk0762"; // Replace with your actual database username
         $DB_PASSWORD = "laurajay1998"; // Replace with your actual database password
         $DB_NAME = "coolvibes-reloaded"; // Replace with your actual database name
 
         // Create connection
+        $conn = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
         $mysqli = mysqli_init();
-  $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
-  $mysqli->real_connect($_ENV["DB_HOST"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
-  $mysqli->close();
+        $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
+        $mysqli->real_connect($_ENV["DB_HOST"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+        $mysqli->close();
+		
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
