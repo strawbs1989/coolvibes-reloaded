@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Database connection settings
-        $server_name = "aws.connect.psdb.cloud:"; // Replace with your actual server name
+        $servername = "aws.connect.psdb.cloud:"; // Replace with your actual server name
         $db_username = "pv12v5sekt6fudyk0762"; // Replace with your actual database username
         $db_password = "laurajay1998"; // Replace with your actual database password
-        $db_name = "coolvibes-reloaded"; // Replace with your actual database name
+        $dbname = "coolvibes-reloaded"; // Replace with your actual database name
 
         // Create connection
         $conn = new mysqli($servername, $db_username, $db_password, $dbname);
