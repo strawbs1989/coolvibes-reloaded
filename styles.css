@@ -5,6 +5,15 @@
     border-radius: 10px;
 }
 
+/* Center the form container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This centers vertically */
+}
+
+
 /* Style the submit button */
 input[type="submit"] {
     background-color: #4CAF50;
