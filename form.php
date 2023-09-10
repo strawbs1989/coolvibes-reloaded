@@ -1,4 +1,10 @@
 <?php
+// This code intentionally contains an error
+echo "Hello, World!"
+?>
+
+
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize inputs
     $yourname = filter_input(INPUT_POST, "yourname", FILTER_SANITIZE_STRING);
@@ -15,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Database connection settings
-        $servername = "aws.connect.psdb.cloud:"; // Replace with your actual server name
+        $db_host = "aws.connect.psdb.cloud:"; // Replace with your actual server name
         $db_username = "pv12v5sekt6fudyk0762"; // Replace with your actual database username
         $db_password = "laurajay1998"; // Replace with your actual database password
-        $dbname = "coolvibes-reloaded"; // Replace with your actual database name
+        $db_name = "coolvibes-reloaded"; // Replace with your actual database name
 
         // Create connection
         $conn = new mysqli($servername, $db_username, $db_password, $dbname);
