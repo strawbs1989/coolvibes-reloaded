@@ -21,8 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $DB_NAME = "coolvibes-reloaded"; // Replace with your actual database name
 
         // Create connection
-        $conn = new mysqli($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
-
+        $mysqli = mysqli_init();
+  $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
+  $mysqli->real_connect($_ENV["DB_HOST"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+  $mysqli->close();
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
