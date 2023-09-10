@@ -1,8 +1,4 @@
 <?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize inputs
     $yourname = filter_input(INPUT_POST, "yourname", FILTER_SANITIZE_STRING);
@@ -26,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Create connection
         $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-		
+
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
