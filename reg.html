@@ -33,13 +33,12 @@
 
 
 <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
+  <input type="text" id="yourname" name="yourname" placeholder="yourname" autocomplete="given-name"><br>
+    <input type="text" id="lastname" name="lastname" placeholder="lastname" autocomplete="family-name"><br>
+    <input type="text" id="username" name="username" placeholder="username" autocomplete="username"><br>
+    <input type="hidden" id="userid" name="userid" value=""><br>
+    <input type="text" id="email" name="email" placeholder="email" autocomplete="email"><br>
+    <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-password"><br>
     <button type="submit">Send</button>
   </p>
 </form>
