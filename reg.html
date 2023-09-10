@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+
  <link rel="stylesheet" type="text/css" href="https://sparkling-seahorse-6be2ba.netlify.app/styles.css">
+ <style>
+ /* Style the form container */
+.form-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Center the form container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This centers vertically */
+}
+
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Add hover effect to the submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+</style>
   <center><form name="contact" action="/pages/success" method="POST" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>
