@@ -1,4 +1,16 @@
+
+
+
+
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
+
+include("connection.php");
+include("functions.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize inputs
     $yourname = filter_input(INPUT_POST, "yourname", FILTER_SANITIZE_STRING);
