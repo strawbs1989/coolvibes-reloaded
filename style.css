@@ -1,38 +1,30 @@
-/* Style the form container */
 .form-container {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Center the form container */
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* This centers vertically */
-}
-
-
-/* Style the register button */
 input[type="register"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4caf50;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-/* Add hover effect to the register button */
+
 input[type="register"]:hover {
     background-color: #45a049;
 }
 
-/* Style The Text */
 body {
-  color: blue;
+    color: blue;
 }
 
 h1 {
-  color: green;
+    color: green;
 }
