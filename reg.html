@@ -1,12 +1,22 @@
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolvibes-Reloaded</title>
 <html>
 <head>
 
  <link rel="stylesheet" type="text/css" href="https://sparkling-seahorse-6be2ba.netlify.app/style.css">
  
- 
-  <center><form action='/success1' method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
+ <form
+  name="contact"
+  method="POST"
+  netlify-honeypot="bot-field"
+  data-netlify="true"
+>
+
+  <form action='/success1' method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
   <p>
   <p class="hidden">
     <label>
@@ -20,7 +30,7 @@
    <label>Last Name: <input type="text" name="lastname" /></label>
   </p>
   <p>
-    <label>User Name: <input type="username" name="username" /></label>
+    <label>User Name: <input type="text" name="username" autocomplete="username"></label>
   </p>
   <p>
     <label>Your Email: <input type="email" name="email" /></label>
@@ -31,7 +41,7 @@
   <p>
     <button type="submit">Register</button>
   </p>
-</form></center>
+</form>
 
 </body>
 </html>
