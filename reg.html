@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coolvibes-Reloaded</title>
-    <link rel="stylesheet" href="https://coolvibes-reloaded.com/style.css">
-    <a href="https://coolvibes-reloaded.com/success1.html">
-</head>
-<body>
 
-<form name="contact" method="POST" data-netlify="true">
+ <link rel="stylesheet" type="text/css" href="https://sparkling-seahorse-6be2ba.netlify.app/style.css">
+ 
+  <center><form name="contact" action="/success" method="POST" data-netlify="true">
   <p>
-            <label>Your Name: <input type="text" name="name" autocomplete="on" /></label>
-        </p>
-        <p>
-            <label>Last Name: <input type="text" name="lastname" autocomplete="on"></label>
-        </p>
-        <p>
-            <label>User Name:<input type="text" name="username" autocomplete="username"></label>
-        </p>
-        <p>
-            <label>Your Email: <input type="email" name="email" autocomplete="on" /></label>
-        </p>
-        <p>
-            <label>Password: <input type="password" name="password" autocomplete="on" /></label>
-        </p>
-        <p>
-            <button type="submit">Register</button>
-        </p>
-</form>
+  <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+    <label>Your Name: <input type="text" name="name" /></label>
+	
+
+  </p>
+  <p>
+   <label>Last Name: <input type="text" name="lastname" /></label>
+  </p>
+  <p>
+    <label>User Name: <input type="username" name="username" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Password: <input type="password" name="password" /></label>
+  </p>
+  <p>
+    <button type="submit">Register</button>
+  </p>
+</form></center>
+
 </body>
 </html>
