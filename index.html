@@ -51,6 +51,7 @@
     </script>
     <!-- Header code for HTML Fragment frag_6 -->
 <script>
+
 $(document).ready(function(){
   var audioContext = new (window.AudioContext || window.webkitAudioContext)();
   var sourceNode = null;
@@ -73,7 +74,10 @@ $(document).ready(function(){
           sourceNode.start(0);
         });
       };
-      
+      document.addEventListener('DOMContentLoaded', function() {
+  var button = document.getElementById('myButton');
+  if (button) {
+    button.addEventListener('click', function() {
       request.send();
       
       $("#toggleButton").text("Pause");
@@ -84,6 +88,11 @@ $(document).ready(function(){
     }
   });
 });
+    });
+  }
+});
+
+      
 </script>
 
 <!-- HTML Fragment frag_28 -->
@@ -216,6 +225,7 @@ $(document).ready(function(){
 }
 </style>
 </head>
+<body style="height: 5644px; background: #000000;">
 <body>
 
 
