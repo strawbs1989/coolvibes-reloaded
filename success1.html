@@ -6,6 +6,17 @@
     <title>Registration Successful</title>
 </head>
 <body>
+<script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Check if "redirect" parameter exists and is set to "success"
+        if (urlParams.has('redirect') && urlParams.get('redirect') === 'success') {
+            document.body.innerHTML = '<h1>Registration Successful!</h1>';
+        } else {
+            document.body.innerHTML = '<h1>Invalid Access</h1>';
+        }
+    </script>
     <h1>Registration Successful, Thank You For Signing Up</h1>
     <p>Thank you for registering with CoolVibes-Reloaded. You Can Now Use Our Request Feature<br>We're excited to have you as a member!</p>
 
