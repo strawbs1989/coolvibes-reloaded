@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Requests</title>
+    <meta name="generator" content="Serif WebPlus X8">
+    <meta name="viewport" content="width=911">
+    <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
+    <style type="text/css">
+      .OBJ-1 { padding:5px;border:1px solid #40434a; }
+      .OBJ-2:hover {  transform: scale(1.1); }
+      .C-1 { line-height:25.00px;font-family:"Arial", sans-serif;font-style:normal;font-weight:700;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:21.3px;vertical-align:0; }
+    </style>
+    <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpvisibility.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      clickHide('pause28', 'pause28', 150);
+      clickShow('pause28', 'play28', 150);
+      clickHide('play28', 'play28', 150);
+      clickShow('play28', 'pause28', 150);
+      });
+    </script>
+    <!-- Header code for HTML Fragment frag_6 -->
+<script>
+$(document).ready(function(){
+  var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  var sourceNode = null;
+
+  $("#toggleButton").click(function(){
+    if (!sourceNode) {
+      // Create a new audio buffer source node
+      sourceNode = audioContext.createBufferSource();
+      
+      // Load the audio from URL
+      var request = new XMLHttpRequest();
+      request.open('GET', 'http://boogie.vside-radio.com:8406/stream', true);
+      request.responseType = 'arraybuffer';
+      
+      request.onload = function() {
+        var audioData = request.response;
+        audioContext.decodeAudioData(audioData, function(buffer) {
+          sourceNode.buffer = buffer;
+          sourceNode.connect(audioContext.destination);
+          sourceNode.start(0);
+        });
+      };
+      
+      request.send();
+      
+      $("#toggleButton").text("Pause");
+    } else {
+      sourceNode.stop();
+      sourceNode = null;
+      $("#toggleButton").text("Play");
+    }
+  });
+});
+</script>
+
+<!-- HTML Fragment frag_28 -->
+  </head>
+  <body style="height:4768px;background:url('wpimages/wp05faad0e_06.png') repeat-x scroll center top, url('wpimages/wpebeca6c4_06.png') repeat-x scroll center top #ffffff;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:911px;height:4768px;">
+      <img alt="" src="wpimages/wp2bd9e327_05_06.jpg" id="pic_115" class="OBJ-1" style="position:absolute;left:230px;top:280px;width:382px;height:131px;">
+      <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:390px;top:257px;width:60px;height:46px;">
+      <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:390px;top:257px;width:60px;height:46px;">
+      <div id="frag_28" style="position:absolute;left:181px;top:180px;width:218px;height:48px;">
+        <!DOCTYPE html>
+	<html>
+<audio id="myAudio"
+ <source src="http://boogie.vside-radio.com:8406/stream"
+         type="audio/mp4">
+ Your browser does not support the HTML5 Audio element.
+</audio>
+</html>
+</div>
+      </div>
+      <!--Postamble for HTML Fragment frag_28-->
+<!-- Add a button to toggle play/pause -->
+<button id="toggleButton">Play</button>
+      <img alt="18/9/23" src="wpimages/wp366571c7_06.png" id="art_83" style="position:absolute;left:447px;top:209px;width:60px;height:23px;">
+      <img alt="17:12" src="wpimages/wp6f92566d_06.png" id="art_84" style="position:absolute;left:563px;top:207px;width:47px;height:23px;">
+      <map id="map1" name="map1"><area shape="poly" coords="256,97,256,76,254,67,36,67,33,77,32,97,33,116,34,124,256,124" href="https://play.google.com/store/apps/details?id=appinventor.ai_jayaubs89.cooljay1_copy&amp;hl=en_GB&amp;gl=US" target="_blank" alt=""></map>
+      <img src="wpimages/wp54340c1f_06.png" alt="" width="907" height="180" usemap="#map1" style="position:absolute;left:3px;top:4588px;width:907px;height:180px;">
+      <div id="txt_274" style="position:absolute;left:21px;top:4607px;width:264px;height:28px;overflow:hidden;">
+        <p class="Footer2"><span class="C-1">Our App</span></p>
+      </div>
+      <div id="frag_60" style="position:absolute;left:16px;top:592px;width:864px;height:1011px;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfw_vLffxvuly1vJZ8e0EsqqelqF-5l4CuSBKjMf0lLQt9g5g/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </body>
+</html>
