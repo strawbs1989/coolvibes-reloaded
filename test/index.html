@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=1539">
     <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
     <style type="text/css">
-      .OBJ-1 { background:transparent url('wpimages/wpa91d652e_06.png') no-repeat 0px 0px; }
-      .OBJ-2,.OBJ-2:link,.OBJ-2:visited { background-image:url('wpimages/wp837a8baf_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
-      .OBJ-2:hover { background-position:0px -39px; }
-      .OBJ-2:focus { outline-style:none; }
-      button.OBJ-2 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
-      button.OBJ-2:disabled { pointer-events:none; }
-      .OBJ-2.Inline { display:inline-block;position:relative;line-height:normal; }
-      .OBJ-2 span,.OBJ-2:link span,.OBJ-2:visited span { color:#ffffff;font-family:Arial,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:uppercase;font-style:normal;left:0px;top:12px;width:127px;height:15px;line-height:15px;font-size:12px;display:block;position:absolute;cursor:pointer; }
-      .OBJ-3 { line-height:39px; }
-      .OBJ-4 { padding:5px;border:1px solid #40434a; }
-      .OBJ-5:hover {  transform: scale(1.1); }
-      .OBJ-6 { border:none; }
+      .OBJ-1 { padding:5px;border:1px solid #40434a; }
+      .OBJ-2:hover {  transform: scale(1.1); }
+      .OBJ-3,.OBJ-3:link,.OBJ-3:visited { background-image:url('wpimages/wp803c4e6b_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
+      .OBJ-3:hover { background-position:0px -50px; }
+      .OBJ-3:active,a:link.OBJ-3.Activated,a:link.OBJ-3.Down,a:visited.OBJ-3.Activated,a:visited.OBJ-3.Down,.OBJ-3.Activated,.OBJ-3.Down { background-position:0px -25px; }
+      .OBJ-3.Disabled,a:link.OBJ-3.Disabled,a:visited.OBJ-3.Disabled,a:hover.OBJ-3.Disabled,a:active.OBJ-3.Disabled { background-position:0px -75px; }
+      .OBJ-3:focus { outline-style:none; }
+      button.OBJ-3 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
+      button.OBJ-3:disabled { pointer-events:none; }
+      .OBJ-3.Inline { display:inline-block;position:relative;line-height:normal; }
+      .OBJ-3 span,.OBJ-3:link span,.OBJ-3:visited span { color:#ffffff;font-family:Arial,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:7px;top:4px;width:106px;height:15px;line-height:15px;font-size:12px;display:block;position:absolute;cursor:pointer; }
+      .OBJ-4 { line-height:25px; }
+      .OBJ-5 { border:none; }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
     <script type="text/javascript" src="wpscripts/jquery.wputils.js"></script>
@@ -31,11 +32,11 @@
       $(document).ready(function() {
       $('#slider_1').data('wpslider', new $.fn.wpslider( { g_nDivId:'#slider_1', g_nTransitStyle:2, g_nLoopTime:4000, g_nAnimationTime:500, g_bPlayAtStart:true, g_strEasing: "swing" } ) );
       var btnState = [];
-      $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       clickHide('pause28', 'pause28', 150);
       clickShow('pause28', 'play28', 150);
       clickHide('play28', 'play28', 150);
       clickShow('play28', 'pause28', 150);
+      $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       $('#slider_1').data('wpslider').restrictSlides();
       });
     </script>
@@ -82,31 +83,13 @@ $(document).ready(function(){
   <body style="height:4362px;background:url('wpimages/wp200a6cd2_06.png') repeat-x scroll center top #ececdf;">
     <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:1539px;height:4362px;">
       <img alt="" src="wpimages/wp20c3a836_06.png" id="qs_280" style="position:absolute;left:13px;top:244px;width:1323px;height:334px;">
-      <img src="wpimages/wp762f1e6e_06.png" alt="" width="1363" height="253" style="position:absolute;left:2px;top:0px;width:1363px;height:253px;">
+      <img src="wpimages/wp5b84fa14_06.png" alt="" width="1363" height="253" style="position:absolute;left:2px;top:0px;width:1363px;height:253px;">
       <img src="wpimages/wpf98da767_06.png" alt="" width="1295" height="51" style="position:absolute;left:41px;top:4228px;width:1295px;height:51px;">
-      <img alt="" src="wpimages/wpac5f0c4e_06.png" id="qs_2" style="position:absolute;left:15px;top:0px;width:1332px;height:185px;">
-      <div id="nav_169" class="OBJ-1" style="position:absolute;left:413px;top:170px;width:635px;height:79px;">
-        <a href="index.html" id="nav_169_B1" class="OBJ-2 ActiveButton Down OBJ-3" style="display:block;position:absolute;left:0px;top:40px;width:127px;height:39px;">
-          <span>Home</span>
-        </a>
-        <a href="unsigned.html" id="nav_169_B2" class="OBJ-2 ActiveButton OBJ-3" style="display:block;position:absolute;left:127px;top:40px;width:127px;height:39px;">
-          <span>Unsigned</span>
-        </a>
-        <a href="djs.html" id="nav_169_B3" class="OBJ-2 ActiveButton OBJ-3" style="display:block;position:absolute;left:254px;top:40px;width:127px;height:39px;">
-          <span>Who&nbsp;Are&nbsp;The&nbsp;DJ&#39;s</span>
-        </a>
-        <a href="djbookings.html" id="nav_169_B4" class="OBJ-2 ActiveButton OBJ-3" style="display:block;position:absolute;left:381px;top:40px;width:127px;height:39px;">
-          <span>DJBookings</span>
-        </a>
-        <a href="shop.html" id="nav_169_B5" class="OBJ-2 ActiveButton OBJ-3" style="display:block;position:absolute;left:508px;top:40px;width:127px;height:39px;">
-          <span>Shop</span>
-        </a>
-      </div>
-      <img alt="" src="wpimages/wp889710bc_05_06.jpg" id="pic_115" class="OBJ-4" style="position:absolute;left:321px;top:300px;width:924px;height:235px;">
+      <img alt="" src="wpimages/wp889710bc_05_06.jpg" id="pic_115" class="OBJ-1" style="position:absolute;left:321px;top:300px;width:924px;height:235px;">
       <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:741px;top:271px;width:64px;height:57px;">
-      <img alt="" src="play28.png" id="play28" class="OBJ-5" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:741px;top:271px;width:64px;height:57px;">
-      <img alt="19/9/23" src="wpimages/wp68129ba9_06.png" id="art_83" style="position:absolute;left:1009px;top:264px;width:60px;height:23px;">
-      <img alt="22:38" src="wpimages/wp0f944538_06.png" id="art_84" style="position:absolute;left:1125px;top:263px;width:47px;height:23px;">
+      <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:741px;top:271px;width:64px;height:57px;">
+      <img alt="20/9/23" src="wpimages/wp2fda4cef_06.png" id="art_83" style="position:absolute;left:1009px;top:264px;width:60px;height:23px;">
+      <img alt="00:20" src="wpimages/wpea60cfda_06.png" id="art_84" style="position:absolute;left:1125px;top:263px;width:47px;height:23px;">
       <div id="frag_28" style="position:absolute;left:91px;top:259px;width:218px;height:48px;">
         <!DOCTYPE html>
 	<html>
@@ -121,9 +104,26 @@ $(document).ready(function(){
       <!--Postamble for HTML Fragment frag_28-->
 <!-- Add a button to toggle play/pause -->
 <button id="toggleButton">Play</button>
-      <img src="wpimages/wp93c6eb7c_06.png" alt="" width="241" height="125" style="position:absolute;left:41px;top:29px;width:241px;height:125px;">
-      <img alt="" src="wpimages/wp67872514_06.png" id="qs_3" style="position:absolute;left:0px;top:4225px;width:1343px;height:131px;">
-      <div id="frag_33" style="position:absolute;left:420px;top:1094px;width:930px;height:325px;">
+      <img src="wpimages/wp68121a23_06.png" alt="" width="1345" height="182" style="position:absolute;left:0px;top:4px;width:1345px;height:182px;">
+      <img alt="" src="wpimages/wp069b4f49_06.png" id="qs_3" style="position:absolute;left:0px;top:4225px;width:1343px;height:137px;">
+      <div id="nav_169" style="position:absolute;left:277px;top:182px;width:844px;height:141px;">
+        <a href="index.html" id="nav_169_B1" class="OBJ-3 ActiveButton Down OBJ-4" style="display:block;position:absolute;left:119px;top:0px;width:121px;height:25px;">
+          <span>Home</span>
+        </a>
+        <a href="unsigned.html" id="nav_169_B2" class="OBJ-3 ActiveButton OBJ-4" style="display:block;position:absolute;left:240px;top:0px;width:121px;height:25px;">
+          <span>Unsigned</span>
+        </a>
+        <a href="djs.html" id="nav_169_B3" class="OBJ-3 ActiveButton OBJ-4" style="display:block;position:absolute;left:361px;top:0px;width:121px;height:25px;">
+          <span>Who&nbsp;Are&nbsp;The&nbsp;DJ&#39;s</span>
+        </a>
+        <a href="djbookings.html" id="nav_169_B4" class="OBJ-3 ActiveButton OBJ-4" style="display:block;position:absolute;left:482px;top:0px;width:121px;height:25px;">
+          <span>DJBookings</span>
+        </a>
+        <a href="shop.html" id="nav_169_B5" class="OBJ-3 ActiveButton OBJ-4" style="display:block;position:absolute;left:603px;top:0px;width:121px;height:25px;">
+          <span>Shop</span>
+        </a>
+      </div>
+      <div id="frag_33" style="position:absolute;left:369px;top:1087px;width:930px;height:325px;">
         <center><!DOCTYPE HTML>
 <html lang="en">
 <html>
@@ -162,7 +162,7 @@ $(document).ready(function(){
         <img alt="" usemap="#map4" src="wpimages/wp60de5113_06.png" id="pic_173" style="position:absolute;left:91px;top:109px;width:57px;height:55px;">
         <img src="wpimages/wp2d5cc5c7_06.png" alt="" width="150" height="46" style="position:absolute;left:84px;top:17px;width:150px;height:46px;">
       </div>
-      <div id="panel_16" style="position:absolute;left:1211px;top:1592px;width:323px;height:357px;">
+      <div id="panel_16" style="position:absolute;left:1232px;top:1095px;width:323px;height:357px;">
         <img alt="" src="wpimages/wpd6743d4e_05_06.jpg" id="pic_181" style="position:absolute;left:48px;top:86px;width:234px;height:228px;">
         <img alt="Licence" src="wpimages/wpb48d1577_06.png" id="art_87" style="position:absolute;left:74px;top:9px;width:160px;height:47px;">
       </div>
@@ -202,11 +202,8 @@ $(document).ready(function(){
         <img alt="DJ Programs" src="wpimages/wpb08020a9_06.png" id="art_85" style="position:absolute;left:207px;top:30px;width:190px;height:34px;">
       </div>
       <div id="panel_6" style="position:absolute;left:82px;top:1857px;width:315px;height:591px;">
-        <iframe id="snobj_1" src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/coolvibesuk&amp;width=265&amp;height=488&amp;header=true&amp;colorscheme=light&amp;show_border=true&amp;show_faces=true&amp;stream=true" class="OBJ-6" style="position:absolute;left:25px;top:84px;width:265px;height:488px;"></iframe>
+        <iframe id="snobj_1" src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/coolvibesuk&amp;width=265&amp;height=488&amp;header=true&amp;colorscheme=light&amp;show_border=true&amp;show_faces=true&amp;stream=true" class="OBJ-5" style="position:absolute;left:25px;top:84px;width:265px;height:488px;"></iframe>
         <img alt="Social" src="wpimages/wp140f6c1b_06.png" id="art_86" style="position:absolute;left:68px;top:6px;width:128px;height:47px;">
-      </div>
-      <div id="frag_29" style="position:absolute;left:1229px;top:2069px;width:297px;height:454px;">
-        <iframe src="https://minnit.chat/CoolvibesReloaded?embed&&nickname=" style="border:none;width:89%;height:500px;" allowTransparency="true"></iframe><br>
       </div>
       <div id="frag_27" style="position:absolute;left:1240px;top:2811px;width:284px;height:439px;">
         <!DOCTYPE html>
@@ -327,38 +324,44 @@ Sunday
       <img alt="Register" src="wpimages/wp4140dc75_06.png" id="art_74" style="position:absolute;left:172px;top:2783px;width:121px;height:34px;">
       <img alt="" src="wpimages/wp69339b43_06.png" id="img_358" style="position:absolute;left:62px;top:2734px;width:383px;height:25px;">
       <img src="wpimages/wp1ebaa7e3_06.png" alt="" width="235" height="53" style="position:absolute;left:716px;top:1434px;width:235px;height:53px;">
-      <img src="wpimages/wp43049364_06.png" alt="" width="150" height="46" style="position:absolute;left:1302px;top:2009px;width:150px;height:46px;">
       <img alt="" src="wpimages/wp0e44f5f4_06.png" id="img_372" style="position:absolute;left:1217px;top:2729px;width:308px;height:25px;">
       <img alt="Schedule" src="wpimages/wpd3cd123d_06.png" id="art_97" style="position:absolute;left:1305px;top:2767px;width:134px;height:34px;">
-      <table id="nav_169_B1M" data-fade="0" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-balance="1" style="visibility:hidden;">
+      <div id="panel_25" style="position:absolute;left:1229px;top:1851px;width:305px;height:604px;">
+        <div id="frag_29" style="position:absolute;left:4px;top:71px;width:297px;height:526px;">
+          <iframe src="https://minnit.chat/CoolvibesReloaded?embed&&nickname=" style="border:none;width:89%;height:500px;" allowTransparency="true"></iframe><br>
+        </div>
+        <img src="wpimages/wp43049364_06.png" alt="" width="150" height="46" style="position:absolute;left:76px;top:12px;width:150px;height:46px;">
+      </div>
+      <img alt="Help Us Stay Online Donate!" src="wpimages/wp796245d8_06.png" id="art_99" style="position:absolute;left:96px;top:2477px;width:288px;height:67px;">
+      <table id="nav_169_B1M" data-fade="0" data-minwidth="100" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-xPad="10" data-yPad="5" data-xOffset="0" data-yOffset="0" data-arrow="0" style="visibility:hidden;">
         <tr>
           <td>
             <a title="" href="m.index.html">Home</a>
           </td>
         </tr>
       </table>
-      <table id="nav_169_B2M" data-fade="0" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-balance="1" style="visibility:hidden;">
+      <table id="nav_169_B2M" data-fade="0" data-minwidth="100" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-xPad="10" data-yPad="5" data-xOffset="0" data-yOffset="0" data-arrow="0" style="visibility:hidden;">
         <tr>
           <td>
             <a title="" href="m.unsigned.html">Unsigned</a>
           </td>
         </tr>
       </table>
-      <table id="nav_169_B3M" data-fade="0" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-balance="1" style="visibility:hidden;">
+      <table id="nav_169_B3M" data-fade="0" data-minwidth="100" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-xPad="10" data-yPad="5" data-xOffset="0" data-yOffset="0" data-arrow="0" style="visibility:hidden;">
         <tr>
           <td>
             <a title="" href="m.who-are.html">Who Are The Djs</a>
           </td>
         </tr>
       </table>
-      <table id="nav_169_B4M" data-fade="0" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-balance="1" style="visibility:hidden;">
+      <table id="nav_169_B4M" data-fade="0" data-minwidth="100" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-xPad="10" data-yPad="5" data-xOffset="0" data-yOffset="0" data-arrow="0" style="visibility:hidden;">
         <tr>
           <td>
             <a title="" href="m.bookings.html">DJ Bookings</a>
           </td>
         </tr>
       </table>
-      <table id="nav_169_B5M" data-fade="0" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-balance="1" style="visibility:hidden;">
+      <table id="nav_169_B5M" data-fade="0" data-minwidth="100" data-hOffset="0" data-vOffset="0" data-vAlignment="3" data-xPad="10" data-yPad="5" data-xOffset="0" data-yOffset="0" data-arrow="0" style="visibility:hidden;">
         <tr>
           <td>
             <a title="" href="m.shop.html">Shop</a>
@@ -369,7 +372,7 @@ Sunday
     <script type="text/javascript" src="wpscripts/jsMenu.js"></script>
     <script type="text/javascript">
       wpmenustack.setRollovers([['nav_169_B1','nav_169_B1M',{"m_vertical":true}],['nav_169_B2','nav_169_B2M',{"m_vertical":true}],['nav_169_B3','nav_169_B3M',{"m_vertical":true}],['nav_169_B4','nav_169_B4M',{"m_vertical":true}],['nav_169_B5','nav_169_B5M',{"m_vertical":true}]]);
-      wpmenustack.setMenus(['nav_169_B1M','nav_169_B2M','nav_169_B3M','nav_169_B4M','nav_169_B5M'],{"m_hOffset":0,"m_vOffset":0,"m_vAlignment":3,"m_menuStyle":{"border":"0px none"},"m_rowStyle":{"border":"0px none"},"m_linkNormalStyle":{"fontSize":"13px","fontFamily":"\"Trebuchet MS\",sans-serif","textAlign":"center","color":"#40434a","backgroundColor":"#423c5a","fontWeight":"normal","textDecoration":"none","fontStyle":"normal"},"m_linkRolloverStyle":{"color":"#ffffff","backgroundColor":"#2f2a3f","textDecoration":"none"},"m_linkPopupStyle":{"backgroundImage":"url(wpimages/wp914468fd.gif)"},"m_linkRolloverPopupStyle":{"backgroundImage":"url(wpimages/wpf6c9d1c6.gif)"}});
+      wpmenustack.setMenus(['nav_169_B1M','nav_169_B2M','nav_169_B3M','nav_169_B4M','nav_169_B5M'],{"m_minwidth":100,"m_hOffset":0,"m_vOffset":0,"m_vAlignment":3,"m_xPad":10,"m_yPad":5,"m_xOffset":0,"m_yOffset":0,"m_arrow":false,"m_menuStyle":{"border":"0px none"},"m_rowStyle":{"border":"0px none"},"m_linkNormalStyle":{"fontSize":"12px","fontFamily":"Verdana,sans-serif","textAlign":"center","color":"#202225","backgroundColor":"transparent","fontWeight":"normal","textDecoration":"none","fontStyle":"normal"},"m_linkRolloverStyle":{"color":"#202225","backgroundColor":"#797b80","textDecoration":"none"}});
     </script>
   </body>
 </html>
