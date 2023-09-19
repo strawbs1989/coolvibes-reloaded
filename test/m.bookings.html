@@ -82,7 +82,7 @@ $(document).ready(function(){
 <!-- Add a button to toggle play/pause -->
 <button id="toggleButton">Play</button>
       <img alt="19/9/23" src="wpimages/wp68129ba9_06.png" id="art_83" style="position:absolute;left:189px;top:239px;width:60px;height:23px;">
-      <img alt="20:15" src="wpimages/wp393d040d_06.png" id="art_84" style="position:absolute;left:440px;top:235px;width:47px;height:23px;">
+      <img alt="22:38" src="wpimages/wp0f944538_06.png" id="art_84" style="position:absolute;left:440px;top:235px;width:47px;height:23px;">
       <map id="map1" name="map1"><area shape="poly" coords="235,112,237,106,237,87,236,71,233,63,133,62,33,62,30,65,30,106,33,114,133,115,233,115" href="https://play.google.com/store/apps/details?id=appinventor.ai_jayaubs89.cooljay1_copy&amp;hl=en_GB&amp;gl=US" target="_blank" alt=""></map>
       <img src="wpimages/wp9fa96841_06.png" alt="" width="672" height="171" usemap="#map1" style="position:absolute;left:1px;top:4588px;width:672px;height:171px;">
       <div id="txt_274" style="position:absolute;left:18px;top:4605px;width:244px;height:26px;overflow:hidden;">
@@ -93,7 +93,7 @@ $(document).ready(function(){
       </div>
       <img alt="DJ PAGE" src="wpimages/wp37bb7ed1_06.png" id="art_30" style="position:absolute;left:268px;top:499px;width:174px;height:47px;">
       <img alt="Book You’re Place On The Radio" src="wpimages/wp5f2cf990_06.png" id="art_31" style="position:absolute;left:180px;top:620px;width:328px;height:25px;">
-      <div id="frag_62" style="position:absolute;left:-77px;top:33px;width:244px;height:42px;">
+      <div id="frag_62" style="position:absolute;left:485px;top:25px;width:178px;height:42px;">
         <!DOCTYPE html>
 <html>
 <head>
@@ -101,66 +101,71 @@ $(document).ready(function(){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: ;
-  height: 500px;
-  color: white;
-  border-radius: 10px;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #423C5A;
-  position: relative;
-}
-
-.topnav #myLinks {
-  display: none;
 }
 
 .topnav a {
   float: left;
-  color: white;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-.topnav a.icon {
-  float: right;
-}
-
 .topnav a:hover {
-  background-color: #423C5A;
+  background-color: #ddd;
   color: black;
 }
 
-.active {
-  background-color: ;
+.topnav a.active {
+  background-color: #04AA6D;
   color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 </style>
 </head>
 <body>
 
-<!-- Simulate a smartphone / tablet look -->
-<div class="mobile-container">
-
-<!-- Top Navigation Menu -->
-<div class="topnav">
-  <div id="myLinks">
-    <a href="https://coolvibes-reloaded.com/m.index.html">Home</a>
+<div class="topnav" id="myTopnav">
+  <a href="https://coolvibes-reloaded.com/m.index.html">Home</a>
     <a href="https://coolvibes-reloaded.com/m.unsigned.html">Unsigned</a>
     <a href="https://coolvibes-reloaded.com/m.who-are.html">Djs</a>
     <a href="https://coolvibes-reloaded.com/m.bookings.html">Bookings</a>
     <a href="https://coolvibes-reloaded.com/m.birthdays.html">Birthdays</a>
     <a href="https://coolvibes-reloaded.com/m.shop.html">Shop</a>
-  </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -168,23 +173,22 @@ body {
 
 <div style="padding-left:16px">
   
-
-<!-- End smartphone / tablet look -->
 </div>
 
 <script>
 function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
   } else {
-    x.style.display = "block";
+    x.className = "topnav";
   }
 }
 </script>
 
 </body>
 </html>
+
 
       </div>
     </div>
