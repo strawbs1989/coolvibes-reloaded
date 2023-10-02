@@ -1,0 +1,639 @@
+		
+		/* Custom Style Sheet */
+		
+		/* p.exl */
+		
+		p.ex1 {
+  margin-top: 25px;
+  
+}
+	/* URL */
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);	
+		/* Typography */
+		
+		h2 {
+		font-family: 'Lora', serif;	
+		font-size: 40px;
+		color: #990033;
+		text-transform: uppercase;
+		margin-bottom: 50px;	
+		}
+		
+		p {
+			font-family: 'Lora', serif;
+		}
+
+	/* Spacing */
+
+	.gap100 {
+		padding:70px 0px ;
+	}
+
+
+		body {
+			background:white;
+			
+		}
+
+		/* Navbar Decoration */
+
+		* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+		/* NavLogo */
+		img {
+			
+			height: 100px;
+			margin-right: -24px;
+			margin-top: 12px;
+		}
+
+		.coolnav a {
+			margin-right: 30px;
+		}
+
+
+
+		.navbar-light .navbar-nav .nav-link {
+			color: #fff;
+		}
+
+		
+
+		
+
+		@media only screen and (max-width: 1140px) {
+			.navbar-brand {
+			 margin-left: 18px;
+		}
+		}
+
+		@media only screen and (max-width: 991px) {
+		   .mrt a {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}   
+		}
+
+		/* Slider Section */
+		.w-100 {
+			width: 100%!important;
+			height: 425px;
+		}
+
+		.carousel-caption {
+			margin-bottom: 20%;
+			padding: 50px 100px;
+			width: 50%;
+		}
+
+		.carousel-caption h5{
+			font-size:60px;
+			text-transform:uppercase;
+		}
+
+		.carousel-caption p{
+			font-size:20px;
+		}
+		/* Carousel Button */
+		
+		.btn-primary {
+		    font-size: 20px;
+    background-color: #0029CF;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0px;
+    margin: 47px;
+}
+	}
+
+	@media only screen and {max-width: 1600px} {
+		.carousel-caption{
+		margin-bottom: 10%;
+		width: 70%;
+	}
+	  .c1 {
+		  margin-bottom:-5%;
+	  }
+	}
+
+	@media only screen and {max-width: 1300px} {
+		.carousel-caption{
+		margin-bottom: 5%;
+		
+	}
+	}
+
+	.carousel-caption h5{
+			font-size:30px;
+			text-transform:uppercase;
+		}
+
+		.carousel-caption p{
+			font-size:16px;
+		}
+		
+		.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -123px;
+}
+		/* Presenter Images	*/
+		
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+	img {
+		height: 100px;
+		margin-right: 11px;
+		margin-top: 12px;
+	}
+	
+	
+
+/* Footer */
+
+footer {
+    background-image: linear-gradient(+130deg, Transparent, DarkBlue) !important;
+    
+}
+
+.copy {
+    padding-top: 79px;
+}
+
+.smed i {
+    color: #ff9966;
+    font-size: 20px;
+    margin: 10px;
+    padding-top: 68px;
+}
+
+/* Table */
+
+table{
+	font-family: sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	background-color: #1d69b1;
+	box-shadow: inset 29px 12px 19px #11dce6;
+}
+
+td,th{
+	border: 1px solid #126a56;
+	text-align: left;
+	padding: 8px;
+	box-shadow: #ffcc00;
+}
+
+tr:nth-child(even){
+	background-color: #f9f2f2;
+	box-shadow: aliceblueinset 29px 12px 19px #0c49a5;
+}
+
+/* Schedule */
+
+.nav {
+    display: -ms-flexbox;
+    display: -webkit-inline-box;
+    -ms-flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    padding-left: 9px;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav>li>a {
+    color: #000;
+    background-color: #33a1d536;
+    border-bottom: 1px solid #33a1d5;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 17px 41px;
+}
+
+.nav-tabs>li>a {
+    margin-right: 19px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+	margin-block: 50px;
+}
+
+.space {
+	width: 35%;
+	height: 10rem;
+	background-color: #C70E35;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #71717100;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* what we play */
+
+/* Red border */
+hr.new1 {
+  border-top: 3px solid red;
+  width: 200px;
+}
+
+/* paragraph */
+.container {
+    display: contents;
+    align-items: flex-start;
+    grid-auto-flow: column;
+    column-gap: 340px;
+}
+element.style {
+    margin-left: 22px;
+}
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.text {
+  font-size: 70px;
+}
+
+/* button */
+
+.button {
+  background-color: #ff6666;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+/* hide content */
+
+.content center {
+    display: none;
+}
+
+
+        /* Header styles */
+        header {
+            background-color: #343a40; /* Dark background color */
+            color: #fff; /* Text color */
+            padding: 60px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        
+
+        /* Now Playing section styles */
+        .now-playing {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .now-playing a {
+            color: #ffc107; /* Yellow link color */
+            text-decoration: none;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Customize button styles */
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+		
+		/* .control */
+		
+		.control {
+        border: 11.2px solid #333;
+        border-radius: 50%;
+        margin: 20px;
+        padding: 28px;
+        width: 112px;
+        height: 112px;
+        font-size: 0;
+        white-space: nowrap;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .control,
+    .control .left,
+    .control .right,
+    .control:before {
+        display: inline-block;
+        vertical-align: middle;
+        transition: border 0.4s, width 0.4s, height 0.4s, margin 0.4s;
+        transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
+    }
+
+    .control:before {
+        content: "";
+        height: 112px;
+    }
+
+    .control.pause .left,
+    .control.pause .right {
+        margin: 0;
+        border-left: 36.96px solid #333;
+        border-top: 0 solid transparent;
+        border-bottom: 0 solid transparent;
+        height: 96.992px;
+    }
+
+    .control.pause .left {
+        border-right: 22.4px solid transparent;
+    }
+
+    .control.play .left {
+        margin-left: 18.66666667px;
+        border-left: 48.496px solid #333;
+        border-top: 28px solid transparent;
+        border-bottom: 28px solid transparent;
+        border-right: 0px solid transparent;
+        height: 56px;
+    }
+
+    .control.play .right {
+        margin: 0;
+        border-left: 48.496px solid #333;
+        border-top: 28px solid transparent;
+        border-bottom: 28px solid transparent;
+        height: 0px;
+    }
+
+    .control:hover {
+        border-color: #000;
+    }
+
+    .control:hover .left,
+    .control:hover .right {
+        border-left-color: #000;
+    }
+	
+	/* tab style */
+	
+	/* Style for the outer container */
+.container-xl {
+    background-color: #fff; /* Set your desired background color */
+    padding: 20px; /* Adjust the padding as needed */
+    border: 1px solid #ddd; /* Add a border if desired */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style for each tab content */
+.tab-content {
+    /* Add styles for the tab content here */
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+/* Style for tab navigation (if needed) */
+.nav-tabs {
+    /* Add styles for the tab navigation here */
+}
+/* card */
+
+.last_played_songs .show, .schedule .show {
+    position: relative;
+    color: #2C2C2C;
+    background-color: #fff;
+    border-bottom: 4px solid #A70925;
+    min-height: 107px;
+    margin: 0;
+}
+
+/* button */
+
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+
+
+
+
+    
+
+
+
+

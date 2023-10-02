@@ -1,0 +1,342 @@
+	<!doctype html>
+	<html lang="en">
+
+	<head>
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <link rel="stylesheet" href="custom.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	    <script src="https://kit.fontawesome.com/962243a7d9.js" crossorigin="anonymous"></script>
+	    <title>coolvibez</title>
+	</head>
+
+	<body>
+	    <div id="fb-root"></div>
+	    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="VZmxrz3D"></script>
+	    <div style="position:static; height:60px;">
+	            <!-- Navbar -->
+    <nav>
+        <a class="navbar-brand" href="index.html">
+            <img src="img/favicon.png" alt="Favicon">
+		
+        <img src="https://coolvibes-reloaded.com/ArtistImages/artists.png" alt="music, artists, entertainment, jennifer mlott, theclocks, unsigned">
+        </a>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" target="_blank">Home</a>
+                <a href="/birthday.html" target="_blank">Birthday</a>
+                <a href="/featured.html" target="_blank">Featured</a>
+                <a href="/schedule.html" target="_blank">Schedule</a>
+                <a href="/tunein.html" target="_blank">Tune In</a>
+				<a href="/just4fun.html" target="_blank">Just4Fun</a>
+				<a href="/mobile.html" target="_blank">Mobile</a>
+            </div>
+        </div>
+    </nav>
+	        <div align="right">
+	            <script language="JavaScript" type="text/javascript">
+	                <!--
+	                /*
+ Java Script Calendar is a small script for web pages which displays current Day of the week, Month, Date and Year along with Holidays notification. Just like this working demo below. It will work with Netscape 2++, Microsoft 3++ and Opera 3++ web browsers.
+ 
+                                    Tuesday, November 24, 1998    
+ 
+About 70 holidays from all over the world are displayed by Calendar (if you know other ones, let me know, I will add them). It even calculates Easter Sunday date! To see how it works change the date on your computer to January, 1,
+for example and re-load the page.
+ 
+Installation is very simple. Just copy the script below, everything between SCRIPT and SCRIPT tags (including tags themselves) and paste in the place you want it to appear on your page. You can customize the way
+ it looks by changing document.write function arguments just after month names definitions. Java Script Calendar is free without any limitations. Copyright &copy; Eugene Vassiltsov. But please, let me know if you will use it.
+*/
+	                calendar = new Date();
+	                day = calendar.getDay();
+	                month = calendar.getMonth();
+	                date = calendar.getDate();
+	                year = calendar.getYear();
+	                if (year < 1000) year += 1900
+	                cent = parseInt(year / 100);
+	                g = year % 19;
+	                k = parseInt((cent - 17) / 25);
+	                i = (cent - parseInt(cent / 4) - parseInt((cent - k) / 3) + 19 * g + 15) % 30;
+	                i = i - parseInt(i / 28) * (1 - parseInt(i / 28) * parseInt(29 / (i + 1)) * parseInt((21 - g) / 11));
+	                j = (year + parseInt(year / 4) + i + 2 - cent + parseInt(cent / 4)) % 7;
+	                l = i - j;
+	                emonth = 3 + parseInt((l + 40) / 44);
+	                edate = l + 28 - 31 * parseInt((emonth / 4));
+	                emonth--;
+	                var dayname = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+	                var monthname = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+	                document.write("<font face=verdana,arial size=2>");
+	                document.write(dayname[day] + ", ");
+	                document.write(monthname[month] + " ");
+	                if (date < 10) document.write("0" + date + ", ");
+	                else document.write(date + ", ");
+	                document.write(year + "    <font color=FF0000>");
+	                // Easter
+	                if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+	                // January
+	                if ((month == 0) && (date == 1)) document.write("New Year's Day");
+	                if ((month == 0) && (date == 8)) document.write("Elvis Presley Born (1935)");
+	                if ((month == 0) && (date == 12)) document.write("Raschel Day");
+	                if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+	                if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+	                if ((month == 0) && (day == 1) && (date > 14) && (date < 22)) document.write("Martin Luther King's Birthday");
+	                if ((month == 0) && (date == 31)) document.write("KeysDAN Day");
+	                // February
+	                if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+	                if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+	                if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+	                if ((month == 1) && (date == 12)) document.write("Lincoln's Birthday");
+	                if ((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+	                if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+	                if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+	                if ((month == 1) && (date == 29)) document.write("Leap Day");
+	                // March
+	                if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+	                if ((month == 2) && (date == 4)) document.write("Summer Dog Day");
+	                if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+	                if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+	                if ((month == 2) && (date == 27)) document.write("Mati Day");
+	                // April
+	                if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+	                if ((month == 3) && (date == 8)) document.write("Buddha born");
+	                if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+	                if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+	                if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+	                if ((month == 3) && (date == 22)) document.write("Earth Day");
+	                if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+	                if ((month == 3) && (day == 0) && (date > 0) && (date < 8)) document.write("Daylight Savings Time Begins");
+	                // May
+	                if ((month == 4) && (date == 1)) document.write("May Day, Boy's Day (Japan)");
+	                if ((month == 4) && (date == 2)) document.write("Myra Day, Constitution Day (Japan)");
+	                if ((month == 4) && (date == 4)) document.write("Kenny, Jr. Day");
+	                if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico), Children's Day (Japan)");
+	                if ((month == 4) && (date == 10)) document.write("Bobby Day");
+	                if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+	                if ((month == 4) && (date == 16)) document.write("Sharon Day");
+	                if ((month == 4) && (day == 0) && (date > 7) && (date < 16)) document.write("Mother's Day");
+	                if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+	                // June
+	                if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+	                if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+	                if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+	                if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+	                if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+	                if ((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+	                if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+	                if ((month == 5) && (day == 0) && (date > 15) && (date < 24)) document.write("Father's Day");
+	                // July
+	                if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+	                if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+	                if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+	                if ((month == 6) && (date == 27)) document.write("West Day");
+	                if ((month == 6) && (date == 30)) document.write("Heather Day");
+	                // August
+	                if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+	                if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+	                if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+	                if ((month == 7) && (date == 16)) document.write("Elvis Presley Died (1977)");
+	                // September
+	                if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+	                if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+	                if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+	                if ((month == 8) && (date == 23)) document.write("Gillian Day");
+	                if ((month == 8) && (day == 1) && (date > 0) && (date < 8)) document.write("Labor Day (USA)");
+	                // October
+	                if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+	                if ((month == 9) && (date == 6)) document.write("Destyn Day");
+	                if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+	                if ((month == 9) && (day == 1) && (date > 7) && (date < 16)) document.write("Columbus Day (USA)");
+	                if ((month == 9) && (day == 0) && (date > 24) && (date < 31)) document.write("Daylight Savings Time Ends");
+	                if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+	                if ((month == 9) && (date == 24)) document.write("United Nations Day");
+	                if ((month == 9) && (date == 31)) document.write("All Hallows Eve");
+	                // November
+	                if ((month == 10) && (date == 1)) document.write("All Saints Day");
+	                if ((month == 10) && (date == 2)) document.write("All Souls Day");
+	                if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+	                if ((month == 10) && (date == 4)) document.write("Johnny Day");
+	                if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+	                if ((month == 10) && (date == 20)) document.write("Revolution Day (Mexico)");
+	                if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+	                if ((month == 10) && (day == 4) && (date > 23) && (date < 30)) document.write("Thanksgiving (USA)");
+	                if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+	                // December
+	                if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+	                if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+	                if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+	                if ((month == 11) && (date == 25)) document.write("Christmas");
+	                if ((month == 11) && (date == 26)) document.write("Boxing Day");
+	                if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+	                document.write("<br></font>");
+	                //
+	                -->
+	            </script>
+	            <div align="right">
+	                <div class="fb-share-button" data-href="https://facebook.com/coolvibesuk" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffacebook.com%2Fcoolvibesuk&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+	            </div>
+	<section>
+	    <center><div class="container text-center">
+    <div class="audio-player" style="position: relative; display: inline-block;">
+        <button id="playAudio" class="btn btn-primary rounded-circle" style="width: 100px; height: 100px; font-size: 24px;">
+            <i class="fas fa-play"></i>
+        </button>
+        <audio id="testAudio" hidden src="http://boogie.vside-radio.com:8406/stream" type="audio/mpeg"></audio>
+        <script type="text/javascript">
+            document.getElementById("playAudio").addEventListener("click", function() {
+                var audio = document.getElementById('testAudio');
+                if (this.className.includes('is-playing')) {
+                    this.className = "btn btn-primary rounded-circle";
+                    this.innerHTML = '<i class="fas fa-play"></i>';
+                    audio.pause();
+                } else {
+                    this.className += " is-playing";
+                    this.innerHTML = '<i class="fas fa-pause"></i>';
+                    audio.play();
+                }
+            });
+        </script>
+    </div>
+	</center>
+    <br>
+	    <div align="center"><img alt="" src="https://coolvibes-reloaded.com/img/cool.jpg" id="img_4" style="position:center:0px;width:520px;height:114px;"></div>
+	</section>
+	<section>
+	    <div class="container d-flex justify-content-center gap100">
+	        <div class="col-md-10 text-center">
+	            <h2>Welcome To Coolvibez</h2>
+	            <p>"Hello And Welcome To Coolvibez Were We Deliver The "!Power Of Music!"</p>
+	            <p>Choose Ya Song Requests & Shout-Outs Of You're Choice"</p>
+	        </div>
+			</div>
+	</section>
+	<section>
+	    <div class="container d-flex justify-content-center gap100">
+	        <div class="col-md-10 text-center">
+	            <h2>Listener Flicks</h2>
+	            <section>
+	                <h5><u>This is just For Fun.</h5></u>
+	                <h5>Do You Go Out Quite Alot? Fancy Having You're Image Here?</h5>
+	                <p>All You Have Do Is Take A Pic Of Yourself Where ever you are</p>
+	                <p>and send it into us via email below</p>
+	                <div align="center"><a href="mailto:jnlravers@gmail.com">Email:Coolvibes-Reloaded</a></div>
+	            </section>
+	            <!-- Presenters Images -->
+	            <div align="center">
+	                <!-- MAIN (Center website) -->
+	                <div class="main">
+	                    <!-- Portfolio Gallery Grid -->
+	                    <div class="row">
+	                        <div class="col-md-4">
+	                            <div class="content">
+	                                <img src="img/artist.jpg" height="123" width="240">
+	                                <h3>Random</h3>
+	                            </div>
+	                        </div>
+	                        <div class="row">
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <h3>Random</h3>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <h3>Random</h3>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <h3>Random</h3>
+	                                </div>
+	                            </div>
+	                            <br>
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <h3>Random</h3>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <div align="center">
+	                                        <h5>Random</h5>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-4">
+	                                <div class="content">
+	                                    <img src="img/artist.jpg" height="123" width="240">
+	                                    <h3>Random</h3>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- END GRID -->
+	                    </div>
+	                    <!-- END MAIN -->
+	                </div>
+	            </div>
+	        </div>
+	</section>
+	</section>
+	<div style="position:relative; height:60px;">
+	    <style="position:relative; top:-0px; center:-200px; width:200px; height:120px; border:none;" />
+	</div>
+	<footer>
+	    <div class="row text-center">
+	        <div class="col-md-4 smed">
+	            <a href="https://www.facebook.com/coolvibesuk/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+	            <a href="https://twitter.com/CoolVibesRadio" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+	            <a href="https://www.instagram.com/coolvibesreloaded/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+	        </div>
+	        <div class="col-md-4">
+	            <p class="audio-links music">
+	                <center>
+	                    <p>ways of tunein in</p>
+	                </center>
+	                <center>
+	                    <p>Download the Get Me Radio! Roku TV App from <a href="https://channelstore.roku.com/en-gb/details/b97490a8fb5758527be0396e43422e42/get-me-radio">here</a> and then search for Coolvibes Radio.
+	                </center>
+	            </p>
+	            <center>
+	                <p>Download the Get Me Radio! Android App <a href="https://play.google.com/store/apps/details?id=com.getmeradio.gmr">from here</a> and search for Coolvibes Radio on our Mobile App.
+	            </center>
+	            </p>
+	            </p>
+	        </div>
+	        <div class="col-md-4">
+	            <p class="text-light copy"> Copyright©Coolvibez 2022 | 2024 </p>
+	        </div>
+	        <div class="col-md-4">
+	            <a class="" href="#"><img src="img/favicon.png"></a>
+	        </div>
+	    </div>
+	</footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+
+	</html>

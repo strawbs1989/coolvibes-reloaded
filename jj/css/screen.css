@@ -1,0 +1,39 @@
+
+body {
+    background-color: #f9f9f9;
+    font: normal 1em / 1.5em  sans-serif;
+ }
+ noscript {
+    font-weight: bold;
+    text-align: center;
+ }
+ h1{
+    text-align: center;
+    color: red;
+ }
+#dj {
+   display: block;
+   width: 100%;
+   max-width: 30em;
+   height: auto;
+   margin: auto;
+   border:  1px solid #000;
+   box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.3);
+ }
+ #dj[src="https://github.com/strawbs1989/coolvibes-reloaded/blob/main/images/off-air.png"] {
+   animation: fade  4s ease-in-out infinite;
+ }
+ @keyframes fade {
+  0% { opacity: 1;  
+       border-radius: 0; 
+       max-width: 30em;
+     }
+ 50% { opacity: 0.2; 
+       border-radius: 50%; 
+       max-width: 20em;
+     }
+100% { opacity: 1; 
+       border-radius: 0; 
+       max-width: 30em;
+     }
+ }
