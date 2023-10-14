@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home(mobile)</title>
+    <meta name="generator" content="Serif WebPlus X8">
+    <meta name="viewport" content="width=914">
+    <meta name="keywords" content="rockin, music, events, travelmusic, travel, holidaymusic, holiday, remixes, bouncemusic, djmusic, volountary, indoorwork, indoor, swimming, baking, vside-radio, secondlife, vside, onlinecommunitys, flights, socialmedia,Permissions-Policy,">
+    <meta name="description" content="Welcome To Our New Website Hope Ya'll Enjoy">
+    <meta name="author" content="Permissions-Policy">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
+    <style type="text/css">
+      .OBJ-1 { padding:5px;border:1px solid #14a9ff; }
+      .P-1 { text-align:center;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .C-1 { line-height:19.00px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .OBJ-2:hover {  transform: scale(1.1); }
+      .C-2 { line-height:25.00px;font-family:"Arial", sans-serif;font-style:normal;font-weight:700;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:21.3px;vertical-align:0; }
+      .P-2 { text-align:center;line-height:1px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:13.0px;vertical-align:0; }
+      .C-3 { line-height:16.00px;font-family:"Arial", sans-serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:13.3px;vertical-align:0; }
+    </style>
+    <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.event.move.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.event.swipe.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpslider.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpvisibility.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#slider_1').data('wpslider', new $.fn.wpslider( { g_nDivId:'#slider_1', g_nTransitStyle:2, g_nLoopTime:4000, g_nAnimationTime:500, g_bPlayAtStart:true, g_strEasing: "swing" } ) );
+      var btnState = [];
+      $('#slider_1').data('wpslider').restrictSlides();
+      clickHide('pause28', 'pause28', 150);
+      clickShow('pause28', 'play28', 150);
+      clickHide('play28', 'play28', 150);
+      clickShow('play28', 'pause28', 150);
+      });
+    </script>
+    <!-- Header code for HTML Fragment frag_6 -->
+<script>
+$(document).ready(function(){
+  var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  var sourceNode = null;
+
+  $("#toggleButton").click(function(){
+    if (!sourceNode) {
+      // Create a new audio buffer source node
+      sourceNode = audioContext.createBufferSource();
+      
+      // Load the audio from URL
+      var request = new XMLHttpRequest();
+      request.open('GET', 'http://boogie.vside-radio.com:8406/stream', true);
+      request.responseType = 'arraybuffer';
+      
+      request.onload = function() {
+        var audioData = request.response;
+        audioContext.decodeAudioData(audioData, function(buffer) {
+          sourceNode.buffer = buffer;
+          sourceNode.connect(audioContext.destination);
+          sourceNode.start(0);
+        });
+      };
+      
+      request.send();
+      
+      $("#toggleButton").text("Pause");
+    } else {
+      sourceNode.stop();
+      sourceNode = null;
+      $("#toggleButton").text("Play");
+    }
+  });
+});
+</script>
+
+<!-- HTML Fragment frag_28 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12VKQBFF9N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-12VKQBFF9N');
+</script>
+  </head>
+  <body style="height:8256px;background:#000000;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:914px;height:8256px;">
+      <map id="map1" name="map1"><area shape="rect" coords="0,0,62,17" href="m.unsigned.html" alt=""></map>
+      <img alt="Unsigned" usemap="#map1" src="wpimages/wpd348e2e0_06.png" style="position:absolute;left:142px;top:43px;width:61px;height:16px;">
+      <map id="map2" name="map2"><area shape="rect" coords="0,0,87,17" href="m.djs.html" alt=""></map>
+      <img alt="WhoAreTheDj’s" usemap="#map2" src="wpimages/wp35a8be02_06.png" style="position:absolute;left:248px;top:43px;width:86px;height:16px;">
+      <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:226px;top:39px;width:22px;height:24px;">
+      <map id="map3" name="map3"><area shape="rect" coords="0,0,35,17" href="m.index.html" alt=""></map>
+      <img alt="Home" usemap="#map3" src="wpimages/wp58d7bb36_06.png" style="position:absolute;left:57px;top:43px;width:34px;height:16px;">
+      <img alt="" src="wpimages/wpd6754e48_06.png" style="position:absolute;left:36px;top:39px;width:22px;height:24px;">
+      <img alt="" src="wpimages/wpf80ed2a0_06.png" style="position:absolute;left:120px;top:39px;width:22px;height:24px;">
+      <map id="map4" name="map4"><area shape="rect" coords="0,0,22,21" href="djpage.html" alt=""></map>
+      <img alt="DJ" usemap="#map4" src="wpimages/wp0b8bc99d_06.png" style="position:absolute;left:355px;top:40px;width:21px;height:20px;">
+      <img alt="" src="wpimages/wp7efdf9b0_05_06.jpg" class="OBJ-1" style="position:absolute;left:0px;top:219px;width:900px;height:235px;">
+      <map id="map5" name="map5"><area shape="rect" coords="0,0,53,17" href="m.podcasts.html" alt=""></map>
+      <img alt="Podcasts" usemap="#map5" src="wpimages/wpf5a116da_06.png" style="position:absolute;left:414px;top:45px;width:52px;height:16px;">
+      <img alt="" src="wpimages/wpd6754e48_06.png" style="position:absolute;left:392px;top:41px;width:22px;height:24px;">
+      <div style="position:absolute;left:590px;top:53px;width:218px;height:48px;">
+        <!DOCTYPE html>
+	<html>
+<audio id="myAudio"
+ <source src="http://boogie.vside-radio.com:8406/stream"
+         type="audio/mp4">
+ Your browser does not support the HTML5 Audio element.
+</audio>
+</html>
+</div>
+      </div>
+      <!--Postamble for HTML Fragment frag_28-->
+<!-- Add a button to toggle play/pause -->
+<button id="toggleButton">Play</button>
+      <img alt="" src="wpimages/wpaff03bdd_06.png" style="position:absolute;left:101px;top:491px;width:141px;height:173px;">
+      <img alt="Autism &amp; Epilepsy" src="wpimages/wpf02266cb_06.png" style="position:absolute;left:305px;top:3922px;width:139px;height:37px;">
+      <img alt="" src="wpimages/wp865a81de_06.gif" style="position:absolute;left:314px;top:4052px;width:115px;height:189px;">
+      <div style="position:absolute;left:288px;top:491px;width:308px;height:327px;overflow:hidden;">
+        <p class="Artistic-Body2 P-1"><span class="C-1">Coolvibes, Manager And Owner</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1"><br></span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">'Coolvibes-<wbr>Reloaded is an online internet</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">Voluntary Radio Station, Based In East Sussex</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">But Our Presenters Are Based All Over. </span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1"><br></span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">we have run multiple stations in the past</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">including</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1"><br></span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">hottunez-<wbr>radio</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">urban8 and</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">blizzard-<wbr>extreme</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1"><br></span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">Now Coolvibes-<wbr>Reloaded Is Here To Stay Forever</span></p>
+        <p class="Artistic-Body2 P-1"><span class="C-1">We Are A Non-<wbr>For Profit Radio</span></p>
+        <p class="Body-1"><span class="C-1"><br></span></p>
+      </div>
+      <img alt="80’s" src="wpimages/wp69e65448_06.png" style="position:absolute;left:97px;top:4497px;width:53px;height:37px;">
+      <img alt="Trance" src="wpimages/wp4ac21241_06.png" style="position:absolute;left:196px;top:4495px;width:91px;height:37px;">
+      <img alt="Hardstyle" src="wpimages/wpe7d31a4c_06.png" style="position:absolute;left:341px;top:4495px;width:125px;height:37px;">
+      <img alt="Reggae" src="wpimages/wpf06fb7be_06.png" style="position:absolute;left:193px;top:4591px;width:99px;height:37px;">
+      <img alt="Freestyle" src="wpimages/wp74d90da8_06.png" style="position:absolute;left:337px;top:4591px;width:120px;height:37px;">
+      <img alt="Remixes" src="wpimages/wp7600fc38_06.png" style="position:absolute;left:507px;top:4591px;width:114px;height:37px;">
+      <img alt="Drum n Bass" src="wpimages/wp07884ce0_06.png" style="position:absolute;left:507px;top:4495px;width:172px;height:37px;">
+      <img alt="Dance" src="wpimages/wp74cf91f9_06.png" style="position:absolute;left:82px;top:4591px;width:82px;height:37px;">
+      <div style="position:absolute;left:248px;top:5462px;width:260px;height:307px;">
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0" nonce="qTNJBEGx"></script>
+<div class="fb-like" data-href="https://facebook.com/coolvibesuk" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+      </div>
+      <div style="position:absolute;left:264px;top:5522px;width:260px;height:187px;">
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="D34TJ2MFYRZJE" />
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+      </div>
+      <div id="slider_1" style="position:absolute;left:109px;top:1837px;width:579px;height:397px;overflow:hidden;">
+        <div id="slider_1_P1" style="position:absolute;left:0px;right:0px;width:579px;height:397px;">
+          <img alt="" src="wpimages/wp422c78ea_05_06.jpg" style="position:absolute;left:0px;top:65px;width:579px;height:333px;">
+        </div>
+        <div id="slider_1_P2" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wp1efee023_05_06.jpg" style="position:absolute;left:0px;top:65px;width:579px;height:333px;">
+        </div>
+        <div id="slider_1_P3" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wp49e3034e_05_06.jpg" style="position:absolute;left:0px;top:65px;width:579px;height:333px;">
+        </div>
+        <div id="slider_1_P4" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wp08443f2f_05_06.jpg" style="position:absolute;left:0px;top:65px;width:579px;height:333px;">
+        </div>
+        <div id="slider_1_P5" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wpe31a9975_05_06.jpg" style="position:absolute;left:0px;top:65px;width:579px;height:333px;">
+        </div>
+        <div id="slider_1_P6" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wpf9989967_05_06.jpg" style="position:absolute;left:1px;top:41px;width:577px;height:333px;">
+        </div>
+        <div id="slider_1_P7" style="position:absolute;left:0px;right:0px;width:579px;height:397px;visibility:hidden;display:none;">
+          <img alt="" src="wpimages/wp7f68f2c8_06.gif" style="position:absolute;left:1px;top:77px;width:577px;height:268px;">
+        </div>
+      </div>
+      <div style="position:absolute;left:149px;top:3078px;width:471px;height:201px;">
+        <iframe src="https://calendar.google.com/calendar/embed?src=0b7ce8pkidv0gk8fq0e3b20tdg%40group.calendar.google.com&ctz=Europe%2FLondon" style="border: 0" width="400" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div style="position:absolute;left:218px;top:5953px;width:315px;height:591px;">
+        <map id="map6" name="map6"><area shape="poly" coords="8,11,11,11,11,8,8,8,8,4,11,4,11,0,5,0,3,2,3,8,0,8,0,11,3,11,3,23,8,23" href="http://www.facebook.com/coolvibesuk" target="_blank" alt=""></map>
+        <img alt="" usemap="#map6" src="wpimages/wpa0a52f99_06.png" style="position:absolute;left:75px;top:514px;width:11px;height:23px;">
+        <div style="position:absolute;left:22px;top:97px;width:297px;height:454px;">
+          <iframe src="https://minnit.chat/CoolvibesReloaded?embed&&nickname=" style="border:none;width:89%;height:500px;" allowTransparency="true"></iframe><br>
+        </div>
+      </div>
+      <img alt="" src="pause28.png" id="pause28" onclick="document.getElementById('myAudio').pause()"__AddCode="here" style="position:absolute;left:400px;top:191px;width:67px;height:57px;">
+      <img alt="" src="play28.png" id="play28" class="OBJ-2" onclick="document.getElementById('myAudio').play()" __AddCode="here" style="position:absolute;left:400px;top:191px;width:67px;height:57px;">
+      <div style="position:absolute;left:230px;top:4815px;width:323px;height:541px;">
+        <div style="position:absolute;left:22px;top:95px;width:284px;height:439px;">
+          <!DOCTYPE html>
+
+
+
+
+<!-- HTML -->
+<div style="color:gold; font-size:14pt;">
+<marquee behavior="scroll" direction="up" style="position:absolute;left:152px;top:0px;height:397px;" scrollamount="2">Monday
+<p>
+8am kayley
+<p>
+12pm Levi
+<p>
+7pm Rob
+<p>
+Tuesday
+<p>
+8am kayley
+<p>
+10am Rishab
+<p>
+Wednesday
+<p>
+7:00,7:30 Brendan
+<p>
+7pm Levi
+<p>
+Thursday
+<p>
+10am Rishab
+<p>
+9pm Strawbs
+<p>
+Friday
+<p>
+10am Wfam
+<p>
+Saturday
+<p>
+10am Wfam
+<p>
+Sunday
+<p>
+9pm Strawbs
+<p></marquee>
+</div>  
+        </div>
+        <img alt="" src="wpimages/wp2a822b9f_06.png" style="position:absolute;left:38px;top:30px;width:253px;height:483px;">
+        <div style="position:absolute;left:73px;top:12px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Who's On</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:85px;top:1331px;width:643px;height:404px;">
+        <img alt="" src="wpimages/wp5ff6fe4a_05_06.jpg" style="position:absolute;left:161px;top:81px;width:164px;height:154px;">
+        <img alt="" src="wpimages/wp57fe17b1_05_06.jpg" style="position:absolute;left:366px;top:85px;width:155px;height:155px;">
+        <img alt="" src="wpimages/wp342bddf6_05_06.jpg" style="position:absolute;left:159px;top:242px;width:165px;height:155px;">
+        <div style="position:absolute;left:268px;top:3px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Artist Of Month</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:210px;top:2276px;width:331px;height:205px;">
+        <map id="map7" name="map7"><area shape="poly" coords="31,56,38,50,46,42,54,36,57,27,42,12,34,4,24,6,16,12,9,19,4,27,7,36,13,43,14,44,11,51,17,48,26,57" href="http://boogie.vside-radio.com:2199/tunein/coolvibes.pls" target="_blank" alt=""></map>
+        <img alt="" usemap="#map7" src="wpimages/wp2c8cfba6_06.png" style="position:absolute;left:251px;top:109px;width:60px;height:58px;">
+        <map id="map8" name="map8"><area shape="poly" coords="36,54,45,50,51,43,56,33,56,24,52,15,45,8,35,3,24,3,15,8,8,15,4,24,3,29,6,39,11,47,18,52,26,55" href="http://boogie.vside-radio.com:2199/tunein/coolvibes.asx" target="_blank" alt=""></map>
+        <img alt="" usemap="#map8" src="wpimages/wpd08294ae_06.png" style="position:absolute;left:173px;top:109px;width:58px;height:57px;">
+        <map id="map9" name="map9"><area shape="poly" coords="54,33,56,33,56,21,51,14,44,7,37,2,21,2,14,7,6,12,2,21,2,35,8,43,14,51,23,55,35,55,42,52,43,55,54,55" href="http://boogie.vside-radio.com:2199/tunein/coolvibes.qtl" target="_blank" alt=""></map>
+        <img alt="" usemap="#map9" src="wpimages/wp775b0d41_06.png" style="position:absolute;left:91px;top:109px;width:57px;height:55px;">
+        <map id="map10" name="map10"><area shape="poly" coords="26,52,37,46,45,40,53,35,56,25,53,16,45,10,42,8,32,7,27,6,24,8,15,10,6,15,2,24,5,34,13,40,23,43,24,45,22,52,25,53" href="http://boogie.vside-radio.com:2199/tunein/coolvibes.ram" target="_blank" alt=""></map>
+        <img alt="" usemap="#map10" src="wpimages/wp63bcece2_06.png" style="position:absolute;left:20px;top:109px;width:57px;height:55px;">
+        <div style="position:absolute;left:105px;top:12px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Tune In</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:215px;top:6593px;width:315px;height:591px;">
+        <div style="position:absolute;left:34px;top:106px;width:297px;height:454px;">
+          <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v17.0" nonce="sF5V6x3D"></script><div class="fb-comments" data-href="https://facebook.com/coolvibesuk" data-width="70" data-numposts="5"></div>
+        </div>
+      </div>
+      <div style="position:absolute;left:219px;top:3621px;width:323px;height:92px;">
+        <div style="position:absolute;left:35px;top:9px;width:265px;height:71px;">
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="XTPGRMBD5YGMS" />
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+        </div>
+      </div>
+      <div style="position:absolute;left:211px;top:2556px;width:323px;height:357px;">
+        <img alt="" src="wpimages/wpd6743d4e_05_06.jpg" style="position:absolute;left:48px;top:86px;width:234px;height:228px;">
+        <div style="position:absolute;left:85px;top:7px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Our Licence</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <img alt="" src="wpimages/wpf7eb3628_06.png" style="position:absolute;left:0px;top:7973px;width:914px;height:283px;">
+      <div style="position:absolute;left:381px;top:8225px;width:307px;height:28px;overflow:hidden;">
+        <p class="Footer"><span class="C-2">Coolvibes-<wbr>Reloaded</span></p>
+      </div>
+      <div style="position:absolute;left:25px;top:8229px;width:319px;height:28px;overflow:hidden;">
+        <p class="Footer"><span class="C-2">Our App</span></p>
+      </div>
+      <map id="map11" name="map11"><area shape="poly" coords="203,29,202,9,201,0,3,0,0,10,0,49,2,57,203,57" href="https://play.google.com/store/apps/details?id=appinventor.ai_jayaubs89.cooljay1_copy&amp;hl=en_GB&amp;gl=US" target="_blank" alt=""></map>
+      <img alt="" usemap="#map11" src="wpimages/wp98dad688_06.png" style="position:absolute;left:67px;top:8170px;width:203px;height:57px;">
+      <div style="position:absolute;left:708px;top:8225px;width:209px;height:28px;overflow:hidden;">
+        <p class="Footer"><span class="C-2">Contact &nbsp;US</span></p>
+      </div>
+      <div style="position:absolute;left:670px;top:8172px;width:240px;height:29px;overflow:hidden;">
+        <p class="Body-1 P-2"><span class="C-3">coolvibes1989@gmail.com</span></p>
+      </div>
+      <map id="map12" name="map12"><area shape="poly" coords="198,63,202,55,202,41,201,31,200,24,39,24,38,31,38,57,41,64,197,64" href="http://eepurl.com/hQjfef" target="_blank" alt=""></map>
+      <img alt="" usemap="#map12" src="wpimages/wpbb88c973_06.png" style="position:absolute;left:397px;top:8160px;width:254px;height:95px;">
+      <img alt="" src="wpimages/wp5679eb8b_06.png" style="position:absolute;left:27px;top:7981px;width:137px;height:118px;">
+      <div style="position:absolute;left:4px;top:928px;width:777px;height:325px;">
+        <center><!DOCTYPE HTML>
+<html lang="en">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+    <title>Who is on air</title>
+    <link rel="stylesheet" href="css/screen.css" media="screen">
+  </head>
+  <body>
+    <noscript>
+      <p>JavaScipt need to be enabled for this page to function correctly</p>
+    </noscript>
+
+    <h1>Who is on air</h1>
+    <img id="dj" src="djimages/off-air.jpg" alt="Off-line">
+    <script src="scripts/showdj.js"></script>
+    <!-- partial -->
+    <script  src="./script.js"></script>
+  </body>
+</html></center>
+      </div>
+      <div style="position:absolute;left:73px;top:4356px;width:614px;height:287px;">
+        <div style="position:absolute;left:222px;top:6px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">What We Play</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:133px;top:2964px;width:529px;height:441px;">
+        <div style="position:absolute;left:174px;top:8px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Schedule</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:192px;top:3842px;width:365px;height:398px;">
+        <div style="position:absolute;left:114px;top:-2px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">We Support</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:180px;top:5390px;width:385px;height:475px;">
+        <div style="position:absolute;left:102px;top:-3px;width:246px;height:96px;">
+          
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">What We Play</button>
+
+
+</body>
+</html>
+
+
+
+        </div>
+      </div>
+      <div style="position:absolute;left:109px;top:1814px;width:579px;height:450px;"></div>
+      <div style="position:absolute;left:338px;top:1775px;width:246px;height:96px;">
+        
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">DJ Programs</button>
+
+
+</body>
+</html>
+
+
+
+      </div>
+      <div style="position:absolute;left:293px;top:5968px;width:246px;height:96px;">
+        
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">Chat</button>
+
+
+</body>
+</html>
+
+
+
+      </div>
+      <div style="position:absolute;left:292px;top:6607px;width:246px;height:96px;">
+        
+<html>
+<head>
+<style>
+.button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: outline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="button">What We Play</button>
+
+
+</body>
+</html>
+
+
+
+      </div>
+      <img alt="Sunday, September 17, 2023" src="wpimages/wp24829adb_06.png" style="position:absolute;left:527px;top:159px;width:263px;height:23px;">
+      <div style="position:absolute;left:182px;top:7341px;width:418px;height:573px;">
+        <iframe src="https://sparkling-seahorse-6be2ba.netlify.app/reg" width="600" height="400" frameborder="0"></iframe>
+      </div>
+      <img alt="Register" src="wpimages/wp398c7fb5_06.png" style="position:absolute;left:255px;top:7263px;width:243px;height:66px;">
+      <img alt="" src="wpimages/wp69339b43_06.png" style="position:absolute;left:195px;top:7239px;width:383px;height:25px;">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/962243a7d9.js" crossorigin="anonymous"></script>
+    <title>coolvibez</title>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="VZmxrz3D"></script>
+    <div style="position:static; height:60px;">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light coolnav">
+        <a class="navbar-brand" href="index.html"><img src="img/favicon.png" alt="music, holidays, entertainment, logo,"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/birthday.html">Birthday</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/featured.html">Featured</a>
+                </li>
+            </ul>
+            <div class="mrt ml-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule.html">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tunein.html">Tunein Again</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mobile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/just4fun.html">Just 4Fun</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <div align="right">
+        <script language="JavaScript" type="text/javascript">
+            <!--
+            /*
+ Java Script Calendar is a small script for web pages which displays current Day of the week, Month, Date and Year along with Holidays notification. Just like this working demo below. It will work with Netscape 2++, Microsoft 3++ and Opera 3++ web browsers.
+ 
+                                    Tuesday, November 24, 1998    
+ 
+About 70 holidays from all over the world are displayed by Calendar (if you know other ones, let me know, I will add them). It even calculates Easter Sunday date! To see how it works change the date on your computer to January, 1,
+for example and re-load the page.
+ 
+Installation is very simple. Just copy the script below, everything between SCRIPT and SCRIPT tags (including tags themselves) and paste in the place you want it to appear on your page. You can customize the way
+ it looks by changing document.write function arguments just after month names definitions. Java Script Calendar is free without any limitations. Copyright &copy; Eugene Vassiltsov. But please, let me know if you will use it.
+*/
+            calendar = new Date();
+            day = calendar.getDay();
+            month = calendar.getMonth();
+            date = calendar.getDate();
+            year = calendar.getYear();
+            if (year < 1000) year += 1900
+            cent = parseInt(year / 100);
+            g = year % 19;
+            k = parseInt((cent - 17) / 25);
+            i = (cent - parseInt(cent / 4) - parseInt((cent - k) / 3) + 19 * g + 15) % 30;
+            i = i - parseInt(i / 28) * (1 - parseInt(i / 28) * parseInt(29 / (i + 1)) * parseInt((21 - g) / 11));
+            j = (year + parseInt(year / 4) + i + 2 - cent + parseInt(cent / 4)) % 7;
+            l = i - j;
+            emonth = 3 + parseInt((l + 40) / 44);
+            edate = l + 28 - 31 * parseInt((emonth / 4));
+            emonth--;
+            var dayname = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+            var monthname = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            document.write("<font face=verdana,arial size=2>");
+            document.write(dayname[day] + ", ");
+            document.write(monthname[month] + " ");
+            if (date < 10) document.write("0" + date + ", ");
+            else document.write(date + ", ");
+            document.write(year + "    <font color=FF0000>");
+            // Easter
+            if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+            // January
+            if ((month == 0) && (date == 1)) document.write("New Year's Day");
+            if ((month == 0) && (date == 8)) document.write("Elvis Presley Born (1935)");
+            if ((month == 0) && (date == 12)) document.write("Raschel Day");
+            if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+            if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+            if ((month == 0) && (day == 1) && (date > 14) && (date < 22)) document.write("Martin Luther King's Birthday");
+            if ((month == 0) && (date == 31)) document.write("KeysDAN Day");
+            // February
+            if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+            if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+            if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+            if ((month == 1) && (date == 12)) document.write("Lincoln's Birthday");
+            if ((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+            if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+            if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+            if ((month == 1) && (date == 29)) document.write("Leap Day");
+            // March
+            if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+            if ((month == 2) && (date == 4)) document.write("Summer Dog Day");
+            if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+            if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+            if ((month == 2) && (date == 27)) document.write("Mati Day");
+            // April
+            if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+            if ((month == 3) && (date == 8)) document.write("Buddha born");
+            if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+            if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+            if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+            if ((month == 3) && (date == 22)) document.write("Earth Day");
+            if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+            if ((month == 3) && (day == 0) && (date > 0) && (date < 8)) document.write("Daylight Savings Time Begins");
+            // May
+            if ((month == 4) && (date == 1)) document.write("May Day, Boy's Day (Japan)");
+            if ((month == 4) && (date == 2)) document.write("Myra Day, Constitution Day (Japan)");
+            if ((month == 4) && (date == 4)) document.write("Kenny, Jr. Day");
+            if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico), Children's Day (Japan)");
+            if ((month == 4) && (date == 10)) document.write("Bobby Day");
+            if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+            if ((month == 4) && (date == 16)) document.write("Sharon Day");
+            if ((month == 4) && (day == 0) && (date > 7) && (date < 16)) document.write("Mother's Day");
+            if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+            // June
+            if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+            if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+            if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+            if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+            if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+            if ((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+            if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+            if ((month == 5) && (day == 0) && (date > 15) && (date < 24)) document.write("Father's Day");
+            // July
+            if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+            if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+            if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+            if ((month == 6) && (date == 27)) document.write("West Day");
+            if ((month == 6) && (date == 30)) document.write("Heather Day");
+            // August
+            if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+            if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+            if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+            if ((month == 7) && (date == 16)) document.write("Elvis Presley Died (1977)");
+            // September
+            if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+            if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+            if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+            if ((month == 8) && (date == 23)) document.write("Gillian Day");
+            if ((month == 8) && (day == 1) && (date > 0) && (date < 8)) document.write("Labor Day (USA)");
+            // October
+            if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+            if ((month == 9) && (date == 6)) document.write("Destyn Day");
+            if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+            if ((month == 9) && (day == 1) && (date > 7) && (date < 16)) document.write("Columbus Day (USA)");
+            if ((month == 9) && (day == 0) && (date > 24) && (date < 31)) document.write("Daylight Savings Time Ends");
+            if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+            if ((month == 9) && (date == 24)) document.write("United Nations Day");
+            if ((month == 9) && (date == 31)) document.write("All Hallows Eve");
+            // November
+            if ((month == 10) && (date == 1)) document.write("All Saints Day");
+            if ((month == 10) && (date == 2)) document.write("All Souls Day");
+            if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+            if ((month == 10) && (date == 4)) document.write("Johnny Day");
+            if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+            if ((month == 10) && (date == 20)) document.write("Revolution Day (Mexico)");
+            if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+            if ((month == 10) && (day == 4) && (date > 23) && (date < 30)) document.write("Thanksgiving (USA)");
+            if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+            // December
+            if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+            if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+            if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+            if ((month == 11) && (date == 25)) document.write("Christmas");
+            if ((month == 11) && (date == 26)) document.write("Boxing Day");
+            if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+            document.write("<br></font>");
+            //
+            -->
+        </script>
+    </div>
+    <div align="right">
+        <div class="fb-share-button" data-href="https://facebook.com/coolvibesuk" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffacebook.com%2Fcoolvibesuk&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    </div>
+    <center>
+           <head>
+	                    
+	                        <title>Station Activity</title>
+    <style type="text/css">
+        td {
+    font-size: 0.6em;
+}
+
+/* temporary for testing purposes */
+#NowOn {
+    border: 0px solid black;
+    font-size: 11.5px;
+    font-family: future_now;
+    color: #00bcd4;
+    background: transparent;
+    height: 65px;
+    width: 350px;
+    position: absolute;
+    top: 30%; /* Adjust the top position to move it higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    </style>
+</head>
+<body onload="NowON()">
+    <div>
+        <p class="text-light">
+            <div id="content">
+                <!-- You can remove the <center> tags -->
+                We Spin All Types Of Variety
+            </div>
+            <!-- You can remove the extra <div> with the same id -->
+            <div id="NowOn"></div>
+        </p>
+    </div>
+ </body>
+ 
+    <script>
+        /* NOT CURRENTLY USED
+var thedate = new Date();
+var dayofweek = thedate.getDay();
+var hourofday = thedate.getHours();
+
+var GMT = new Date().getTimezoneOffset();
+var offsetGMT = +1 new Date().getTimezoneOffset()/01:00;
+*/
+	                        // Sun=0 1 2 3 4 5 Sat=6
+	                        var DayOfWeek = new Array('Weekend', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend');
+	                        var NoShow = 'No Show Scheduled<br />for COOLVIBES';
+	                        var DH = new Array(7);
+	                        for (d = 0; d < 7; d++) {
+	                            DH[d] = new Array(24);
+	                            for (h = 0; h < 24; h++) {
+	                                DH[d][h] = '';
+	                            }
+	                        }
+	                        DH[1][10] = 'Monday at 10 AM<br>COOLVIBES-RELOADED<br>with auto';
+	                        DH[1][08] = 'Monday at 8 AM<br>Kayleys Theme<br>with kayley';
+	                        DH[1][12] = 'Monday at 12 PM<br>with Levis show<br>Monday at Noon<br>No Genre';
+	                        DH[1][14] = 'auto<br>with COOLVIBES-RELOADED<br>Monday at 2 PM<br>No Genre';
+	                        DH[1][16] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday at 4 PM<br>Rap';
+	                        DH[1][17] = 'The Greatest<br>with COOLVIBES-RELOADED<br>Monday at 5 PM<br>No Genre';
+	                        DH[1][18] = 'AUTOMIX Corner<br>with COOLVIBES-RELOADED<br>Monday at 6 PM<br>No Genre';
+	                        DH[1][20] = 'Daily automix<br>with COOLVIBES-RELOADED<br>Monday at 8 PM<br>No Genre';
+	                        DH[1][22] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday 10 to Midnight<br>No Genre';
+	                        DH[1][23] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday at 11 PM<br>No Genre';
+	                        DH[2][20] = 'AutoMix<br>With COOLVIBES-RELOADED<br>Tuesday  8 PM to 10pm<br>Rock';
+	                        DH[2][08] = 'Kayleys Theme<br>with Kayley<br>Tuesday at 8 AM<br>Rock';
+	                        DH[2][16] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Tuesday at 4 PM<br>Rock';
+	                        DH[2][20] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Tuesday at 8 PM<br>No Genre';
+	                        DH[3][19] = 'Levis Show! Braap!<br>with DJ Levi<br>Wednesday at 7 PM<br>No Genre';
+	                        DH[3][10] = 'AutoMix Wednesdays<br>with COOLVIBES-RELOADED<br>Wednesday at 10 AM<br>No Genre';
+	                        DH[3][15] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday 3 to 5 PM<br>Classic Rock';
+	                        DH[3][16] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday at 4 PM<br>Classic Rock';
+	                        DH[3][22] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday at 10 PM<br>Rap';
+	                        DH[4][23] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Thursday Noon to 1 AM<br>mix';
+	                        DH[4][22] = 'Request Show<br>with Strawbs<br>Thursday 8 PM to 10pm<br>Mix n Match';
+	                        DH[4][13] = 'automix<br>with autodj<br>Thursday at 1 PM<br>mix';
+	                        DH[4][14] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Thursday at 2 PM<br>No Genre';
+	                        DH[4][18] = 'Request Show<br>with DJ Strawbs<br>Thursday at 10 PM<br>No Genre';
+	                        DH[5][10] = 'Friday at 10 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[5][11] = 'Friday at 11 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[5][19] = 'Friday at Eve<br>G-Force<br>with DJ Reuben';
+	                        DH[5][10] = 'Friday at 10 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[5][09] = 'Friday at 9 AM<br>Mix n Match<br>AutoMix';
+	                        DH[5][14] = 'Friday at 2 PM<br>automix<br>with autodj';
+	                        DH[5][15] = 'Friday at 3 PM<br>automix<br>with autodj';
+	                        DH[5][16] = 'Friday at 4 PM<br>automix<br>with autodj';
+	                        DH[5][17] = 'Friday at 5 PM<br>automix<br>with autodj';
+	                        DH[5][19] = 'Friday at 7 PM<br>Mix n Match<br>AUTOMIX';
+	                        DH[5][22] = 'Friday at 10 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[5][23] = 'Friday at 11 PM<br>automix<br>with autodj';
+	                        DH[6][18] = 'Saturday at 6 PM<br>automix<br>with automix';
+	                        DH[6][19] = 'Saturday at 7 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[6][13] = 'Saturday at 1 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[6][10] = 'Saturday at 10 AM<br>mix<br>with COOLVIBES-RELOADED';
+	                        DH[6][23] = 'Saturday at 11 PM<br>mix<br>with COOLVIBES-RELOADED';
+	                        DH[0][18] = 'Sunday   at 18 PM<br>Request Show<br>with Strawbs';
+	                        DH[0][21] = 'Sunday   at 12 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
+	                        DH[0][14] = 'Sunday   at 2 PM<br>G Force Reggae<br>with Reuben';
+	                        DH[0][13] = 'Sunday   at 1 PM<br>80s Show<br>with Rob';
+	                        // Add more when schedule is known. Note: there may be better ways to do this when information is known.
+	                        
+	                        // Call NowON() when the page loads
+                            function NowON() {
+                            var thedate = new Date();
+                            var dayofweek = thedate.getDay();
+                            var hourofday = thedate.getHours();
+                            var showOn = DH[dayofweek][hourofday];
+                            if (showOn == '') {
+                            showOn = thedate + '<p />No Show Scheduled';
+            }
+            document.getElementById('NowOn').innerHTML = showOn;
+        }
+    </script>
+	                </head>
+
+	                <BODY onLoad="NowON()"></BODY>
+	                <!-- Unhide this if table display desired
+<script type="text/javascript">
+document.write(TableStationSchedule())
+</script>
+-->
+	                
+	            </center>
+
+	</html>
+<section>
+    <center><audio id="testAudio" hidden src="http://boogie.vside-radio.com:8406/stream" type="audio/mpeg">
+        </audio>
+        <button id="playAudio">Play</button>
+        <script type="text/javascript">
+            document.getElementById("playAudio").addEventListener("click", function() {
+                var audio = document.getElementById('testAudio');
+                if (this.className == 'is-playing') {
+                    this.className = "";
+                    this.innerHTML = "Play"
+                    audio.pause();
+                } else {
+                    this.className = "is-playing";
+                    this.innerHTML = "Pause";
+                    audio.play();
+                }
+            });
+        </script>
+    </center>
+    <div align="center"><img alt="" src="https://coolvibes-reloaded.com/img/cool.jpg" id="img_4" style="position:center:0px;width:520px;height:114px;"></div>
+</section>
+<div style="padding-left:16px">
+</div>
+<div style="padding-left:16px">
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<!-- Header -->
+<!-- End Header -->
+<!-- Start Presenters -->
+<div align="right">
+</div>
+<html>
+
+<head>
+    <li>
+        <center>
+            <h4>
+                <p>Search For You're Tune, Then Request It To Strawbs On The Home Page (Where it says Requests)</p>
+            </h4>
+        </center>
+        <center><iframe src="https://docs.google.com/spreadsheets/d/1rk3xGUPk5ypfqosAEgNgQeeWhMijkxlsCTEJ2cknnis/edit#gid=918827520" name="iframe_a" height="700px" width="810px"></iframe></center>

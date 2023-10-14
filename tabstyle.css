@@ -1,0 +1,42 @@
+.main {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	margin: 5rem auto 0 auto;
+}
+.container {
+	width: 75%;
+}
+
+.nav {
+	display: flex;
+	border-bottom: 7px solid #33a1d5;
+}
+
+.nav > li {
+	width: 20%;
+	text-align: center;
+}
+
+.nav > li > a {
+	color: #000;
+	background-color: #33a1d5;
+	border-bottom: 1px solid #33a1d5;
+}
+
+.nav .no-margin {
+	margin-right: 0;
+}
+
+.nav .active,
+.nav > li > a:hover {
+	color: #000000;
+	background-color: #33a1d5;
+	/* border: 1px solid #A70925; */
+}
+
+.space {
+	width: 35%;
+	height: 10rem;
+	background-color: #C70E35;
+}
