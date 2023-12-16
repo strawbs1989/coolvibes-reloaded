@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Area</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">BrandName</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center">
+        <h1>Welcome to the Members Area</h1>
+        
+    </section>
+
+    <!-- Content Section -->
+    <section id="content">
+        <div class="container">
+            <h2>Staff Schedule</h2>
+            <iframe src="https://docs.google.com/spreadsheets/d/1jpcfDoNAcvV19LOqWBbfGhJAJrxOnoEFiluv2Y_k4EU/edit?rm=minimal&amp;usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=true" height="600" width="1200"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-4">
+        &copy; 2021 BrandName. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+```
+
+```css
+body {
+    font-family: Arial, sans-serif;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+#content {
+    padding: 40px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+```
+
+```js
+// Add active class to the current nav item
+$(document).ready(function() {
+    $('nav .nav-link').click(function() {
+        $('nav .nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+```
