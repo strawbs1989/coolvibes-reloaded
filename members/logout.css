@@ -1,0 +1,11 @@
+	body {
+    font-family: Arial, sans-serif;
+}
+ 
+header {
+    font-weight: bold;
+}
+ 
+#logout-message {
+    padding: 40px;
+}
