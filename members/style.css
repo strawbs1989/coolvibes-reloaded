@@ -1,20 +1,8 @@
-body {
+	body {
     font-family: Arial, sans-serif;
 }
  
-#hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-}
- 
 #content {
-    padding: 40px 0;
-}
- 
-footer {
-    background-color: #343a40;
-    color: #ffffff;
+    text-align: center;
+    padding: 40px;
 }
