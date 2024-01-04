@@ -222,26 +222,18 @@ Installation is very simple. Just copy the script below, everything between SCRI
 	<section>
 	
 	    <div class="container text-center">
-    <div class="audio-player" style="position: relative; display: inline-block;">
-        <button id="playAudio" class="btn btn-primary rounded-circle" style="width: 100px; height: 100px; font-size: 24px background-image: url("https://coolvibes-reloaded.com/img/favicon.png");">
-            <i class="fas fa-play"></i>
-        </button>
-        <audio id="testAudio" hidden src="http://boogie.vside-radio.com:8406/stream" type="audio/mpeg"></audio>
-        <script type="text/javascript">
-            document.getElementById("playAudio").addEventListener("click", function() {
-                var audio = document.getElementById('testAudio');
-                if (this.className.includes('is-playing')) {
-                    this.className = "btn btn-primary rounded-circle";
-                    this.innerHTML = '<i class="fas fa-play"></i>';
-                    audio.pause();
-                } else {
-                    this.className += " is-playing";
-                    this.innerHTML = '<i class="fas fa-pause"></i>';
-                    audio.play();
-                }
-            });
-        </script>
-    </div>
+    <html>
+<body>
+<style>
+iframe {
+  overflow: hidden;
+  height: 30px;
+  margin-top: 50px; 
+  
+}</style>
+<iframe src="https://coolvibes-reloaded.com/player" scrolling="no" style="border:none;"></iframe>
+</body>
+</html>
     <br>
     <img alt="" src="https://coolvibes-reloaded.com/img/cool.jpg" id="img_4" style="width: 520px; height: 114px; margin-top: -60px;">
 </div>
