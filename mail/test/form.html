@@ -19,7 +19,7 @@ $body .="Track: ".$trackName "\r\r";
 $body .="Artist: ".$artistName "\r\r";
 $body .="Dedication: ".$yourDedication "\r\r";
 
-mail($to,$artistName,$body);
+//mail($to,$artistName,$body);
 
 $message_sent= = true;
 
@@ -54,7 +54,7 @@ $invalid_class_name = "form-invalid";
 
 <body>
 <?php
-if(message_sent);
+if($message_sent);
 ?>
 
 <h3>Request successful and should play shortly.</h3>
