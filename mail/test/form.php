@@ -1,7 +1,9 @@
 <?php
 
-if(isset($_POST) {
-   $yourName = $_POST['name'];
+if(isset($_POST)['email']) && $_POST['email'] != ''){
+	// submit the form
+    
+	$yourName = $_POST['name'];
    $trackName = $_POST['track'];
    $artistName = $_POST['artist'];
    $message = $_POST['message'];
@@ -15,5 +17,8 @@ if(isset($_POST) {
    $body .= "Message: ".$message. "\r\n"
    
    mail($to,$message,$body);
+
+}
+   
    
    ?>

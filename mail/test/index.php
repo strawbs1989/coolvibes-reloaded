@@ -11,12 +11,17 @@
 </head>
 
 <body>
+<?php
+if(message_sent);
+?>
 
 
 <h3>Request successful and should play shortly</h3>
 
-
-    <div class="container">
+<?php
+else:
+?>
+<div class="container">
         <form action="https://coolvibes-reloaded.com/mail/test/form" method="POST" class="form">
             <div class="form-group">
                 <label for="name" class="form-label">Your Name</label>
