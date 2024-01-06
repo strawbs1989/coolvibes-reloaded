@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-<title>Requests</title>
-<link rel="stylesheet" type="text/css" href="https://coolvibes-reloaded.com/mail/style.css">
+<title>Form Submit to Send Email</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 <?php
 if(!empty($_POST["send"])) {
-	$yourName = $_POST["yourName"];
-  $trackName = $_POST["trackName"];
-	$artistName = $_POST["artistName"];
-	$yourdedicationMessage = $_POST["yourdedicationMessage"];
-	$toEmail = "coolvibes1989@gmail.com";
+	$userName = $_POST["userName"];
+  $userEmail = $_POST["userEmail"];
+	$userPhone = $_POST["userPhone"];
+	$userMessage = $_POST["userMessage"];
+	$toEmail = "websolution90@gmail.com";
   
-	$mailHeaders = "Name: " . $yourName .
-	"\r\n Track: ". $trackName  . 
-	"\r\n Artist: ". $artistName  . 
-	"\r\n Dedication: " . $yourdedicationMessage . "\r\n";
+	$mailHeaders = "Name: " . $userName .
+	"\r\n Email: ". $userEmail  . 
+	"\r\n Phone: ". $userPhone  . 
+	"\r\n Message: " . $userMessage . "\r\n";
 
 	if(mail($toEmail, $userName, $mailHeaders)) {
-	    $message = "Request successful and should play shortly.";
+	    $message = "Your contact information is received successfully.";
 	}
 }
 ?>
@@ -30,19 +30,19 @@ if(!empty($_POST["send"])) {
 <div class="form-container">
   <form name="contactFormEmail" method="post">
     <div class="input-row">
-      <label>Your Name: <em>*</em></label> 
+      <label>Name <em>*</em></label> 
       <input type="text" name="userName" required id="userName"> 
     </div>
     <div class="input-row">
-      <label>Track Name: <em>*</em></label> 
-      <input type="email" name="trackName" required id="trackName"> 
+      <label>Email <em>*</em></label> 
+      <input type="email" name="userEmail" required id="userEmail"> 
     </div>
     <div class="input-row">
-      <label>Artist Name: <em>*</em></label> 
-      <input type="text" name="artistName" required id="artistName">
+      <label>Phone <em>*</em></label> 
+      <input type="text" name="userPhone" required id="userPhone">
     </div>
     <div class="input-row">
-      <label>Your Dedication message: <em>*</em></label> 
+      <label>Message <em>*</em></label> 
      <!-- <textarea name="userMessage" required id="userMessage"> -->
     </div>
     <div class="input-row">
@@ -58,5 +58,8 @@ if(!empty($_POST["send"])) {
 
 </body>
 </html>
+
+
+
 
 
