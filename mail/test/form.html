@@ -2,14 +2,13 @@
 $message_sent = false;
 if(isset($_POST['email']) && $_POST['email'] != ''){
     
-	if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
+	if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
 	
-	// request a song
-	
+	// submit the form
 $yourName = $_POST['name'];
 $trackName = $_POST['track'];
 $artistName = $_POST['artist'];
-$yourdedicationMessage = $_POST["yourdedicationMessage"];
+$yourdedicationMessage = $_POST['yourdedicationMessage'];
 
 $to = "coolvibes1989@gmail.com";
 $body = "";
@@ -60,7 +59,6 @@ if($message_sent);
 <h3>Request successful and should play shortly.</h3>
 
 <?php
-
 else:
 ?>
     <div class="container">
