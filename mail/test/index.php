@@ -7,7 +7,7 @@
     <title>Requests</title>
     <link rel="stylesheet" href="https://coolvibes-reloaded.com/mail/test/form.css" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
-    <script src="main.js"></script>
+    <script src="https://coolvibes-reloaded.com/mail/test/main.js"></script>
 </head>
 
 <body>
