@@ -1,10 +1,13 @@
+<html>
+<body>
+
 <?php
 $message_sent = false;
 if(isset($_POST['email']) && $_POST['email'] != ''){
     
 	if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
 	
-	// submit the form
+// submit the form
 $yourName = $_POST['name'];
 $trackName = $_POST['track'];
 $artistName = $_POST['artist'];
@@ -13,28 +16,26 @@ $yourdedicationMessage = $_POST['yourdedicationMessage'];
 $to = "coolvibes1989@gmail.com";
 $body = "";
 
-$body .="From: ".$yourName "\r\r";
-$body .="Track: ".$trackName "\r\r";
-$body .="Artist: ".$artistName "\r\r";
-$body .="Dedication: ".$yourDedication "\r\r";
+$body .="From: ".$yourName. "\r\n";
+$body .="Track: ".$trackName. "\r\n";
+$body .="Artist: ".$artistName. "\r\n";
+$body .="Dedication: ".$yourDedication. "\r\n";
 
 //mail($to,$artistName,$body);
 
-$message_sent= = true;
+$message_sent = true;
 
-{
-else{
+
+
+}
 $invalid_class_name = "form-invalid";
 
-}
-
-
-	
-	
-}
-
+}	
 
 ?>
+ 
+</body>
+</html>
 
 
 
@@ -56,7 +57,7 @@ $invalid_class_name = "form-invalid";
 if($message_sent);
 ?>
 
-<h3>Request successful and should play shortly.</h3>
+<h3>Request successful and should play shortly</h3>
 
 <?php
 else:
