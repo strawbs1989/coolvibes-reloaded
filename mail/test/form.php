@@ -1,46 +1,22 @@
-<html>
-<body>
-
 <?php
-$message_sent = false;
-if(isset($_POST['email']) && $_POST['email'] != ''){
-    
-	if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
-	
-// submit the form
-$yourName = $_POST['name'];
-$trackName = $_POST['track'];
-$artistName = $_POST['artist'];
-$yourdedicationMessage = $_POST['yourdedicationMessage'];
 
-$to = "coolvibes1989@gmail.com";
-$body = "";
+if(isset($_POST) {
+   $yourName = $_POST['name'];
+   $trackName = $_POST['track'];
+   $artistName = $_POST['artist'];
+   $message = $_POST['message'];
 
-$body .="From: ".$yourName. "\r\n";
-$body .="Track: ".$trackName. "\r\n";
-$body .="Artist: ".$artistName. "\r\n";
-$body .="Dedication: ".$yourDedication. "\r\n";
-
-//mail($to,$artistName,$body);
-
-$message_sent = true;
-
-
-
-}
-$invalid_class_name = "form-invalid";
-
-}	
-
-?>
- 
-</body>
-</html>
-
-
-
-
-
+   $to = "coolvibes1989@gmail.com";
+   $body = ";
+   
+   $body .= "From: ".$yourName. "\r\n"
+   $body .= "Track: ".$trackName. "\r\n"
+   $body .= "Artist: ".$artistName. "\r\n"
+   $body .= "Message: ".$message. "\r\n"
+   
+   mail($to,$message,$body);
+   
+   ?>
 
 <html lang="en">
 <head>
@@ -53,15 +29,11 @@ $invalid_class_name = "form-invalid";
 </head>
 
 <body>
-<?php
-if($message_sent);
-?>
+
 
 <h3>Request successful and should play shortly</h3>
 
-<?php
-else:
-?>
+
     <div class="container">
         <form action="form.php" method="POST" class="form">
             <div class="form-group">
