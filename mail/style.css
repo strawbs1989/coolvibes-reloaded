@@ -21,10 +21,10 @@ body{
 	width: 100%;
 	max-width: 600px;
 	margin:0 auto;
-  background: #09aad0;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
+  background: #09aad0;
 }
 .input-row{
   margin-bottom: 10px;
