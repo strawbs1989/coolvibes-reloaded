@@ -23,7 +23,7 @@ else:
 ?>
 <center><p>Track Information</p></center>
 <div class="container">
-        <form action="https://coolvibes-reloaded.com/mail/test/form" method="POST" class="form">
+        <form action="https://coolvibes-reloaded.com/mail/test/form.php" method="POST" class="form">
             <div class="form-group">
                 <label for="name" class="form-label">Your Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" tabindex="1" required>
