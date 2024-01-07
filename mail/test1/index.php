@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Requests</title>
-    <link rel="stylesheet" href="https://coolvibes-reloaded.com/mail/test/form.css" media="all">
+    <link rel="stylesheet" href="https://coolvibes-reloaded.com/mail/test1/form.css" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
-    <script src="https://coolvibes-reloaded.com/mail/test/main.js"></script>
+    <script src="https://coolvibes-reloaded.com/mail/test1/main.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@ else:
 ?>
 <center><p>Track Information</p></center>
 <div class="container">
-        <form action="https://coolvibes-reloaded.com/mail/test/form.php" method="POST" class="form">
+        <form action="https://coolvibes-reloaded.com/mail/test1/form.php" method="POST" class="form">
             <div class="form-group">
                 <label for="name" class="form-label">Your Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" tabindex="1" required>
