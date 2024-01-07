@@ -21,6 +21,7 @@ if(message_sent);
 <?php
 else:
 ?>
+<center><p>Track Information</p></center>
 <div class="container">
         <form action="https://coolvibes-reloaded.com/mail/test/form" method="POST" class="form">
             <div class="form-group">
