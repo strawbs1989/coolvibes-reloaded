@@ -1,0 +1,46 @@
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+body {
+background-color: #cccccc;
+}
+
+input[type=submit] {
+  width: 300%;
+  background: linear-gradient(to right, #ff3300 0%, #000000 100%);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background: linear-gradient(to right, #ff0000 0%, #000000 100%);
+}
+
+div {
+  border-radius: 5px;
+  background-color: #ffccff;
+  padding: 20px;
+}
+input[type=dedi], select {
+padding: 17px;
+border: 1px solid #4CAF50;
+}
+input[type=text], select {
+padding: 17px;
+border: 1px solid #4CAF50;
+body {
+color: white;
+}
+
+input[type=text], select {
+padding: 17px;
+border: 1px solid #4CAF50;
+body {
+color: white;
+}
