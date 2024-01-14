@@ -1,9 +1,9 @@
 <?php
 
 if (isset($_POST['dedicate'])) {
-$artist =$_POST[artist];
-$artist_song =$_POST['artist_song'];	
-$artist_song =$_POST[artist_song];	
+$name =$_POST[name];
+$artistname =$_POST[artistname];	
+$artist_song =$_POST[artisttrack];	
 $dedication =$_POST[dedication];	
 $headers =$_POST[headers];
 
@@ -14,3 +14,4 @@ $txt = "You Have received an email from ".$name.".\n\n".$message;
 mail($mailTo, $subject, $txt, $headers);
 header("Location: coolvibes-reloaded.com/songreq/index.php?mailsent");	
 }
+?>
