@@ -22,13 +22,18 @@ if ($sent) {
 
 ?><html>
 <head>
-<title>Thank You</title>
+<title>Success</title>
 </head>
 <body>
-<h1>Thank You</h1>
-<p>Thank you for your feedback.</p>
+<h1>Request successful</h1>
+<p>should play shortly.</p>
 </body>
 </html>
+<body>
+<h1>Note:</h1>
+<p>The DJ might also read your 
+dedication over the air.</p>
+</body
 <?php
 
 } else {
