@@ -10,7 +10,7 @@ $mailTo= "coolvibes1989@gmail.com";
 $headers = "From: ".$mailFrom;
 $txt = "You Have received an email from ".$name.".\n\n".$message;
 
-mail($mailTo, $subject, $txt, $headers);
+mail($mailTo, $name, $txt, $headers);
 header("Location: coolvibes-reloaded.com/songreq/index.php?mailsent");	
 
 ?>
