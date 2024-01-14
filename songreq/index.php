@@ -12,5 +12,5 @@ $headers = "From: ".$mailFrom;
 $txt = "You Have received an email from ".$name.".\n\n".$message;
 
 mail($mailTo, $subject, $txt, $headers);
-header("Location: index.php?mailsent");	
+header("Location: coolvibes-reloaded.com/songreq/index.php?mailsent");	
 }
