@@ -14,7 +14,7 @@ return preg_replace('/[nr|!/<>^$%*&]+/','',$form_field);
 
 
 #Send email
-$headers = "From: jay@requests.cu.ma";
+$headers = "From: jayaubs89@gmail.com";
 $sent = mail('coolvibes1989@gmail.com', $your_name, $track_name, $artist_name, $dedication);
 
 #Thank user or notify them of a problem
