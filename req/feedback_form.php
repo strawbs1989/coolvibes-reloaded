@@ -29,11 +29,6 @@ if ($sent) {
 <p>should play shortly.</p>
 </body>
 </html>
-<body>
-<h1>Note:</h1>
-<p>The DJ might also read your 
-dedication over the air.</p>
-</body
 <?php
 
 } else {
