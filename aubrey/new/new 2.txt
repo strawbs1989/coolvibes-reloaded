@@ -1,0 +1,14 @@
+<html>
+<body>
+
+Thank You <?php echo $_POST["name"]; ?><br>
+Request successful and should play shortly: <?php echo $_POST["request"]; ?>
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>

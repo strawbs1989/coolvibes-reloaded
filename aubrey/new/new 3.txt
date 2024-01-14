@@ -1,0 +1,7 @@
+<?php
+else;
+?>
+
+	<?php if ($success_message): ?>
+    <h3>Request successful and should play shortly</h3>
+<?php endif; ?>
