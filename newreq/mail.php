@@ -2,8 +2,8 @@
  
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use newreq\phpmailer\src\PHPMailer;
+use newreq\phpmailer\src\Exception;
  
 //required files
 require 'newreq/phpmailer/src/Exception.php';
