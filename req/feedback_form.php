@@ -1,9 +1,10 @@
 <?php
 
 #Receive user input
-$your_name = $_POST['your_name'];
-$track_name = $_POST['track_name'];
-$artist_name = $_POST['artist_name'];
+$yourname = $_POST['yourname'];
+$subject = $_POST['subject'];
+$trackname = $_POST['trackname'];
+$artistname = $_POST['artistname'];
 $dedication = $_POST['dedication'];
 
 #Filter user input
@@ -15,7 +16,7 @@ return preg_replace('/[nr|!/<>^$%*&]+/','',$form_field);
 
 #Send email
 $headers = "From: jayaubs89@gmail.com";
-$sent = mail('coolvibes1989@gmail.com', $your_name, $track_name, $artist_name, $dedication);
+$sent = mail('coolvibes1989@gmail.com', $yourname, $subject, $trackname, $artistname, $dedication);
 
 #Thank user or notify them of a problem
 if ($sent) {
