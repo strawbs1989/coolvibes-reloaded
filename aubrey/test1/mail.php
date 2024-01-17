@@ -1,8 +1,8 @@
 <?php
 
-$yourName = $_POST['name'];
-$trackName = $_POST['track'];
-$artistName = $_POST['artist'];
+$name = $_POST['name'];
+$track = $_POST['track'];
+$artist = $_POST['artist'];
 $message = $_POST['message'];
 
 $mailheader = "From:".$name."<".$email.">\r\n";
