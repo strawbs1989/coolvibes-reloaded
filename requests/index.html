@@ -1,12 +1,6 @@
 <html lang="en">
 <head>
-<script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk'
-        });
-      };
-    </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <body>
 <!-- Required meta tags -->
 	    <meta charset="utf-8">
@@ -15,7 +9,7 @@
 <link href="https://www.coolvibes-reloaded.com/requests/style.css" rel="stylesheet">
 
 <form action="https://api.web3forms.com/submit" method="POST">
-
+<div class="g-recaptcha" data-sitekey="6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk"></div>
 
 
     <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
@@ -48,22 +42,14 @@
 
                         <textarea rows="5" name="dedication" id="dedication" placeholder="Your Dedication" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
                     </div>
-					<div><script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk'
-        });
-      };
-    </script></div>
+					
 					
     <input type="hidden" name="redirect" value="https://www.coolvibes-reloaded.com/requests/success.html">
     <button type="submit">Submit Form</button>
     
 </form>
 
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
+	
 </head>
 </body>
 </html>
