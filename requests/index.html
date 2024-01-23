@@ -1,25 +1,22 @@
-<html lang="en">
-<head>
-<body>
-<!-- Required meta tags -->
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<html>
+  <head>
+  <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk'
+        });
+      };
+    </script>
+  </head>
+  <body>
+
 <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
-<link href="https://www.coolvibes-reloaded.com/requests/style.css" rel="stylesheet">
-
 <form action="https://api.web3forms.com/submit" method="POST">
+<div id="html_element"></div>
 
-<script src="/js/init.js"></script>
-
-    <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
-    <div class="text-center">
-                <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
-                    Track Information
-                </h1>
-                <p class="text-gray-600 dark:text-gray-400">
-                    Submit Your Favorite Tune!
-                </p>
-            </div>
+    <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5">
     <div class="mb-6">
                         <label for="name" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Full Name</label>
                         <input type="text" name="name" id="name" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
@@ -41,10 +38,16 @@
 
                         <textarea rows="5" name="dedication" id="dedication" placeholder="Your Dedication" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
                     </div>
-    <input type="hidden" name="redirect" value="https://www.coolvibes-reloaded.com/requests/success.html">
+    <input type="hidden" name="redirect" value="https://coolvibes-reloaded.ssite.link/req/success.html">
     <button type="submit">Submit Form</button>
-
-</form>
-</head>
-</body>
-</html>
+       </form>
+	   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+	<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk'
+        });
+      };
+    </script>
