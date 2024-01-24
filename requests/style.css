@@ -3,12 +3,16 @@
     margin: 1em 2em;
   }
 }
-.success {
-border: 6px solid #000000;
-padding: 10px;
-background: #EEFFEE;
-margin: 10px;
-}
+.box { 
+  text-align: center;
+  border: 3px solid blue; 
+  border-top: 4px solid rgb(60, 146, 60); 
+  border-top: 5px solid rgb(0, 0, 0); 
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 10px; 
+  padding: 1px;
+            
+		}
 
 h1 {
 text-align: center;
