@@ -21,10 +21,7 @@
                     Submit Your Favorite Tune!
                 </p>
             </div>
-			<div class="header">
-						<a href="#default" class="logo">CompanyLogo</a>
-                   <div class="header-center" input type="hidden">
-                    </div>
+			
 			<div class="mb-6">
 						<input type="hidden" name="subject" value="SongRequests">
                     </div>
@@ -33,13 +30,17 @@
                         <input type="text" name="name" id="name" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
     <div class="mb-6">
-                        <label for="track" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Track Name</label>
-                        <input type="text" name="trackname" id="trackname" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        <label for="track" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Track & Artist Name</label>
+                        <input type="text" name="trackname" id="trackname" placeholder="Ex: Plan B She Said" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
-					<div class="mb-6">
-                        <label for="artist" class="text-sm mb-2 font-medium text-gray-600 dark:text-gray-400">Artist Name</label>
-                        <input type="text" name="artist" id="artist" placeholder="ex: Metallica" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
+					<label for="djs" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />Choose A DJ:</label>
+					<select name="djs" id="djs">
+					<option value="volvo">Classic Kat</option>
+					<option value="saab">Strawbs</option>
+					<option value="opel">Dale</option>
+					<option value="audi">Jon</option>
+					<option value="audi">Simon</option>
+				  </select>
                     <div class="mb-6">
                     <label for="from_name" class="text-sm mb-2 font-medium text-gray-600 dark:text-gray-400">Requestee</label>
                     <input type="text" name="from_name" id="from_name" value="CoolvibesReloaded" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />

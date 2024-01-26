@@ -18,3 +18,9 @@ h1 {
 text-align: center;
 color: #fff;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+}
