@@ -25,31 +25,37 @@
 			<div class="mb-6">
 						<input type="hidden" name="subject" value="SongRequests">
                     </div>
-    <div class="mb-6">
-                        <label for="name" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Full Name</label>
-                        <input type="text" name="name" id="name" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-    <div class="mb-6">
-                        <label for="track" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Track & Artist Name</label>
-                        <input type="text" name="trackname" id="trackname" placeholder="Ex: Plan B She Said" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-					<label for="djs" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />Choose A DJ:</label>
-					<select name="djs" id="djs">
-					<option value="volvo">Classic Kat</option>
-					<option value="saab">Strawbs</option>
-					<option value="opel">Dale</option>
-					<option value="audi">Jon</option>
-					<option value="audi">Simon</option>
-				  </select>
-                    <div class="mb-6">
-                    <label for="from_name" class="text-sm mb-2 font-medium text-gray-600 dark:text-gray-400">Requestee</label>
-                    <input type="text" name="from_name" id="from_name" value="CoolvibesReloaded" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label for="dedication" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Dedication</label>
-
-                        <textarea rows="5" name="dedication" id="dedication" placeholder="Your Dedication" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
-                    </div>
+					
+					<input type="hidden" name="from_name" value="CoolVibes Requests">
+			
+    <label for="from">From:</label><br>
+	<input type="text" class="box" name="from" id="from" required />
+  
+  <br>
+  <label for="text">To:</label><br>
+  <input type="text" name="to" id="to" pattern="[a-z]{4,8}" />
+  <p>To must be lowercase and 4-8 characters in length.</p>
+  
+  <br>
+  <label for="dj">Choose A DJ:</label><br>
+  <select name="djs" id="djs" required />
+    <option value="dj kat">Classic Kat</option>
+    <option value="dj strawbs">Strawbs</option>
+    <option value="dj dale">Dale</option>
+    <option value="dj jon">Jon</option>
+    <option value="dj simon">Simon</option>
+  </select>
+  <br>
+  <br>
+  <label for="text">Message:</label><br>
+  <input type="text" name="message" id="message" required />
+  
+  
+  <br>
+  <label for="song request">Song Request:</label><br>
+  <input type="text" name="songrequest" placeholder="Ex Plan b She Said" id="songrequest" rows="3" cols="30">
+  
+  <br><br>
 					
 					
     <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/success">
