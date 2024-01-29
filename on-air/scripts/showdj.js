@@ -32,7 +32,7 @@
 
             if (hr === 17) // 17:00 - 17:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/djbunny.jpg';
-				txt = 'https://coolvibes-reloaded.com/req/index.html" target="_blank">Tuesday at 5 PM<br>Requests With<br>With Bunny</a>';
+				txt = 'https://coolvibes-reloaded.com/req/" target="_blank">Tuesday at 5 PM<br>Requests With<br>With Bunny</a>';
             break;
         case 3: // Wednesday
             if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
@@ -40,7 +40,7 @@
 
             if (hr === 15) // 15:00 - 15:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/djbunny.jpg';
-				txt = '<a href="https://coolvibes-reloaded.com/req/index.html" target="_blank">Wednesday at 3 PM<br>Requests<br>With Bunny</a>';
+				txt = '<a href="https://coolvibes-reloaded.com/req/" target="_blank">Wednesday at 3 PM<br>Requests<br>With Bunny</a>';
             break;
         case 4: // Thursday
             if (hr === 21) // 21:00 - 21:59 - 60 minutes - 1 hour
@@ -49,19 +49,19 @@
 
             if (hr === 16) { // 16:00 - 16:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/djbunny.jpg';
-                txt = '<a href="https://coolvibes-reloaded.com/req/index.html" target="_blank">Thurday at 4 PM<br>Requests With<br>With Bunny</a>';
+                txt = '<a href="https://coolvibes-reloaded.com/req/" target="_blank">Thurday at 4 PM<br>Requests With<br>With Bunny</a>';
             }
             break;
         case 5: // Friday
             if (hr === 13 || hr === 14) { // 13:00 - 14:59 - 2 hours
                 dj.src = 'djimages/djbunny.jpg';
-                txt = '<a href="https://coolvibes-reloaded.com/req/index.html" target="_blank">Friday at 1 PM<br>Requests With<br>With Bunny</a>';
+                txt = '<a href="https://coolvibes-reloaded.com/req/" target="_blank">Friday at 1 PM<br>Requests With<br>With Bunny</a>';
             }
             break;
         case 6: // Saturday
             if (hr === 2 || hr === 3) { // 2:00 - 3:59 - 2 hours
                 dj.src = 'djimages/djbunny.jpg';
-                txt = '<a href="https://coolvibes-reloaded.com/req/index.html" target="_blank">Saturday at 2 AM<br>Requests With<br>With Bunny</a>';
+                txt = '<a href="https://coolvibes-reloaded.com/req/" target="_blank">Saturday at 2 AM<br>Requests With<br>With Bunny</a>';
             }
             break;
         case 0: // Sunday
