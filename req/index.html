@@ -1,36 +1,22 @@
-<html>
+<DOCTYPE HTML>
 <head>
-<meta charset="utf-8">
-<title>Requests</title>
-<link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
-<link rel="stylesheet" href="/req/style.css">
-<style>label{display:block;}</style>
-</head>
 <body>
+<title>Auto,Requests</title>
+<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
+<link href="https://coolvibes-reloaded.com/req/style.css" rel="stylesheet">
+<center><form class="cc_request_form" data-username="coolvibes">
+<div data-type="result"></div>
+Song artist: <input type="text"  name="request[artist]" size="40" maxlength="127" /><br />
+Song title: <input type="text"  name="request[title]" size="40" maxlength="127" /><br />
+Dedicated to: <input type="text"  name="request[dedication]" size="40" maxlength="127" /><br />
+Your name: <input type="text"  name="request[sender]" size="40" maxlength="127" /><br />
+Your E-mail: <input type="text"  name="request[email]" size="40" maxlength="127" /><br />
+<input type="button" value="Submit song request" data-type="submit" /><br />
+</form></center>
 
-
-<form action="/req/feedback_form.php" method="post">
-
-<label>Your Name</label>
-<input type="text" name="yourname" size="40">
-
-<label>Subject</label>
-<input type="text" name="subject" size="40">
-
-<label>Track Name</label>
-<input type="text" name="trackname" size="40">
-
-<label>Artist Name</label>
-<input type="text" name="artistname" size="40">
-
-
-<label>Dedication</label>
-<textarea name="dedication" cols="50" rows="10"></textarea>
-
-<input type="submit" name="send" value="Submit">
-
-
-</form>
-
+</head>
+<script language="javascript" type="text/javascript" src="https://boogie.vside-radio.com:2199/system/request.js"></script>
 </body>
-</html>

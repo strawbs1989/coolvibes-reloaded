@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Requests</title>
+<link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
+<link rel="stylesheet" href="/req/style.css">
+<style>label{display:block;}</style>
+</head>
+<body>
+
+
+<form action="/req/feedback_form.php" method="post">
+
+<label>Your Name</label>
+<input type="text" name="yourname" size="40">
+
+<label>Subject</label>
+<input type="text" name="subject" size="40">
+
+<label>Track Name</label>
+<input type="text" name="trackname" size="40">
+
+<label>Artist Name</label>
+<input type="text" name="artistname" size="40">
+
+
+<label>Dedication</label>
+<textarea name="dedication" cols="50" rows="10"></textarea>
+
+<input type="submit" name="send" value="Submit">
+
+
+</form>
+
+</body>
+</html>
