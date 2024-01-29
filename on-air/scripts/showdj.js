@@ -13,7 +13,7 @@
                 dj.src = 'djimages/kat.png';
                 txt = '<a href="https://coolvibes-reloaded.com/requests/" target=_blank">Monday at 8 AM<br>Requests With<br>DJ Kat</a>';
             if (hr === 22) { // 22:00 - 12:59 - 59 minutes - 2 hour
-                dj.src = 'djimages/djbunny.jpg';
+                
                 
             }
 
@@ -23,7 +23,7 @@
         case 2: // Tuesday
             if (hr === 8 && (mn >= 0 && mn <= 15)) // 8:00 - 8:15 - 15 minutes
                 dj.src = 'djimages/kat.png';
-
+                txt = '<a href="https://coolvibes-reloaded.com/requests/" target=_blank">Tuesday at 8 AM<br>Requests With<br>DJ Kat</a>';
             if (hr === 11) { // 11:00 - 11:59 - 60 minutes - 1 hour
                 dj.src = 'djimages/steve.jpg';
                 
