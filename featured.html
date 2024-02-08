@@ -14,6 +14,16 @@
 	</head>
 
 	<body>
+	<h1 style="color:blue;"></h1>
+	    <center><noscript>
+<p>JavaScipt need to be enabled for this page to function correctly</p>
+</noscript>
+
+
+
+<img id="dj" src="https://coolvibes-reloaded.com/on-air/images/off-air.png" alt="Off-line">
+
+<script src="https://coolvibes-reloaded.com/on-air/scripts/showdj.js"></script></center>
 	    <!-- Navbar -->
     <nav>
         <a class="navbar-brand" href="index.html">
@@ -37,7 +47,6 @@
                 <a href="/index.html" target="_blank">Home</a>
                 <a href="/birthday.html" target="_blank">Birthday</a>
                 <a href="/featured.html" target="_blank">Featured</a>
-                <a href="/schedule.html" target="_blank">Schedule</a>
                 <a href="/tunein.html" target="_blank">Tune In</a>
 				<a href="/just4fun.html" target="_blank">Just4Fun</a>
 				<a href="/mobile.html" target="_blank">Mobile</a>
@@ -47,158 +56,20 @@
 	    <center>
 	           <head>
 	                    
-	                        <title>Station Activity</title>
-    <style type="text/css">
-        td {
-    font-size: 0.6em;
-}
-
-/* temporary for testing purposes */
-#NowOn {
-    border: 0px solid black;
-    font-size: 11.5px;
-    font-family: future_now;
-    color: #00bcd4;
-    background: transparent;
-    height: 65px;
-    width: 350px;
-    position: absolute;
-    top: 30%; /* Adjust the top position to move it higher */
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-    </style>
-</head>
-<body onload="NowON()">
-    <div>
-        <p class="text-light">
-            <div id="content">
-                <!-- You can remove the <center> tags -->
-                We Spin All Types Of Variety
-            </div>
-            <!-- You can remove the extra <div> with the same id -->
-            <div id="NowOn"></div>
-        </p>
-    </div>
- </body>
- 
-    <script>
-        /* NOT CURRENTLY USED
-var thedate = new Date();
-var dayofweek = thedate.getDay();
-var hourofday = thedate.getHours();
-
-var GMT = new Date().getTimezoneOffset();
-var offsetGMT = +1 new Date().getTimezoneOffset()/01:00;
-*/
-	                        // Sun=0 1 2 3 4 5 Sat=6
-	                        var DayOfWeek = new Array('Weekend', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Weekend');
-	                        var NoShow = 'No Show Scheduled<br />for COOLVIBES';
-	                        var DH = new Array(7);
-	                        for (d = 0; d < 7; d++) {
-	                            DH[d] = new Array(24);
-	                            for (h = 0; h < 24; h++) {
-	                                DH[d][h] = '';
-	                            }
-	                        }
-	                        DH[1][10] = 'Monday at 10 AM<br>COOLVIBES-RELOADED<br>with auto';
-	                        DH[1][08] = 'Monday at 8 AM<br>Kayleys Theme<br>with kayley';
-	                        DH[1][12] = 'Monday at 12 PM<br>with Levis show<br>Monday at Noon<br>No Genre';
-	                        DH[1][14] = 'auto<br>with COOLVIBES-RELOADED<br>Monday at 2 PM<br>No Genre';
-	                        DH[1][16] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday at 4 PM<br>Rap';
-	                        DH[1][17] = 'The Greatest<br>with COOLVIBES-RELOADED<br>Monday at 5 PM<br>No Genre';
-	                        DH[1][18] = 'AUTOMIX Corner<br>with COOLVIBES-RELOADED<br>Monday at 6 PM<br>No Genre';
-	                        DH[1][20] = 'Daily automix<br>with COOLVIBES-RELOADED<br>Monday at 8 PM<br>No Genre';
-	                        DH[1][22] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday 10 to Midnight<br>No Genre';
-	                        DH[1][23] = 'No Show Name<br>with COOLVIBES-RELOADED<br>Monday at 11 PM<br>No Genre';
-	                        DH[2][20] = 'AutoMix<br>With COOLVIBES-RELOADED<br>Tuesday  8 PM to 10pm<br>Rock';
-	                        DH[2][08] = 'Kayleys Theme<br>with Kayley<br>Tuesday at 8 AM<br>Rock';
-	                        DH[2][16] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Tuesday at 4 PM<br>Rock';
-	                        DH[2][20] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Tuesday at 8 PM<br>No Genre';
-	                        DH[3][19] = 'Levis Show! Braap!<br>with DJ Levi<br>Wednesday at 7 PM<br>No Genre';
-	                        DH[3][10] = 'AutoMix Wednesdays<br>with COOLVIBES-RELOADED<br>Wednesday at 10 AM<br>No Genre';
-	                        DH[3][15] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday 3 to 5 PM<br>Classic Rock';
-	                        DH[3][16] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday at 4 PM<br>Classic Rock';
-	                        DH[3][22] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Wednesday at 10 PM<br>Rap';
-	                        DH[4][23] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Thursday Noon to 1 AM<br>mix';
-	                        DH[4][22] = 'Request Show<br>with Strawbs<br>Thursday 8 PM to 10pm<br>Mix n Match';
-	                        DH[4][13] = 'automix<br>with autodj<br>Thursday at 1 PM<br>mix';
-	                        DH[4][14] = 'AutoMix<br>with COOLVIBES-RELOADED<br>Thursday at 2 PM<br>No Genre';
-	                        DH[4][18] = 'Request Show<br>with DJ Strawbs<br>Thursday at 10 PM<br>No Genre';
-	                        DH[5][10] = 'Friday at 10 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[5][11] = 'Friday at 11 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[5][19] = 'Friday at Eve<br>G-Force<br>with DJ Reuben';
-	                        DH[5][10] = 'Friday at 10 AM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[5][09] = 'Friday at 9 AM<br>Mix n Match<br>AutoMix';
-	                        DH[5][14] = 'Friday at 2 PM<br>automix<br>with autodj';
-	                        DH[5][15] = 'Friday at 3 PM<br>automix<br>with autodj';
-	                        DH[5][16] = 'Friday at 4 PM<br>automix<br>with autodj';
-	                        DH[5][17] = 'Friday at 5 PM<br>automix<br>with autodj';
-	                        DH[5][19] = 'Friday at 7 PM<br>Mix n Match<br>AUTOMIX';
-	                        DH[5][22] = 'Friday at 10 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[5][23] = 'Friday at 11 PM<br>automix<br>with autodj';
-	                        DH[6][18] = 'Saturday at 6 PM<br>automix<br>with automix';
-	                        DH[6][19] = 'Saturday at 7 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[6][13] = 'Saturday at 1 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[6][10] = 'Saturday at 10 AM<br>mix<br>with COOLVIBES-RELOADED';
-	                        DH[6][23] = 'Saturday at 11 PM<br>mix<br>with COOLVIBES-RELOADED';
-	                        DH[0][18] = 'Sunday   at 18 PM<br>Request Show<br>with Strawbs';
-	                        DH[0][21] = 'Sunday   at 12 PM<br>AutoMix<br>with COOLVIBES-RELOADED';
-	                        DH[0][14] = 'Sunday   at 2 PM<br>G Force Reggae<br>with Reuben';
-	                        DH[0][13] = 'Sunday   at 1 PM<br>80s Show<br>with Rob';
-	                        // Add more when schedule is known. Note: there may be better ways to do this when information is known.
 	                        
-	                        // Call NowON() when the page loads
-                            function NowON() {
-                            var thedate = new Date();
-                            var dayofweek = thedate.getDay();
-                            var hourofday = thedate.getHours();
-                            var showOn = DH[dayofweek][hourofday];
-                            if (showOn == '') {
-                            showOn = thedate + '<p />No Show Scheduled';
-            }
-            document.getElementById('NowOn').innerHTML = showOn;
-        }
-    </script>
-	                </head>
-
-	                <BODY onLoad="NowON()"></BODY>
-	                <!-- Unhide this if table display desired
-<script type="text/javascript">
-document.write(TableStationSchedule())
-</script>
--->
-	                
-	            </center>
 
 	</html>
+	
+	    
+        <section>
+	    <center><center><body>
 
-	</html>
-	<section>
-	    <center><div class="container text-center">
-    <div class="audio-player" style="position: relative; display: inline-block;">
-        <button id="playAudio" class="btn btn-primary rounded-circle" style="width: 100px; height: 100px; font-size: 24px background-image: url("https://coolvibes-reloaded.com/img/favicon.png");">
-            <i class="fas fa-play"></i>
-        </button>
-        <audio id="testAudio" hidden src="http://boogie.vside-radio.com:8406/stream" type="audio/mpeg"></audio>
-        <script type="text/javascript">
-            document.getElementById("playAudio").addEventListener("click", function() {
-                var audio = document.getElementById('testAudio');
-                if (this.className.includes('is-playing')) {
-                    this.className = "btn btn-primary rounded-circle";
-                    this.innerHTML = '<i class="fas fa-play"></i>';
-                    audio.pause();
-                } else {
-                    this.className += " is-playing";
-                    this.innerHTML = '<i class="fas fa-pause"></i>';
-                    audio.play();
-                }
-            });
-        </script>
+<iframe src="https://coolvibes-reloaded.com/player" scrolling="no" style="border:none;"></iframe>
+</body>
+	    </center>
     </div>
 	    </center>
-	    <div align="center"><img alt="" src="https://coolvibes-reloaded.com/img/cool.jpg" id="img_4" style="position:center:0px;width:520px;height:114px;"></div>
+	    <div align="center"><img alt="" src="https://coolvibes-reloaded.com/img/valcool.jpg" id="img_4" style="position:center:0px;width:520px;height:114px;"></div>
 	</section>
 	<section>
 	    <div class="container d-flex justify-content-center gap100">
