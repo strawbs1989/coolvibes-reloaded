@@ -1,8 +1,16 @@
 	<html lang="en">
 	<head>
-	<meta name="google-site-verification" content="1xjlTUqvQWj7O7NHWofmVGDK78JsiuwMXj14tP7DuoA" />
-	<meta charset="uft-8">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="script.js"></script>
+	<script>
+	function onLoadCallback() {
+	grecaptcha.render('divRecaptcha', {
+	  sitekey:'6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk',
+	  callback: successCallback,
+	});
+	}
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?
+	onLoad=onLoadCallback&render=explicit" async defer></script>
 <body>
 <p class="solid">
 <!-- Required meta tags -->
@@ -81,9 +89,13 @@
 </body>
 <center></center>
 <center><button type="submit">Submit Form</button></center>
+<div id ="divRecaptcha" class="g-recaptcha"></div>
 </html>
  </tr>
+ 
  </table>
+ 
+ 
 
 		 
 		
