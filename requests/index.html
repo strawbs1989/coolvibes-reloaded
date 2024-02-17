@@ -90,6 +90,17 @@
 <center></center>
 <center><button type="submit">Submit Form</button></center>
 <div id ="divRecaptcha" class="g-recaptcha"></div>
+<script src="https://coolvibes-reloaded.com/requests/script.js"></script>
+	<script>
+	function onLoadCallback() {
+	grecaptcha.render('divRecaptcha', {
+	  sitekey:'6LeJTFopAAAAAHzmqVJLwy0x33w6YGgvq7YpSmjk',
+	  callback: successCallback,
+	});
+	}
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?
+	onLoad=onLoadCallback&render=explicit" async defer></script>
 </html>
  </tr>
  
