@@ -45,7 +45,7 @@
               if (response.status == 200) {
                 result.innerHTML = json.message;
                 result.classList.remove("text-gray-500");
-                result.classList.add("text-green-500");
+                result.classList.add("text-pink-500");
               } else {
                 console.log(response);
                 result.innerHTML = json.message;
