@@ -1,25 +1,4 @@
-
-	<html lang="en">
-	<head>
-	
-
-<body>
-<p class="solid">
-<!-- Required meta tags -->
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
-<link href="https://coolvibes-reloaded.com/requests/test/style.css" rel="stylesheet">
-<link href="https://coolvibes-reloaded.com/requests/style1.css" rel="stylesheet">
-<script src="https://coolvibes-reloaded.com/requests/test/script.js"></script>
-
-
-
-
-
-
-    
-    <!-- 
+<!-- 
     =======================================================================
 
     This is a working contact form. To receive email, 
@@ -37,13 +16,11 @@
         <h1
           class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
         >
-          Track Information
+          Track Info
         </h1>
-        <h1
-          class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
-        >
-          Submit You're Favorite Tune
-        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+          Submit You're Favorite Tune!!
+        </p>
       </div>
       <div class="m-7">
         <form
@@ -53,7 +30,7 @@
           class="needs-validation"
           novalidate
         >
-          <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d" />
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
           <input
             type="hidden"
             name="subject"
@@ -63,52 +40,68 @@
 
           <div class="flex mb-6 space-x-4">
             <div class="w-full md:w-1/2">
-              
+              <label
+                for="fname"
+                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                >From:</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="first_name"
+                
+                required
+                class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              />
               <div
                 class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
               >
-                Please provide your first name.
+                
               </div>
             </div>
             <div class="w-full md:w-1/2">
               <label
                 for="lname"
                 class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >From</label
+                >To:</label
               >
               <input
                 type="text"
                 name="last_name"
                 id="lname"
-                placeholder="Requestee"
+                
                 required
                 class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
               />
               <div
                 class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
               >
-                Please provide your last name.
+                
               </div>
             </div>
           </div>
 
           <div class="flex mb-6 space-x-4">
             <div class="w-full md:w-1/2">
+			
               <label
-                for="to"
+                
                 class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >To</label
-              >
-              <input
-                type="to"
-                name="to"
-                id="to"
-                placeholder="friend or family"
-                required
-                class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
+                >DJ Select:</label
+              
+                
+		 <th><select name="djs" id="djs" required>
+    <option value="dj kat">Classic Kat</option>
+    <option value="dj strawbs">Strawbs</option>
+    <option value="dj dale">Dale</option>
+    <option value="dj jon">Jon</option>
+    <option value="dj simon">Simon</option>
+  </select>
+  </th>
+  <tr>
+             
               <div class="empty-feedback text-red-400 text-sm mt-1">
-                Specify Who The Request Is Aimed At
+                
               </div>
               <div class="invalid-feedback text-red-400 text-sm mt-1">
                 
@@ -117,24 +110,23 @@
 
             <div class="w-full md:w-1/2">
               <label
-                for="djselect"
+                for="phone"
                 class="block text-sm mb-2 text-gray-600 dark:text-gray-400"
-                >Select A DJ</label
+                >Phone Number</label
               >
-              
-		 <th><select name="djs" id="djs" required>
-    <option value="dj kat">Classic Kat</option>
-    <option value="dj strawbs">Strawbs</option>
-    <option value="dj dale">Dale</option>
-    <option value="dj jon">Jon</option>
-    <option value="dj simon">Simon</option>
-    </select>
-    </th>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+1 (555) 1234-567"
+                required
+                class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              />
 
               <div
                 class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
               >
-                
+                Please provide your phone number.
               </div>
             </div>
           </div>
@@ -145,51 +137,31 @@
               >Your Message</label
             >
 
-            
-  <th><div class="col-2"><input type="text" class="box2"></input></div>
-        </div></th>
-  </tr>
-  <tr>
-  <th>Song Request</th>
-  <th><input type="text" name="songrequest" placeholder="Ex Plan b She Said" id="songrequest" rows="3" cols="30"></th>
-  </tr>
-  <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/test/success">
-  
+            <textarea
+              rows="5"
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              required
+            ></textarea>
             <div
               class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
             >
-              
+              Please enter your message.
             </div>
           </div>
-          
+          <div class="mb-6">
+            <button
+              type="submit"
+              class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+            >
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
         </form>
       </div>
     </div>
   </div>
 </div>
-   
-    
-</form>
-
-
-	
-</head>
-</body>
-
-
-
-<center><button type="submit">Submit Form</button></center>
-
-
-</html>
- 
- 
-
- 
- 
-
-		 
-		
-		 
-
-
