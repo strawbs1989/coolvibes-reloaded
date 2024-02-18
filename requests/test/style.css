@@ -1,126 +1,134 @@
-
-
 @media screen and (min-width: 80rem) {
-  .container {
-    margin: 1em 2em;
-	
-	
-  }
-}
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    .container {
+        margin:1em 2em
+    }
 }
 
-body{
-  
-  align-items: center;
-  justify-content: center;
-  min-height: 10vh;
-  padding: 10px;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(115deg, #003366 10%, #00ffff 100%);
-  color: #000000;
+@import 'https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap';* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif
 }
-	
+
+body {
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    padding: 10px;
+    font-family: poppins,sans-serif;
+    background: linear-gradient(to bottom, #000000 0%, #00ffff 100%);
+    /* color: #bfffbf; */
+}
 
 div.a {
-  height: auto;
-  border: 1px solid black;
+    height: auto;
+    border: 1px solid #fdfafa
 }
 
-table, th, td {
-	border: 1px solid black;
-  	border-collapse: collapse;
+table,th,td {
+    border: 1px solid #f8f3f3;
+    border-collapse: collapse
 }
-th, td {
-  	padding: 10px;
+
+th,td {
+    padding: 10px
 }
+
 th {
-  	background-color: #bfbfbf;
+    background-color: #bfbfbf
 }
+
 th:nth-child(2) {
-  	background-color: #a6a6a6;
+    background-color: #a6a6a6
 }
+
 colgroup {
-  	width: 250px;
-}
-
-
-
-
-
-
-.container{
-  
-  background: transparent;
-  padding: 25px 40px 10px 40px;
-  
-  padding: 25px 40px 10px 40px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-.container .text{
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  background: -webkit-linear-gradient(right, #bfbfbf, #000, #bfbfbf, #000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.container form{
-  padding: 10px 0 0 0;
-}
-.container form .form-row{
-  display: flex;
-  margin: 32px 0;
-}
-form .form-row .input-data{
-  width: 100%;
-  height: 40px;
-  margin: 0 20px;
-  position: relative;
-}
-form .form-row .textarea{
-  height: 70px;
-}
-
-.textarea textarea{
-  resize: none;
-  padding-top: 10px;
-}
-
-.box { 
-  text-align: center;
-  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.2); 
-  border-radius: 0px; 
-  background-color: #6699ff;
-  
-  }
-
-.box2 { 
-  text-align: center;
-  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.2); 
-  border-radius: 0px; 
-  background-color: #6699ff;
-  
-  }
-		
-		
-
-
-h1 {
-text-align: center;
-color: #fff;
+    width: 250px
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
+    background: 0 0;
+    padding: 25px 40px 10px;
+    padding: 25px 40px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1)
 }
 
+.container .text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: poppins,sans-serif;
+    background: -webkit-linear-gradient(right,#bfbfbf,#fff,#bfbfbf,#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.container form {
+    padding: 10px 0 0
+}
+
+.container form .form-row {
+    display: flex;
+    margin: 32px 0
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative
+}
+
+form .form-row .textarea {
+    height: 70px
+}
+
+.textarea textarea {
+    resize: none;
+    padding-top: 0px
+}
+
+.box {
+    text-align: center;
+    box-shadow: 4px 2px 10px rgba(0,0,0,.2);
+    border-radius: 0;
+    background-color: #0066ff;
+}
+
+.box2 {
+    text-align: center;
+    box-shadow: 4px 2px 10px rgba(0,0,0,.2);
+    border-radius: 0;
+    background-color: #69f
+}
+
+h1 {
+    text-align: center;
+    color: #fff
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
+}
