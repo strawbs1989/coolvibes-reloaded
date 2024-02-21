@@ -1,182 +1,77 @@
-<html>
+<html lang="en">
+<head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<body>
 <!-- Required meta tags -->
-	    
-		<header>
-		<meta charset="utf-8">
+	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
-<link href="https://coolvibes-reloaded.com/requests/test/style.css" rel="stylesheet">
-<script src="https://coolvibes-reloaded.com/requests/test/script.js"></script>
-<script src="https://coolvibes-reloaded.com/requests/test/mail.php"></script>
-</header>
-<body>
+<link href="https://www.coolvibes-reloaded.com/requests/style.css" rel="stylesheet">
 
-<div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
-  <div class="container mx-auto">
-    <center><div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-      <div class="text-center">
-        <h1
-          class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
-        >
-          Track Info
-        </h1>
-		<h2
-          class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200"
-        >
-          Submit You're Favorite Tune!!
-        </h2>
-        
-      </div>
-      <div class="m-7">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          id="form"
-          class="needs-validation"
-          novalidate
-        >
-          <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d" />
-          <input
-            type="hidden"
-            name="subject"
-            value="New Request"
-          />
-		  <input
-		  type="hidden"
-		  name="from_name"
-		  value="CoolvibesRequests"
-		  />
-          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+<form action="https://api.web3forms.com/submit" method="POST">
 
-          <div class="flex mb-6 space-x-4">
-            <div class="w-full md:w-1/2">
-              <label
-                for="fname"
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >From:</label
-              >
-              <input
-                type="text"
-                name="name"
-                id="first_name"
-                
-                required
-                class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
-              <div
-                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
-              >
-                
-              </div>
+
+
+    <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
+    <div class="text-center">
+                <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
+                    Track Information
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Submit Your Favorite Tune!
+                </p>
             </div>
-            <div class="w-full md:w-1/2">
-              <label
-                for="lname"
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >To:</label
-              >
-              <input
-                type="text"
-                name="last_name"
-                id="lname"
-                
-                required
-                class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
-              <div
-                class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
-              >
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="flex mb-6 space-x-4">
-            <div class="w-full md:w-1/2">
 			
-              <label
-                
-                class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                >DJ Select:</label
-              
-                
-		 <th><select name="djs" id="djs" required>
+			<div class="mb-6">
+						<input type="hidden" name="subject" value="SongRequests">
+                    </div>
+					
+					<input type="hidden" name="from_name" value="CoolVibes Requests">
+			
+    <label for="from">From:</label><br>
+	<input type="text" class="box" name="from" id="from" required />
+  
+  <br>
+  <label for="text">To:</label><br>
+  <input type="text" name="to" id="to" pattern="[a-z]{4,8}" />
+  <p>To must be lowercase and 4-8 characters in length.</p>
+  
+  <br>
+  <label for="dj">Choose A DJ:</label><br>
+  <select name="djs" id="djs" required />
     <option value="dj kat">Classic Kat</option>
     <option value="dj strawbs">Strawbs</option>
     <option value="dj dale">Dale</option>
     <option value="dj jon">Jon</option>
     <option value="dj simon">Simon</option>
-	<option value="dj twist">Christina</option>
   </select>
-  </th>
-  <tr>
-             
-              <div class="empty-feedback text-red-400 text-sm mt-1">
-                
-              </div>
-              <div class="invalid-feedback text-red-400 text-sm mt-1">
-                
-              </div>
-            </div>
+  <br>
+  <br>
+  <label for="text">Message:</label><br>
+  <input type="text" name="message" id="message" required />
+  
+  
+  <br>
+  <label for="song request">Song Request:</label><br>
+  <input type="text" name="songrequest" placeholder="Ex Plan b She Said" id="songrequest" rows="3" cols="30">
+  
+  <br><br>
+					
+					
+    <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/success">
+    <button type="submit">Submit Form</button>
+  <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>  
+</form>
 
-            
-          </div>
-          <div class="mb-6">
-            <label
-              for="message"
-              class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-              >Dedication:</label
-            >
-
-            <textarea
-              rows="2"
-              name="message"
-              id="message"
-              placeholder="Who Do You Wish To Dedicate To?"
-              class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              required
-            ></textarea>
-            <div
-              class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
-            >
-              Please enter your message.
-            </div>
-          </div>
-		  
-		  <div class="mb-6">
-            <label
-              for="message"
-              class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-              ></label
-            >
-
-            <textarea
-              rows="3"
-              name="message"
-              id="message"
-              placeholder="Ex Plan B She Said"
-              class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              required
-            ></textarea>
-            <div
-              class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
-            >
-              
-            </div>
-          </div>
-		  <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/success">
-          <div class="mb-6">
-            <center><button
-              type="submit"
-              class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-            >
-              Submit Request!!!
-            </button></center>
-          </div>
-          <p class="text-base text-center text-gray-400" id="result"></p>
-        </form>
-      </div>
-    </div></center>
-  </div>
-</div>
+	
+</head>
 </body>
+<button class="g-recaptcha" 
+        data-sitekey="6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+</html>
