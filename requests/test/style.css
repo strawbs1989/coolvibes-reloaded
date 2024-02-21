@@ -94,13 +94,12 @@ form .form-row .textarea{
   padding-top: 10px;
 }
 
-.box { 
-  text-align: center;
-  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.2); 
-  border-radius: 0px; 
-  background-color: #6699ff;
-  
-  }
+.box {
+    text-align: left;
+    box-shadow: 4px 2px 10px rgba(0,0,0,.2);
+    border-radius: 6;
+    background-color: #efefef;
+}
 
 .box2 { 
   text-align: center;
