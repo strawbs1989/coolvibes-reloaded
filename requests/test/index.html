@@ -11,7 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://coolvibes-reloaded.com/requests/test/script.js"></script>
-  <script src="https://web3forms.com/client/script.js" async defer></script>
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	    
 	    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
@@ -24,9 +23,8 @@
 <link href="https://coolvibes-reloaded.com/requests/test/style.css" rel="stylesheet">
 
 <form action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG">
 <img src="https://coolvibes-reloaded.com/img/favicon.png" width="100px" height="100px">
-<img src="cid:1pBI2sAnDXor8ObN6v6NN3zIiYs45vaTB" width="100px" height="100px"/>
+
 
 
     
@@ -79,20 +77,24 @@
 					
 					
     <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/test/success">
-    <div class="h-captcha" data-captcha="true"></div>
-    
-    <button type="submit">Request It</button>
+    <button type="submit">Submit Form</button>
   
 </form></center>
 
-	
+	<form action="https://api.web3forms.com/submit" method="POST">
     
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
     
+    <! -- Step 1: Add this line -->
+    <div class="h-captcha" data-captcha="true"></div>
     
+    <button type="submit">Submit Form</button>
 </form>
 
-
-
+<! -- Step 2: Add the script -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </head>
 </body>
 
