@@ -12,7 +12,7 @@
 <form action="https://api.web3forms.com/submit" method="POST">
 <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
 <img src="https://coolvibes-reloaded.com/img/favicon.png" width="100px" height="100px">
-
+ <script src="https://www.google.com/recaptcha/api.js"></script>
     
     <center><div class="text-center">
                 <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
@@ -67,14 +67,11 @@
 	
     
 </form>
-<script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
-</script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
-</script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("requests").submit();
+   }
+ </script>
 	
 </head>
 </body>
