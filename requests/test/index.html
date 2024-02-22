@@ -64,12 +64,12 @@
     <button class="g-recaptcha" 
         data-sitekey="6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG" 
         data-callback='onSubmit' 
-		data-action='submit'>Request It</button>
+        data-action='submit'>Submit</button>
 	
     
 </form>
  <script>
-   function onSubmit('6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG') {
+   function onSubmit(token) {
      document.getElementById("requests").submit();
    }
  </script>
