@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <body>
 <!-- Required meta tags -->
 
@@ -8,11 +8,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
 <link href="https://coolvibes-reloaded.com/requests/test/style.css" rel="stylesheet">
- <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-<form action="https://api.web3forms.com/submit" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST" action="req.php">
 <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
 <img src="https://coolvibes-reloaded.com/img/favicon.png" width="100px" height="100px">
- <script src="https://www.google.com/recaptcha/api.js"></script>
+ 
     
     <center><div class="text-center">
                 <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
@@ -64,14 +63,14 @@
     <button class class="g-recaptcha" 
         data-sitekey="6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG" 
         data-callback='onSubmit' data-action='submit'>Request It</button>
-	
-    
-</form>
- <script>
+	    <script>
    function onSubmit(token) {
-     document.getElementById("demo-form").submit();
+     document.getElementById("req").submit();
    }
  </script>
+    
+</form>
+ 
 	
 </head>
 </body>
