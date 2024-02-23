@@ -110,8 +110,8 @@ form .form-row .textarea{
   }
 		
 button {
-    background-image: url("https://coolvibes-reloaded.com/img/button.png");
-    background-color: #cccccc;
+    background: linear-gradient(to top left, #cc33ff 0%, #003366 100%);
+    background-color: #ef0808;
     padding-right: 30px;
     padding-left: 30px;
 }		
