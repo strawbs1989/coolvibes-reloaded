@@ -109,7 +109,12 @@ form .form-row .textarea{
   
   }
 		
-		
+button {
+    background-color: #d0cfcf;
+    background-color: #ef0808;
+    padding-right: 30px;
+    padding-left: 30px;
+}		
 
 
 h1 {
