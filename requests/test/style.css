@@ -111,11 +111,26 @@ form .form-row .textarea{
 		
 button {
     background: linear-gradient(to top left, #cc33ff 0%, #003366 100%);
-    background-color: #ef0808;
+    
+	color: #fff;
     padding-right: 30px;
     padding-left: 30px;
 }		
 
+button {
+  color: #1d1d1d;
+  color: #fff;
+  background-color: #efefef;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
 
 h1 {
 text-align: center;
