@@ -1,73 +1,88 @@
-(function () {
-  "use strict";
-  /*
-   * Form Validation
-   */
+import React from "react";
+import { useForm } from "react-hook-form";
+import Script from "next/script";
 
-  // Fetch all the forms we want to apply custom validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-  const result = document.getElementById("result");
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
+function App() {
+  const { register, handleSubmit, setValue } = useForm();
+  const [result, setResult] = React.useState("");
+  const [captchatoken, setCaptchaToken] = React.useState("");
 
-          form.querySelectorAll(":invalid")[0].focus();
-        } else {
-          /*
-           * Form Submission using fetch()
-           */
-
-          const formData = new FormData(form);
-          event.preventDefault();
-          event.stopPropagation();
-          const object = {};
-          formData.forEach((value, key) => {
-            object[key] = value;
-          });
-          const json = JSON.stringify(object);
-          result.innerHTML = "Please wait...";
-
-          fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-            body: json
-          })
-            .then(async (response) => {
-              let json = await response.json();
-              if (response.status == 200) {
-                result.innerHTML = json.message;
-                result.classList.remove("text-gray-500");
-                result.classList.add("text-pink-500");
-              } else {
-                console.log(response);
-                result.innerHTML = json.message;
-                result.classList.remove("text-gray-500");
-                result.classList.add("text-red-500");
-              }
-            })
-            .catch((error) => {
-              console.log(error);
-              result.innerHTML = "Something went wrong!";
-            })
-            .then(function () {
-              form.reset();
-              form.classList.remove("was-validated");
-              setTimeout(() => {
-                result.style.display = "none";
-              }, 5000);
-            });
-        }
-        form.classList.add("was-validated");
-      },
-      false
-    );
+  React.useEffect(() => {
+    setValue("recaptcha_response", captchatoken);
   });
-})();
+
+  const onSubmit = async (data) => {
+    console.log(data);
+
+    setResult("Sending....");
+    const formData = new FormData();
+
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    for (const key in data) {
+      if (key === "file") {
+        formData.append(key, data[key][0]);
+      } else {
+        formData.append(key, data[key]);
+      }
+    }
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      setResult(res.message);
+    } else {
+      console.log("Error", res);
+      setResult(res.message);
+    }
+  };
+
+  return (
+    <div className="App">
+      <h1>React Hook Form File Upload</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" placeholder="Name" {...register("name")} />
+        <br />
+        <br />
+        <input type="email" placeholder="Email" {...register("email")} />
+        <br />
+        <br />
+        <input type="file" {...register("file")} />
+        <br />
+        <input
+          type="hidden"
+          {...register("recaptcha_response")}
+          id="recaptchaResponse"
+        />
+        <br />
+        <input type="submit" />
+      </form>
+      <br />
+      <span>{result}</span>
+
+      <Script
+        id="recaptcha-load"
+        strategy="lazyOnload"
+        src={`https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY`}
+        onLoad={() => {
+          grecaptcha.ready(function () {
+            grecaptcha
+              .execute("RECAPTCHA_SITE_KEY", {
+                action: "contact"
+              })
+              .then(function (token) {
+                //console.log(token);
+                setCaptchaToken(token);
+              });
+          });
+        }}
+      />
+    </div>
+  );
+}
+
+export default App;

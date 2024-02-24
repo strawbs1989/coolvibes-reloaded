@@ -1,65 +1,44 @@
-
-	<html lang="en">
-	<head>
-	
-
+<html lang="en">
+<head>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <body>
-<p class="solid">
 <!-- Required meta tags -->
+
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" rel="stylesheet">
-<link href="https://coolvibes-reloaded.com/requests/style.css" rel="stylesheet">
-
-<script src="https://coolvibes-reloaded.com/requests/script.js"></script>
-
-
-<div class="m-7">
-        <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
-          <input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d" />
-          <input type="hidden" name="subject" value="New SongRequest " />
-          <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-
-
+<link href="https://coolvibes-reloaded.com/requests/test/style.css" rel="stylesheet">
+<form action="https://api.web3forms.com/submit" method="POST" action="https://coolvibes-reloaded.com/requests/test/req.php">
+<input type="hidden" name="access_key" value="b2a9ce58-7ae1-41ee-9dac-cfddde70ae5d">
+<img src="https://coolvibes-reloaded.com/img/favicon.png" width="100px" height="100px">
+ 
     
-    <div class="container">
-      <div class="text">
-                <h3 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
-                    Track Information
-                </h3>
-				
-                <center><p class="text-gray-600 dark:text-gray-400">
+    <center><div class="text-center">
+                <h1 class="my-3 text-3xl font-semibold text-black dark:text-gray-200">
+                    Song Info
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400">
                     Submit Your Favorite Tune!
-                </p></center>
-				
+                </p>
             </div>
-			</div>
 			
-			<div class="a"><div class="mb-6">
+			<div class="mb-6">
 						<input type="hidden" name="subject" value="SongRequests">
                     </div>
 					
 					<input type="hidden" name="from_name" value="CoolVibes Requests">
-			<center>
-	<title>Requests</title>
-	
-	<body>
-	
-
-	<table border="4">
-	<tr>
-		 <td>From</td>
-		 <td><div class="col-2"><input type="text" class="box" required></input></div></td>
-		 </tr>
-		 <tr>
-		 <th>To:</th>
-		 
-		 <th><input type="text" name="to" id="to" pattern="[a-z]{4,8}"></th>
-		 </tr>
-		 <tr>
-		 <th>DJ Select</th>
-		 <th><select name="djs" id="djs" required>
+			
+    <label for="from">From:</label><br>
+	<input type="text" class="box" name="from" id="from" required />
+  
+  <br>
+  <label for="text">To:</label><br>
+  <input type="text" name="to" id="to" pattern="[a-z]{4,8}" />
+  <p>To must be lowercase and 4-8 characters in length.</p>
+  
+  <br>
+  <label for="dj">Choose A DJ:</label><br>
+  <select name="djs" id="djs" required />
     <option value="dj kat">Classic Kat</option>
     <option value="dj strawbs">Strawbs</option>
     <option value="dj dale">Dale</option>
@@ -67,40 +46,34 @@
     <option value="dj simon">Simon</option>
 	<option value="dj twist">Christina</option>
   </select>
-  </th>
-  <tr>
-  <th>Message</th>
-  <th><div class="col-2"><input type="text" class="box2"></input></div>
-        </div></th>
-  </tr>
-  <tr>
-  <th>Song Request</th>
-  <th><input type="text" name="songrequest" placeholder="Ex Plan b She Said" id="songrequest" rows="3" cols="30"></th>
-  </tr>
-  <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/success">
-   
+  <br>
+  <br>
+  <label for="text">Message:</label><br>
+  <input type="text" name="message" id="message" required />
+  
+  
+  <br>
+  <label for="song request">Song Request:</label><br>
+  <input type="text" name="songrequest" placeholder="Ex Plan b She Said" id="songrequest" rows="3" cols="30">
+  
+  <br><br>
+					
+					
+    <input type="hidden" name="redirect" value="https://coolvibes-reloaded.com/requests/test/success">
+    <button class class="g-recaptcha" 
+        data-sitekey="6LcA63opAAAAANBsf6780sjjZwWU1Vijf38Xc5iG" 
+        data-callback='onSubmit' data-action='submit'>Request It</button>
+	    <script>
+   function onSubmit(token) {
+     document.getElementById("req").submit();
+   }
+ </script>
     
 </form>
-</table>
-</center>
+ 
 	
 </head>
 </body>
-<center></center>
 
-
-<center><button type="submit">Submit Form</button></center>
-
-
+        
 </html>
- </tr>
- 
- </table>
- 
- 
-
-		 
-		
-		 
-
-

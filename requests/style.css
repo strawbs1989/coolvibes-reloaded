@@ -95,12 +95,11 @@ form .form-row .textarea{
 }
 
 .box {
-    text-align: center;
+    text-align: left;
     box-shadow: 4px 2px 10px rgba(0,0,0,.2);
     border-radius: 6;
     background-color: #efefef;
 }
-
 
 .box2 { 
   text-align: center;
@@ -110,8 +109,28 @@ form .form-row .textarea{
   
   }
 		
-		
+button {
+    background: linear-gradient(to top left, #cc33ff 0%, #003366 100%);
+    
+	color: #fff;
+    padding-right: 30px;
+    padding-left: 30px;
+}		
 
+button {
+  color: #1d1d1d;
+  color: #fff;
+  background-color: #efefef;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
 
 h1 {
 text-align: center;
