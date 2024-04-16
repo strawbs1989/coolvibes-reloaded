@@ -1,12 +1,12 @@
-name = "coolvibe.pages.dev"
+name = "coolvibes"
 pages_build_output_dir = "./main"
 type = "javascript"
 workers_dev = false
 route = "coolvibes-reloaded.com/*"
 account_id = "405a893f25a12a10d87acb599ba48b94"
-zone_id = "525f83de6299fdc5228856c2ab589f1c"
 
-kv-namespaces = [
+
+kv_namespaces = [
     { binding = "wranglerKV", id = "574f7e0b3710496ebd90364a51f4f026" }
 ]
 
