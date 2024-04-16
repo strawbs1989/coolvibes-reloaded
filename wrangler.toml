@@ -1,9 +1,9 @@
 name = "coolvibes"
 pages_build_output_dir = "./main"
 type = "javascript"
-workers_dev = false
-route = "coolvibes-reloaded.com/*"
-account_id = "405a893f25a12a10d87acb599ba48b94"
+
+
+
 
 
 kv_namespaces = [
